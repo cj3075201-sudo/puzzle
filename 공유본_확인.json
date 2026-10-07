@@ -4,6 +4,7 @@
   "missing_links": [],
   "return_link_fix": "원래 모음 파일명도 보존",
   "state_tests": "요소조합24 state.test.js 47그룹 통과",
-  "visual_check": "Windows Edge에서 모음 화면 렌더 확인",
-  "credential_pattern_matches": 0
+  "visual_check": "Windows Edge: 모음 및 보라색 연결 퍼즐 렌더 확인",
+  "credential_pattern_matches": 0,
+  "build_check": "공유본 퍼즐22 만들기.py 실행 성공. 배포 HTML은 원본 그대로 보존."
 }
