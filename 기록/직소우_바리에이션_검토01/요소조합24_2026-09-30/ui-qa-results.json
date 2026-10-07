@@ -1,0 +1,509 @@
+{
+  "checks": [
+    {
+      "name": "six cards + API + font",
+      "pass": true,
+      "detail": {
+        "cards": 6,
+        "loaded": true,
+        "font": true,
+        "scrollWidth": 1536,
+        "width": 1536
+      }
+    },
+    {
+      "name": "viewport 1536 level 1",
+      "pass": true
+    },
+    {
+      "name": "viewport 1536 level 2",
+      "pass": true
+    },
+    {
+      "name": "viewport 1536 level 3",
+      "pass": true
+    },
+    {
+      "name": "viewport 1536 level 4",
+      "pass": true
+    },
+    {
+      "name": "viewport 1536 level 5",
+      "pass": true
+    },
+    {
+      "name": "viewport 1536 level 6",
+      "pass": true
+    },
+    {
+      "name": "viewport 900 level 1",
+      "pass": true
+    },
+    {
+      "name": "viewport 900 level 2",
+      "pass": true
+    },
+    {
+      "name": "viewport 900 level 3",
+      "pass": true
+    },
+    {
+      "name": "viewport 900 level 4",
+      "pass": true
+    },
+    {
+      "name": "viewport 900 level 5",
+      "pass": true
+    },
+    {
+      "name": "viewport 900 level 6",
+      "pass": true
+    },
+    {
+      "name": "click model to cell",
+      "pass": true
+    },
+    {
+      "name": "assign letter",
+      "pass": true
+    },
+    {
+      "name": "selected piece move",
+      "pass": true
+    },
+    {
+      "name": "undo move",
+      "pass": true
+    },
+    {
+      "name": "clear",
+      "pass": true
+    },
+    {
+      "name": "undo clear",
+      "pass": true
+    },
+    {
+      "name": "remove requires selected piece",
+      "pass": true
+    },
+    {
+      "name": "delete selected",
+      "pass": true
+    },
+    {
+      "name": "only safe hints",
+      "pass": true
+    },
+    {
+      "name": "saved piece and letter state",
+      "pass": true
+    },
+    {
+      "name": "independent level state",
+      "pass": true
+    },
+    {
+      "name": "QA API absent in public",
+      "pass": true
+    }
+  ],
+  "views": [
+    {
+      "id": 1,
+      "width": 1536,
+      "docWidth": 1521,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 427.5,
+        "y": 598.03125,
+        "width": 624.921875,
+        "height": 490,
+        "right": 1052.421875,
+        "bottom": 1088.03125
+      },
+      "models": {
+        "x": 1098.421875,
+        "y": 623.03125,
+        "width": 378.578125,
+        "height": 220,
+        "right": 1477,
+        "bottom": 843.03125
+      },
+      "words": {
+        "x": 1098.421875,
+        "y": 890.03125,
+        "width": 378.578125,
+        "height": 120,
+        "right": 1477,
+        "bottom": 1010.03125
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 2,
+      "width": 1536,
+      "docWidth": 1521,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 427.5,
+        "y": 598.03125,
+        "width": 624.921875,
+        "height": 490,
+        "right": 1052.421875,
+        "bottom": 1088.03125
+      },
+      "models": {
+        "x": 1098.421875,
+        "y": 623.03125,
+        "width": 378.578125,
+        "height": 220,
+        "right": 1477,
+        "bottom": 843.03125
+      },
+      "words": {
+        "x": 1098.421875,
+        "y": 890.03125,
+        "width": 378.578125,
+        "height": 120,
+        "right": 1477,
+        "bottom": 1010.03125
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 3,
+      "width": 1536,
+      "docWidth": 1521,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 427.5,
+        "y": 598.03125,
+        "width": 624.921875,
+        "height": 490,
+        "right": 1052.421875,
+        "bottom": 1088.03125
+      },
+      "models": {
+        "x": 1098.421875,
+        "y": 623.03125,
+        "width": 378.578125,
+        "height": 220,
+        "right": 1477,
+        "bottom": 843.03125
+      },
+      "words": {
+        "x": 1098.421875,
+        "y": 890.03125,
+        "width": 378.578125,
+        "height": 120,
+        "right": 1477,
+        "bottom": 1010.03125
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 4,
+      "width": 1536,
+      "docWidth": 1521,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 427.5,
+        "y": 598.03125,
+        "width": 624.921875,
+        "height": 490,
+        "right": 1052.421875,
+        "bottom": 1088.03125
+      },
+      "models": {
+        "x": 1098.421875,
+        "y": 623.03125,
+        "width": 378.578125,
+        "height": 220,
+        "right": 1477,
+        "bottom": 843.03125
+      },
+      "words": {
+        "x": 1098.421875,
+        "y": 890.03125,
+        "width": 378.578125,
+        "height": 120,
+        "right": 1477,
+        "bottom": 1010.03125
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 5,
+      "width": 1536,
+      "docWidth": 1521,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 427.5,
+        "y": 598.03125,
+        "width": 624.921875,
+        "height": 490,
+        "right": 1052.421875,
+        "bottom": 1088.03125
+      },
+      "models": {
+        "x": 1098.421875,
+        "y": 623.03125,
+        "width": 378.578125,
+        "height": 220,
+        "right": 1477,
+        "bottom": 843.03125
+      },
+      "words": {
+        "x": 1098.421875,
+        "y": 890.03125,
+        "width": 378.578125,
+        "height": 120,
+        "right": 1477,
+        "bottom": 1010.03125
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 6,
+      "width": 1536,
+      "docWidth": 1521,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 427.5,
+        "y": 598.03125,
+        "width": 624.921875,
+        "height": 490,
+        "right": 1052.421875,
+        "bottom": 1088.03125
+      },
+      "models": {
+        "x": 1098.421875,
+        "y": 623.03125,
+        "width": 378.578125,
+        "height": 220,
+        "right": 1477,
+        "bottom": 843.03125
+      },
+      "words": {
+        "x": 1098.421875,
+        "y": 890.03125,
+        "width": 378.578125,
+        "height": 120,
+        "right": 1477,
+        "bottom": 1010.03125
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 1,
+      "width": 900,
+      "docWidth": 885,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 391.8125,
+        "y": 614.21875,
+        "width": 459.171875,
+        "height": 397.0625,
+        "right": 850.984375,
+        "bottom": 1011.28125
+      },
+      "models": {
+        "x": 34,
+        "y": 869.5,
+        "width": 311.8125,
+        "height": 155,
+        "right": 345.8125,
+        "bottom": 1024.5
+      },
+      "words": {
+        "x": 34,
+        "y": 1071.5,
+        "width": 311.8125,
+        "height": 160,
+        "right": 345.8125,
+        "bottom": 1231.5
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 2,
+      "width": 900,
+      "docWidth": 885,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 391.8125,
+        "y": 614.21875,
+        "width": 459.171875,
+        "height": 397.0625,
+        "right": 850.984375,
+        "bottom": 1011.28125
+      },
+      "models": {
+        "x": 34,
+        "y": 869.5,
+        "width": 311.8125,
+        "height": 155,
+        "right": 345.8125,
+        "bottom": 1024.5
+      },
+      "words": {
+        "x": 34,
+        "y": 1071.5,
+        "width": 311.8125,
+        "height": 160,
+        "right": 345.8125,
+        "bottom": 1231.5
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 3,
+      "width": 900,
+      "docWidth": 885,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 391.8125,
+        "y": 614.21875,
+        "width": 459.171875,
+        "height": 397.0625,
+        "right": 850.984375,
+        "bottom": 1011.28125
+      },
+      "models": {
+        "x": 34,
+        "y": 869.5,
+        "width": 311.8125,
+        "height": 155,
+        "right": 345.8125,
+        "bottom": 1024.5
+      },
+      "words": {
+        "x": 34,
+        "y": 1071.5,
+        "width": 311.8125,
+        "height": 160,
+        "right": 345.8125,
+        "bottom": 1231.5
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 4,
+      "width": 900,
+      "docWidth": 885,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 391.8125,
+        "y": 614.21875,
+        "width": 459.171875,
+        "height": 397.0625,
+        "right": 850.984375,
+        "bottom": 1011.28125
+      },
+      "models": {
+        "x": 34,
+        "y": 869.5,
+        "width": 311.8125,
+        "height": 155,
+        "right": 345.8125,
+        "bottom": 1024.5
+      },
+      "words": {
+        "x": 34,
+        "y": 1071.5,
+        "width": 311.8125,
+        "height": 160,
+        "right": 345.8125,
+        "bottom": 1231.5
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 5,
+      "width": 900,
+      "docWidth": 885,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 391.8125,
+        "y": 614.21875,
+        "width": 459.171875,
+        "height": 397.0625,
+        "right": 850.984375,
+        "bottom": 1011.28125
+      },
+      "models": {
+        "x": 34,
+        "y": 869.5,
+        "width": 311.8125,
+        "height": 155,
+        "right": 345.8125,
+        "bottom": 1024.5
+      },
+      "words": {
+        "x": 34,
+        "y": 1071.5,
+        "width": 311.8125,
+        "height": 160,
+        "right": 345.8125,
+        "bottom": 1231.5
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    },
+    {
+      "id": 6,
+      "width": 900,
+      "docWidth": 885,
+      "actors": 1,
+      "objects": 6,
+      "board": {
+        "x": 391.8125,
+        "y": 614.21875,
+        "width": 459.171875,
+        "height": 397.0625,
+        "right": 850.984375,
+        "bottom": 1011.28125
+      },
+      "models": {
+        "x": 34,
+        "y": 869.5,
+        "width": 311.8125,
+        "height": 155,
+        "right": 345.8125,
+        "bottom": 1024.5
+      },
+      "words": {
+        "x": 34,
+        "y": 1071.5,
+        "width": 311.8125,
+        "height": 160,
+        "right": 345.8125,
+        "bottom": 1231.5
+      },
+      "speaker": "주민의 이야기를 들어 보세요",
+      "rule": "열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등."
+    }
+  ]
+}

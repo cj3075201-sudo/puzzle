@@ -1,0 +1,73 @@
+{
+  "at": "2026-09-29T19:12:01.237Z",
+  "checks": [
+    {
+      "name": "two playable cards",
+      "pass": true
+    },
+    {
+      "name": "review hidden at entry",
+      "pass": true
+    },
+    {
+      "name": "desktop overview fits",
+      "pass": true
+    },
+    {
+      "name": "review tab shows only review",
+      "pass": true
+    },
+    {
+      "name": "solutions collapsed by default",
+      "pass": true
+    },
+    {
+      "name": "overview 900 fits",
+      "pass": true
+    },
+    {
+      "name": "overview 400 fits",
+      "pass": true
+    },
+    {
+      "name": "A script and world loaded",
+      "pass": true
+    },
+    {
+      "name": "A one interlocutor",
+      "pass": true
+    },
+    {
+      "name": "A separate save key",
+      "pass": true
+    },
+    {
+      "name": "A desktop fits",
+      "pass": true
+    },
+    {
+      "name": "A 900px fits",
+      "pass": true
+    },
+    {
+      "name": "B script and world loaded",
+      "pass": true
+    },
+    {
+      "name": "B one interlocutor",
+      "pass": true
+    },
+    {
+      "name": "B separate save key",
+      "pass": true
+    },
+    {
+      "name": "B desktop fits",
+      "pass": true
+    },
+    {
+      "name": "B 900px fits",
+      "pass": true
+    }
+  ]
+}

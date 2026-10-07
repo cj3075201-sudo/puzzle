@@ -1,0 +1,67 @@
+{
+  "A": {
+    "pieces": 6,
+    "connections": [
+      [
+        "actor",
+        "verb",
+        "twin"
+      ],
+      [
+        "actor",
+        "inside",
+        "round"
+      ],
+      [
+        "object",
+        "verb",
+        "round"
+      ],
+      [
+        "verb",
+        "other",
+        "round"
+      ],
+      [
+        "house",
+        "inside",
+        "round"
+      ]
+    ],
+    "matched": true,
+    "no_overlap": true
+  },
+  "B": {
+    "pieces": 6,
+    "connections": [
+      [
+        "actor",
+        "verb",
+        "twin"
+      ],
+      [
+        "object",
+        "verb",
+        "round"
+      ],
+      [
+        "verb",
+        "other",
+        "round"
+      ],
+      [
+        "other",
+        "inside",
+        "round"
+      ],
+      [
+        "house",
+        "inside",
+        "round"
+      ]
+    ],
+    "matched": true,
+    "no_overlap": true
+  },
+  "scope": "기존 원형/두 갈래 생성 함수와 주다 배치 재사용. A 주민/B 열쇠에 위쪽 원형 홈을 갖춘 외곽을 사용. 동일 여섯 외곽 세트의 재배치나 게임 채택을 뜻하지 않음."
+}

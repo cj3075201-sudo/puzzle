@@ -1,0 +1,18 @@
+{
+  "11": {
+    "file": "시험본/11.html",
+    "sha256": "fd5cde28de7f5d55fb9433a0139b13d13622803ed85e5ffb157fc27af13eadb3",
+    "source": "A/플레이.html",
+    "version": "first frozen build",
+    "final_sha256": "d996de6b7d12de42d995a0ed785511ac3c99a272fbfbd706264e4cf774c00034",
+    "final_change": "v2 SVG click areas; v3 current observation/holding refresh after blocked failure and Korean particle typo. Frozen v1 unchanged; per-version evidence in A."
+  },
+  "12": {
+    "file": "시험본/12.html",
+    "sha256": "d6fb3ebf6440d2cd5ee054121d3ee3d8067bbd9b1b03e0b045d22367433be52f",
+    "source": "B/플레이.html",
+    "version": "B redesigned v2, frozen before first UI play",
+    "final_sha256": "49f59fa80ab627e98ca6c1240d8ea34cbbfb77c7a6e17e3bdceee2a7185bfcdc",
+    "final_change": "v3 only clerk inside workstation/dialogue partition visuals; semantic files unchanged; frozen v2 remains; B/UI수정_v3 evidence"
+  }
+}

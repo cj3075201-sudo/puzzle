@@ -1,0 +1,478 @@
+{
+  "title": "높은 선착장의 책 · 직소우 언어 퍼즐",
+  "text": "DO YOU UNDERSTAND?\n높은 선착장의 책\n처음부터 다시\n수문지기와 나누는 약속\n높은 선착장의 책\n\n수문 너머 높은 선착장에 책을 마른 채로 옮기자.\n\n바깥 수로\n수문실\n돌담의 물때 자국\n안쪽 부표\n높은 선착장\n펌프\n닫힘\n문\n돌담\n수문지기의 창\n창 안\n손을 놓고 있다\n배를 보는 옆 창\n거울 · 담장 틈\n← 돌아오기\n책\n뒤\n앞\n책 도착\n배·인물·거울·부표·선착장을 눌러 살펴보세요.\n책\n\n수문지기는 창 안의 작은 자리에서 문을 붙든다. 배가 굽은 수로를 지나면 목소리가 닿지 않는다. 출발자리에서 주변을 살피고, 계속 지킬 부탁을 나눌 수 있다.\n\n수로 너머 · 목소리가 닿지 않는다\n\n배 뒤끝이 지나간 뒤 수문지기가 손을 놓았다. 닫힌 문 안에 펌프의 물이 고이고 배가 높은 선착장까지 올라간다. 책을 마른 바닥에 내렸다.\n\n창 안의 반응\n\n배에서 보이는 수문지기의 시선과 손을 살펴보자.\n\n거울에 비친 바깥 수면이 기준선 아래다.\n배 뒤끝이 문턱 안쪽에 있다.\n책이 도착했다\n높은 선착장에 닿았다.\n\n배 뒤끝이 지나간 뒤 수문지기가 손을 놓았다. 닫힌 문 안에 펌프의 물이 고이고 배가 높은 선착장까지 올라간다. 책을 마른 바닥에 내렸다.\n\n이 퍼즐은 어땠나요?\n평가 남기기\n좋았어\n가능성 있어\n너무 쉬워\n헷갈려\n내 취향 아냐\n별도 설치 없이 실행되는 퍼즐 표본 · 기본 뜻은 한국어로 표시 · 새 표현은 시험 규칙",
+  "viewport": {
+    "width": 1536,
+    "height": 1200
+  },
+  "controls": [
+    {
+      "index": 0,
+      "tag": "button",
+      "text": "처음부터 다시",
+      "rect": {
+        "x": 1398,
+        "y": 15,
+        "width": 110,
+        "height": 38
+      },
+      "disabled": false
+    },
+    {
+      "index": 1,
+      "tag": "g",
+      "text": "外 · 담장 밖 물",
+      "rect": {
+        "x": 81,
+        "y": 528,
+        "width": 685,
+        "height": 74
+      },
+      "disabled": false
+    },
+    {
+      "index": 2,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 81,
+        "y": 528,
+        "width": 685,
+        "height": 74
+      },
+      "disabled": false
+    },
+    {
+      "index": 3,
+      "tag": "g",
+      "text": "內 · 수문실 부표",
+      "rect": {
+        "x": 800,
+        "y": 466,
+        "width": 592,
+        "height": 135
+      },
+      "disabled": false
+    },
+    {
+      "index": 4,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 800,
+        "y": 466,
+        "width": 586,
+        "height": 135
+      },
+      "disabled": false
+    },
+    {
+      "index": 5,
+      "tag": "g",
+      "text": "높은 선착장과 펌프",
+      "rect": {
+        "x": 1368,
+        "y": 391,
+        "width": 139,
+        "height": 208
+      },
+      "disabled": false
+    },
+    {
+      "index": 6,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 1396,
+        "y": 448,
+        "width": 111,
+        "height": 18
+      },
+      "disabled": false
+    },
+    {
+      "index": 7,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 1421,
+        "y": 466,
+        "width": 16,
+        "height": 133
+      },
+      "disabled": false
+    },
+    {
+      "index": 8,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 1368,
+        "y": 391,
+        "width": 84,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 9,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 1464,
+        "y": 485,
+        "width": 31,
+        "height": 68
+      },
+      "disabled": false
+    },
+    {
+      "index": 10,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1445,
+        "y": 473,
+        "width": 34,
+        "height": 21
+      },
+      "disabled": false
+    },
+    {
+      "index": 11,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 1458,
+        "y": 564,
+        "width": 24,
+        "height": 16
+      },
+      "disabled": false
+    },
+    {
+      "index": 12,
+      "tag": "g",
+      "text": "창 안 수문지기 살펴보기",
+      "rect": {
+        "x": 835,
+        "y": 259,
+        "width": 302,
+        "height": 117
+      },
+      "disabled": false
+    },
+    {
+      "index": 13,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 835,
+        "y": 259,
+        "width": 302,
+        "height": 117
+      },
+      "disabled": false
+    },
+    {
+      "index": 14,
+      "tag": "circle",
+      "text": "",
+      "rect": {
+        "x": 853,
+        "y": 273,
+        "width": 49,
+        "height": 49
+      },
+      "disabled": false
+    },
+    {
+      "index": 15,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 848,
+        "y": 322,
+        "width": 62,
+        "height": 48
+      },
+      "disabled": false
+    },
+    {
+      "index": 16,
+      "tag": "line",
+      "text": "",
+      "rect": {
+        "x": 910,
+        "y": 340,
+        "width": 15,
+        "height": 20
+      },
+      "disabled": false
+    },
+    {
+      "index": 17,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 923,
+        "y": 269,
+        "width": 34,
+        "height": 20
+      },
+      "disabled": false
+    },
+    {
+      "index": 18,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 923,
+        "y": 300,
+        "width": 91,
+        "height": 19
+      },
+      "disabled": false
+    },
+    {
+      "index": 19,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 923,
+        "y": 336,
+        "width": 81,
+        "height": 16
+      },
+      "disabled": false
+    },
+    {
+      "index": 20,
+      "tag": "g",
+      "text": "거울에 비친 현재 모습 살펴보기",
+      "rect": {
+        "x": 580,
+        "y": 264,
+        "width": 177,
+        "height": 101
+      },
+      "disabled": false
+    },
+    {
+      "index": 21,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 580,
+        "y": 264,
+        "width": 177,
+        "height": 101
+      },
+      "disabled": false
+    },
+    {
+      "index": 22,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 588,
+        "y": 337,
+        "width": 160,
+        "height": 20
+      },
+      "disabled": false
+    },
+    {
+      "index": 23,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 592,
+        "y": 273,
+        "width": 79,
+        "height": 18
+      },
+      "disabled": false
+    },
+    {
+      "index": 24,
+      "tag": "g",
+      "text": "거울 손잡이 돌리기",
+      "rect": {
+        "x": 655,
+        "y": 369,
+        "width": 30,
+        "height": 30
+      },
+      "disabled": false
+    },
+    {
+      "index": 25,
+      "tag": "circle",
+      "text": "",
+      "rect": {
+        "x": 655,
+        "y": 369,
+        "width": 30,
+        "height": 30
+      },
+      "disabled": false
+    },
+    {
+      "index": 26,
+      "tag": "line",
+      "text": "",
+      "rect": {
+        "x": 658,
+        "y": 375,
+        "width": 22,
+        "height": 17
+      },
+      "disabled": false
+    },
+    {
+      "index": 27,
+      "tag": "g",
+      "text": "출발자리로 돌아오기",
+      "rect": {
+        "x": 29,
+        "y": 558,
+        "width": 185,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 28,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 29,
+        "y": 558,
+        "width": 185,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 29,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 45,
+        "y": 566,
+        "width": 85,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 30,
+      "tag": "g",
+      "text": "배 살펴보기",
+      "rect": {
+        "x": 825,
+        "y": 402,
+        "width": 222,
+        "height": 109
+      },
+      "disabled": false
+    },
+    {
+      "index": 31,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 825,
+        "y": 448,
+        "width": 222,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 32,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 896,
+        "y": 402,
+        "width": 71,
+        "height": 42
+      },
+      "disabled": false
+    },
+    {
+      "index": 33,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 906,
+        "y": 414,
+        "width": 15,
+        "height": 20
+      },
+      "disabled": false
+    },
+    {
+      "index": 34,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 835,
+        "y": 426,
+        "width": 13,
+        "height": 18
+      },
+      "disabled": false
+    },
+    {
+      "index": 35,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 1003,
+        "y": 426,
+        "width": 13,
+        "height": 18
+      },
+      "disabled": false
+    },
+    {
+      "index": 36,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 833,
+        "y": 492,
+        "width": 46,
+        "height": 19
+      },
+      "disabled": false
+    },
+    {
+      "index": 37,
+      "tag": "select",
+      "text": "평가 남기기\n좋았어\n가능성 있어\n너무 쉬워\n헷갈려\n내 취향 아냐",
+      "value": "",
+      "options": [
+        "평가 남기기",
+        "좋았어",
+        "가능성 있어",
+        "너무 쉬워",
+        "헷갈려",
+        "내 취향 아냐"
+      ],
+      "rect": {
+        "x": 1365,
+        "y": 971,
+        "width": 121,
+        "height": 40
+      },
+      "disabled": false
+    }
+  ],
+  "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/206.png",
+  "step": 206,
+  "case": "11"
+}

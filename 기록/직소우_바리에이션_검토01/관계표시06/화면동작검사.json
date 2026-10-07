@@ -1,0 +1,127 @@
+{
+  "results": [
+    {
+      "mode": "tile",
+      "checks": [
+        "neutral ambiguity",
+        "opposite role",
+        "word swap equivalence",
+        "omission recovery",
+        "context conflict",
+        "reset",
+        "noun click exchange"
+      ],
+      "passed": true
+    },
+    {
+      "mode": "stamp",
+      "checks": [
+        "neutral ambiguity",
+        "opposite role",
+        "word swap equivalence",
+        "omission recovery",
+        "context conflict",
+        "reset",
+        "noun click exchange"
+      ],
+      "passed": true
+    },
+    {
+      "mode": "shape",
+      "checks": [
+        "neutral ambiguity",
+        "opposite role",
+        "word swap equivalence",
+        "omission recovery",
+        "context conflict",
+        "reset",
+        "noun click exchange"
+      ],
+      "passed": true
+    }
+  ],
+  "fontLoaded": true,
+  "svgTextBounds": [
+    {
+      "text": "보내다",
+      "width": 47.16921615600586,
+      "height": 21.121797561645508,
+      "safe": true
+    },
+    {
+      "text": "나",
+      "width": 18.13582992553711,
+      "height": 25.144996643066406,
+      "safe": true
+    },
+    {
+      "text": "주민",
+      "width": 36.27165985107422,
+      "height": 25.144996643066406,
+      "safe": true
+    },
+    {
+      "text": "너",
+      "width": 18.13582992553711,
+      "height": 25.144996643066406,
+      "safe": true
+    },
+    {
+      "text": "α",
+      "width": 17.067167282104492,
+      "height": 33.1913948059082,
+      "safe": true
+    },
+    {
+      "text": "보내다",
+      "width": 47.16921615600586,
+      "height": 21.121797561645508,
+      "safe": true
+    },
+    {
+      "text": "나",
+      "width": 18.13582992553711,
+      "height": 25.144996643066406,
+      "safe": true
+    },
+    {
+      "text": "주민",
+      "width": 36.27165985107422,
+      "height": 25.144996643066406,
+      "safe": true
+    },
+    {
+      "text": "너",
+      "width": 18.13582992553711,
+      "height": 25.144996643066406,
+      "safe": true
+    },
+    {
+      "text": "보내다",
+      "width": 47.16700744628906,
+      "height": 21.12080955505371,
+      "safe": true
+    },
+    {
+      "text": "나",
+      "width": 18.134981155395508,
+      "height": 25.14381980895996,
+      "safe": true
+    },
+    {
+      "text": "주민",
+      "width": 36.269962310791016,
+      "height": 25.14381980895996,
+      "safe": true
+    },
+    {
+      "text": "너",
+      "width": 18.134981155395508,
+      "height": 25.14381980895996,
+      "safe": true
+    }
+  ],
+  "viewport820NoOverflow": true,
+  "pageErrors": [],
+  "scope": "비교 화면 동작. 실제 자유 조립·재미 검증 아님."
+}

@@ -1,0 +1,11 @@
+{
+  "giveOutputIsKey": true,
+  "markedActorSwaps": true,
+  "AB": "resident outside, door closed",
+  "BA": "resident inside, door closed",
+  "resetOpen": true,
+  "textClearance": true,
+  "width820": true,
+  "errors": [],
+  "scope": "설명용 미리보기, 사람 플레이 시험 아님"
+}

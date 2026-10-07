@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "second scene completion restored",
+      "pass": true
+    },
+    {
+      "name": "purple assignments restored",
+      "pass": true
+    },
+    {
+      "name": "first scene completion retained separately",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow",
+      "pass": true
+    }
+  ]
+}

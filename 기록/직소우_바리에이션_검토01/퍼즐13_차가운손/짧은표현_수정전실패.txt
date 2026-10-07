@@ -1,0 +1,54 @@
+PASS six pieces complete without input mutations
+PASS translation preserves graph meaning
+PASS outside recipient refuses and retains key
+PASS reverse actor is determined by twin connection
+PASS four-piece resident remains ambiguous
+PASS same person cannot transfer to self
+PASS missing item does not succeed
+PASS empty glyph is rejected
+PASS mismatched connector fails
+PASS flat neighbors do not connect
+PASS four yellow pieces exceed chain limit
+PASS model and glyph are independent
+PASS yellow glyph on blue shape fails
+PASS overlap fails
+PASS empty input fails
+PASS unconnected remaining ports are allowed
+PASS complete cannot run twice
+PASS different layout with different shapes keeps meaning
+PASS real palette completes then rejects a round actor connector
+PASS moving house-inside chain to item cannot count as identifying recipient
+PASS resident and key role swap is semantically rejected after valid assembly
+PASS correct assembly plus floating extra cannot succeed
+PASS unsupported glyph cannot be interpreted as a known word
+PASS duplicate ids cannot overwrite another piece in graph lookup
+PASS outside refusal preserves input and allows correction to inside
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'unsupported_meaning'
+- 'complete'
+
+    at /mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐13_차가운손/core.test.js:117:10
+    at test (/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐13_차가운손/core.test.js:22:24)
+    at Object.<anonymous> (/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐13_차가운손/core.test.js:115:1)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Object..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'unsupported_meaning',
+  expected: 'complete',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.16.0

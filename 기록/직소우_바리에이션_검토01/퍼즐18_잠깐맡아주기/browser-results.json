@@ -1,0 +1,66 @@
+[
+  {
+    "name": "initial slots",
+    "pass": true
+  },
+  {
+    "name": "direct trade blocked",
+    "pass": true
+  },
+  {
+    "name": "full recipient highlighted",
+    "pass": true
+  },
+  {
+    "name": "player holds key",
+    "pass": true
+  },
+  {
+    "name": "keeper slot empty",
+    "pass": true
+  },
+  {
+    "name": "cannot skip emptying book slot",
+    "pass": true
+  },
+  {
+    "name": "player holding restored",
+    "pass": true
+  },
+  {
+    "name": "empty slot restored",
+    "pass": true
+  },
+  {
+    "name": "middle transfer",
+    "pass": true
+  },
+  {
+    "name": "key first completes",
+    "pass": true
+  },
+  {
+    "name": "completed reload",
+    "pass": true
+  },
+  {
+    "name": "book first completes",
+    "pass": true
+  },
+  {
+    "name": "player can hold both",
+    "pass": true
+  },
+  {
+    "name": "both shown",
+    "pass": true
+  },
+  {
+    "name": "four transfers complete",
+    "pass": true
+  },
+  {
+    "name": "reset cancels transfer",
+    "pass": true
+  }
+]

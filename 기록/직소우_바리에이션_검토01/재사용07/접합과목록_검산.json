@@ -1,0 +1,148 @@
+{
+  "scope": "7종 기하 배치. 단어교환은 외곽을 바꾸지 않음. 전체 자유조립/사람 경험 검증 아님.",
+  "layouts": {
+    "send_plain": {
+      "piece_count": 4,
+      "contacts": [
+        [
+          "W",
+          "verb",
+          "round"
+        ],
+        [
+          "N",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "E",
+          "round"
+        ]
+      ],
+      "palette_membership": true,
+      "no_overlap": true,
+      "ports_matched": true
+    },
+    "send_mark": {
+      "piece_count": 4,
+      "contacts": [
+        [
+          "W",
+          "verb",
+          "round"
+        ],
+        [
+          "N",
+          "verb",
+          "twin"
+        ],
+        [
+          "verb",
+          "E",
+          "round"
+        ]
+      ],
+      "palette_membership": true,
+      "no_overlap": true,
+      "ports_matched": true
+    },
+    "push_plain": {
+      "piece_count": 3,
+      "contacts": [
+        [
+          "W",
+          "verb",
+          "round"
+        ],
+        [
+          "N",
+          "verb",
+          "round"
+        ]
+      ],
+      "palette_membership": true,
+      "no_overlap": true,
+      "ports_matched": true
+    },
+    "push_mark": {
+      "piece_count": 3,
+      "contacts": [
+        [
+          "W",
+          "verb",
+          "twin"
+        ],
+        [
+          "N",
+          "verb",
+          "round"
+        ]
+      ],
+      "palette_membership": true,
+      "no_overlap": true,
+      "ports_matched": true
+    },
+    "pull_plain": {
+      "piece_count": 3,
+      "contacts": [
+        [
+          "W",
+          "verb",
+          "round"
+        ],
+        [
+          "N",
+          "verb",
+          "round"
+        ]
+      ],
+      "palette_membership": true,
+      "no_overlap": true,
+      "ports_matched": true
+    },
+    "pull_mark": {
+      "piece_count": 3,
+      "contacts": [
+        [
+          "W",
+          "verb",
+          "twin"
+        ],
+        [
+          "N",
+          "verb",
+          "round"
+        ]
+      ],
+      "palette_membership": true,
+      "no_overlap": true,
+      "ports_matched": true
+    },
+    "pain_plain": {
+      "piece_count": 2,
+      "contacts": [
+        [
+          "W",
+          "verb",
+          "round"
+        ]
+      ],
+      "palette_membership": true,
+      "no_overlap": true,
+      "ports_matched": true
+    }
+  },
+  "palette_counts": {
+    "send": 6,
+    "push": 5,
+    "pull": 5,
+    "pain": 2
+  },
+  "unique_color_and_outline_items": 10,
+  "unique_outline_profiles": 9,
+  "full_palette_reuse": [
+    "push",
+    "pull"
+  ]
+}

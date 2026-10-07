@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-29T19:09:09.118Z",
+  "checks": [
+    {
+      "name": "surge remains the default-policy failure",
+      "pass": true
+    },
+    {
+      "name": "post-surge current buoy reading is above the line and keeper releases",
+      "pass": true
+    }
+  ],
+  "scope": "실제 배 포인터 입력 2회로 기본부탁 역류 재현. 실패 후 현재 관측·손 그림만 검사."
+}

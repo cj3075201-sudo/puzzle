@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "six play cards",
+      "pass": true
+    },
+    {
+      "name": "play default",
+      "pass": true
+    },
+    {
+      "name": "desktop no overflow",
+      "pass": true
+    },
+    {
+      "name": "analysis tab displays",
+      "pass": true
+    },
+    {
+      "name": "six sample and five baseline rows",
+      "pass": true
+    },
+    {
+      "name": "A3 evidence summary",
+      "pass": true
+    },
+    {
+      "name": "detail anchor opens",
+      "pass": true
+    },
+    {
+      "name": "900px no overflow",
+      "pass": true
+    },
+    {
+      "name": "400px no overflow",
+      "pass": true
+    },
+    {
+      "name": "A final observation scope text",
+      "pass": true
+    },
+    {
+      "name": "A final morning time text",
+      "pass": true
+    }
+  ]
+}

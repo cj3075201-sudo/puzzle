@@ -1,0 +1,22 @@
+const assert=require('assert/strict'),fs=require('fs'),L=require('./state.js'),C=require('./core.js'),M=require('./models.json');
+const water=(where='밖',level='낮다')=>[where,['물',level]], boat=(part='뒤',where='밖')=>['배',[part,['있다',where]]],whole=where=>['배',['있다',where]],policy=(...cs)=>['문',['열다',...(cs.length?[['때',...cs]]:[])]];
+const correct=policy(water(),boat()),checks=[];
+function check(name,fn){fn();checks.push({name,pass:true});}
+function run(p,mirror='outside'){let s=L.initial();s.mirror=mirror;s=L.submit(p,s).state;s=L.launch(s).state;for(let i=0;i<10&&s.mode==='voyage';i++)s=L.step(s).state;return s;}
+check('대표 조건은 실제 직소 10피스로 조립/해석된다',()=>{const pieces=C.build(correct,M,L.blueWords);assert.equal(pieces.length,10);assert(C.analyze(pieces,M,L.blueWords).ok);});
+check('기본 안물 정책은 높은 외부 선행물결에서 역류',()=>{assert.equal(run(L.initial().policy,'inside').lastCause,'surge');});
+check('조건 미관측과 불일치는 다르다',()=>{const s=run(correct,'inside');assert.equal(s.lastCause,'unseen');assert(s.observations.some(r=>r.value===null));assert.equal(run(policy(water('밖','높다'))).lastCause,'surge');});
+check('외부 물만 따르면 끝까지 열어 펌프가 샌다',()=>assert.equal(run(policy(water())).lastCause,'leak'));
+check('앞 조건과 전체밖 조건은 걸침에서 조기에 놓는다',()=>{assert.equal(run(policy(water(),boat('앞'))).lastCause,'early_release');assert.equal(run(policy(water(),whole('밖'))).lastCause,'early_release');});
+check('무조건 열기/닫기는 각각 역류/닫힘',()=>{assert.equal(run(policy()).lastCause,'surge');assert.equal(run(['문','닫다']).lastCause,'closed');});
+const valid=[correct,policy(boat(),water()),policy(['물',['있다','밖'],'낮다'],boat()),policy(water(),['아니다',boat('뒤','안')]),policy(water(),['아니다',whole('안')])];
+check('AND 순서/물 부착/뒤안 부정/전체안 부정 대안 모두 실제 조립 및 완료',()=>{for(const p of valid){const pieces=C.build(p,M,L.blueWords);assert(pieces.length<=12);assert(C.analyze(pieces,M,L.blueWords).ok);assert(run(p).complete);}});
+check('뒤끝 경계와 걸쳐 있는 전체의 부정',()=>{const s=L.initial();s.boatBack=5.999;assert.equal(L.position(s,'back'),'outside');assert.equal(L.evaluate(L.parseCondition(whole('안')),s).value,false);assert.equal(L.evaluate(L.parseCondition(['아니다',whole('안')]),s).value,true);s.boatBack=6;assert.equal(L.position(s,'back'),'inside');assert.equal(L.evaluate(L.parseCondition(whole('안')),s).value,true);});
+check('현재 거울은 매번 바깥물을 보고 옆창의 뒤끝도 보인다',()=>{let s=L.initial();s.mirror='outside';s=L.submit(correct,s).state;s=L.launch(s).state;assert.equal(s.insideLevel,2);assert.equal(L.policyReading(s).readings[0].value,false);s=L.step(s).state;assert.equal(s.outsideLevel,3);assert.equal(L.policyReading(s).readings[0].value,true);s=L.step(s).state;assert.equal(s.insideLevel,7);assert.equal(s.outsideLevel,3);assert.equal(L.position(s,'front'),'inside');assert.equal(L.position(s,'back'),'outside');assert(L.policyReading(s).readings.every(r=>r.value));s=L.step(s).state;assert.equal(L.position(s,'back'),'inside');assert.equal(s.outsideLevel,3);assert(!L.policyReading(s).hold);s=L.step(s).state;assert(s.complete);assert.equal(s.history.length,4);});
+check('원거리 부탁/거울 변경 불가, 복귀 후 상태 수정 가능',()=>{let s=L.launch(L.initial()).state;assert(!L.submit(correct,s).ok);assert(!L.act(s,'turn').ok);s=L.back(s).state;assert.equal(s.mode,'shore');assert.equal(s.insideLevel,2);assert(L.submit(correct,s).ok);});
+check('출발 전 관찰/대기 반복으로 배가 만드는 물결을 제거할 수 없다',()=>{let s=L.initial();for(let i=0;i<8;i++)s=L.inspect(s,'outside').state;assert.equal(L.launch(s).state.outsideLevel,9);});
+// Exhaust the small, supported vocabulary: every unordered conjunction of 0–2 conditions.
+const atoms=[water(),water('안'),water('밖','높다'),water('안','높다'),boat(),boat('앞'),boat('뒤','안'),boat('앞','안'),whole('안'),whole('밖'),['아니다',whole('안')],['아니다',boat('뒤','안')]];
+let evaluated=0,successes=[];const tryP=p=>{evaluated++;let pcs;try{pcs=C.build(p,M,L.blueWords);if(!C.analyze(pcs,M,L.blueWords).ok)return;}catch{return;}if(run(p).complete)successes.push({policy:p,pieces:pcs.length});};tryP(policy());for(let i=0;i<atoms.length;i++){tryP(policy(atoms[i]));for(let j=i;j<atoms.length;j++)tryP(policy(atoms[i],atoms[j]));}
+assert(successes.length>=3);assert(successes.every(x=>x.policy[1][1].length===3));
+fs.writeFileSync(__dirname+'/상태시험.json',JSON.stringify({at:new Date().toISOString(),checks,finiteSweep:{evaluated,scope:'무조건 또는 12개 조건 중 중복 허용 1~2개; 실제 모형으로 배치 가능한 표현만 실행',successes},notMeasured:'사람의 사고시간, 재미, 초견 난도'},null,2));console.log(JSON.stringify({checks:checks.length,evaluated,successes:successes.length},null,2));

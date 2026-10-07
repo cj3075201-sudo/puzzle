@@ -1,0 +1,446 @@
+{
+  "scope": "낱개 피스의 도형/접합 검사. 새 문법 채택·문장 연결선의 물리 접합·사람 이해/재미 검증이 아니다.",
+  "layouts": {
+    "old_send": {
+      "pieces": 4,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "give": {
+      "pieces": 4,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "give_swap": {
+      "pieces": 4,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "send": {
+      "pieces": 4,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "send_swap": {
+      "pieces": 4,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "show": {
+      "pieces": 4,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "show_swap": {
+      "pieces": 4,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "take": {
+      "pieces": 4,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "take_swap": {
+      "pieces": 4,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_0": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_1": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_2": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_3": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_4": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_5": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_6": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_7": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_8": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_9": {
+      "pieces": 3,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_10": {
+      "pieces": 4,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ],
+        [
+          "2",
+          "3",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "noun_11": {
+      "pieces": 4,
+      "connections": [
+        [
+          "0",
+          "1",
+          "round"
+        ],
+        [
+          "1",
+          "2",
+          "round"
+        ],
+        [
+          "2",
+          "3",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "open": {
+      "pieces": 3,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    },
+    "enter": {
+      "pieces": 2,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true
+    }
+  }
+}

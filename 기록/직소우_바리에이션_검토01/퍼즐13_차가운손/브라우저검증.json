@@ -1,0 +1,413 @@
+{
+  "desktop": {
+    "width": 1414,
+    "passed": true,
+    "checks": [
+      {
+        "name": "initial chat hidden",
+        "ok": true
+      },
+      {
+        "name": "world npc opens chat",
+        "ok": true
+      },
+      {
+        "name": "outside speech has four pieces",
+        "ok": true
+      },
+      {
+        "name": "inside speech has three pieces",
+        "ok": true
+      },
+      {
+        "name": "both heard",
+        "ok": true
+      },
+      {
+        "name": "recall retains shape",
+        "ok": true
+      },
+      {
+        "name": "close chat",
+        "ok": true
+      },
+      {
+        "name": "incomplete not complete",
+        "ok": true
+      },
+      {
+        "name": "clear empty",
+        "ok": true
+      },
+      {
+        "name": "undo restores",
+        "ok": true
+      },
+      {
+        "name": "select does not overwrite glyph",
+        "ok": true
+      },
+      {
+        "name": "wrong target tracked",
+        "ok": true
+      },
+      {
+        "name": "busy locks repeat submit",
+        "ok": true
+      },
+      {
+        "name": "wrong target returns key",
+        "ok": true
+      },
+      {
+        "name": "wrong target keeps pieces",
+        "ok": true
+      },
+      {
+        "name": "failure unlocks",
+        "ok": true
+      },
+      {
+        "name": "pointer drag moves one cell",
+        "ok": true
+      },
+      {
+        "name": "undo move",
+        "ok": true
+      },
+      {
+        "name": "keyboard move",
+        "ok": true
+      },
+      {
+        "name": "keyboard undo",
+        "ok": true
+      },
+      {
+        "name": "word replacement",
+        "ok": true
+      },
+      {
+        "name": "correct graph parsed",
+        "ok": true
+      },
+      {
+        "name": "last speaker outside does not choose recipient",
+        "ok": true
+      },
+      {
+        "name": "complete owns key inside",
+        "ok": true
+      },
+      {
+        "name": "complete panel shown",
+        "ok": true
+      },
+      {
+        "name": "no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "restart fresh",
+        "ok": true
+      },
+      {
+        "name": "no forced observation",
+        "ok": true
+      },
+      {
+        "name": "last ready state",
+        "ok": true
+      },
+      {
+        "name": "final overflow",
+        "ok": true
+      }
+    ]
+  },
+  "mobile": {
+    "width": 534,
+    "passed": true,
+    "checks": [
+      {
+        "name": "initial chat hidden",
+        "ok": true
+      },
+      {
+        "name": "world npc opens chat",
+        "ok": true
+      },
+      {
+        "name": "outside speech has four pieces",
+        "ok": true
+      },
+      {
+        "name": "inside speech has three pieces",
+        "ok": true
+      },
+      {
+        "name": "both heard",
+        "ok": true
+      },
+      {
+        "name": "recall retains shape",
+        "ok": true
+      },
+      {
+        "name": "close chat",
+        "ok": true
+      },
+      {
+        "name": "incomplete not complete",
+        "ok": true
+      },
+      {
+        "name": "clear empty",
+        "ok": true
+      },
+      {
+        "name": "undo restores",
+        "ok": true
+      },
+      {
+        "name": "select does not overwrite glyph",
+        "ok": true
+      },
+      {
+        "name": "wrong target tracked",
+        "ok": true
+      },
+      {
+        "name": "busy locks repeat submit",
+        "ok": true
+      },
+      {
+        "name": "wrong target returns key",
+        "ok": true
+      },
+      {
+        "name": "wrong target keeps pieces",
+        "ok": true
+      },
+      {
+        "name": "failure unlocks",
+        "ok": true
+      },
+      {
+        "name": "pointer drag moves one cell",
+        "ok": true
+      },
+      {
+        "name": "undo move",
+        "ok": true
+      },
+      {
+        "name": "keyboard move",
+        "ok": true
+      },
+      {
+        "name": "keyboard undo",
+        "ok": true
+      },
+      {
+        "name": "word replacement",
+        "ok": true
+      },
+      {
+        "name": "correct graph parsed",
+        "ok": true
+      },
+      {
+        "name": "last speaker outside does not choose recipient",
+        "ok": true
+      },
+      {
+        "name": "complete owns key inside",
+        "ok": true
+      },
+      {
+        "name": "complete panel shown",
+        "ok": true
+      },
+      {
+        "name": "no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "restart fresh",
+        "ok": true
+      },
+      {
+        "name": "no forced observation",
+        "ok": true
+      },
+      {
+        "name": "last ready state",
+        "ok": true
+      },
+      {
+        "name": "final overflow",
+        "ok": true
+      }
+    ]
+  },
+  "complete": {
+    "width": 1340,
+    "passed": true,
+    "checks": [
+      {
+        "name": "initial chat hidden",
+        "ok": true
+      },
+      {
+        "name": "world npc opens chat",
+        "ok": true
+      },
+      {
+        "name": "outside speech has four pieces",
+        "ok": true
+      },
+      {
+        "name": "inside speech has three pieces",
+        "ok": true
+      },
+      {
+        "name": "both heard",
+        "ok": true
+      },
+      {
+        "name": "recall retains shape",
+        "ok": true
+      },
+      {
+        "name": "close chat",
+        "ok": true
+      },
+      {
+        "name": "incomplete not complete",
+        "ok": true
+      },
+      {
+        "name": "clear empty",
+        "ok": true
+      },
+      {
+        "name": "undo restores",
+        "ok": true
+      },
+      {
+        "name": "select does not overwrite glyph",
+        "ok": true
+      },
+      {
+        "name": "wrong target tracked",
+        "ok": true
+      },
+      {
+        "name": "busy locks repeat submit",
+        "ok": true
+      },
+      {
+        "name": "wrong target returns key",
+        "ok": true
+      },
+      {
+        "name": "wrong target keeps pieces",
+        "ok": true
+      },
+      {
+        "name": "failure unlocks",
+        "ok": true
+      },
+      {
+        "name": "pointer drag moves one cell",
+        "ok": true
+      },
+      {
+        "name": "undo move",
+        "ok": true
+      },
+      {
+        "name": "keyboard move",
+        "ok": true
+      },
+      {
+        "name": "keyboard undo",
+        "ok": true
+      },
+      {
+        "name": "word replacement",
+        "ok": true
+      },
+      {
+        "name": "correct graph parsed",
+        "ok": true
+      },
+      {
+        "name": "last speaker outside does not choose recipient",
+        "ok": true
+      },
+      {
+        "name": "complete owns key inside",
+        "ok": true
+      },
+      {
+        "name": "complete panel shown",
+        "ok": true
+      },
+      {
+        "name": "no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "restart fresh",
+        "ok": true
+      },
+      {
+        "name": "no forced observation",
+        "ok": true
+      },
+      {
+        "name": "last ready state",
+        "ok": true
+      },
+      {
+        "name": "final overflow",
+        "ok": true
+      }
+    ]
+  },
+  "reload": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "reload pieces restored",
+        "ok": true
+      },
+      {
+        "name": "reload heard restored",
+        "ok": true
+      },
+      {
+        "name": "reload chat restored",
+        "ok": true
+      },
+      {
+        "name": "reload graph valid",
+        "ok": true
+      },
+      {
+        "name": "reload completed world",
+        "ok": true
+      },
+      {
+        "name": "reload completed screen",
+        "ok": true
+      },
+      {
+        "name": "restart cancels pending completion",
+        "ok": true
+      }
+    ]
+  }
+}

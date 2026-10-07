@@ -1,0 +1,30 @@
+{
+  "before": "same screenshot returned unsupported_meaning",
+  "after": "complete",
+  "engine_tests": 30,
+  "browser": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "screenshot five pieces recreated",
+        "ok": true
+      },
+      {
+        "name": "short chain parsed",
+        "ok": true
+      },
+      {
+        "name": "five piece submit complete",
+        "ok": true
+      },
+      {
+        "name": "key transferred",
+        "ok": true
+      },
+      {
+        "name": "completion shown",
+        "ok": true
+      }
+    ]
+  }
+}

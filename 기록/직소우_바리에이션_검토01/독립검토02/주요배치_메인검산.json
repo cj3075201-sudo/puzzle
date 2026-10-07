@@ -1,0 +1,283 @@
+{
+  "two_locations_A": {
+    "pieces": 8,
+    "edges": [
+      {
+        "from": "나",
+        "to": "보내다",
+        "at": [
+          0.5,
+          0
+        ]
+      },
+      {
+        "from": "input_resident",
+        "to": "보내다",
+        "at": [
+          0,
+          0.5
+        ]
+      },
+      {
+        "from": "input_resident",
+        "to": "안",
+        "at": [
+          -0.5,
+          1
+        ]
+      },
+      {
+        "from": "보내다",
+        "to": "output_resident",
+        "at": [
+          1,
+          0.5
+        ]
+      },
+      {
+        "from": "output_resident",
+        "to": "밖",
+        "at": [
+          1.5,
+          1
+        ]
+      },
+      {
+        "from": "안",
+        "to": "inside_house",
+        "at": [
+          0,
+          1.5
+        ]
+      },
+      {
+        "from": "밖",
+        "to": "outside_house",
+        "at": [
+          2,
+          1.5
+        ]
+      }
+    ],
+    "overlaps": [],
+    "unmatched_ports": [],
+    "connected": true,
+    "all_polygons_valid": true,
+    "central_glyph_box_clear": true,
+    "sum_area": 8.0,
+    "union_area": 8.0,
+    "valid": true
+  },
+  "two_locations_B": {
+    "pieces": 8,
+    "edges": [
+      {
+        "from": "나",
+        "to": "보내다",
+        "at": [
+          0.5,
+          0
+        ]
+      },
+      {
+        "from": "input_resident",
+        "to": "보내다",
+        "at": [
+          0,
+          0.5
+        ]
+      },
+      {
+        "from": "input_resident",
+        "to": "밖",
+        "at": [
+          -0.5,
+          1
+        ]
+      },
+      {
+        "from": "보내다",
+        "to": "output_resident",
+        "at": [
+          1,
+          0.5
+        ]
+      },
+      {
+        "from": "output_resident",
+        "to": "안",
+        "at": [
+          1.5,
+          1
+        ]
+      },
+      {
+        "from": "밖",
+        "to": "outside_house",
+        "at": [
+          0,
+          1.5
+        ]
+      },
+      {
+        "from": "안",
+        "to": "inside_house",
+        "at": [
+          2,
+          1.5
+        ]
+      }
+    ],
+    "overlaps": [],
+    "unmatched_ports": [],
+    "connected": true,
+    "all_polygons_valid": true,
+    "central_glyph_box_clear": true,
+    "sum_area": 8.0,
+    "union_area": 8.0,
+    "valid": true
+  },
+  "two_locations_B_alternate": {
+    "pieces": 8,
+    "edges": [
+      {
+        "from": "나",
+        "to": "보내다",
+        "at": [
+          0.5,
+          0
+        ]
+      },
+      {
+        "from": "input_resident",
+        "to": "보내다",
+        "at": [
+          0,
+          0.5
+        ]
+      },
+      {
+        "from": "input_resident",
+        "to": "밖",
+        "at": [
+          -0.5,
+          1
+        ]
+      },
+      {
+        "from": "보내다",
+        "to": "output_resident",
+        "at": [
+          1,
+          0.5
+        ]
+      },
+      {
+        "from": "output_resident",
+        "to": "안",
+        "at": [
+          1.5,
+          0
+        ]
+      },
+      {
+        "from": "밖",
+        "to": "outside_house",
+        "at": [
+          0,
+          1.5
+        ]
+      },
+      {
+        "from": "안",
+        "to": "inside_house",
+        "at": [
+          2,
+          -0.5
+        ]
+      }
+    ],
+    "overlaps": [],
+    "unmatched_ports": [],
+    "connected": true,
+    "all_polygons_valid": true,
+    "central_glyph_box_clear": true,
+    "sum_area": 8.000000000000002,
+    "union_area": 8.0,
+    "valid": true
+  },
+  "negative_missing_branch_port": {
+    "pieces": 8,
+    "edges": [
+      {
+        "from": "나",
+        "to": "보내다",
+        "at": [
+          0.5,
+          0
+        ]
+      },
+      {
+        "from": "input_resident",
+        "to": "보내다",
+        "at": [
+          0,
+          0.5
+        ]
+      },
+      {
+        "from": "보내다",
+        "to": "output_resident",
+        "at": [
+          1,
+          0.5
+        ]
+      },
+      {
+        "from": "output_resident",
+        "to": "밖",
+        "at": [
+          1.5,
+          1
+        ]
+      },
+      {
+        "from": "안",
+        "to": "inside_house",
+        "at": [
+          0,
+          1.5
+        ]
+      },
+      {
+        "from": "밖",
+        "to": "outside_house",
+        "at": [
+          2,
+          1.5
+        ]
+      }
+    ],
+    "overlaps": [],
+    "unmatched_ports": [
+      {
+        "piece": 4,
+        "id": "안",
+        "word": "안",
+        "at": [
+          -0.5,
+          1
+        ],
+        "side": "N",
+        "offset": 0.5,
+        "kind": "socket"
+      }
+    ],
+    "connected": false,
+    "all_polygons_valid": true,
+    "central_glyph_box_clear": true,
+    "sum_area": 7.948764238517738,
+    "union_area": 7.9487642385177395,
+    "valid": false
+  }
+}

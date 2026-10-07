@@ -1,0 +1,23 @@
+{
+  "UI_paths_completed": 6,
+  "state_checks": 31,
+  "UI_checks": 25,
+  "protected_originals_unchanged": 13,
+  "final_HTML_sha256": "179427d09dc419e52242affc66e1eba5d0d3fd60d7ec4952b70c9748a9f76dd7",
+  "final_state_sha256": "7621bdccbab2e650a9045d503ddfa99902d16904d03747161b5fdd9bf42bcc6e",
+  "embedded_model_equals_source": true,
+  "main_viewed_images": [
+    "ui-1536.png",
+    "ui-900.png",
+    "review/evidence-c/280.png",
+    "review/evidence-c/322.png"
+  ],
+  "C_report": "review/independent-review-c.md",
+  "trial_scope": "One-listener offline HTML; new rules are candidate mechanics; no human difficulty measurement.",
+  "windows_open": {
+    "requested": true,
+    "exit_code": 0,
+    "result": "OPEN_REQUESTED",
+    "observation": "Windows 기본 브라우저 열기 요청 성공. 실제 화면 검증은 격리 Chromium 렌더와 클릭 증거 기준."
+  }
+}

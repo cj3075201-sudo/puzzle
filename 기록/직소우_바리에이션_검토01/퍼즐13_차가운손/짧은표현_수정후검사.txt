@@ -1,0 +1,31 @@
+PASS six pieces complete without input mutations
+PASS translation preserves graph meaning
+PASS outside recipient refuses and retains key
+PASS reverse actor is determined by twin connection
+PASS four-piece resident remains ambiguous
+PASS same person cannot transfer to self
+PASS missing item does not succeed
+PASS empty glyph is rejected
+PASS mismatched connector fails
+PASS flat neighbors do not connect
+PASS four yellow pieces exceed chain limit
+PASS model and glyph are independent
+PASS yellow glyph on blue shape fails
+PASS overlap fails
+PASS empty input fails
+PASS unconnected remaining ports are allowed
+PASS complete cannot run twice
+PASS different layout with different shapes keeps meaning
+PASS real palette completes then rejects a round actor connector
+PASS moving house-inside chain to item cannot count as identifying recipient
+PASS resident and key role swap is semantically rejected after valid assembly
+PASS correct assembly plus floating extra cannot succeed
+PASS unsupported glyph cannot be interpreted as a known word
+PASS duplicate ids cannot overwrite another piece in graph lookup
+PASS outside refusal preserves input and allows correction to inside
+PASS user screenshot five-piece contextual inside resident succeeds
+PASS five-piece outside resident is understood then refuses
+PASS contextual short chain works for giver without reversing ownership
+PASS short chain preserves word order instead of searching keywords
+PASS both full and short location chains denote the same receiver
+30 tests passed

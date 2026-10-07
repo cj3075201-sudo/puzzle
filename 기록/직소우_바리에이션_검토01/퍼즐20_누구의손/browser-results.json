@@ -1,0 +1,94 @@
+[
+  {
+    "name": "cold approach withdraws",
+    "pass": true
+  },
+  {
+    "name": "patient short speech",
+    "pass": true
+  },
+  {
+    "name": "wrong owner points player",
+    "pass": true
+  },
+  {
+    "name": "new pointing hand visible",
+    "pass": true
+  },
+  {
+    "name": "self understanding recorded",
+    "pass": true
+  },
+  {
+    "name": "statement does not warm or finish",
+    "pass": true
+  },
+  {
+    "name": "understanding and board restored",
+    "pass": true
+  },
+  {
+    "name": "withdraw pose restored",
+    "pass": true
+  },
+  {
+    "name": "physical warm updates",
+    "pass": true
+  },
+  {
+    "name": "warming does not finish",
+    "pass": true
+  },
+  {
+    "name": "old cold statement corrected",
+    "pass": true
+  },
+  {
+    "name": "warm restore",
+    "pass": true
+  },
+  {
+    "name": "warm approach accepted",
+    "pass": true
+  },
+  {
+    "name": "hands stay together",
+    "pass": true
+  },
+  {
+    "name": "completion restored",
+    "pass": true
+  },
+  {
+    "name": "direct help works without quiz",
+    "pass": true
+  },
+  {
+    "name": "reset cancels warmth",
+    "pass": true
+  },
+  {
+    "name": "empty glyph error shown",
+    "pass": true
+  },
+  {
+    "name": "patient shows own palm",
+    "pass": true
+  },
+  {
+    "name": "own warm statement",
+    "pass": true
+  },
+  {
+    "name": "then points player",
+    "pass": true
+  },
+  {
+    "name": "reset cancels gesture followup",
+    "pass": true
+  },
+  {
+    "name": "bare repetition clarifies without auto understanding",
+    "pass": true
+  }
+]

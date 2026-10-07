@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>직소우 · 관계 표시 세 가지 비교</title>
+<style>
+@font-face{font-family:Project;src:url(data:font/ttf;base64,__FONT__) format('truetype');font-weight:100 900;font-display:swap}
+:root{--paper:#f5f2e9;--ink:#25343b;--muted:#606b6d;--line:#d8d5ca;--gold:#e9c76a;--blue:#8fbfd2}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Project,'Malgun Gothic',sans-serif;line-height:1.6}button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:3px solid #416c7e;outline-offset:3px}main{max-width:1540px;margin:auto;padding:38px 42px 54px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--muted);margin:0 0 12px}h1{font-size:34px;letter-spacing:-1px;line-height:1.3;margin:0 0 10px;font-weight:700}h2{font-size:24px;line-height:1.4;margin:0 0 14px}h3{font-size:21px;margin:0;font-weight:700}p{margin:0}.lead{font-size:16px;color:var(--muted)}.overview-head{display:flex;justify-content:space-between;align-items:flex-start;gap:26px;margin-bottom:26px}.legend{display:flex;align-items:center;gap:10px;font-size:14px;white-space:nowrap;padding-top:10px}.swatch{width:14px;height:14px;display:inline-block;border-radius:3px}.swatch.y{background:var(--gold)}.swatch.b{background:var(--blue)}.same{margin:22px 0 18px;padding:15px 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px}.same strong{font-size:20px}.same span{font-size:14px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:#fffdf7;border:1px solid var(--line);border-radius:13px;overflow:hidden}.card-head{padding:20px 22px 0}.number{font-size:12px;color:var(--muted);display:block;margin-bottom:5px;letter-spacing:1.2px}.diagram{padding:0 4px}.puzzle-svg{display:block;width:100%;height:auto;font-family:Project,'Malgun Gothic',sans-serif}.piece-word{fill:#233039;pointer-events:none}.card-note{padding:0 22px 22px;font-size:14px;color:var(--muted);min-height:136px}.count{font-size:17px;display:block;color:var(--ink);margin-bottom:6px}.card-note strong{font-weight:700}.fine{margin-top:18px;font-size:13px;color:var(--muted)}.take{margin:21px 0 0;padding:16px 18px;background:#e9ede8;border-left:3px solid #6c8775;font-size:16px}.take strong{margin-right:8px}.lab{margin-top:38px;padding-top:28px;border-top:1px solid var(--line)}.lab-intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:18px}.lab-intro p{color:var(--muted);font-size:14px}.tabs{display:flex;gap:8px;flex-wrap:wrap}.tabs button,.small-btn,.choices button{border:1px solid #c6c9c2;border-radius:7px;padding:9px 14px;background:#fbfaf5}.tabs button[aria-selected=true],.choices button[aria-pressed=true]{background:#304750;color:#fff;border-color:#304750}.play{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:22px;margin-top:18px}.board{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fffdf7;position:relative}.task{padding:15px 20px;background:#ece9df;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:16px}.task small{font-size:12px;display:block;color:var(--muted)}#board-svg{max-width:690px;margin:auto;padding:10px 30px 4px}#board-svg .puzzle-svg{width:100%;overflow:visible}#board-svg [data-piece=left],#board-svg [data-piece=top]{cursor:pointer}#board-svg [data-piece].selected path{stroke:#23343e;stroke-width:4}.hint{padding:0 20px 14px;text-align:center;font-size:13px;color:var(--muted)}.controls{display:flex;flex-direction:column;gap:16px}.control{padding-bottom:16px;border-bottom:1px solid var(--line)}.control b{display:block;margin-bottom:7px;font-size:15px}.control p{font-size:13px;color:var(--muted);margin-top:8px}.choices{display:flex;gap:5px;flex-wrap:wrap}.choices button{font-size:13px;padding:7px 10px}.full{width:100%}.check{background:#304750;border:0;border-radius:8px;color:white;padding:12px 18px;font-weight:700}.feedback{border-top:1px solid var(--line);background:#faf9f2;padding:18px 21px;min-height:114px}.feedback b{display:block;font-size:17px;margin-bottom:4px}.feedback p{font-size:14px;color:var(--muted)}.ok b{color:#316047}.uncertain b{color:#806324}.wrong b{color:#985140}.detail{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}.detail article{border-top:1px solid var(--line);padding:15px 2px;font-size:14px;color:var(--muted)}.detail b{color:var(--ink);display:block;margin-bottom:5px}.foot{font-size:12px;color:var(--muted);margin-top:22px}svg text{user-select:none}
+@media(max-width:900px){main{padding:24px 18px}.overview-head{display:block}.legend{padding-top:15px}.cards{grid-template-columns:1fr}.card{display:grid;grid-template-columns:1fr 1fr}.card-head{grid-column:1/-1}.card-note{padding-top:25px}.same{align-items:start;flex-direction:column}.play{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:1fr 1fr}.lab-intro{display:block}.tabs{margin-top:12px}.detail{grid-template-columns:1fr}h1{font-size:27px}}
+</style>
+<main>
+<section id="comparison">
+<div class="overview-head"><div><p class="eyebrow">JIGSAW LANGUAGE / COMPARISON 06</p><h1>같은 관계를, 어디에 담을까?</h1><p class="lead">새 색 조각 · 접합부 표식 · 연결부 모양을 같은 발화로 비교</p></div><div class="legend"><i class="swatch y"></i>대상 <i class="swatch b"></i>행동</div></div>
+<div class="same"><strong>세 조립 모두: 주민이 나를 너에게 보낸다.</strong><span>α / 두 갈래 접합 = 이 행동을 하는 쪽<br>위·왼쪽 위치 자체에는 역할 뜻이 없다.</span></div>
+<div class="cards">
+<article class="card"><div class="card-head"><span class="number">A / 별도 조각</span><h3>새 색 조각을 사이에 끼우기</h3></div><div class="diagram" data-preview="tile"></div><div class="card-note"><strong class="count">5피스 · 조각 한 칸 추가</strong>α가 들어갈 자리를 만들고 연결한다.<br>회전 없이 가로·세로 모형을 따로 쓴다.<br><strong>발견·조립 방식은 기존 피스와 같다.</strong></div></article>
+<article class="card"><div class="card-head"><span class="number">B / 접합부 표식</span><h3>붙인 경계에 관계 글자 찍기</h3></div><div class="diagram" data-preview="stamp"></div><div class="card-note"><strong class="count">4피스 + 작은 α 표식</strong>연결 길이를 유지하고 관계를 명시한다.<br>표식을 붙이고 읽는 조작은 새로 생긴다.<br><strong>별도 색 없이 같은 역할을 표현한다.</strong></div></article>
+<article class="card"><div class="card-head"><span class="number">C / 연결부 모양</span><h3>대응하는 돌출·홈으로 구별</h3></div><div class="diagram" data-preview="shape"></div><div class="card-note"><strong class="count">4피스 · 역할이 담긴 외곽</strong>두 갈래는 한 대상을 잇는 한 접합이다.<br>그 노랑과 파랑의 외곽이 서로 맞아야 한다.<br><strong>외곽에 역할 문법을 더하는 변경이다.</strong></div></article>
+</div>
+<p class="fine">노랑 글자는 양쪽 모형 어디에나 넣을 수 있다. 원형 접합만 쓰는 무표지 발화도 유지한다. 특정 글자만 정답 홈에 맞게 만들지 않는다.</p>
+<div class="take"><strong>후속 판단: 2안(A) 제외 · 3안(B) 보류 · 4안(C) 검토 중</strong>1안은 별도 표시 없이 문맥으로 읽는 기존 방식이다. 이 화면의 세 도면과 조작은 비교 이력으로 보존한다. C의 채택은 아직 정하지 않았다.</div>
+<p class="foot">2026-09-27 후속 사용자 판단 반영 · 한국어와 풀이 문장은 설계 설명용 · 이 도면은 최종 게임 UI가 아니다.</p>
+</section>
+<section class="lab" id="lab">
+<div class="lab-intro"><div><h2>직접 뜻을 바꿔 보는 최소 조립 문제</h2><p>관계 표시와 글자 자리를 바꿔 목표를 표현해 보세요. 버튼은 비교 상태를 전환하는 도구입니다.</p></div><div class="tabs" role="tablist" aria-label="비교 방식"><button data-mode="tile" role="tab" aria-selected="true">A 새 색 조각</button><button data-mode="stamp" role="tab" aria-selected="false">B 접합 표식</button><button data-mode="shape" role="tab" aria-selected="false">C 연결부 모양</button></div></div>
+<div class="play"><div class="board"><div class="task"><div><small>이번 조립 목표 · 뜻을 이미 배웠다고 가정</small><strong id="target"></strong></div><button class="small-btn" id="flip-target">반대 목표</button></div><div id="board-svg"></div><p class="hint">노랑 두 조각을 차례로 누르면, 외곽을 유지한 채 글자만 맞바꿉니다.</p><div class="feedback" id="feedback" aria-live="polite"><b>관계를 어디에 표시할지 골라 보세요.</b><p>표시를 생략하면 두 입력의 역할은 문맥에 남습니다.</p></div></div>
+<aside class="controls"><div class="control"><b id="mark-label">α 조각을 끼울 자리</b><div class="choices" id="mark-choices"><button data-mark="none" aria-pressed="true">생략</button><button data-mark="left" aria-pressed="false">왼쪽 접합</button><button data-mark="top" aria-pressed="false">위쪽 접합</button></div><p id="mode-note"></p></div>
+<div class="control"><b>글자와 모형은 별개</b><button class="small-btn full" id="swap-words">나 ↔ 주민 글자 맞바꾸기</button><p>외곽이 그대로여도 글자가 바뀌면 행동하는 대상이 달라집니다.</p></div>
+<div class="control"><b>주변 상황도 바꿔 보기</b><div class="choices" id="context-choices"><button data-context="none" aria-pressed="true">단서 없음</button><button data-context="resident" aria-pressed="false">주민이 출발 준비</button><button data-context="self" aria-pressed="false">내가 출발 준비</button></div><p>준비 자세는 의도를 추측할 단서입니다. 명시한 역할을 반대로 바꾸지는 않습니다.</p></div>
+<button class="check" id="check">이 조립의 뜻 확인</button><button class="small-btn" id="reset">이 방식 처음부터</button></aside></div>
+<div class="detail"><article><b>표시가 알려주는 범위</b>이번 문형은 두 입력 중 한 명이 다른 한 명을 너에게 보내는 한 사건이다. 표시는 보내는 쪽을 정한다. 요청인지 보고인지, 상대가 동의하는지, 실제로 가능한지는 정하지 않는다.</article><article><b>이 예시로 확인할 수 없는 것</b>뜻을 모르는 상태의 학습, 집·안·주민처럼 긴 연결의 설명 범위, 실제 조각 드래그의 손맛과 재미는 별도 문제다. 좁은 칸·피스 소모·정답 전용 모형은 넣지 않았다.</article></div>
+<p class="foot">외곽·접합·표식 위치 비교용 로컬 화면. 본편 코드·에셋·빌드는 변경하지 않았다. 자유 배치와 물리 스냅 조작을 구현한 게임은 아니다.</p>
+</section>
+</main>
+<script>
+const SVG_DATA=__SVGS__;
+const state={mode:'tile',mark:'none',swapped:false,target:'resident',context:'none',selected:null};
+const notes={tile:['α 조각을 끼울 자리','표시한 쪽에 1피스가 들어가며 노랑이 한 칸 밀립니다. 위쪽은 세로 모형, 왼쪽은 가로 모형입니다. 회전은 하지 않습니다.'],stamp:['α 표식을 붙일 접합','조각 네 개는 그대로입니다. 표식이 걸친 노랑–파랑 접합 하나에만 적용합니다. 표식 제거는 반대 역할 지정이 아닙니다.'],shape:['두 갈래로 바꿀 접합','단어 자리를 고정하고 표시를 옮기면 파랑과 노랑 두 외곽을 바꿉니다. 이 화면은 변경 결과를 한 번에 보여줍니다. 글자를 맞바꾸는 풀이도 됩니다.']};
+const who=x=>x==='self'?'나':'주민';
+const actorAt=side=>side==='left'?(state.swapped?'resident':'self'):(state.swapped?'self':'resident');
+function meaning(actor){return actor==='self'?'내가 주민을 너에게 보낸다.':'주민이 나를 너에게 보낸다.'}
+function evaluate(s){
+ const actor=s.mark==='none'?null:(s.mark==='left'?(s.swapped?'resident':'self'):(s.swapped?'self':'resident'));
+ const expected=s.context==='resident'?'self':s.context==='self'?'resident':null;
+ return {actor,patient:actor?(actor==='self'?'resident':'self'):null,expected,explicit:!!actor,matched:actor===s.target,contextConflict:!!actor&&!!expected&&actor!==expected};
+}
+function fillWords(root){root.querySelector('[data-piece=left] text').textContent=who(actorAt('left'));root.querySelector('[data-piece=top] text').textContent=who(actorAt('top'));}
+function render(){
+ document.querySelector('#board-svg').innerHTML=SVG_DATA[state.mode+'_'+state.mark];fillWords(document.querySelector('#board-svg'));
+ document.querySelector('#target').textContent=meaning(state.target);
+ document.querySelector('#mark-label').textContent=notes[state.mode][0];document.querySelector('#mode-note').textContent=notes[state.mode][1];
+ document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-selected',b.dataset.mode===state.mode));
+ document.querySelectorAll('[data-mark]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mark===state.mark));
+ document.querySelectorAll('[data-context]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.context===state.context));
+ ['left','top'].forEach(side=>{const g=document.querySelector('#board-svg [data-piece='+side+']');g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',who(actorAt(side))+' 글자 선택');if(state.selected===side)g.classList.add('selected');g.onclick=()=>selectWord(side);g.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectWord(side);}};});
+ const f=document.querySelector('#feedback');f.className='feedback';f.innerHTML='<b>조립을 바꿨어요.</b><p>뜻 확인을 누르면 명시한 역할과 문맥상 추정을 구분해서 보여줍니다.</p>';
+}
+function selectWord(side){if(state.selected&&state.selected!==side){state.swapped=!state.swapped;state.selected=null;}else state.selected=state.selected===side?null:side;render();}
+function showResult(){
+ const v=evaluate(state), f=document.querySelector('#feedback');
+ if(!v.explicit){f.className='feedback uncertain';f.innerHTML='<b>역할을 하나로 명시하지 않은 발화</b><p>'+(v.expected?meaning(v.expected)+'라는 해석이 상황상 유력합니다. 준비 자세만으로 반대 제안을 배제하지는 않습니다.':'내가 주민을 보내거나, 주민이 나를 보내는 두 해석이 남습니다.')+' 생략 자체를 오답이나 반대 역할로 처리하지 않습니다.</p>';return;}
+ f.className='feedback '+(v.matched?'ok':'wrong');
+ f.innerHTML='<b>'+(v.matched?'목표의 관계를 표현했어요.':'다른 관계를 표현했어요.')+'</b><p>'+meaning(v.actor)+(v.contextConflict?' 주변 준비 자세와 다른 계획을 말합니다. 표지 뜻을 뒤집지 않으며, 수락·실행 여부는 별개입니다.':' 누가 보내는지는 표시로 정해졌습니다. 요청·보고나 실제 실행 여부까지 정해진 것은 아닙니다.')+'</p>';
+}
+document.querySelectorAll('[data-preview]').forEach(e=>e.innerHTML=SVG_DATA[e.dataset.preview+'_top']);
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{state.mode=b.dataset.mode;state.selected=null;render();});
+document.querySelectorAll('[data-mark]').forEach(b=>b.onclick=()=>{state.mark=b.dataset.mark;state.selected=null;render();});
+document.querySelectorAll('[data-context]').forEach(b=>b.onclick=()=>{state.context=b.dataset.context;render();});
+document.querySelector('#swap-words').onclick=()=>{state.swapped=!state.swapped;state.selected=null;render();};
+document.querySelector('#flip-target').onclick=()=>{state.target=state.target==='self'?'resident':'self';render();};
+document.querySelector('#reset').onclick=()=>{Object.assign(state,{mark:'none',swapped:false,target:'resident',context:'none',selected:null});render();};
+document.querySelector('#check').onclick=showResult;
+window.comparison={state,evaluate,render,showResult};render();
+</script></html>

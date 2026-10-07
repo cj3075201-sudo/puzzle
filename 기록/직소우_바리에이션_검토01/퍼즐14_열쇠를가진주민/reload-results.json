@@ -1,0 +1,30 @@
+[
+  {
+    "name": "reset clears highlight",
+    "pass": true
+  },
+  {
+    "name": "restore pieces",
+    "pass": true
+  },
+  {
+    "name": "restore heard",
+    "pass": true
+  },
+  {
+    "name": "restore dialogue",
+    "pass": true
+  },
+  {
+    "name": "restore completion",
+    "pass": true
+  },
+  {
+    "name": "restore position",
+    "pass": true
+  },
+  {
+    "name": "restore completion panel",
+    "pass": true
+  }
+]

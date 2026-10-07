@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "blank purple pieces prepared",
+      "pass": true
+    },
+    {
+      "name": "empty word rejected",
+      "pass": true
+    },
+    {
+      "name": "wrong color rejected",
+      "pass": true
+    },
+    {
+      "name": "same symbol impossible subject and object rejected",
+      "pass": true
+    },
+    {
+      "name": "disconnected utterances joined through purple",
+      "pass": true
+    },
+    {
+      "name": "candidates inferred from all facts",
+      "pass": true
+    },
+    {
+      "name": "symbol links visibly drawn",
+      "pass": true
+    },
+    {
+      "name": "actual drag moves model",
+      "pass": true
+    },
+    {
+      "name": "broken local expression not accepted",
+      "pass": true
+    },
+    {
+      "name": "drag undo restores resolved target",
+      "pass": true
+    },
+    {
+      "name": "first world action completes",
+      "pass": true
+    },
+    {
+      "name": "world action undo",
+      "pass": true
+    },
+    {
+      "name": "second scene starts with separate board",
+      "pass": true
+    },
+    {
+      "name": "reciprocal relation resolves second pair",
+      "pass": true
+    },
+    {
+      "name": "same forward relation twice remains ambiguous",
+      "pass": true
+    },
+    {
+      "name": "all three colors can be rebuilt from palettes",
+      "pass": true
+    },
+    {
+      "name": "second world action completes",
+      "pass": true
+    },
+    {
+      "name": "finish visible",
+      "pass": true
+    },
+    {
+      "name": "editing solved board reopens trial",
+      "pass": true
+    },
+    {
+      "name": "undo edited trial restores completion",
+      "pass": true
+    },
+    {
+      "name": "save includes both solved scenes",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow",
+      "pass": true
+    }
+  ]
+}

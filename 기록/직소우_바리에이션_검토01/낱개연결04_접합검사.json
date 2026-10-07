@@ -1,0 +1,50 @@
+{
+  "A": {
+    "piece_count": 5,
+    "directed_contacts": [
+      [
+        "집",
+        "안"
+      ],
+      [
+        "안",
+        "주민"
+      ],
+      [
+        "주민",
+        "열쇠"
+      ],
+      [
+        "열쇠",
+        "찾다"
+      ]
+    ],
+    "overlaps": [],
+    "matched_ports": 8,
+    "status": "geometry_only; grammar_unadopted"
+  },
+  "B": {
+    "piece_count": 5,
+    "directed_contacts": [
+      [
+        "집",
+        "안"
+      ],
+      [
+        "안",
+        "열쇠"
+      ],
+      [
+        "주민",
+        "열쇠"
+      ],
+      [
+        "열쇠",
+        "찾다"
+      ]
+    ],
+    "overlaps": [],
+    "matched_ports": 8,
+    "status": "geometry_only; grammar_unadopted"
+  }
+}

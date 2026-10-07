@@ -1,0 +1,120 @@
+{
+  "participant": "a",
+  "role": "A author crossplays B via visible UI only",
+  "prior_engine_expertise": true,
+  "read_B_source": false,
+  "read_answers": false,
+  "used_test_api": false,
+  "read_other_participant_records": false,
+  "cases": [
+    {
+      "case": "05",
+      "scene": "B1 울리지 않는 이유",
+      "start_step": 1,
+      "first_submit_step": 11,
+      "completion_step": 20,
+      "end_step": 20,
+      "success": true,
+      "hint_used": false,
+      "semantic_failures": 1,
+      "geometry_failures": 0,
+      "submissions": 4,
+      "first_submit_seconds": 15.312,
+      "completion_seconds": 32.28,
+      "time_source": "own UI evidence JSON filesystem modification timestamps",
+      "bottlenecks": [
+        "전원 직접 시험 불가 예외는 첫 시도에서 배움",
+        "종/램프 관측으로 원인 분리",
+        "시험 없이 종 직접 수리도 성공"
+      ],
+      "evidence_steps": [
+        2,
+        11,
+        14,
+        16,
+        20,
+        22,
+        31
+      ],
+      "alternative": {
+        "start_step": 22,
+        "end_step": 31,
+        "success": true,
+        "seconds": 6.048
+      }
+    },
+    {
+      "case": "09",
+      "scene": "B2 안전해도 건너지 않는 사람",
+      "start_step": 1,
+      "first_submit_step": 15,
+      "completion_step": 28,
+      "end_step": 28,
+      "success": true,
+      "hint_used": false,
+      "semantic_failures": 0,
+      "geometry_failures": 0,
+      "submissions": 3,
+      "first_submit_seconds": 18.116,
+      "completion_seconds": 30.868,
+      "time_source": "own UI evidence JSON filesystem modification timestamps",
+      "bottlenecks": [
+        "추론보다 조립 클릭이 비중 큼",
+        "물 먼저 흘린 뒤 관찰창 이동도 유효",
+        "관찰 후 벽뒤로 돌아가도 믿음 유지"
+      ],
+      "evidence_steps": [
+        2,
+        15,
+        22,
+        28,
+        39,
+        49,
+        51,
+        55
+      ],
+      "alternative": {
+        "start_step": 30,
+        "end_step": 55,
+        "success": true,
+        "seconds": 15.436
+      }
+    },
+    {
+      "case": "07",
+      "scene": "B3 열어 달라 닫아 달라",
+      "start_step": 1,
+      "first_submit_step": 15,
+      "completion_step": 32,
+      "end_step": 32,
+      "success": true,
+      "hint_used": false,
+      "semantic_failures": 0,
+      "geometry_failures": 0,
+      "submissions": 4,
+      "first_submit_seconds": 10.264,
+      "completion_seconds": 25.6,
+      "time_source": "own UI evidence JSON filesystem modification timestamps",
+      "bottlenecks": [
+        "첫 화면 상태와 격자 어휘로 해법 예상 가능",
+        "질문은 예상 확인에 사용",
+        "두 NPC에게 질문하지 않고도 해결"
+      ],
+      "evidence_steps": [
+        1,
+        15,
+        19,
+        20,
+        32,
+        34,
+        48
+      ],
+      "alternative": {
+        "start_step": 34,
+        "end_step": 48,
+        "success": true,
+        "seconds": 2.852
+      }
+    }
+  ]
+}

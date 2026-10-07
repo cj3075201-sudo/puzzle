@@ -1,0 +1,91 @@
+{
+  "result": {
+    "type": "object",
+    "value": [
+      {
+        "name": "단일 사건",
+        "pass": true
+      },
+      {
+        "name": "이전 3종 목록 제거",
+        "pass": true
+      },
+      {
+        "name": "세계 8대상",
+        "pass": true
+      },
+      {
+        "name": "NPC 직접 클릭",
+        "pass": true
+      },
+      {
+        "name": "실제 모형/글자 UI 연결 [\"질문\",[\"이전\",\"책\"]]",
+        "pass": true
+      },
+      {
+        "name": "기억 질문",
+        "pass": true
+      },
+      {
+        "name": "실제 모형/글자 UI 연결 [\"함\",[\"표식\",\"있다\"],[\"풀다\",\"빗장\"]]",
+        "pass": true
+      },
+      {
+        "name": "윗면 표식 잘못된 지시 복구",
+        "pass": true
+      },
+      {
+        "name": "실제 모형/글자 UI 연결 [\"질문\",\"표식\"]",
+        "pass": true
+      },
+      {
+        "name": "옆면 식별 시험",
+        "pass": true
+      },
+      {
+        "name": "함 차이 증언",
+        "pass": true
+      },
+      {
+        "name": "실제 모형/글자 UI 연결 [\"질문\",\"저울\"]",
+        "pass": true
+      },
+      {
+        "name": "현재 하중 질문",
+        "pass": true
+      },
+      {
+        "name": "하중 이동",
+        "pass": true
+      },
+      {
+        "name": "실제 모형/글자 UI 연결 [\"질문\",\"저울\"]",
+        "pass": true
+      },
+      {
+        "name": "왕복 하중 질문",
+        "pass": true
+      },
+      {
+        "name": "실제 모형/글자 UI 연결 [\"함\",[\"표식\",\"있다\"],[\"풀다\",\"빗장\"]]",
+        "pass": true
+      },
+      {
+        "name": "분기 관계 부탁",
+        "pass": true
+      },
+      {
+        "name": "UI 완주",
+        "pass": true
+      },
+      {
+        "name": "완료 표시",
+        "pass": true
+      },
+      {
+        "name": "실제 모형/글자 UI 연결 [\"질문\",\"표식\"]",
+        "pass": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "speech disabled while NPC acts",
+      "pass": true
+    },
+    {
+      "name": "duplicate speech ignored",
+      "pass": true
+    },
+    {
+      "name": "controls restored after animation",
+      "pass": true
+    },
+    {
+      "name": "automatic chain begins with visible intermediate root",
+      "pass": true
+    },
+    {
+      "name": "own action visible before final read",
+      "pass": true
+    },
+    {
+      "name": "automatic chain ends open",
+      "pass": true
+    },
+    {
+      "name": "animated exit complete",
+      "pass": true
+    },
+    {
+      "name": "reset clears completion",
+      "pass": true
+    }
+  ]
+}

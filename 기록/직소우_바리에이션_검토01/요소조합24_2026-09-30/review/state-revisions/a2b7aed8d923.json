@@ -1,0 +1,1263 @@
+{
+  "type": "independent state QA, not UI completion or human play",
+  "state_sha256": "a2b7aed8d92360844d0b0afa5bd7050fd7c4c921f6b79be418fa5358dd9318fc",
+  "checks": [
+    {
+      "name": "01 지속조건 완료",
+      "pass": true
+    },
+    {
+      "name": "02 반전 완료",
+      "pass": true
+    },
+    {
+      "name": "03 이전 자리정책 실패",
+      "pass": true
+    },
+    {
+      "name": "03 실물고정 완료",
+      "pass": true
+    },
+    {
+      "name": "04 이전 실물정책 실패",
+      "pass": true
+    },
+    {
+      "name": "04 현재자리 완료",
+      "pass": true
+    },
+    {
+      "name": "05 고정시야 실패",
+      "pass": true
+    },
+    {
+      "name": "05 실물고정 없이 오른등정책 실패",
+      "pass": true
+    },
+    {
+      "name": "05 실물고정+시야이동 완료",
+      "pass": true
+    },
+    {
+      "name": "06 이전 고정실물정책 실패",
+      "pass": true
+    },
+    {
+      "name": "06 앞등 상대관측 완료",
+      "pass": true
+    },
+    {
+      "name": "1 공개 목표 출력과 실제 출력 일치",
+      "pass": true
+    },
+    {
+      "name": "2 공개 목표 출력과 실제 출력 일치",
+      "pass": true
+    },
+    {
+      "name": "3 공개 목표 출력과 실제 출력 일치",
+      "pass": true
+    },
+    {
+      "name": "4 공개 목표 출력과 실제 출력 일치",
+      "pass": true
+    },
+    {
+      "name": "5 공개 목표 출력과 실제 출력 일치",
+      "pass": true
+    },
+    {
+      "name": "6 공개 목표 출력과 실제 출력 일치",
+      "pass": true
+    },
+    {
+      "name": "1 닫다/꺼짐 동등정책 허용",
+      "pass": true
+    },
+    {
+      "name": "3 닫다/꺼짐 동등정책 허용",
+      "pass": true
+    },
+    {
+      "name": "4 닫다/꺼짐 동등정책 허용",
+      "pass": true
+    },
+    {
+      "name": "5 닫다/꺼짐 동등정책 허용",
+      "pass": true
+    },
+    {
+      "name": "6 닫다/꺼짐 동등정책 허용",
+      "pass": true
+    },
+    {
+      "name": "1 매틱 무조건정책 교체 우회 차단",
+      "pass": true
+    },
+    {
+      "name": "3 매틱 무조건정책 교체 우회 차단",
+      "pass": true
+    },
+    {
+      "name": "4 매틱 무조건정책 교체 우회 차단",
+      "pass": true
+    },
+    {
+      "name": "5 매틱 무조건정책 교체 우회 차단",
+      "pass": true
+    },
+    {
+      "name": "6 매틱 무조건정책 교체 우회 차단",
+      "pass": true
+    },
+    {
+      "name": "지금 요청은 지속지시 변경하지 않음",
+      "pass": true
+    },
+    {
+      "name": "독립 행동 혼합 거절: [\"수리\",[\"가다\",\"오른쪽\"],[\"말\",[\"문\",\"열다\"]]]",
+      "pass": true,
+      "observed": "서로 다른 행동을 한 번에 섞기보다 부탁 하나를 또렷하게 연결해 주세요."
+    },
+    {
+      "name": "독립 행동 혼합 거절: [\"수리\",[\"○\",[\"풀다\"]],[\"문\",\"닫다\"]]",
+      "pass": true,
+      "observed": "서로 다른 행동을 한 번에 섞기보다 부탁 하나를 또렷하게 연결해 주세요."
+    },
+    {
+      "name": "독립 행동 혼합 거절: [\"수리\",[\"○\",[\"묶다\",\"왼등\"]],[\"문\",\"열다\"]]",
+      "pass": true,
+      "observed": "서로 다른 행동을 한 번에 섞기보다 부탁 하나를 또렷하게 연결해 주세요."
+    }
+  ],
+  "cases": [
+    {
+      "id": 1,
+      "name": "left sustained",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 참"
+        },
+        {
+          "step": 2,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 3,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 참"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 거짓"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 2,
+      "name": "off-left sustained",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 거짓"
+        },
+        {
+          "step": 2,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 참"
+        },
+        {
+          "step": 3,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 거짓"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 참"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "previous location policy",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 참"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": false,
+          "pass": false,
+          "reason": "왼등 켜짐: 조건 참"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": true,
+          "pass": false,
+          "reason": "왼등 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 거짓"
+        }
+      ],
+      "messages": "4칸 통과: 원하는 문 닫힘, 실제 닫힘. 왼등 꺼짐: 조건 거짓 · 시험 되감기로 다시 시도할 수 있습니다."
+    },
+    {
+      "id": 3,
+      "name": "identity binding",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 참"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 참"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 거짓"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 4,
+      "name": "previous identity policy",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 참"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": true,
+          "pass": false,
+          "reason": "○ 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": false,
+          "pass": false,
+          "reason": "○ 켜짐: 조건 참"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 거짓"
+        }
+      ],
+      "messages": "4칸 통과: 원하는 문 닫힘, 실제 닫힘. ○ 꺼짐: 조건 거짓 · 시험 되감기로 다시 시도할 수 있습니다."
+    },
+    {
+      "id": 4,
+      "name": "current location",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 참"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 참"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 거짓"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 5,
+      "name": "identity with stationary observer",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": false,
+          "actual": false,
+          "wanted": true,
+          "pass": false,
+          "reason": "○은 수리의 오른쪽 자리에서 보이지 않습니다. 미확인이라 안전하게 닫습니다."
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": false,
+          "actual": false,
+          "wanted": false,
+          "pass": false,
+          "reason": "○은 수리의 오른쪽 자리에서 보이지 않습니다. 미확인이라 안전하게 닫습니다."
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 참"
+        }
+      ],
+      "messages": "4칸 통과: 원하는 문 열림, 실제 열림. ○ 켜짐: 조건 참 · 시험 되감기로 다시 시도할 수 있습니다."
+    },
+    {
+      "id": 5,
+      "name": "location reference with identity following",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "오른등 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": false,
+          "actual": false,
+          "wanted": true,
+          "pass": false,
+          "reason": "오른등은 수리의 왼쪽 자리에서 보이지 않습니다. 미확인이라 안전하게 닫습니다."
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": false,
+          "actual": false,
+          "wanted": false,
+          "pass": false,
+          "reason": "오른등은 수리의 왼쪽 자리에서 보이지 않습니다. 미확인이라 안전하게 닫습니다."
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "오른등 켜짐: 조건 참"
+        }
+      ],
+      "messages": "4칸 통과: 원하는 문 열림, 실제 열림. 오른등 켜짐: 조건 참 · 시험 되감기로 다시 시도할 수 있습니다."
+    },
+    {
+      "id": 5,
+      "name": "identity and observation following",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 참"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 참"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 6,
+      "name": "previous fixed identity",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 참"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": false,
+          "actual": false,
+          "wanted": true,
+          "pass": false,
+          "reason": "○은 수리의 오른쪽 자리에서 보이지 않습니다. 미확인이라 안전하게 닫습니다."
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": false,
+          "actual": false,
+          "wanted": false,
+          "pass": false,
+          "reason": "○은 수리의 왼쪽 자리에서 보이지 않습니다. 미확인이라 안전하게 닫습니다."
+        }
+      ],
+      "messages": "4칸 실패: 원하는 문 닫힘, 실제 닫힘. ○은 수리의 왼쪽 자리에서 보이지 않습니다. 미확인이라 안전하게 닫습니다. · 시험 되감기로 다시 시도할 수 있습니다."
+    },
+    {
+      "id": 6,
+      "name": "relative observation",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "앞등 꺼짐: 조건 거짓"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "앞등 켜짐: 조건 참"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "right",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "앞등 켜짐: 조건 참"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "앞등 꺼짐: 조건 거짓"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 1,
+      "name": "equivalent inverse policy",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 거짓"
+        },
+        {
+          "step": 2,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 참"
+        },
+        {
+          "step": 3,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 거짓"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 참"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 3,
+      "name": "equivalent inverse policy",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 거짓"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 참"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 거짓"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 참"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 4,
+      "name": "equivalent inverse policy",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 거짓"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "왼등 켜짐: 조건 거짓"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 참"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "왼등 꺼짐: 조건 참"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 5,
+      "name": "equivalent inverse policy",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 참"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 거짓"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "○ 꺼짐: 조건 참"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "○ 켜짐: 조건 거짓"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 6,
+      "name": "equivalent inverse policy",
+      "complete": true,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": "b",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "앞등 꺼짐: 조건 참"
+        },
+        {
+          "step": 2,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "left",
+          "source": "b",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "앞등 켜짐: 조건 거짓"
+        },
+        {
+          "step": 3,
+          "order": [
+            "b",
+            "a"
+          ],
+          "position": "right",
+          "source": "a",
+          "known": true,
+          "actual": true,
+          "wanted": true,
+          "pass": true,
+          "reason": "앞등 켜짐: 조건 거짓"
+        },
+        {
+          "step": 4,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": "a",
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "앞등 꺼짐: 조건 참"
+        }
+      ],
+      "messages": "✓ 뜻이 닿았다. 네 번의 변화에서 원하는 수문 상태를 모두 유지했습니다."
+    },
+    {
+      "id": 1,
+      "name": "unconditional policy replaced every tick",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": null,
+          "known": true,
+          "actual": false,
+          "wanted": true,
+          "pass": false,
+          "reason": "조건 없는 지시"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "unconditional policy replaced every tick",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": null,
+          "known": true,
+          "actual": false,
+          "wanted": true,
+          "pass": false,
+          "reason": "조건 없는 지시"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "unconditional policy replaced every tick",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": null,
+          "known": true,
+          "actual": false,
+          "wanted": true,
+          "pass": false,
+          "reason": "조건 없는 지시"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "unconditional policy replaced every tick",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "left",
+          "source": null,
+          "known": true,
+          "actual": true,
+          "wanted": false,
+          "pass": false,
+          "reason": "조건 없는 지시"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "unconditional policy replaced every tick",
+      "complete": false,
+      "trace": [
+        {
+          "step": 1,
+          "order": [
+            "a",
+            "b"
+          ],
+          "position": "right",
+          "source": null,
+          "known": true,
+          "actual": false,
+          "wanted": false,
+          "pass": true,
+          "reason": "조건 없는 지시"
+        }
+      ]
+    }
+  ]
+}

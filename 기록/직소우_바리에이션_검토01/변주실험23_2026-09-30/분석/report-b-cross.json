@@ -1,0 +1,123 @@
+{
+  "participant": "b",
+  "kind": "공통 엔진을 아는 타 제작자 UI 교차 시험",
+  "sources_accessed": false,
+  "first_runs": [
+    {
+      "case": "06",
+      "scene": "홍수 때 닫히는 문",
+      "start_step": 1,
+      "first_submit_step": 27,
+      "completion_step": 40,
+      "end_step": 40,
+      "success": true,
+      "hint_used": false,
+      "semantic_failures": 0,
+      "geometry_failures": 0,
+      "elapsed_seconds": 30.233,
+      "submissions": 2,
+      "bottlenecks": [
+        "막힘 없음. 공통 직소 엔진을 아는 제작자.",
+        "상단 NPC/하단 조립판을 오가는 스크롤"
+      ],
+      "evidence_steps": [
+        1,
+        27,
+        40
+      ]
+    },
+    {
+      "case": "04",
+      "scene": "바뀌는 당번, 같은 환자",
+      "start_step": 1,
+      "first_submit_step": 19,
+      "completion_step": 56,
+      "end_step": 56,
+      "success": true,
+      "hint_used": false,
+      "semantic_failures": 0,
+      "geometry_failures": 0,
+      "elapsed_seconds": 30.03,
+      "submissions": 4,
+      "bottlenecks": [
+        "막힘 없음. 이름/상태 선택 기준이 설명에서 직접 주어짐"
+      ],
+      "evidence_steps": [
+        1,
+        19,
+        45,
+        55,
+        56
+      ]
+    },
+    {
+      "case": "08",
+      "scene": "한 사람은 남아야 한다",
+      "start_step": 1,
+      "first_submit_step": 28,
+      "completion_step": 28,
+      "end_step": 28,
+      "success": true,
+      "hint_used": false,
+      "semantic_failures": 0,
+      "geometry_failures": 0,
+      "elapsed_seconds": 18.795,
+      "submissions": 1,
+      "bottlenecks": [
+        "게임 막힘 없음",
+        "UI 클릭 헬퍼의 텍스트 없는 컨트롤 처리 오류 1회. 게임 실패 아님"
+      ],
+      "evidence_steps": [
+        1,
+        28
+      ]
+    }
+  ],
+  "post_completion_alternatives": [
+    {
+      "original_case": "08",
+      "evidence_case": "08",
+      "scene": "한 사람은 남아야 한다",
+      "start_step": 29,
+      "first_submit_step": 45,
+      "completion_step": 48,
+      "end_step": 48,
+      "success": true,
+      "hint_used": false,
+      "semantic_failures": 0,
+      "geometry_failures": 0,
+      "elapsed_seconds": 3.884,
+      "submissions": 2,
+      "method": "수리/도루 개별 명령, 첫 이름만 교체",
+      "evidence_steps": [
+        30,
+        45,
+        48
+      ]
+    },
+    {
+      "original_case": "04",
+      "evidence_case": "08",
+      "scene": "바뀌는 당번, 같은 환자",
+      "start_step": 49,
+      "first_submit_step": 62,
+      "completion_step": 120,
+      "end_step": 120,
+      "success": true,
+      "hint_used": false,
+      "semantic_failures": 0,
+      "geometry_failures": 0,
+      "elapsed_seconds": 20.284,
+      "submissions": 6,
+      "method": "계속 없이 매 교대 이름 지시",
+      "evidence_steps": [
+        62,
+        76,
+        86,
+        96,
+        110,
+        120
+      ]
+    }
+  ]
+}

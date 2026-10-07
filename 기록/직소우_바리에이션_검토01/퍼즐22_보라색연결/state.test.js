@@ -1,0 +1,23 @@
+const assert=require('node:assert/strict');
+const P=require('./state.js');
+const s0=P.initial(0),s1=P.initial(1);
+const line=(a,v,b)=>[a,[v,b]];
+const first=[line('○','가지다','열쇠'),line('○','보다','△'),line('△','내다','소리'),line('○','열다','△')];
+const second=[line('○','가지다','열쇠'),line('○','보다','△'),line('△','보다','○'),line('○','돕다','△')];
+let count=0;function test(name,fn){fn();count++;console.log('PASS '+name);}
+test('joined constraints identify an actor and a door',()=>{const r=P.solve(first,s0);assert.equal(r.ok,true);assert.deepEqual(r.bindings,[{'○':'b','△':'d2'}]);assert.deepEqual(r.actionPairs,[{actor:'b',target:'d2'}]);});
+test('action preconditions do not silently disambiguate',()=>{const r=P.solve(first.filter((_,i)=>i!==2),s0);assert.equal(r.code,'ambiguous');assert.deepEqual(r.actionPairs,[{actor:'a',target:'d1'},{actor:'b',target:'d2'}]);});
+test('missing cross sentence relation leaves ambiguity',()=>{const r=P.solve(first.filter((_,i)=>i!==1),s0);assert.equal(r.code,'ambiguous');assert.equal(r.actionPairs.length,4);});
+test('symbol renaming and statement order preserve meaning',()=>{const renamed=JSON.parse(JSON.stringify(first).replaceAll('○','◇').replaceAll('△','○')).reverse();assert.deepEqual(P.solve(renamed,s0).actionPairs,[{actor:'b',target:'d2'}]);});
+test('two purple occurrences share identity, including across both positions',()=>{const r=P.solve(second,s1);assert.equal(r.ok,true);assert.deepEqual(r.bindings,[{'○':'b','△':'c'}]);assert.equal(P.solve([line('○','보다','○'),line('○','돕다','○')],s1).code,'contradiction');});
+test('global contradiction can exist even when each separate fact is true somewhere',()=>{const r=P.solve([...first,line('△','가지다','열쇠')],s0);assert.equal(r.code,'contradiction');assert.ok(r.rows.filter(r=>r.kind==='fact').every(r=>r.ok));});
+test('independent unused variable does not make a unique action ambiguous',()=>{const r=P.solve([...first,line('◇','가지다','열쇠')],s0);assert.equal(r.bindings.length,2);assert.equal(r.actionPairs.length,1);assert.equal(r.ok,true);});
+test('literal resident means all residents, rather than a privileged NPC',()=>{const r=P.solve([line('주민','열다','문')],s0);assert.equal(r.code,'ambiguous');assert.equal(r.actionPairs.length,9);});
+test('world preconditions reject a uniquely named impossible action',()=>{const r=P.solve([...first.slice(0,3),line('열쇠','열다','소리')],s0);assert.equal(r.code,'cannot-act');});
+test('no canonical answer whitelist: an extra true relation is accepted',()=>{assert.equal(P.solve([...first,line('주민','가지다','열쇠')],s0).ok,true);});
+test('incomplete and malformed words receive errors',()=>{assert.equal(P.solve([],s0).code,'empty');assert.equal(P.solve(first.slice(0,3),s0).code,'action-count');assert.equal(P.solve([...first,line('○','열다','△')],s0).code,'action-count');assert.equal(P.solve([['○',['보다']]],s0).code,'invalid');assert.equal(P.solve([line('없는것','보다','문')],s0).code,'invalid');assert.equal(P.solve([null],s0).code,'invalid');assert.equal(P.solve([{word:'○',children:'bad'}],s0).code,'invalid');});
+test('object tree API matches array syntax',()=>{function tree(t){return typeof t==='string'?{word:t,children:[]}:{word:t[0],children:t.slice(1).map(tree)};}assert.equal(P.solve(first.map(tree),s0).ok,true);});
+test('submit success and failure preserve input state',()=>{const before=JSON.stringify(s0);const failed=P.submit(s0,first.slice(1));assert.equal(failed.ok,false);assert.deepEqual(failed.state,s0);const r=P.submit(s0,first);assert.equal(r.ok,true);assert.equal(r.state.complete,true);assert.equal(r.state.turn,1);assert.equal(JSON.stringify(s0),before);assert.notEqual(r.state,s0);});
+test('levels use their actual facts instead of hardcoded answer identities',()=>{const level=P.levels[0],saved=level.facts;try{level.facts=saved.map(([v,a,b])=>[v,a==='a'?'b':a==='b'?'a':a,b]);const r=P.solve(first,s0);assert.equal(r.ok,true);assert.deepEqual(r.actionPairs,[{actor:'a',target:'d2'}]);}finally{level.facts=saved;}});
+test('load fallback and basic bounds',()=>{assert.equal(P.initial(999).level,0);assert.equal(P.solve(Array(7).fill(first[0]),s0).code,'invalid');assert.equal(P.info(s1).id,1);});
+console.log(`${count} tests passed`);

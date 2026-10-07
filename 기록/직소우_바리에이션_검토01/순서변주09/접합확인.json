@@ -1,0 +1,75 @@
+{
+  "give": {
+    "pieces": 4,
+    "connections": [
+      [
+        "actor",
+        "verb",
+        "twin"
+      ],
+      [
+        "object",
+        "verb",
+        "round"
+      ],
+      [
+        "verb",
+        "other",
+        "round"
+      ]
+    ],
+    "matched": true,
+    "no_overlap": true
+  },
+  "give_reverse": {
+    "pieces": 4,
+    "connections": [
+      [
+        "actor",
+        "verb",
+        "twin"
+      ],
+      [
+        "object",
+        "verb",
+        "round"
+      ],
+      [
+        "verb",
+        "other",
+        "round"
+      ]
+    ],
+    "matched": true,
+    "no_overlap": true
+  },
+  "exit": {
+    "pieces": 2,
+    "connections": [
+      [
+        "actor",
+        "verb",
+        "round"
+      ]
+    ],
+    "matched": true,
+    "no_overlap": true
+  },
+  "close": {
+    "pieces": 3,
+    "connections": [
+      [
+        "actor",
+        "verb",
+        "round"
+      ],
+      [
+        "verb",
+        "door",
+        "round"
+      ]
+    ],
+    "matched": true,
+    "no_overlap": true
+  }
+}

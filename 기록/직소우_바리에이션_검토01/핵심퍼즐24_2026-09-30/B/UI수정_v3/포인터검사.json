@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "selector": "[data-actor=\"clerk\"]",
+      "rect": {
+        "x": 219.76856231689453,
+        "y": 328.77637481689453
+      },
+      "state": {
+        "listener": "clerk",
+        "panel": "진료소의 배송 쪽지"
+      },
+      "pass": true
+    },
+    {
+      "selector": "[data-object=\"cart\"]",
+      "rect": {
+        "x": 502.0485382080078,
+        "y": 336.99549865722656
+      },
+      "state": {
+        "listener": "clerk",
+        "panel": "바깥 작업 자리의 운반함"
+      },
+      "pass": true
+    }
+  ],
+  "semanticTest": "not repeated: visual-only, hashes unchanged"
+}

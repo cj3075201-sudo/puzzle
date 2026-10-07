@@ -1,0 +1,518 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "12 lobby cards",
+      "pass": true
+    },
+    {
+      "name": "1 NPC inside hears",
+      "pass": true
+    },
+    {
+      "name": "1 NPC outside hears",
+      "pass": true
+    },
+    {
+      "name": "1 NPC doctor hears",
+      "pass": true
+    },
+    {
+      "name": "1 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "1 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "1 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "1 step 1 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "1 step 1 accepted",
+      "pass": true
+    },
+    {
+      "name": "1 completed",
+      "pass": true
+    },
+    {
+      "name": "1 completion saved",
+      "pass": true
+    },
+    {
+      "name": "2 NPC inside hears",
+      "pass": true
+    },
+    {
+      "name": "2 NPC outside hears",
+      "pass": true
+    },
+    {
+      "name": "2 NPC guard hears",
+      "pass": true
+    },
+    {
+      "name": "2 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "2 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "2 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "2 completed",
+      "pass": true
+    },
+    {
+      "name": "2 completion saved",
+      "pass": true
+    },
+    {
+      "name": "3 NPC inside hears",
+      "pass": true
+    },
+    {
+      "name": "3 NPC outside hears",
+      "pass": true
+    },
+    {
+      "name": "3 NPC mechanic hears",
+      "pass": true
+    },
+    {
+      "name": "3 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "3 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "3 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "3 completed",
+      "pass": true
+    },
+    {
+      "name": "3 completion saved",
+      "pass": true
+    },
+    {
+      "name": "4 NPC inside hears",
+      "pass": true
+    },
+    {
+      "name": "4 NPC outside hears",
+      "pass": true
+    },
+    {
+      "name": "4 NPC messenger hears",
+      "pass": true
+    },
+    {
+      "name": "4 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "4 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "4 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "4 completed",
+      "pass": true
+    },
+    {
+      "name": "4 completion saved",
+      "pass": true
+    },
+    {
+      "name": "5 NPC left hears",
+      "pass": true
+    },
+    {
+      "name": "5 NPC middle hears",
+      "pass": true
+    },
+    {
+      "name": "5 NPC right hears",
+      "pass": true
+    },
+    {
+      "name": "5 NPC doctor hears",
+      "pass": true
+    },
+    {
+      "name": "5 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "5 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "5 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "5 completed",
+      "pass": true
+    },
+    {
+      "name": "5 completion saved",
+      "pass": true
+    },
+    {
+      "name": "6 NPC patient hears",
+      "pass": true
+    },
+    {
+      "name": "6 NPC expert hears",
+      "pass": true
+    },
+    {
+      "name": "6 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "6 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "6 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "6 step 1 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "6 step 1 accepted",
+      "pass": true
+    },
+    {
+      "name": "6 completed",
+      "pass": true
+    },
+    {
+      "name": "6 completion saved",
+      "pass": true
+    },
+    {
+      "name": "7 NPC guide hears",
+      "pass": true
+    },
+    {
+      "name": "7 NPC doctor hears",
+      "pass": true
+    },
+    {
+      "name": "7 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "7 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "7 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "7 step 1 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "7 step 1 accepted",
+      "pass": true
+    },
+    {
+      "name": "7 step 2 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "7 step 2 accepted",
+      "pass": true
+    },
+    {
+      "name": "7 completed",
+      "pass": true
+    },
+    {
+      "name": "7 completion saved",
+      "pass": true
+    },
+    {
+      "name": "8 NPC manager hears",
+      "pass": true
+    },
+    {
+      "name": "8 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "8 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "8 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "8 step 1 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "8 step 1 accepted",
+      "pass": true
+    },
+    {
+      "name": "8 completed",
+      "pass": true
+    },
+    {
+      "name": "8 completion saved",
+      "pass": true
+    },
+    {
+      "name": "9 NPC suri hears",
+      "pass": true
+    },
+    {
+      "name": "9 NPC moru hears",
+      "pass": true
+    },
+    {
+      "name": "9 NPC doctor hears",
+      "pass": true
+    },
+    {
+      "name": "9 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "9 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "9 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "9 step 1 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "9 step 1 accepted",
+      "pass": true
+    },
+    {
+      "name": "9 completed",
+      "pass": true
+    },
+    {
+      "name": "9 completion saved",
+      "pass": true
+    },
+    {
+      "name": "10 NPC traveler hears",
+      "pass": true
+    },
+    {
+      "name": "10 NPC guard hears",
+      "pass": true
+    },
+    {
+      "name": "10 NPC porter hears",
+      "pass": true
+    },
+    {
+      "name": "10 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "10 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "10 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "10 step 1 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "10 step 1 accepted",
+      "pass": true
+    },
+    {
+      "name": "10 completed",
+      "pass": true
+    },
+    {
+      "name": "10 completion saved",
+      "pass": true
+    },
+    {
+      "name": "11 NPC messenger hears",
+      "pass": true
+    },
+    {
+      "name": "11 NPC scribe hears",
+      "pass": true
+    },
+    {
+      "name": "11 NPC guard hears",
+      "pass": true
+    },
+    {
+      "name": "11 NPC explorer hears",
+      "pass": true
+    },
+    {
+      "name": "11 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "11 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "11 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "11 step 1 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "11 step 1 accepted",
+      "pass": true
+    },
+    {
+      "name": "11 step 2 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "11 step 2 accepted",
+      "pass": true
+    },
+    {
+      "name": "11 completed",
+      "pass": true
+    },
+    {
+      "name": "11 completion saved",
+      "pass": true
+    },
+    {
+      "name": "12 NPC suri hears",
+      "pass": true
+    },
+    {
+      "name": "12 NPC moru hears",
+      "pass": true
+    },
+    {
+      "name": "12 hearing does not complete",
+      "pass": true
+    },
+    {
+      "name": "12 step 0 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "12 step 0 accepted",
+      "pass": true
+    },
+    {
+      "name": "12 step 1 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "12 step 1 accepted",
+      "pass": true
+    },
+    {
+      "name": "12 step 2 UI graph matches",
+      "pass": true
+    },
+    {
+      "name": "12 step 2 accepted",
+      "pass": true
+    },
+    {
+      "name": "12 completed",
+      "pass": true
+    },
+    {
+      "name": "12 completion saved",
+      "pass": true
+    },
+    {
+      "name": "clear",
+      "pass": true
+    },
+    {
+      "name": "undo clear",
+      "pass": true
+    },
+    {
+      "name": "wrong color does not replace",
+      "pass": true
+    },
+    {
+      "name": "word replacement",
+      "pass": true
+    },
+    {
+      "name": "undo word",
+      "pass": true
+    },
+    {
+      "name": "pointer drag moved",
+      "pass": true
+    },
+    {
+      "name": "switch restores complete",
+      "pass": true
+    },
+    {
+      "name": "hint opens",
+      "pass": true
+    },
+    {
+      "name": "hint not completion",
+      "pass": true
+    },
+    {
+      "name": "lobby returns",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

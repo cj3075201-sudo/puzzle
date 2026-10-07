@@ -1,0 +1,551 @@
+{"at": "2026-09-29T18:53:02.951Z", "request": {"agent": "m", "action": "open", "case": "11"}, "case": "11", "step": 1, "screenshot": "/tmp/grad-core24-20260930/evidence/m/11/001.png"}
+{"at": "2026-09-29T18:53:07.232Z", "request": {"agent": "m", "action": "state"}, "case": "11", "step": 2, "screenshot": "/tmp/grad-core24-20260930/evidence/m/11/002.png"}
+{"at": "2026-09-29T18:53:07.411Z", "request": {"agent": "m", "action": "click", "x": 931, "y": 319.5}, "case": "11", "step": 3, "screenshot": "/tmp/grad-core24-20260930/evidence/m/11/003.png"}
+{"at": "2026-09-29T18:53:21.736Z", "request": {"agent": "m", "action": "click", "x": 878, "y": 343}, "case": "11", "step": 4, "screenshot": "/tmp/grad-core24-20260930/evidence/m/11/004.png"}
+{"at": "2026-09-29T18:55:44.053Z", "request": {"agent": "c", "action": "open", "case": "11"}, "case": "11", "step": 1, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/001.png"}
+{"at": "2026-09-29T18:55:46.119Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 2, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/002.png"}
+{"at": "2026-09-29T18:55:46.304Z", "request": {"agent": "c", "action": "click", "x": 226, "y": 518.5}, "case": "11", "step": 3, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/003.png"}
+{"at": "2026-09-29T18:55:56.788Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 4, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/004.png"}
+{"at": "2026-09-29T18:55:56.972Z", "request": {"agent": "c", "action": "click", "x": 986, "y": 317.5}, "case": "11", "step": 5, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/005.png"}
+{"at": "2026-09-29T18:56:00.853Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 6, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/006.png"}
+{"at": "2026-09-29T18:56:01.034Z", "request": {"agent": "c", "action": "click", "x": 1437.5, "y": 495}, "case": "11", "step": 7, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/007.png"}
+{"at": "2026-09-29T18:56:01.250Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 8, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/008.png"}
+{"at": "2026-09-29T18:56:01.433Z", "request": {"agent": "c", "action": "click", "x": 1096, "y": 571}, "case": "11", "step": 9, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/009.png"}
+{"at": "2026-09-29T18:56:01.634Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 10, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/010.png"}
+{"at": "2026-09-29T18:56:01.818Z", "request": {"agent": "c", "action": "click", "x": 668.5, "y": 314.5}, "case": "11", "step": 11, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/011.png"}
+{"at": "2026-09-29T18:56:11.053Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 12, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/012.png"}
+{"at": "2026-09-29T18:56:11.260Z", "request": {"agent": "c", "action": "click", "x": 121.5, "y": 575}, "case": "11", "step": 13, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/013.png"}
+{"at": "2026-09-29T18:56:11.474Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 14, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/014.png"}
+{"at": "2026-09-29T18:56:11.656Z", "request": {"agent": "c", "action": "click", "x": 1423, "y": 492.5}, "case": "11", "step": 15, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/015.png"}
+{"at": "2026-09-29T18:56:11.890Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 16, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/016.png"}
+{"at": "2026-09-29T18:56:12.090Z", "request": {"agent": "c", "action": "click", "x": 419, "y": 560.5}, "case": "11", "step": 17, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/017.png"}
+{"at": "2026-09-29T18:56:12.306Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 18, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/018.png"}
+{"at": "2026-09-29T18:56:12.508Z", "request": {"agent": "c", "action": "click", "x": 975.5, "y": 316}, "case": "11", "step": 19, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/019.png"}
+{"at": "2026-09-29T18:56:17.391Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 20, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/020.png"}
+{"at": "2026-09-29T18:56:20.192Z", "request": {"agent": "c", "action": "scroll", "dy": 650, "x": 800, "y": 700}, "case": "11", "step": 21, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/021.png"}
+{"at": "2026-09-29T18:56:23.675Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 22, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/022.png"}
+{"at": "2026-09-29T18:56:23.860Z", "request": {"agent": "c", "action": "click", "x": 202.5, "y": 926}, "case": "11", "step": 23, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/023.png"}
+{"at": "2026-09-29T18:56:24.093Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 24, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/024.png"}
+{"at": "2026-09-29T18:56:29.095Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 25, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/025.png"}
+{"at": "2026-09-29T18:56:29.291Z", "request": {"agent": "c", "action": "click", "x": 202.5, "y": 926}, "case": "11", "step": 26, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/026.png"}
+{"at": "2026-09-29T18:56:29.525Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 27, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/027.png"}
+{"at": "2026-09-29T18:56:29.727Z", "request": {"agent": "c", "action": "click", "x": 202.5, "y": 976}, "case": "11", "step": 28, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/028.png"}
+{"at": "2026-09-29T18:56:29.977Z", "request": {"agent": "c", "action": "click", "x": 1460, "y": 195}, "case": "11", "step": 29, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/029.png"}
+{"at": "2026-09-29T18:56:42.261Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 30, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/030.png"}
+{"at": "2026-09-29T18:56:42.449Z", "request": {"agent": "c", "action": "click", "x": 223.5, "y": 204}, "case": "11", "step": 31, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/031.png"}
+{"at": "2026-09-29T18:56:42.666Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 32, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/032.png"}
+{"at": "2026-09-29T18:56:42.849Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 444.5}, "case": "11", "step": 33, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/033.png"}
+{"at": "2026-09-29T18:56:55.766Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 34, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/034.png"}
+{"at": "2026-09-29T18:56:55.974Z", "request": {"agent": "c", "action": "click", "x": 121.5, "y": 575}, "case": "11", "step": 35, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/035.png"}
+{"at": "2026-09-29T18:56:56.205Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 36, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/036.png"}
+{"at": "2026-09-29T18:56:56.406Z", "request": {"agent": "c", "action": "click", "x": 662.5, "y": 381.5}, "case": "11", "step": 37, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/037.png"}
+{"at": "2026-09-29T18:56:56.626Z", "request": {"agent": "c", "action": "scroll", "dy": 700, "x": 800, "y": 700}, "case": "11", "step": 38, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/038.png"}
+{"at": "2026-09-29T18:57:03.260Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 39, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/039.png"}
+{"at": "2026-09-29T18:57:03.441Z", "request": {"agent": "c", "action": "click", "x": 1122.5, "y": 498}, "case": "11", "step": 40, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/040.png"}
+{"at": "2026-09-29T18:57:03.675Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 41, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/041.png"}
+{"at": "2026-09-29T18:57:03.858Z", "request": {"agent": "c", "action": "click", "x": 1143, "y": 566}, "case": "11", "step": 42, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/042.png"}
+{"at": "2026-09-29T18:57:04.091Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 43, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/043.png"}
+{"at": "2026-09-29T18:57:04.275Z", "request": {"agent": "c", "action": "click", "x": 528.5, "y": 549.5}, "case": "11", "step": 44, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/044.png"}
+{"at": "2026-09-29T18:57:04.492Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 45, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/045.png"}
+{"at": "2026-09-29T18:57:04.675Z", "request": {"agent": "c", "action": "click", "x": 1113.5, "y": 773.5}, "case": "11", "step": 46, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/046.png"}
+{"at": "2026-09-29T18:57:04.909Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 47, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/047.png"}
+{"at": "2026-09-29T18:57:05.093Z", "request": {"agent": "c", "action": "click", "x": 1177.5, "y": 498}, "case": "11", "step": 48, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/048.png"}
+{"at": "2026-09-29T18:57:05.325Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 49, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/049.png"}
+{"at": "2026-09-29T18:57:05.508Z", "request": {"agent": "c", "action": "click", "x": 1143, "y": 657}, "case": "11", "step": 50, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/050.png"}
+{"at": "2026-09-29T18:57:05.724Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 51, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/051.png"}
+{"at": "2026-09-29T18:57:05.907Z", "request": {"agent": "c", "action": "click", "x": 595.5, "y": 549.5}, "case": "11", "step": 52, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/052.png"}
+{"at": "2026-09-29T18:57:06.124Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 53, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/053.png"}
+{"at": "2026-09-29T18:57:06.309Z", "request": {"agent": "c", "action": "click", "x": 1429, "y": 773.5}, "case": "11", "step": 54, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/054.png"}
+{"at": "2026-09-29T18:57:06.541Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 55, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/055.png"}
+{"at": "2026-09-29T18:57:06.725Z", "request": {"agent": "c", "action": "click", "x": 1143, "y": 657}, "case": "11", "step": 56, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/056.png"}
+{"at": "2026-09-29T18:57:06.958Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 57, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/057.png"}
+{"at": "2026-09-29T18:57:07.141Z", "request": {"agent": "c", "action": "click", "x": 662.5, "y": 549.5}, "case": "11", "step": 58, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/058.png"}
+{"at": "2026-09-29T18:57:07.375Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 59, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/059.png"}
+{"at": "2026-09-29T18:57:07.558Z", "request": {"agent": "c", "action": "click", "x": 1162.5, "y": 810.5}, "case": "11", "step": 60, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/060.png"}
+{"at": "2026-09-29T18:57:07.792Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 61, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/061.png"}
+{"at": "2026-09-29T18:57:07.978Z", "request": {"agent": "c", "action": "click", "x": 1122.5, "y": 498}, "case": "11", "step": 62, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/062.png"}
+{"at": "2026-09-29T18:57:08.207Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 63, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/063.png"}
+{"at": "2026-09-29T18:57:08.392Z", "request": {"agent": "c", "action": "click", "x": 1235, "y": 748}, "case": "11", "step": 64, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/064.png"}
+{"at": "2026-09-29T18:57:08.625Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 65, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/065.png"}
+{"at": "2026-09-29T18:57:08.808Z", "request": {"agent": "c", "action": "click", "x": 729.5, "y": 549.5}, "case": "11", "step": 66, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/066.png"}
+{"at": "2026-09-29T18:57:09.024Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 67, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/067.png"}
+{"at": "2026-09-29T18:57:09.208Z", "request": {"agent": "c", "action": "click", "x": 1225.5, "y": 773.5}, "case": "11", "step": 68, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/068.png"}
+{"at": "2026-09-29T18:57:09.443Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 69, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/069.png"}
+{"at": "2026-09-29T18:57:09.625Z", "request": {"agent": "c", "action": "click", "x": 1235, "y": 657}, "case": "11", "step": 70, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/070.png"}
+{"at": "2026-09-29T18:57:09.842Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 71, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/071.png"}
+{"at": "2026-09-29T18:57:10.026Z", "request": {"agent": "c", "action": "click", "x": 729.5, "y": 616.5}, "case": "11", "step": 72, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/072.png"}
+{"at": "2026-09-29T18:57:10.259Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 73, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/073.png"}
+{"at": "2026-09-29T18:57:10.442Z", "request": {"agent": "c", "action": "click", "x": 1151.5, "y": 773.5}, "case": "11", "step": 74, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/074.png"}
+{"at": "2026-09-29T18:57:10.676Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 75, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/075.png"}
+{"at": "2026-09-29T18:57:10.858Z", "request": {"agent": "c", "action": "click", "x": 1177.5, "y": 498}, "case": "11", "step": 76, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/076.png"}
+{"at": "2026-09-29T18:57:11.093Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 77, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/077.png"}
+{"at": "2026-09-29T18:57:11.275Z", "request": {"agent": "c", "action": "click", "x": 1417, "y": 566}, "case": "11", "step": 78, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/078.png"}
+{"at": "2026-09-29T18:57:11.508Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 79, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/079.png"}
+{"at": "2026-09-29T18:57:11.691Z", "request": {"agent": "c", "action": "click", "x": 729.5, "y": 683.5}, "case": "11", "step": 80, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/080.png"}
+{"at": "2026-09-29T18:57:11.924Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 81, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/081.png"}
+{"at": "2026-09-29T18:57:12.112Z", "request": {"agent": "c", "action": "click", "x": 1205, "y": 810.5}, "case": "11", "step": 82, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/082.png"}
+{"at": "2026-09-29T18:57:16.065Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 83, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/083.png"}
+{"at": "2026-09-29T18:57:16.260Z", "request": {"agent": "c", "action": "click", "x": 1018.5, "y": 962.5}, "case": "11", "step": 84, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/084.png"}
+{"at": "2026-09-29T18:57:32.094Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 85, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/085.png"}
+{"at": "2026-09-29T18:57:32.292Z", "request": {"agent": "c", "action": "click", "x": 729.5, "y": 549.5}, "case": "11", "step": 86, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/086.png"}
+{"at": "2026-09-29T18:57:32.513Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 87, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/087.png"}
+{"at": "2026-09-29T18:57:32.708Z", "request": {"agent": "c", "action": "click", "x": 662.5, "y": 549.5}, "case": "11", "step": 88, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/088.png"}
+{"at": "2026-09-29T18:57:32.923Z", "request": {"agent": "c", "action": "scroll", "dy": 250, "x": 1390, "y": 650}, "case": "11", "step": 89, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/089.png"}
+{"at": "2026-09-29T18:57:39.237Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 90, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/090.png"}
+{"at": "2026-09-29T18:57:39.423Z", "request": {"agent": "c", "action": "click", "x": 1122.5, "y": 498}, "case": "11", "step": 91, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/091.png"}
+{"at": "2026-09-29T18:57:39.640Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 92, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/092.png"}
+{"at": "2026-09-29T18:57:39.824Z", "request": {"agent": "c", "action": "click", "x": 1235, "y": 666}, "case": "11", "step": 93, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/093.png"}
+{"at": "2026-09-29T18:57:40.040Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 94, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/094.png"}
+{"at": "2026-09-29T18:57:40.223Z", "request": {"agent": "c", "action": "click", "x": 729.5, "y": 549.5}, "case": "11", "step": 95, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/095.png"}
+{"at": "2026-09-29T18:57:40.440Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 96, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/096.png"}
+{"at": "2026-09-29T18:57:40.629Z", "request": {"agent": "c", "action": "click", "x": 1225.5, "y": 773.5}, "case": "11", "step": 97, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/097.png"}
+{"at": "2026-09-29T18:57:40.879Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 98, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/098.png"}
+{"at": "2026-09-29T18:57:41.095Z", "request": {"agent": "c", "action": "click", "x": 1018.5, "y": 962.5}, "case": "11", "step": 99, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/099.png"}
+{"at": "2026-09-29T18:57:41.324Z", "request": {"agent": "c", "action": "scroll", "dy": -800, "x": 800, "y": 600}, "case": "11", "step": 100, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/100.png"}
+{"at": "2026-09-29T18:57:41.537Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 101, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/101.png"}
+{"at": "2026-09-29T18:57:41.714Z", "request": {"agent": "c", "action": "click", "x": 223.5, "y": 515}, "case": "11", "step": 102, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/102.png"}
+{"at": "2026-09-29T18:57:41.931Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 103, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/103.png"}
+{"at": "2026-09-29T18:57:42.114Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 444.5}, "case": "11", "step": 104, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/104.png"}
+{"at": "2026-09-29T18:57:49.498Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 105, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/105.png"}
+{"at": "2026-09-29T18:57:49.681Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 518.5}, "case": "11", "step": 106, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/106.png"}
+{"at": "2026-09-29T18:57:58.366Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 107, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/107.png"}
+{"at": "2026-09-29T18:57:58.547Z", "request": {"agent": "c", "action": "click", "x": 714, "y": 468.5}, "case": "11", "step": 108, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/108.png"}
+{"at": "2026-09-29T18:58:03.780Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 109, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/109.png"}
+{"at": "2026-09-29T18:58:03.963Z", "request": {"agent": "c", "action": "click", "x": 936, "y": 518.5}, "case": "11", "step": 110, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/110.png"}
+{"at": "2026-09-29T18:58:16.391Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 111, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/111.png"}
+{"at": "2026-09-29T18:58:16.607Z", "request": {"agent": "c", "action": "click", "x": 121.5, "y": 575}, "case": "11", "step": 112, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/112.png"}
+{"at": "2026-09-29T18:58:16.840Z", "request": {"agent": "c", "action": "scroll", "dy": 700, "x": 800, "y": 700}, "case": "11", "step": 113, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/113.png"}
+{"at": "2026-09-29T18:58:22.792Z", "request": {"agent": "c", "action": "scroll", "dy": 300, "x": 1390, "y": 650}, "case": "11", "step": 114, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/114.png"}
+{"at": "2026-09-29T18:58:38.392Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 115, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/115.png"}
+{"at": "2026-09-29T18:58:38.590Z", "request": {"agent": "c", "action": "click", "x": 584, "y": 962.5}, "case": "11", "step": 116, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/116.png"}
+{"at": "2026-09-29T18:58:38.821Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 117, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/117.png"}
+{"at": "2026-09-29T18:58:39.006Z", "request": {"agent": "c", "action": "click", "x": 1122.5, "y": 498}, "case": "11", "step": 118, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/118.png"}
+{"at": "2026-09-29T18:58:39.238Z", "request": {"agent": "c", "action": "scroll", "dy": -400, "x": 1390, "y": 650}, "case": "11", "step": 119, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/119.png"}
+{"at": "2026-09-29T18:58:44.910Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 120, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/120.png"}
+{"at": "2026-09-29T18:58:45.108Z", "request": {"agent": "c", "action": "click", "x": 1143, "y": 566}, "case": "11", "step": 121, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/121.png"}
+{"at": "2026-09-29T18:58:56.040Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 122, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/122.png"}
+{"at": "2026-09-29T18:58:56.222Z", "request": {"agent": "c", "action": "click", "x": 528.5, "y": 549.5}, "case": "11", "step": 123, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/123.png"}
+{"at": "2026-09-29T18:58:56.454Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 124, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/124.png"}
+{"at": "2026-09-29T18:58:56.638Z", "request": {"agent": "c", "action": "click", "x": 1113.5, "y": 773.5}, "case": "11", "step": 125, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/125.png"}
+{"at": "2026-09-29T18:58:56.853Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 126, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/126.png"}
+{"at": "2026-09-29T18:58:57.039Z", "request": {"agent": "c", "action": "click", "x": 1177.5, "y": 498}, "case": "11", "step": 127, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/127.png"}
+{"at": "2026-09-29T18:58:57.270Z", "request": {"agent": "c", "action": "scroll", "dy": 180, "x": 1390, "y": 650}, "case": "11", "step": 128, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/128.png"}
+{"at": "2026-09-29T18:58:57.486Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 129, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/129.png"}
+{"at": "2026-09-29T18:58:57.674Z", "request": {"agent": "c", "action": "click", "x": 1235, "y": 666}, "case": "11", "step": 130, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/130.png"}
+{"at": "2026-09-29T18:58:57.907Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 131, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/131.png"}
+{"at": "2026-09-29T18:58:58.106Z", "request": {"agent": "c", "action": "click", "x": 595.5, "y": 549.5}, "case": "11", "step": 132, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/132.png"}
+{"at": "2026-09-29T18:58:58.338Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 133, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/133.png"}
+{"at": "2026-09-29T18:58:58.520Z", "request": {"agent": "c", "action": "click", "x": 1429, "y": 773.5}, "case": "11", "step": 134, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/134.png"}
+{"at": "2026-09-29T18:58:58.755Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 135, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/135.png"}
+{"at": "2026-09-29T18:58:58.938Z", "request": {"agent": "c", "action": "click", "x": 1417, "y": 575}, "case": "11", "step": 136, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/136.png"}
+{"at": "2026-09-29T18:58:59.155Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 137, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/137.png"}
+{"at": "2026-09-29T18:58:59.339Z", "request": {"agent": "c", "action": "click", "x": 595.5, "y": 616.5}, "case": "11", "step": 138, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/138.png"}
+{"at": "2026-09-29T18:58:59.557Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 139, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/139.png"}
+{"at": "2026-09-29T18:58:59.738Z", "request": {"agent": "c", "action": "click", "x": 1162.5, "y": 810.5}, "case": "11", "step": 140, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/140.png"}
+{"at": "2026-09-29T18:58:59.954Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 141, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/141.png"}
+{"at": "2026-09-29T18:59:00.138Z", "request": {"agent": "c", "action": "click", "x": 1122.5, "y": 498}, "case": "11", "step": 142, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/142.png"}
+{"at": "2026-09-29T18:59:00.354Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 143, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/143.png"}
+{"at": "2026-09-29T18:59:00.538Z", "request": {"agent": "c", "action": "click", "x": 1143, "y": 575}, "case": "11", "step": 144, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/144.png"}
+{"at": "2026-09-29T18:59:00.753Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 145, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/145.png"}
+{"at": "2026-09-29T18:59:00.939Z", "request": {"agent": "c", "action": "click", "x": 662.5, "y": 616.5}, "case": "11", "step": 146, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/146.png"}
+{"at": "2026-09-29T18:59:01.155Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 147, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/147.png"}
+{"at": "2026-09-29T18:59:01.341Z", "request": {"agent": "c", "action": "click", "x": 1225.5, "y": 773.5}, "case": "11", "step": 148, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/148.png"}
+{"at": "2026-09-29T18:59:01.574Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 149, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/149.png"}
+{"at": "2026-09-29T18:59:01.771Z", "request": {"agent": "c", "action": "click", "x": 1143, "y": 575}, "case": "11", "step": 150, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/150.png"}
+{"at": "2026-09-29T18:59:02.003Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 151, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/151.png"}
+{"at": "2026-09-29T18:59:02.189Z", "request": {"agent": "c", "action": "click", "x": 729.5, "y": 616.5}, "case": "11", "step": 152, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/152.png"}
+{"at": "2026-09-29T18:59:02.420Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 153, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/153.png"}
+{"at": "2026-09-29T18:59:02.604Z", "request": {"agent": "c", "action": "click", "x": 1151.5, "y": 773.5}, "case": "11", "step": 154, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/154.png"}
+{"at": "2026-09-29T18:59:02.822Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 155, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/155.png"}
+{"at": "2026-09-29T18:59:03.005Z", "request": {"agent": "c", "action": "click", "x": 1177.5, "y": 498}, "case": "11", "step": 156, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/156.png"}
+{"at": "2026-09-29T18:59:03.223Z", "request": {"agent": "c", "action": "scroll", "dy": -300, "x": 1390, "y": 650}, "case": "11", "step": 157, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/157.png"}
+{"at": "2026-09-29T18:59:03.452Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 158, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/158.png"}
+{"at": "2026-09-29T18:59:03.637Z", "request": {"agent": "c", "action": "click", "x": 1326, "y": 566}, "case": "11", "step": 159, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/159.png"}
+{"at": "2026-09-29T18:59:03.871Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 160, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/160.png"}
+{"at": "2026-09-29T18:59:04.053Z", "request": {"agent": "c", "action": "click", "x": 796.5, "y": 616.5}, "case": "11", "step": 161, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/161.png"}
+{"at": "2026-09-29T18:59:04.273Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 162, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/162.png"}
+{"at": "2026-09-29T18:59:04.474Z", "request": {"agent": "c", "action": "click", "x": 1205, "y": 810.5}, "case": "11", "step": 163, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/163.png"}
+{"at": "2026-09-29T18:59:04.706Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 164, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/164.png"}
+{"at": "2026-09-29T18:59:04.888Z", "request": {"agent": "c", "action": "click", "x": 1122.5, "y": 498}, "case": "11", "step": 165, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/165.png"}
+{"at": "2026-09-29T18:59:05.107Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 166, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/166.png"}
+{"at": "2026-09-29T18:59:05.303Z", "request": {"agent": "c", "action": "click", "x": 1235, "y": 657}, "case": "11", "step": 167, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/167.png"}
+{"at": "2026-09-29T18:59:05.520Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 168, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/168.png"}
+{"at": "2026-09-29T18:59:05.704Z", "request": {"agent": "c", "action": "click", "x": 595.5, "y": 683.5}, "case": "11", "step": 169, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/169.png"}
+{"at": "2026-09-29T18:59:05.920Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 170, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/170.png"}
+{"at": "2026-09-29T18:59:06.104Z", "request": {"agent": "c", "action": "click", "x": 1262.5, "y": 773.5}, "case": "11", "step": 171, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/171.png"}
+{"at": "2026-09-29T18:59:06.324Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 172, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/172.png"}
+{"at": "2026-09-29T18:59:06.522Z", "request": {"agent": "c", "action": "click", "x": 1235, "y": 657}, "case": "11", "step": 173, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/173.png"}
+{"at": "2026-09-29T18:59:06.737Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 174, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/174.png"}
+{"at": "2026-09-29T18:59:06.921Z", "request": {"agent": "c", "action": "click", "x": 595.5, "y": 750.5}, "case": "11", "step": 175, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/175.png"}
+{"at": "2026-09-29T18:59:07.137Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 176, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/176.png"}
+{"at": "2026-09-29T18:59:07.320Z", "request": {"agent": "c", "action": "click", "x": 1337.5, "y": 773.5}, "case": "11", "step": 177, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/177.png"}
+{"at": "2026-09-29T18:59:07.538Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 178, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/178.png"}
+{"at": "2026-09-29T18:59:07.720Z", "request": {"agent": "c", "action": "click", "x": 1177.5, "y": 498}, "case": "11", "step": 179, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/179.png"}
+{"at": "2026-09-29T18:59:07.937Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 180, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/180.png"}
+{"at": "2026-09-29T18:59:08.119Z", "request": {"agent": "c", "action": "click", "x": 1326, "y": 657}, "case": "11", "step": 181, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/181.png"}
+{"at": "2026-09-29T18:59:08.339Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 182, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/182.png"}
+{"at": "2026-09-29T18:59:08.520Z", "request": {"agent": "c", "action": "click", "x": 595.5, "y": 817.5}, "case": "11", "step": 183, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/183.png"}
+{"at": "2026-09-29T18:59:08.737Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 184, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/184.png"}
+{"at": "2026-09-29T18:59:08.921Z", "request": {"agent": "c", "action": "click", "x": 1302, "y": 810.5}, "case": "11", "step": 185, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/185.png"}
+{"at": "2026-09-29T18:59:09.137Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 186, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/186.png"}
+{"at": "2026-09-29T18:59:09.320Z", "request": {"agent": "c", "action": "click", "x": 1122.5, "y": 498}, "case": "11", "step": 187, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/187.png"}
+{"at": "2026-09-29T18:59:09.538Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 188, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/188.png"}
+{"at": "2026-09-29T18:59:09.722Z", "request": {"agent": "c", "action": "click", "x": 1326, "y": 566}, "case": "11", "step": 189, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/189.png"}
+{"at": "2026-09-29T18:59:09.937Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 190, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/190.png"}
+{"at": "2026-09-29T18:59:10.121Z", "request": {"agent": "c", "action": "click", "x": 662.5, "y": 817.5}, "case": "11", "step": 191, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/191.png"}
+{"at": "2026-09-29T18:59:10.344Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 192, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/192.png"}
+{"at": "2026-09-29T18:59:10.541Z", "request": {"agent": "c", "action": "click", "x": 1225.5, "y": 773.5}, "case": "11", "step": 193, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/193.png"}
+{"at": "2026-09-29T18:59:14.129Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 194, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/194.png"}
+{"at": "2026-09-29T18:59:14.340Z", "request": {"agent": "c", "action": "click", "x": 1018.5, "y": 962.5}, "case": "11", "step": 195, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/195.png"}
+{"at": "2026-09-29T18:59:24.141Z", "request": {"agent": "c", "action": "scroll", "dy": -800, "x": 800, "y": 650}, "case": "11", "step": 196, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/196.png"}
+{"at": "2026-09-29T18:59:24.351Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 197, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/197.png"}
+{"at": "2026-09-29T18:59:24.530Z", "request": {"agent": "c", "action": "click", "x": 223.5, "y": 515}, "case": "11", "step": 198, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/198.png"}
+{"at": "2026-09-29T18:59:24.776Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 199, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/199.png"}
+{"at": "2026-09-29T18:59:24.960Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 444.5}, "case": "11", "step": 200, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/200.png"}
+{"at": "2026-09-29T18:59:38.282Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 201, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/201.png"}
+{"at": "2026-09-29T18:59:38.462Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 518.5}, "case": "11", "step": 202, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/202.png"}
+{"at": "2026-09-29T18:59:38.717Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 203, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/203.png"}
+{"at": "2026-09-29T18:59:38.896Z", "request": {"agent": "c", "action": "click", "x": 714, "y": 468.5}, "case": "11", "step": 204, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/204.png"}
+{"at": "2026-09-29T18:59:39.144Z", "request": {"agent": "c", "action": "state"}, "case": "11", "step": 205, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/205.png"}
+{"at": "2026-09-29T18:59:39.331Z", "request": {"agent": "c", "action": "click", "x": 936, "y": 518.5}, "case": "11", "step": 206, "screenshot": "/tmp/grad-core24-20260930/evidence/c/11/206.png"}
+{"at": "2026-09-29T19:05:24.899Z", "request": {"agent": "c", "action": "open", "case": "12"}, "case": "12", "step": 1, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/001.png"}
+{"at": "2026-09-29T19:05:30.511Z", "request": {"agent": "a", "action": "open", "case": "12"}, "case": "12", "step": 1, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/001.png"}
+{"at": "2026-09-29T19:05:33.946Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 2, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/002.png"}
+{"at": "2026-09-29T19:05:34.078Z", "request": {"agent": "m", "action": "open", "case": "12"}, "case": "12", "step": 1, "screenshot": "/tmp/grad-core24-20260930/evidence/m/12/001.png"}
+{"at": "2026-09-29T19:05:34.157Z", "request": {"agent": "c", "action": "click", "x": 219.5, "y": 328.5}, "case": "12", "step": 3, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/003.png"}
+{"at": "2026-09-29T19:05:34.388Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 4, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/004.png"}
+{"at": "2026-09-29T19:05:34.588Z", "request": {"agent": "c", "action": "click", "x": 502, "y": 337.5}, "case": "12", "step": 5, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/005.png"}
+{"at": "2026-09-29T19:05:34.804Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 6, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/006.png"}
+{"at": "2026-09-29T19:05:35.005Z", "request": {"agent": "c", "action": "click", "x": 804.5, "y": 311}, "case": "12", "step": 7, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/007.png"}
+{"at": "2026-09-29T19:05:35.220Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 8, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/008.png"}
+{"at": "2026-09-29T19:05:35.423Z", "request": {"agent": "c", "action": "click", "x": 993.5, "y": 329.5}, "case": "12", "step": 9, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/009.png"}
+{"at": "2026-09-29T19:05:35.637Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 10, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/010.png"}
+{"at": "2026-09-29T19:05:35.836Z", "request": {"agent": "c", "action": "click", "x": 553, "y": 464}, "case": "12", "step": 11, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/011.png"}
+{"at": "2026-09-29T19:05:39.090Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 2, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/002.png"}
+{"at": "2026-09-29T19:05:39.307Z", "request": {"agent": "a", "action": "click", "x": 219.5, "y": 328.5}, "case": "12", "step": 3, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/003.png"}
+{"at": "2026-09-29T19:05:40.137Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 12, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/012.png"}
+{"at": "2026-09-29T19:05:40.336Z", "request": {"agent": "c", "action": "click", "x": 349.5, "y": 465.5}, "case": "12", "step": 13, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/013.png"}
+{"at": "2026-09-29T19:05:40.553Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 14, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/014.png"}
+{"at": "2026-09-29T19:05:40.751Z", "request": {"agent": "c", "action": "click", "x": 1159.5, "y": 334}, "case": "12", "step": 15, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/015.png"}
+{"at": "2026-09-29T19:05:40.971Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 16, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/016.png"}
+{"at": "2026-09-29T19:05:41.171Z", "request": {"agent": "c", "action": "click", "x": 1322.5, "y": 334}, "case": "12", "step": 17, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/017.png"}
+{"at": "2026-09-29T19:05:41.389Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 18, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/018.png"}
+{"at": "2026-09-29T19:05:43.527Z", "request": {"agent": "a", "action": "scroll", "dy": 650}, "case": "12", "step": 4, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/004.png"}
+{"at": "2026-09-29T19:05:46.852Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 5, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/005.png"}
+{"at": "2026-09-29T19:05:47.036Z", "request": {"agent": "a", "action": "click", "x": 1203.5, "y": 448}, "case": "12", "step": 6, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/006.png"}
+{"at": "2026-09-29T19:05:51.712Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 7, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/007.png"}
+{"at": "2026-09-29T19:05:51.908Z", "request": {"agent": "a", "action": "click", "x": 1166, "y": 513}, "case": "12", "step": 8, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/008.png"}
+{"at": "2026-09-29T19:05:52.087Z", "request": {"agent": "a", "action": "click", "x": 529.5, "y": 499.5}, "case": "12", "step": 9, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/009.png"}
+{"at": "2026-09-29T19:05:52.269Z", "request": {"agent": "a", "action": "click", "x": 1145, "y": 723.5}, "case": "12", "step": 10, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/010.png"}
+{"at": "2026-09-29T19:05:52.453Z", "request": {"agent": "a", "action": "click", "x": 1166, "y": 597}, "case": "12", "step": 11, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/011.png"}
+{"at": "2026-09-29T19:05:52.636Z", "request": {"agent": "a", "action": "click", "x": 596.5, "y": 499.5}, "case": "12", "step": 12, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/012.png"}
+{"at": "2026-09-29T19:05:52.819Z", "request": {"agent": "a", "action": "click", "x": 1194, "y": 723.5}, "case": "12", "step": 13, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/013.png"}
+{"at": "2026-09-29T19:05:53.002Z", "request": {"agent": "a", "action": "click", "x": 1148.5, "y": 448}, "case": "12", "step": 14, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/014.png"}
+{"at": "2026-09-29T19:05:53.186Z", "request": {"agent": "a", "action": "click", "x": 1336, "y": 513}, "case": "12", "step": 15, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/015.png"}
+{"at": "2026-09-29T19:05:53.370Z", "request": {"agent": "a", "action": "click", "x": 663.5, "y": 499.5}, "case": "12", "step": 16, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/016.png"}
+{"at": "2026-09-29T19:05:53.556Z", "request": {"agent": "a", "action": "click", "x": 1408.5, "y": 723.5}, "case": "12", "step": 17, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/017.png"}
+{"at": "2026-09-29T19:05:53.672Z", "request": {"agent": "c", "action": "scroll", "dy": 650, "x": 800, "y": 700}, "case": "12", "step": 19, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/019.png"}
+{"at": "2026-09-29T19:05:53.772Z", "request": {"agent": "a", "action": "click", "x": 1043, "y": 912.5}, "case": "12", "step": 18, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/018.png"}
+{"at": "2026-09-29T19:05:53.886Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 20, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/020.png"}
+{"at": "2026-09-29T19:05:54.086Z", "request": {"agent": "c", "action": "click", "x": 190, "y": 1094}, "case": "12", "step": 21, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/021.png"}
+{"at": "2026-09-29T19:05:57.774Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 19, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/019.png"}
+{"at": "2026-09-29T19:05:57.955Z", "request": {"agent": "a", "action": "click", "x": 663.5, "y": 624.5}, "case": "12", "step": 20, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/020.png"}
+{"at": "2026-09-29T19:05:58.137Z", "request": {"agent": "a", "action": "click", "x": 1333.5, "y": 848.5}, "case": "12", "step": 21, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/021.png"}
+{"at": "2026-09-29T19:05:58.339Z", "request": {"agent": "a", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 22, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/022.png"}
+{"at": "2026-09-29T19:05:58.485Z", "request": {"agent": "c", "action": "scroll", "dy": 350, "x": 850, "y": 800}, "case": "12", "step": 22, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/022.png"}
+{"at": "2026-09-29T19:06:02.490Z", "request": {"agent": "a", "action": "scroll", "dy": -1000}, "case": "12", "step": 23, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/023.png"}
+{"at": "2026-09-29T19:06:02.703Z", "request": {"agent": "a", "action": "click", "x": 993.5, "y": 329.5}, "case": "12", "step": 24, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/024.png"}
+{"at": "2026-09-29T19:06:06.336Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 23, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/023.png"}
+{"at": "2026-09-29T19:06:06.519Z", "request": {"agent": "c", "action": "click", "x": 1203.5, "y": 133}, "case": "12", "step": 24, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/024.png"}
+{"at": "2026-09-29T19:06:06.735Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 25, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/025.png"}
+{"at": "2026-09-29T19:06:06.918Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 198}, "case": "12", "step": 26, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/026.png"}
+{"at": "2026-09-29T19:06:07.134Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 27, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/027.png"}
+{"at": "2026-09-29T19:06:07.319Z", "request": {"agent": "c", "action": "click", "x": 529.5, "y": 184.5}, "case": "12", "step": 28, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/028.png"}
+{"at": "2026-09-29T19:06:07.420Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 25, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/025.png"}
+{"at": "2026-09-29T19:06:07.534Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 29, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/029.png"}
+{"at": "2026-09-29T19:06:07.619Z", "request": {"agent": "a", "action": "click", "x": 502, "y": 337.5}, "case": "12", "step": 26, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/026.png"}
+{"at": "2026-09-29T19:06:07.718Z", "request": {"agent": "c", "action": "click", "x": 1145, "y": 408.5}, "case": "12", "step": 30, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/030.png"}
+{"at": "2026-09-29T19:06:07.938Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 31, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/031.png"}
+{"at": "2026-09-29T19:06:08.119Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 282}, "case": "12", "step": 32, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/032.png"}
+{"at": "2026-09-29T19:06:08.334Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 33, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/033.png"}
+{"at": "2026-09-29T19:06:08.517Z", "request": {"agent": "c", "action": "click", "x": 596.5, "y": 184.5}, "case": "12", "step": 34, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/034.png"}
+{"at": "2026-09-29T19:06:08.734Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 35, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/035.png"}
+{"at": "2026-09-29T19:06:08.917Z", "request": {"agent": "c", "action": "click", "x": 1194, "y": 408.5}, "case": "12", "step": 36, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/036.png"}
+{"at": "2026-09-29T19:06:09.134Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 37, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/037.png"}
+{"at": "2026-09-29T19:06:09.318Z", "request": {"agent": "c", "action": "click", "x": 1148.5, "y": 133}, "case": "12", "step": 38, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/038.png"}
+{"at": "2026-09-29T19:06:09.533Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 39, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/039.png"}
+{"at": "2026-09-29T19:06:09.716Z", "request": {"agent": "c", "action": "click", "x": 1336, "y": 198}, "case": "12", "step": 40, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/040.png"}
+{"at": "2026-09-29T19:06:09.934Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 41, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/041.png"}
+{"at": "2026-09-29T19:06:10.116Z", "request": {"agent": "c", "action": "click", "x": 663.5, "y": 184.5}, "case": "12", "step": 42, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/042.png"}
+{"at": "2026-09-29T19:06:10.334Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 43, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/043.png"}
+{"at": "2026-09-29T19:06:10.517Z", "request": {"agent": "c", "action": "click", "x": 1333.5, "y": 408.5}, "case": "12", "step": 44, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/044.png"}
+{"at": "2026-09-29T19:06:10.734Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 45, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/045.png"}
+{"at": "2026-09-29T19:06:10.934Z", "request": {"agent": "c", "action": "click", "x": 1043, "y": 597.5}, "case": "12", "step": 46, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/046.png"}
+{"at": "2026-09-29T19:06:12.421Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 27, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/027.png"}
+{"at": "2026-09-29T19:06:12.621Z", "request": {"agent": "a", "action": "click", "x": 448, "y": 676}, "case": "12", "step": 28, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/028.png"}
+{"at": "2026-09-29T19:06:12.820Z", "request": {"agent": "a", "action": "click", "x": 553, "y": 464}, "case": "12", "step": 29, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/029.png"}
+{"at": "2026-09-29T19:06:14.602Z", "request": {"agent": "c", "action": "scroll", "dy": 500, "x": 800, "y": 850}, "case": "12", "step": 47, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/047.png"}
+{"at": "2026-09-29T19:06:16.603Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 30, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/030.png"}
+{"at": "2026-09-29T19:06:16.803Z", "request": {"agent": "a", "action": "click", "x": 125.5, "y": 707}, "case": "12", "step": 31, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/031.png"}
+{"at": "2026-09-29T19:06:16.986Z", "request": {"agent": "a", "action": "scroll", "dy": 800}, "case": "12", "step": 32, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/032.png"}
+{"at": "2026-09-29T19:06:17.168Z", "request": {"agent": "a", "action": "click", "x": 596.5, "y": 510.5}, "case": "12", "step": 33, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/033.png"}
+{"at": "2026-09-29T19:06:17.352Z", "request": {"agent": "a", "action": "click", "x": 1242, "y": 734.5}, "case": "12", "step": 34, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/034.png"}
+{"at": "2026-09-29T19:06:17.535Z", "request": {"agent": "a", "action": "click", "x": 663.5, "y": 510.5}, "case": "12", "step": 35, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/035.png"}
+{"at": "2026-09-29T19:06:17.719Z", "request": {"agent": "a", "action": "click", "x": 1451, "y": 734.5}, "case": "12", "step": 36, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/036.png"}
+{"at": "2026-09-29T19:06:17.922Z", "request": {"agent": "a", "action": "click", "x": 1043, "y": 923.5}, "case": "12", "step": 37, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/037.png"}
+{"at": "2026-09-29T19:06:29.353Z", "request": {"agent": "c", "action": "scroll", "dy": -1800, "x": 850, "y": 650}, "case": "12", "step": 48, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/048.png"}
+{"at": "2026-09-29T19:06:29.568Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 49, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/049.png"}
+{"at": "2026-09-29T19:06:29.769Z", "request": {"agent": "c", "action": "click", "x": 502, "y": 337.5}, "case": "12", "step": 50, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/050.png"}
+{"at": "2026-09-29T19:06:29.985Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 51, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/051.png"}
+{"at": "2026-09-29T19:06:30.185Z", "request": {"agent": "c", "action": "click", "x": 448, "y": 676}, "case": "12", "step": 52, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/052.png"}
+{"at": "2026-09-29T19:06:30.403Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 53, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/053.png"}
+{"at": "2026-09-29T19:06:30.606Z", "request": {"agent": "c", "action": "click", "x": 553, "y": 464}, "case": "12", "step": 54, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/054.png"}
+{"at": "2026-09-29T19:06:30.838Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 55, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/055.png"}
+{"at": "2026-09-29T19:06:31.036Z", "request": {"agent": "c", "action": "click", "x": 125.5, "y": 707}, "case": "12", "step": 56, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/056.png"}
+{"at": "2026-09-29T19:06:35.905Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 38, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/038.png"}
+{"at": "2026-09-29T19:06:36.087Z", "request": {"agent": "a", "action": "click", "x": 559, "y": 1004.5}, "case": "12", "step": 39, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/039.png"}
+{"at": "2026-09-29T19:06:36.269Z", "request": {"agent": "a", "action": "click", "x": 1148.5, "y": 540}, "case": "12", "step": 40, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/040.png"}
+{"at": "2026-09-29T19:06:36.453Z", "request": {"agent": "a", "action": "click", "x": 1166, "y": 774}, "case": "12", "step": 41, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/041.png"}
+{"at": "2026-09-29T19:06:36.637Z", "request": {"agent": "a", "action": "click", "x": 529.5, "y": 591.5}, "case": "12", "step": 42, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/042.png"}
+{"at": "2026-09-29T19:06:36.820Z", "request": {"agent": "a", "action": "click", "x": 1408.5, "y": 815.5}, "case": "12", "step": 43, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/043.png"}
+{"at": "2026-09-29T19:06:37.005Z", "request": {"agent": "a", "action": "click", "x": 1203.5, "y": 540}, "case": "12", "step": 44, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/044.png"}
+{"at": "2026-09-29T19:06:37.190Z", "request": {"agent": "a", "action": "click", "x": 1166, "y": 689}, "case": "12", "step": 45, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/045.png"}
+{"at": "2026-09-29T19:06:37.385Z", "request": {"agent": "a", "action": "click", "x": 596.5, "y": 591.5}, "case": "12", "step": 46, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/046.png"}
+{"at": "2026-09-29T19:06:37.571Z", "request": {"agent": "a", "action": "click", "x": 1319, "y": 889.5}, "case": "12", "step": 47, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/047.png"}
+{"at": "2026-09-29T19:06:37.755Z", "request": {"agent": "a", "action": "click", "x": 1148.5, "y": 540}, "case": "12", "step": 48, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/048.png"}
+{"at": "2026-09-29T19:06:37.954Z", "request": {"agent": "a", "action": "click", "x": 1336, "y": 605}, "case": "12", "step": 49, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/049.png"}
+{"at": "2026-09-29T19:06:38.137Z", "request": {"agent": "a", "action": "click", "x": 663.5, "y": 591.5}, "case": "12", "step": 50, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/050.png"}
+{"at": "2026-09-29T19:06:38.320Z", "request": {"agent": "a", "action": "click", "x": 1451, "y": 815.5}, "case": "12", "step": 51, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/051.png"}
+{"at": "2026-09-29T19:06:38.503Z", "request": {"agent": "a", "action": "click", "x": 1203.5, "y": 540}, "case": "12", "step": 52, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/052.png"}
+{"at": "2026-09-29T19:06:38.687Z", "request": {"agent": "a", "action": "click", "x": 1251, "y": 689}, "case": "12", "step": 53, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/053.png"}
+{"at": "2026-09-29T19:06:38.870Z", "request": {"agent": "a", "action": "click", "x": 529.5, "y": 658.5}, "case": "12", "step": 54, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/054.png"}
+{"at": "2026-09-29T19:06:39.052Z", "request": {"agent": "a", "action": "click", "x": 1145, "y": 926.5}, "case": "12", "step": 55, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/055.png"}
+{"at": "2026-09-29T19:06:39.237Z", "request": {"agent": "a", "action": "click", "x": 1148.5, "y": 540}, "case": "12", "step": 56, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/056.png"}
+{"at": "2026-09-29T19:06:39.417Z", "request": {"agent": "c", "action": "scroll", "dy": 1100, "x": 850, "y": 650}, "case": "12", "step": 57, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/057.png"}
+{"at": "2026-09-29T19:06:39.446Z", "request": {"agent": "a", "action": "click", "x": 1420, "y": 605}, "case": "12", "step": 57, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/057.png"}
+{"at": "2026-09-29T19:06:39.633Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 58, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/058.png"}
+{"at": "2026-09-29T19:06:39.662Z", "request": {"agent": "a", "action": "click", "x": 529.5, "y": 725.5}, "case": "12", "step": 58, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/058.png"}
+{"at": "2026-09-29T19:06:39.849Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 608.5}, "case": "12", "step": 59, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/059.png"}
+{"at": "2026-09-29T19:06:39.878Z", "request": {"agent": "a", "action": "click", "x": 1365, "y": 852.5}, "case": "12", "step": 59, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/059.png"}
+{"at": "2026-09-29T19:06:40.069Z", "request": {"agent": "a", "action": "click", "x": 1043, "y": 1004.5}, "case": "12", "step": 60, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/060.png"}
+{"at": "2026-09-29T19:06:40.095Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 60, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/060.png"}
+{"at": "2026-09-29T19:06:40.282Z", "request": {"agent": "c", "action": "click", "x": 1203.5, "y": 144}, "case": "12", "step": 61, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/061.png"}
+{"at": "2026-09-29T19:06:40.499Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 62, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/062.png"}
+{"at": "2026-09-29T19:06:40.686Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 209}, "case": "12", "step": 63, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/063.png"}
+{"at": "2026-09-29T19:06:40.899Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 64, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/064.png"}
+{"at": "2026-09-29T19:06:41.082Z", "request": {"agent": "c", "action": "click", "x": 529.5, "y": 195.5}, "case": "12", "step": 65, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/065.png"}
+{"at": "2026-09-29T19:06:41.298Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 66, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/066.png"}
+{"at": "2026-09-29T19:06:41.482Z", "request": {"agent": "c", "action": "click", "x": 1145, "y": 419.5}, "case": "12", "step": 67, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/067.png"}
+{"at": "2026-09-29T19:06:41.700Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 68, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/068.png"}
+{"at": "2026-09-29T19:06:41.881Z", "request": {"agent": "c", "action": "click", "x": 1336, "y": 209}, "case": "12", "step": 69, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/069.png"}
+{"at": "2026-09-29T19:06:42.099Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 70, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/070.png"}
+{"at": "2026-09-29T19:06:42.282Z", "request": {"agent": "c", "action": "click", "x": 596.5, "y": 195.5}, "case": "12", "step": 71, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/071.png"}
+{"at": "2026-09-29T19:06:42.499Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 72, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/072.png"}
+{"at": "2026-09-29T19:06:42.683Z", "request": {"agent": "c", "action": "click", "x": 1242, "y": 419.5}, "case": "12", "step": 73, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/073.png"}
+{"at": "2026-09-29T19:06:42.901Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 74, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/074.png"}
+{"at": "2026-09-29T19:06:43.106Z", "request": {"agent": "c", "action": "click", "x": 1043, "y": 608.5}, "case": "12", "step": 75, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/075.png"}
+{"at": "2026-09-29T19:06:51.809Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 76, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/076.png"}
+{"at": "2026-09-29T19:06:52.006Z", "request": {"agent": "c", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 77, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/077.png"}
+{"at": "2026-09-29T19:06:52.222Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 78, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/078.png"}
+{"at": "2026-09-29T19:06:52.422Z", "request": {"agent": "c", "action": "click", "x": 490, "y": 1037.5}, "case": "12", "step": 79, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/079.png"}
+{"at": "2026-09-29T19:06:52.637Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 80, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/080.png"}
+{"at": "2026-09-29T19:06:52.824Z", "request": {"agent": "c", "action": "click", "x": 1203.5, "y": 573}, "case": "12", "step": 81, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/081.png"}
+{"at": "2026-09-29T19:06:52.936Z", "request": {"agent": "a", "action": "scroll", "dy": 160, "x": 1250, "y": 680}, "case": "12", "step": 61, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/061.png"}
+{"at": "2026-09-29T19:06:53.038Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 82, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/082.png"}
+{"at": "2026-09-29T19:06:53.223Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 722}, "case": "12", "step": 83, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/083.png"}
+{"at": "2026-09-29T19:06:53.456Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 84, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/084.png"}
+{"at": "2026-09-29T19:06:53.654Z", "request": {"agent": "c", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 85, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/085.png"}
+{"at": "2026-09-29T19:06:53.871Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 86, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/086.png"}
+{"at": "2026-09-29T19:06:54.056Z", "request": {"agent": "c", "action": "click", "x": 1242, "y": 848.5}, "case": "12", "step": 87, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/087.png"}
+{"at": "2026-09-29T19:06:54.272Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 88, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/088.png"}
+{"at": "2026-09-29T19:06:54.455Z", "request": {"agent": "c", "action": "click", "x": 1148.5, "y": 573}, "case": "12", "step": 89, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/089.png"}
+{"at": "2026-09-29T19:06:54.672Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 90, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/090.png"}
+{"at": "2026-09-29T19:06:54.856Z", "request": {"agent": "c", "action": "click", "x": 1336, "y": 638}, "case": "12", "step": 91, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/091.png"}
+{"at": "2026-09-29T19:06:55.072Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 92, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/092.png"}
+{"at": "2026-09-29T19:06:55.255Z", "request": {"agent": "c", "action": "click", "x": 663.5, "y": 624.5}, "case": "12", "step": 93, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/093.png"}
+{"at": "2026-09-29T19:06:55.472Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 94, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/094.png"}
+{"at": "2026-09-29T19:06:55.674Z", "request": {"agent": "c", "action": "click", "x": 1451, "y": 848.5}, "case": "12", "step": 95, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/095.png"}
+{"at": "2026-09-29T19:06:55.888Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 96, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/096.png"}
+{"at": "2026-09-29T19:06:56.088Z", "request": {"agent": "c", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 97, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/097.png"}
+{"at": "2026-09-29T19:06:57.556Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 62, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/062.png"}
+{"at": "2026-09-29T19:06:57.754Z", "request": {"agent": "a", "action": "click", "x": 1166, "y": 712}, "case": "12", "step": 63, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/063.png"}
+{"at": "2026-09-29T19:06:57.936Z", "request": {"agent": "a", "action": "click", "x": 529.5, "y": 591.5}, "case": "12", "step": 64, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/064.png"}
+{"at": "2026-09-29T19:06:58.119Z", "request": {"agent": "a", "action": "click", "x": 1408.5, "y": 815.5}, "case": "12", "step": 65, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/065.png"}
+{"at": "2026-09-29T19:06:58.324Z", "request": {"agent": "a", "action": "click", "x": 1043, "y": 1004.5}, "case": "12", "step": 66, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/066.png"}
+{"at": "2026-09-29T19:07:01.669Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 67, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/067.png"}
+{"at": "2026-09-29T19:07:01.873Z", "request": {"agent": "a", "action": "click", "x": 190, "y": 712}, "case": "12", "step": 68, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/068.png"}
+{"at": "2026-09-29T19:07:06.271Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 98, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/098.png"}
+{"at": "2026-09-29T19:07:06.453Z", "request": {"agent": "c", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 99, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/099.png"}
+{"at": "2026-09-29T19:07:06.669Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 100, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/100.png"}
+{"at": "2026-09-29T19:07:06.852Z", "request": {"agent": "c", "action": "click", "x": 1194, "y": 848.5}, "case": "12", "step": 101, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/101.png"}
+{"at": "2026-09-29T19:07:07.070Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 102, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/102.png"}
+{"at": "2026-09-29T19:07:07.253Z", "request": {"agent": "c", "action": "click", "x": 663.5, "y": 624.5}, "case": "12", "step": 103, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/103.png"}
+{"at": "2026-09-29T19:07:07.475Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 104, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/104.png"}
+{"at": "2026-09-29T19:07:07.688Z", "request": {"agent": "c", "action": "click", "x": 1408.5, "y": 848.5}, "case": "12", "step": 105, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/105.png"}
+{"at": "2026-09-29T19:07:07.904Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 106, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/106.png"}
+{"at": "2026-09-29T19:07:08.111Z", "request": {"agent": "c", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 107, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/107.png"}
+{"at": "2026-09-29T19:07:10.084Z", "request": {"agent": "a", "action": "state"}, "case": "12", "step": 69, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/069.png"}
+{"at": "2026-09-29T19:07:10.293Z", "request": {"agent": "a", "action": "click", "x": 559, "y": 1037.5}, "case": "12", "step": 70, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/070.png"}
+{"at": "2026-09-29T19:07:10.489Z", "request": {"agent": "a", "action": "click", "x": 1148.5, "y": 573}, "case": "12", "step": 71, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/071.png"}
+{"at": "2026-09-29T19:07:10.673Z", "request": {"agent": "a", "action": "scroll", "dy": -500, "x": 1250, "y": 650}, "case": "12", "step": 72, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/072.png"}
+{"at": "2026-09-29T19:07:10.873Z", "request": {"agent": "a", "action": "click", "x": 1166, "y": 638}, "case": "12", "step": 73, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/073.png"}
+{"at": "2026-09-29T19:07:11.072Z", "request": {"agent": "a", "action": "click", "x": 529.5, "y": 624.5}, "case": "12", "step": 74, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/074.png"}
+{"at": "2026-09-29T19:07:11.273Z", "request": {"agent": "a", "action": "click", "x": 1365, "y": 885.5}, "case": "12", "step": 75, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/075.png"}
+{"at": "2026-09-29T19:07:11.472Z", "request": {"agent": "a", "action": "click", "x": 1203.5, "y": 573}, "case": "12", "step": 76, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/076.png"}
+{"at": "2026-09-29T19:07:11.672Z", "request": {"agent": "a", "action": "click", "x": 1336, "y": 638}, "case": "12", "step": 77, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/077.png"}
+{"at": "2026-09-29T19:07:11.873Z", "request": {"agent": "a", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 78, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/078.png"}
+{"at": "2026-09-29T19:07:12.073Z", "request": {"agent": "a", "action": "click", "x": 1145, "y": 959.5}, "case": "12", "step": 79, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/079.png"}
+{"at": "2026-09-29T19:07:12.290Z", "request": {"agent": "a", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 80, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/080.png"}
+{"at": "2026-09-29T19:07:16.275Z", "request": {"agent": "a", "action": "scroll", "dy": -1200}, "case": "12", "step": 81, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/081.png"}
+{"at": "2026-09-29T19:07:16.488Z", "request": {"agent": "a", "action": "click", "x": 237, "y": 707}, "case": "12", "step": 82, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/082.png"}
+{"at": "2026-09-29T19:07:16.704Z", "request": {"agent": "a", "action": "click", "x": 349.5, "y": 465.5}, "case": "12", "step": 83, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/083.png"}
+{"at": "2026-09-29T19:07:22.923Z", "request": {"agent": "a", "action": "scroll", "dy": 900}, "case": "12", "step": 84, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/084.png"}
+{"at": "2026-09-29T19:07:23.122Z", "request": {"agent": "a", "action": "click", "x": 559, "y": 1037.5}, "case": "12", "step": 85, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/085.png"}
+{"at": "2026-09-29T19:07:23.321Z", "request": {"agent": "a", "action": "click", "x": 1148.5, "y": 573}, "case": "12", "step": 86, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/086.png"}
+{"at": "2026-09-29T19:07:23.506Z", "request": {"agent": "a", "action": "click", "x": 1166, "y": 638}, "case": "12", "step": 87, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/087.png"}
+{"at": "2026-09-29T19:07:23.707Z", "request": {"agent": "a", "action": "click", "x": 529.5, "y": 624.5}, "case": "12", "step": 88, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/088.png"}
+{"at": "2026-09-29T19:07:23.806Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 108, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/108.png"}
+{"at": "2026-09-29T19:07:23.905Z", "request": {"agent": "a", "action": "click", "x": 1333.5, "y": 848.5}, "case": "12", "step": 89, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/089.png"}
+{"at": "2026-09-29T19:07:24.002Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 1037.5}, "case": "12", "step": 109, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/109.png"}
+{"at": "2026-09-29T19:07:24.104Z", "request": {"agent": "a", "action": "click", "x": 1166, "y": 722}, "case": "12", "step": 90, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/090.png"}
+{"at": "2026-09-29T19:07:24.218Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 110, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/110.png"}
+{"at": "2026-09-29T19:07:24.304Z", "request": {"agent": "a", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 91, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/091.png"}
+{"at": "2026-09-29T19:07:24.402Z", "request": {"agent": "c", "action": "click", "x": 1148.5, "y": 573}, "case": "12", "step": 111, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/111.png"}
+{"at": "2026-09-29T19:07:24.487Z", "request": {"agent": "a", "action": "click", "x": 1408.5, "y": 885.5}, "case": "12", "step": 92, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/092.png"}
+{"at": "2026-09-29T19:07:24.619Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 112, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/112.png"}
+{"at": "2026-09-29T19:07:24.688Z", "request": {"agent": "a", "action": "click", "x": 1203.5, "y": 573}, "case": "12", "step": 93, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/093.png"}
+{"at": "2026-09-29T19:07:24.801Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 638}, "case": "12", "step": 113, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/113.png"}
+{"at": "2026-09-29T19:07:24.886Z", "request": {"agent": "a", "action": "click", "x": 1336, "y": 638}, "case": "12", "step": 94, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/094.png"}
+{"at": "2026-09-29T19:07:25.020Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 114, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/114.png"}
+{"at": "2026-09-29T19:07:25.069Z", "request": {"agent": "a", "action": "click", "x": 663.5, "y": 624.5}, "case": "12", "step": 95, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/095.png"}
+{"at": "2026-09-29T19:07:25.203Z", "request": {"agent": "c", "action": "click", "x": 529.5, "y": 624.5}, "case": "12", "step": 115, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/115.png"}
+{"at": "2026-09-29T19:07:25.255Z", "request": {"agent": "a", "action": "click", "x": 1194, "y": 959.5}, "case": "12", "step": 96, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/096.png"}
+{"at": "2026-09-29T19:07:25.419Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 116, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/116.png"}
+{"at": "2026-09-29T19:07:25.488Z", "request": {"agent": "a", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 97, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/097.png"}
+{"at": "2026-09-29T19:07:25.603Z", "request": {"agent": "c", "action": "click", "x": 1365, "y": 885.5}, "case": "12", "step": 117, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/117.png"}
+{"at": "2026-09-29T19:07:25.668Z", "request": {"agent": "a", "action": "scroll", "dy": -1400}, "case": "12", "step": 98, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/098.png"}
+{"at": "2026-09-29T19:07:25.819Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 118, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/118.png"}
+{"at": "2026-09-29T19:07:25.884Z", "request": {"agent": "a", "action": "click", "x": 183, "y": 707}, "case": "12", "step": 99, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/099.png"}
+{"at": "2026-09-29T19:07:26.004Z", "request": {"agent": "c", "action": "click", "x": 1203.5, "y": 573}, "case": "12", "step": 119, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/119.png"}
+{"at": "2026-09-29T19:07:26.218Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 120, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/120.png"}
+{"at": "2026-09-29T19:07:26.402Z", "request": {"agent": "c", "action": "click", "x": 1336, "y": 638}, "case": "12", "step": 121, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/121.png"}
+{"at": "2026-09-29T19:07:26.618Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 122, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/122.png"}
+{"at": "2026-09-29T19:07:26.802Z", "request": {"agent": "c", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 123, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/123.png"}
+{"at": "2026-09-29T19:07:27.019Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 124, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/124.png"}
+{"at": "2026-09-29T19:07:27.201Z", "request": {"agent": "c", "action": "click", "x": 1145, "y": 959.5}, "case": "12", "step": 125, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/125.png"}
+{"at": "2026-09-29T19:07:27.419Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 126, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/126.png"}
+{"at": "2026-09-29T19:07:27.622Z", "request": {"agent": "c", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 127, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/127.png"}
+{"at": "2026-09-29T19:07:27.836Z", "request": {"agent": "c", "action": "scroll", "dy": -1800, "x": 850, "y": 650}, "case": "12", "step": 128, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/128.png"}
+{"at": "2026-09-29T19:07:28.069Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 129, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/129.png"}
+{"at": "2026-09-29T19:07:28.269Z", "request": {"agent": "c", "action": "click", "x": 553, "y": 464}, "case": "12", "step": 130, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/130.png"}
+{"at": "2026-09-29T19:07:28.487Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 131, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/131.png"}
+{"at": "2026-09-29T19:07:28.685Z", "request": {"agent": "c", "action": "click", "x": 125.5, "y": 707}, "case": "12", "step": 132, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/132.png"}
+{"at": "2026-09-29T19:07:32.739Z", "request": {"agent": "a", "action": "scroll", "dy": 900}, "case": "12", "step": 100, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/100.png"}
+{"at": "2026-09-29T19:07:32.938Z", "request": {"agent": "a", "action": "click", "x": 529.5, "y": 624.5}, "case": "12", "step": 101, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/101.png"}
+{"at": "2026-09-29T19:07:33.138Z", "request": {"agent": "a", "action": "click", "x": 1371.5, "y": 848.5}, "case": "12", "step": 102, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/102.png"}
+{"at": "2026-09-29T19:07:33.354Z", "request": {"agent": "a", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 103, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/103.png"}
+{"at": "2026-09-29T19:07:33.554Z", "request": {"agent": "a", "action": "click", "x": 559, "y": 1037.5}, "case": "12", "step": 104, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/104.png"}
+{"at": "2026-09-29T19:07:33.755Z", "request": {"agent": "a", "action": "click", "x": 1148.5, "y": 573}, "case": "12", "step": 105, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/105.png"}
+{"at": "2026-09-29T19:07:33.953Z", "request": {"agent": "a", "action": "click", "x": 1166, "y": 638}, "case": "12", "step": 106, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/106.png"}
+{"at": "2026-09-29T19:07:34.153Z", "request": {"agent": "a", "action": "click", "x": 529.5, "y": 624.5}, "case": "12", "step": 107, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/107.png"}
+{"at": "2026-09-29T19:07:34.337Z", "request": {"agent": "a", "action": "click", "x": 1365, "y": 885.5}, "case": "12", "step": 108, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/108.png"}
+{"at": "2026-09-29T19:07:34.520Z", "request": {"agent": "a", "action": "click", "x": 1203.5, "y": 573}, "case": "12", "step": 109, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/109.png"}
+{"at": "2026-09-29T19:07:34.705Z", "request": {"agent": "a", "action": "click", "x": 1336, "y": 638}, "case": "12", "step": 110, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/110.png"}
+{"at": "2026-09-29T19:07:34.903Z", "request": {"agent": "a", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 111, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/111.png"}
+{"at": "2026-09-29T19:07:35.088Z", "request": {"agent": "a", "action": "click", "x": 1145, "y": 959.5}, "case": "12", "step": 112, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/112.png"}
+{"at": "2026-09-29T19:07:35.287Z", "request": {"agent": "a", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 113, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/113.png"}
+{"at": "2026-09-29T19:07:35.469Z", "request": {"agent": "a", "action": "scroll", "dy": -1400}, "case": "12", "step": 114, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/114.png"}
+{"at": "2026-09-29T19:07:35.669Z", "request": {"agent": "a", "action": "click", "x": 553, "y": 464}, "case": "12", "step": 115, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/115.png"}
+{"at": "2026-09-29T19:07:35.868Z", "request": {"agent": "a", "action": "click", "x": 237, "y": 707}, "case": "12", "step": 116, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/116.png"}
+{"at": "2026-09-29T19:07:36.068Z", "request": {"agent": "a", "action": "click", "x": 349.5, "y": 465.5}, "case": "12", "step": 117, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/117.png"}
+{"at": "2026-09-29T19:07:36.269Z", "request": {"agent": "a", "action": "click", "x": 183, "y": 707}, "case": "12", "step": 118, "screenshot": "/tmp/grad-core24-20260930/evidence/a/12/118.png"}
+{"at": "2026-09-29T19:07:40.859Z", "request": {"agent": "c", "action": "scroll", "dy": 1400, "x": 850, "y": 650}, "case": "12", "step": 133, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/133.png"}
+{"at": "2026-09-29T19:07:41.091Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 134, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/134.png"}
+{"at": "2026-09-29T19:07:41.289Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 1037.5}, "case": "12", "step": 135, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/135.png"}
+{"at": "2026-09-29T19:07:41.503Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 136, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/136.png"}
+{"at": "2026-09-29T19:07:41.704Z", "request": {"agent": "c", "action": "click", "x": 1148.5, "y": 573}, "case": "12", "step": 137, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/137.png"}
+{"at": "2026-09-29T19:07:41.921Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 138, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/138.png"}
+{"at": "2026-09-29T19:07:42.123Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 638}, "case": "12", "step": 139, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/139.png"}
+{"at": "2026-09-29T19:07:42.337Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 140, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/140.png"}
+{"at": "2026-09-29T19:07:42.538Z", "request": {"agent": "c", "action": "click", "x": 529.5, "y": 624.5}, "case": "12", "step": 141, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/141.png"}
+{"at": "2026-09-29T19:07:42.753Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 142, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/142.png"}
+{"at": "2026-09-29T19:07:42.938Z", "request": {"agent": "c", "action": "click", "x": 1371.5, "y": 848.5}, "case": "12", "step": 143, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/143.png"}
+{"at": "2026-09-29T19:07:43.152Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 144, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/144.png"}
+{"at": "2026-09-29T19:07:43.344Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 722}, "case": "12", "step": 145, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/145.png"}
+{"at": "2026-09-29T19:07:43.571Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 146, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/146.png"}
+{"at": "2026-09-29T19:07:43.770Z", "request": {"agent": "c", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 147, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/147.png"}
+{"at": "2026-09-29T19:07:43.986Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 148, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/148.png"}
+{"at": "2026-09-29T19:07:44.171Z", "request": {"agent": "c", "action": "click", "x": 1408.5, "y": 885.5}, "case": "12", "step": 149, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/149.png"}
+{"at": "2026-09-29T19:07:44.386Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 150, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/150.png"}
+{"at": "2026-09-29T19:07:44.586Z", "request": {"agent": "c", "action": "click", "x": 1203.5, "y": 573}, "case": "12", "step": 151, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/151.png"}
+{"at": "2026-09-29T19:07:44.803Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 152, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/152.png"}
+{"at": "2026-09-29T19:07:45.003Z", "request": {"agent": "c", "action": "click", "x": 1336, "y": 638}, "case": "12", "step": 153, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/153.png"}
+{"at": "2026-09-29T19:07:45.219Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 154, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/154.png"}
+{"at": "2026-09-29T19:07:45.403Z", "request": {"agent": "c", "action": "click", "x": 663.5, "y": 624.5}, "case": "12", "step": 155, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/155.png"}
+{"at": "2026-09-29T19:07:45.620Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 156, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/156.png"}
+{"at": "2026-09-29T19:07:45.819Z", "request": {"agent": "c", "action": "click", "x": 1194, "y": 959.5}, "case": "12", "step": 157, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/157.png"}
+{"at": "2026-09-29T19:07:46.038Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 158, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/158.png"}
+{"at": "2026-09-29T19:07:46.253Z", "request": {"agent": "c", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 159, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/159.png"}
+{"at": "2026-09-29T19:07:46.468Z", "request": {"agent": "c", "action": "scroll", "dy": -1800, "x": 850, "y": 650}, "case": "12", "step": 160, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/160.png"}
+{"at": "2026-09-29T19:07:46.684Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 161, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/161.png"}
+{"at": "2026-09-29T19:07:46.885Z", "request": {"agent": "c", "action": "click", "x": 349.5, "y": 465.5}, "case": "12", "step": 162, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/162.png"}
+{"at": "2026-09-29T19:07:47.101Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 163, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/163.png"}
+{"at": "2026-09-29T19:07:47.301Z", "request": {"agent": "c", "action": "click", "x": 183, "y": 707}, "case": "12", "step": 164, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/164.png"}
+{"at": "2026-09-29T19:08:00.454Z", "request": {"agent": "c", "action": "scroll", "dy": 1400, "x": 850, "y": 650}, "case": "12", "step": 165, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/165.png"}
+{"at": "2026-09-29T19:08:00.669Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 166, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/166.png"}
+{"at": "2026-09-29T19:08:00.871Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 1037.5}, "case": "12", "step": 167, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/167.png"}
+{"at": "2026-09-29T19:08:01.104Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 168, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/168.png"}
+{"at": "2026-09-29T19:08:01.303Z", "request": {"agent": "c", "action": "click", "x": 1148.5, "y": 573}, "case": "12", "step": 169, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/169.png"}
+{"at": "2026-09-29T19:08:01.520Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 170, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/170.png"}
+{"at": "2026-09-29T19:08:01.705Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 638}, "case": "12", "step": 171, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/171.png"}
+{"at": "2026-09-29T19:08:01.920Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 172, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/172.png"}
+{"at": "2026-09-29T19:08:02.122Z", "request": {"agent": "c", "action": "click", "x": 529.5, "y": 624.5}, "case": "12", "step": 173, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/173.png"}
+{"at": "2026-09-29T19:08:02.354Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 174, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/174.png"}
+{"at": "2026-09-29T19:08:02.553Z", "request": {"agent": "c", "action": "click", "x": 1365, "y": 885.5}, "case": "12", "step": 175, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/175.png"}
+{"at": "2026-09-29T19:08:02.786Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 176, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/176.png"}
+{"at": "2026-09-29T19:08:02.986Z", "request": {"agent": "c", "action": "click", "x": 1203.5, "y": 573}, "case": "12", "step": 177, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/177.png"}
+{"at": "2026-09-29T19:08:03.220Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 178, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/178.png"}
+{"at": "2026-09-29T19:08:03.419Z", "request": {"agent": "c", "action": "click", "x": 1336, "y": 638}, "case": "12", "step": 179, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/179.png"}
+{"at": "2026-09-29T19:08:03.636Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 180, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/180.png"}
+{"at": "2026-09-29T19:08:03.835Z", "request": {"agent": "c", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 181, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/181.png"}
+{"at": "2026-09-29T19:08:04.052Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 182, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/182.png"}
+{"at": "2026-09-29T19:08:04.236Z", "request": {"agent": "c", "action": "click", "x": 1145, "y": 959.5}, "case": "12", "step": 183, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/183.png"}
+{"at": "2026-09-29T19:08:04.459Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 184, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/184.png"}
+{"at": "2026-09-29T19:08:04.672Z", "request": {"agent": "c", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 185, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/185.png"}
+{"at": "2026-09-29T19:08:04.903Z", "request": {"agent": "c", "action": "scroll", "dy": -1800, "x": 850, "y": 650}, "case": "12", "step": 186, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/186.png"}
+{"at": "2026-09-29T19:08:05.119Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 187, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/187.png"}
+{"at": "2026-09-29T19:08:05.317Z", "request": {"agent": "c", "action": "click", "x": 553, "y": 464}, "case": "12", "step": 188, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/188.png"}
+{"at": "2026-09-29T19:08:05.535Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 189, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/189.png"}
+{"at": "2026-09-29T19:08:05.734Z", "request": {"agent": "c", "action": "click", "x": 125.5, "y": 707}, "case": "12", "step": 190, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/190.png"}
+{"at": "2026-09-29T19:08:18.074Z", "request": {"agent": "c", "action": "scroll", "dy": 1400, "x": 850, "y": 650}, "case": "12", "step": 191, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/191.png"}
+{"at": "2026-09-29T19:08:18.303Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 192, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/192.png"}
+{"at": "2026-09-29T19:08:18.504Z", "request": {"agent": "c", "action": "click", "x": 559, "y": 1037.5}, "case": "12", "step": 193, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/193.png"}
+{"at": "2026-09-29T19:08:18.720Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 194, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/194.png"}
+{"at": "2026-09-29T19:08:18.920Z", "request": {"agent": "c", "action": "click", "x": 1148.5, "y": 573}, "case": "12", "step": 195, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/195.png"}
+{"at": "2026-09-29T19:08:19.138Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 196, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/196.png"}
+{"at": "2026-09-29T19:08:19.337Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 638}, "case": "12", "step": 197, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/197.png"}
+{"at": "2026-09-29T19:08:19.554Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 198, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/198.png"}
+{"at": "2026-09-29T19:08:19.753Z", "request": {"agent": "c", "action": "click", "x": 529.5, "y": 624.5}, "case": "12", "step": 199, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/199.png"}
+{"at": "2026-09-29T19:08:19.974Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 200, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/200.png"}
+{"at": "2026-09-29T19:08:20.170Z", "request": {"agent": "c", "action": "click", "x": 1333.5, "y": 848.5}, "case": "12", "step": 201, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/201.png"}
+{"at": "2026-09-29T19:08:20.390Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 202, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/202.png"}
+{"at": "2026-09-29T19:08:20.588Z", "request": {"agent": "c", "action": "click", "x": 1166, "y": 722}, "case": "12", "step": 203, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/203.png"}
+{"at": "2026-09-29T19:08:20.803Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 204, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/204.png"}
+{"at": "2026-09-29T19:08:21.002Z", "request": {"agent": "c", "action": "click", "x": 596.5, "y": 624.5}, "case": "12", "step": 205, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/205.png"}
+{"at": "2026-09-29T19:08:21.220Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 206, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/206.png"}
+{"at": "2026-09-29T19:08:21.418Z", "request": {"agent": "c", "action": "click", "x": 1408.5, "y": 885.5}, "case": "12", "step": 207, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/207.png"}
+{"at": "2026-09-29T19:08:21.635Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 208, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/208.png"}
+{"at": "2026-09-29T19:08:21.836Z", "request": {"agent": "c", "action": "click", "x": 1203.5, "y": 573}, "case": "12", "step": 209, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/209.png"}
+{"at": "2026-09-29T19:08:22.052Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 210, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/210.png"}
+{"at": "2026-09-29T19:08:22.252Z", "request": {"agent": "c", "action": "click", "x": 1336, "y": 638}, "case": "12", "step": 211, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/211.png"}
+{"at": "2026-09-29T19:08:22.486Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 212, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/212.png"}
+{"at": "2026-09-29T19:08:22.686Z", "request": {"agent": "c", "action": "click", "x": 663.5, "y": 624.5}, "case": "12", "step": 213, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/213.png"}
+{"at": "2026-09-29T19:08:22.902Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 214, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/214.png"}
+{"at": "2026-09-29T19:08:23.102Z", "request": {"agent": "c", "action": "click", "x": 1194, "y": 959.5}, "case": "12", "step": 215, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/215.png"}
+{"at": "2026-09-29T19:08:23.319Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 216, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/216.png"}
+{"at": "2026-09-29T19:08:23.520Z", "request": {"agent": "c", "action": "click", "x": 1043, "y": 1037.5}, "case": "12", "step": 217, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/217.png"}
+{"at": "2026-09-29T19:08:23.734Z", "request": {"agent": "c", "action": "scroll", "dy": -1800, "x": 850, "y": 650}, "case": "12", "step": 218, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/218.png"}
+{"at": "2026-09-29T19:08:23.952Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 219, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/219.png"}
+{"at": "2026-09-29T19:08:24.151Z", "request": {"agent": "c", "action": "click", "x": 349.5, "y": 465.5}, "case": "12", "step": 220, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/220.png"}
+{"at": "2026-09-29T19:08:24.367Z", "request": {"agent": "c", "action": "state"}, "case": "12", "step": 221, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/221.png"}
+{"at": "2026-09-29T19:08:24.569Z", "request": {"agent": "c", "action": "click", "x": 183, "y": 707}, "case": "12", "step": 222, "screenshot": "/tmp/grad-core24-20260930/evidence/c/12/222.png"}

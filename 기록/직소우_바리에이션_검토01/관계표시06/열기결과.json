@@ -1,0 +1,6 @@
+{
+  "command": "Windows default application launch for comparison HTML",
+  "exit_code": 0,
+  "windows_display_verified": false,
+  "headless_html_render_verified": true
+}

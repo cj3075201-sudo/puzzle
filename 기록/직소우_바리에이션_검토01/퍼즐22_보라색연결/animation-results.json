@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "busy controls locked",
+      "pass": true
+    },
+    {
+      "name": "duplicate submission ignored",
+      "pass": true
+    },
+    {
+      "name": "animated completion displayed",
+      "pass": true
+    },
+    {
+      "name": "animation completion can be undone",
+      "pass": true
+    },
+    {
+      "name": "initial board restored",
+      "pass": true
+    }
+  ]
+}

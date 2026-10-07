@@ -1,0 +1,38 @@
+[
+  {
+    "name": "transfer saved",
+    "pass": true
+  },
+  {
+    "name": "book saved",
+    "pass": true
+  },
+  {
+    "name": "board restored",
+    "pass": true
+  },
+  {
+    "name": "saved utterance restored",
+    "pass": true
+  },
+  {
+    "name": "speech restored",
+    "pass": true
+  },
+  {
+    "name": "completion saved",
+    "pass": true
+  },
+  {
+    "name": "courier position restored",
+    "pass": true
+  },
+  {
+    "name": "keeper stays outside",
+    "pass": true
+  },
+  {
+    "name": "completion visible",
+    "pass": true
+  }
+]

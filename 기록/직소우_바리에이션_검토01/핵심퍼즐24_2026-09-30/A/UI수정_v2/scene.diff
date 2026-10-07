@@ -1,0 +1,9 @@
+--- v1/scene.js
++++ v2/scene.js
+@@ -33,4 +33,6 @@
+  const action=w.mode==='shore'?'배에 타기 →':w.mode==='voyage'?'배를 눌러 이어 보기 →':w.complete?'책 도착':'배가 멈췄다';text(bx+7,by+38,action,13,'#263f40',ship);
+  text(15,26,'배·인물·거울·부표·선착장을 눌러 살펴보세요.',13,'#536a55');
+  if(w.complete){rect(1108,181,38,32,'#d1b980');text(1118,203,'책',14,'#594e35');}
++ // Include gaps between an object's art and label in the same pointer target.
++ for(const target of svg.querySelectorAll('[data-world]')){const b=target.getBBox();target.prepend(E('rect',{x:b.x,y:b.y,width:b.width,height:b.height,fill:'transparent','pointer-events':'all','data-hitbox':'world','aria-hidden':'true'}));}
+ }};

@@ -1,0 +1,193 @@
+{
+  "scope": "설명용 9배치. 접합과 글자 여백만 검증; 문법 채택/재미 검증 아님.",
+  "layouts": {
+    "tile_none": {
+      "pieces": 4,
+      "joins": [
+        [
+          "left",
+          "verb"
+        ],
+        [
+          "top",
+          "verb"
+        ],
+        [
+          "verb",
+          "dest"
+        ]
+      ],
+      "overlaps": 0,
+      "all_ports_matched": true,
+      "text_safe": true
+    },
+    "tile_left": {
+      "pieces": 5,
+      "joins": [
+        [
+          "alpha",
+          "verb"
+        ],
+        [
+          "top",
+          "verb"
+        ],
+        [
+          "verb",
+          "dest"
+        ],
+        [
+          "left",
+          "alpha"
+        ]
+      ],
+      "overlaps": 0,
+      "all_ports_matched": true,
+      "text_safe": true
+    },
+    "tile_top": {
+      "pieces": 5,
+      "joins": [
+        [
+          "left",
+          "verb"
+        ],
+        [
+          "alpha",
+          "verb"
+        ],
+        [
+          "verb",
+          "dest"
+        ],
+        [
+          "top",
+          "alpha"
+        ]
+      ],
+      "overlaps": 0,
+      "all_ports_matched": true,
+      "text_safe": true
+    },
+    "stamp_none": {
+      "pieces": 4,
+      "joins": [
+        [
+          "left",
+          "verb"
+        ],
+        [
+          "top",
+          "verb"
+        ],
+        [
+          "verb",
+          "dest"
+        ]
+      ],
+      "overlaps": 0,
+      "all_ports_matched": true,
+      "text_safe": true
+    },
+    "stamp_left": {
+      "pieces": 4,
+      "joins": [
+        [
+          "left",
+          "verb"
+        ],
+        [
+          "top",
+          "verb"
+        ],
+        [
+          "verb",
+          "dest"
+        ]
+      ],
+      "overlaps": 0,
+      "all_ports_matched": true,
+      "text_safe": true
+    },
+    "stamp_top": {
+      "pieces": 4,
+      "joins": [
+        [
+          "left",
+          "verb"
+        ],
+        [
+          "top",
+          "verb"
+        ],
+        [
+          "verb",
+          "dest"
+        ]
+      ],
+      "overlaps": 0,
+      "all_ports_matched": true,
+      "text_safe": true
+    },
+    "shape_none": {
+      "pieces": 4,
+      "joins": [
+        [
+          "left",
+          "verb"
+        ],
+        [
+          "top",
+          "verb"
+        ],
+        [
+          "verb",
+          "dest"
+        ]
+      ],
+      "overlaps": 0,
+      "all_ports_matched": true,
+      "text_safe": true
+    },
+    "shape_left": {
+      "pieces": 4,
+      "joins": [
+        [
+          "left",
+          "verb"
+        ],
+        [
+          "top",
+          "verb"
+        ],
+        [
+          "verb",
+          "dest"
+        ]
+      ],
+      "overlaps": 0,
+      "all_ports_matched": true,
+      "text_safe": true
+    },
+    "shape_top": {
+      "pieces": 4,
+      "joins": [
+        [
+          "left",
+          "verb"
+        ],
+        [
+          "top",
+          "verb"
+        ],
+        [
+          "verb",
+          "dest"
+        ]
+      ],
+      "overlaps": 0,
+      "all_ports_matched": true,
+      "text_safe": true
+    }
+  }
+}

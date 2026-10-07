@@ -1,0 +1,38 @@
+{
+  "at": "2026-09-29T19:01:17.815Z",
+  "checks": [
+    {
+      "name": "dock actual bbox center pointer produces expected response",
+      "pass": true
+    },
+    {
+      "name": "outside actual bbox center pointer produces expected response",
+      "pass": true
+    },
+    {
+      "name": "inside actual bbox center pointer produces expected response",
+      "pass": true
+    },
+    {
+      "name": "mirror actual bbox center pointer produces expected response",
+      "pass": true
+    },
+    {
+      "name": "keeper actual bbox center pointer produces expected response",
+      "pass": true
+    },
+    {
+      "name": "turn actual bbox center pointer produces expected response",
+      "pass": true
+    },
+    {
+      "name": "shore actual bbox center pointer produces expected response",
+      "pass": true
+    },
+    {
+      "name": "boat actual bbox center pointer produces expected response",
+      "pass": true
+    }
+  ],
+  "scope": "모든 월드 클릭 그룹의 실제 bbox 중심 포인터 입력. 의미·정답 변경 없는 UI 회귀 검사."
+}

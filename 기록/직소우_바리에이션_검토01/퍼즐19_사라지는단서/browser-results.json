@@ -1,0 +1,66 @@
+[
+  {
+    "name": "three residents and lamp speech",
+    "pass": true
+  },
+  {
+    "name": "lamp fixed",
+    "pass": true
+  },
+  {
+    "name": "outside giver ambiguous",
+    "pass": true
+  },
+  {
+    "name": "courier has lost book clue",
+    "pass": true
+  },
+  {
+    "name": "empty receiver not auto selected",
+    "pass": true
+  },
+  {
+    "name": "partial world restored",
+    "pass": true
+  },
+  {
+    "name": "three slots restored",
+    "pass": true
+  },
+  {
+    "name": "lamp inside",
+    "pass": true
+  },
+  {
+    "name": "lamp visual position",
+    "pass": true
+  },
+  {
+    "name": "changed location enables completion",
+    "pass": true
+  },
+  {
+    "name": "lamp retains fixed item",
+    "pass": true
+  },
+  {
+    "name": "complete reload",
+    "pass": true
+  },
+  {
+    "name": "reset cancels movement",
+    "pass": true
+  },
+  {
+    "name": "movement reversible",
+    "pass": true
+  },
+  {
+    "name": "lamp has movement transition",
+    "pass": true
+  },
+  {
+    "name": "lamp arrives inside at separate position",
+    "pass": true
+  }
+]

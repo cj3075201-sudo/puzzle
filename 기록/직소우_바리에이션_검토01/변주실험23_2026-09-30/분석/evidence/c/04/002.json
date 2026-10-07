@@ -1,0 +1,1837 @@
+{
+  "title": "A 실험 · 직소우 퍼즐",
+  "text": "DO YOU UNDERSTAND?\nA 실험\n퍼즐 목록\n이 퍼즐 다시 시작\n대화 02 · 새 기능 시험\n바뀌는 당번, 같은 환자\n\n오전·오후 운반 동안 수리는 쉬고, 각 교대의 열쇠 당번이 문을 열게 하세요.\n\n←\n2 / 3\n→\n오전 교대\n수리\n손 치료 중. 오후에도 안정 필요.\n모루\n오전 열쇠 당번.\n도루\n오후 열쇠 당번.\n관리인\n각 교대의 부탁과 운반을 담당한다.\n\n수리는 손 치료를 받는 중이고 모루가 열쇠 당번입니다. 오후에는 열쇠가 도루에게 넘어갑니다. 수리는 오후에 통증이 가셔도 하루 동안 안정을 취해야 합니다. 관리인에게 각자의 일을 부탁한 뒤 운반을 시작할 수 있습니다.\n\n현재 오전 교대\n주민\t현재 상태\t일정\n수리\t손 통증 · 안정 필요\t치료\n모루\t열쇠 보유\t오전 당번\n도루\t열쇠 없음\t오후 당번\n\n계속 부탁: 아직 없음\n\n이번만: 휴식 없음 / 문 열기 없음\n\n이 퍼즐의 임시 규칙 · 계속→사람→행동은 매 교대 다시 읽는 부탁입니다. 이름은 같은 사람을, 주민에 붙인 상태는 그때 조건에 맞는 사람을 고릅니다. 계속이 없으면 이번 교대에만 부탁합니다. 예: 계속→주민(가지다→등불, 기다리다)은 그때 등불을 가진 주민이 기다리는 부탁입니다.\n관리인의 말\n인물을 클릭하세요\n\n오전 부탁판. 계속 부탁은 같은 행동의 이전 부탁을 교체한다. 한 번 부탁은 이번 교대에 더해진다. 운반→시작하다로 현재 교대를 확인한다.\n\n들은 이야기\n조립 방법\n관리인에게 말하기\n모형과 글자를 골라 조립\n되돌리기\n조각 삭제\n비우기\n말해 보기\n\n주민을 클릭해 이야기를 듣고, 조각을 연결해 답해 보세요.\n\n모형\n모양을 골라 놓기\n노랑\n파랑\n글자\n선택한 조각에 넣기\n계속\n수리\n모루\n도루\n주민\n손\n열쇠\n문\n운반\n쉬다\n열다\n가지다\n아프다\n편하다\n시작하다\n\n모형과 글자는 여러 번 쓸 수 있어요.\n\n막혔을 때\n직소 소통 비교 표본 · 한국어 뜻 표시 · 새 기능은 이 표본에서 시험하는 임시 문법",
+  "viewport": {
+    "width": 1536,
+    "height": 1200
+  },
+  "controls": [
+    {
+      "index": 0,
+      "tag": "button",
+      "text": "퍼즐 목록",
+      "rect": {
+        "x": 1271,
+        "y": 15,
+        "width": 84,
+        "height": 38
+      },
+      "disabled": false
+    },
+    {
+      "index": 1,
+      "tag": "button",
+      "text": "이 퍼즐 다시 시작",
+      "rect": {
+        "x": 1363,
+        "y": 15,
+        "width": 130,
+        "height": 38
+      },
+      "disabled": false
+    },
+    {
+      "index": 2,
+      "tag": "button",
+      "text": "←",
+      "rect": {
+        "x": 1355,
+        "y": 115,
+        "width": 42,
+        "height": 38
+      },
+      "disabled": false
+    },
+    {
+      "index": 3,
+      "tag": "button",
+      "text": "→",
+      "rect": {
+        "x": 1451,
+        "y": 115,
+        "width": 42,
+        "height": 38
+      },
+      "disabled": false
+    },
+    {
+      "index": 4,
+      "tag": "g",
+      "text": "수리와 이야기하기",
+      "rect": {
+        "x": 316,
+        "y": 198,
+        "width": 130,
+        "height": 188
+      },
+      "disabled": false
+    },
+    {
+      "index": 5,
+      "tag": "ellipse",
+      "text": "",
+      "rect": {
+        "x": 340,
+        "y": 344,
+        "width": 82,
+        "height": 16
+      },
+      "disabled": false
+    },
+    {
+      "index": 6,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 346,
+        "y": 278,
+        "width": 72,
+        "height": 73
+      },
+      "disabled": false
+    },
+    {
+      "index": 7,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 361,
+        "y": 337,
+        "width": 44,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 8,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 346,
+        "y": 220,
+        "width": 69,
+        "height": 37
+      },
+      "disabled": false
+    },
+    {
+      "index": 9,
+      "tag": "ellipse",
+      "text": "",
+      "rect": {
+        "x": 350,
+        "y": 235,
+        "width": 62,
+        "height": 57
+      },
+      "disabled": false
+    },
+    {
+      "index": 10,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 365,
+        "y": 261,
+        "width": 35,
+        "height": 2
+      },
+      "disabled": false
+    },
+    {
+      "index": 11,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 322,
+        "y": 293,
+        "width": 98,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 12,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 369,
+        "y": 198,
+        "width": 25,
+        "height": 18
+      },
+      "disabled": false
+    },
+    {
+      "index": 13,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 316,
+        "y": 373,
+        "width": 130,
+        "height": 13
+      },
+      "disabled": false
+    },
+    {
+      "index": 14,
+      "tag": "g",
+      "text": "모루와 이야기하기",
+      "rect": {
+        "x": 577,
+        "y": 198,
+        "width": 115,
+        "height": 188
+      },
+      "disabled": false
+    },
+    {
+      "index": 15,
+      "tag": "ellipse",
+      "text": "",
+      "rect": {
+        "x": 593,
+        "y": 344,
+        "width": 82,
+        "height": 16
+      },
+      "disabled": false
+    },
+    {
+      "index": 16,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 599,
+        "y": 278,
+        "width": 72,
+        "height": 73
+      },
+      "disabled": false
+    },
+    {
+      "index": 17,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 614,
+        "y": 337,
+        "width": 44,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 18,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 600,
+        "y": 234,
+        "width": 69,
+        "height": 29
+      },
+      "disabled": false
+    },
+    {
+      "index": 19,
+      "tag": "ellipse",
+      "text": "",
+      "rect": {
+        "x": 603,
+        "y": 235,
+        "width": 62,
+        "height": 57
+      },
+      "disabled": false
+    },
+    {
+      "index": 20,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 618,
+        "y": 261,
+        "width": 35,
+        "height": 2
+      },
+      "disabled": false
+    },
+    {
+      "index": 21,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 587,
+        "y": 291,
+        "width": 95,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 22,
+      "tag": "circle",
+      "text": "",
+      "rect": {
+        "x": 600,
+        "y": 302,
+        "width": 12,
+        "height": 12
+      },
+      "disabled": false
+    },
+    {
+      "index": 23,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 606,
+        "y": 314,
+        "width": 10,
+        "height": 17
+      },
+      "disabled": false
+    },
+    {
+      "index": 24,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 622,
+        "y": 198,
+        "width": 26,
+        "height": 18
+      },
+      "disabled": false
+    },
+    {
+      "index": 25,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 602,
+        "y": 373,
+        "width": 64,
+        "height": 13
+      },
+      "disabled": false
+    },
+    {
+      "index": 26,
+      "tag": "g",
+      "text": "도루와 이야기하기",
+      "rect": {
+        "x": 817,
+        "y": 198,
+        "width": 117,
+        "height": 188
+      },
+      "disabled": false
+    },
+    {
+      "index": 27,
+      "tag": "ellipse",
+      "text": "",
+      "rect": {
+        "x": 835,
+        "y": 344,
+        "width": 82,
+        "height": 16
+      },
+      "disabled": false
+    },
+    {
+      "index": 28,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 841,
+        "y": 278,
+        "width": 72,
+        "height": 73
+      },
+      "disabled": false
+    },
+    {
+      "index": 29,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 856,
+        "y": 337,
+        "width": 44,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 30,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 831,
+        "y": 230,
+        "width": 83,
+        "height": 27
+      },
+      "disabled": false
+    },
+    {
+      "index": 31,
+      "tag": "ellipse",
+      "text": "",
+      "rect": {
+        "x": 845,
+        "y": 235,
+        "width": 62,
+        "height": 57
+      },
+      "disabled": false
+    },
+    {
+      "index": 32,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 860,
+        "y": 261,
+        "width": 35,
+        "height": 2
+      },
+      "disabled": false
+    },
+    {
+      "index": 33,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 817,
+        "y": 293,
+        "width": 98,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 34,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 864,
+        "y": 198,
+        "width": 26,
+        "height": 18
+      },
+      "disabled": false
+    },
+    {
+      "index": 35,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 844,
+        "y": 373,
+        "width": 64,
+        "height": 13
+      },
+      "disabled": false
+    },
+    {
+      "index": 36,
+      "tag": "g",
+      "text": "관리인와 이야기하기",
+      "rect": {
+        "x": 1057,
+        "y": 198,
+        "width": 143,
+        "height": 188
+      },
+      "disabled": false
+    },
+    {
+      "index": 37,
+      "tag": "ellipse",
+      "text": "",
+      "rect": {
+        "x": 1088,
+        "y": 344,
+        "width": 82,
+        "height": 16
+      },
+      "disabled": false
+    },
+    {
+      "index": 38,
+      "tag": "ellipse",
+      "text": "",
+      "rect": {
+        "x": 1072,
+        "y": 217,
+        "width": 115,
+        "height": 148
+      },
+      "disabled": false
+    },
+    {
+      "index": 39,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1093,
+        "y": 278,
+        "width": 72,
+        "height": 73
+      },
+      "disabled": false
+    },
+    {
+      "index": 40,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1109,
+        "y": 337,
+        "width": 44,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 41,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1094,
+        "y": 220,
+        "width": 69,
+        "height": 37
+      },
+      "disabled": false
+    },
+    {
+      "index": 42,
+      "tag": "ellipse",
+      "text": "",
+      "rect": {
+        "x": 1098,
+        "y": 235,
+        "width": 62,
+        "height": 57
+      },
+      "disabled": false
+    },
+    {
+      "index": 43,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1112,
+        "y": 261,
+        "width": 35,
+        "height": 2
+      },
+      "disabled": false
+    },
+    {
+      "index": 44,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1082,
+        "y": 291,
+        "width": 95,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 45,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 1110,
+        "y": 198,
+        "width": 38,
+        "height": 18
+      },
+      "disabled": false
+    },
+    {
+      "index": 46,
+      "tag": "text",
+      "text": "",
+      "rect": {
+        "x": 1057,
+        "y": 373,
+        "width": 143,
+        "height": 13
+      },
+      "disabled": false
+    },
+    {
+      "index": 47,
+      "tag": "summary",
+      "text": "들은 이야기",
+      "rect": {
+        "x": 44,
+        "y": 916,
+        "width": 292,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 48,
+      "tag": "summary",
+      "text": "조립 방법",
+      "rect": {
+        "x": 44,
+        "y": 966,
+        "width": 292,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 49,
+      "tag": "rect",
+      "text": "1행 1열",
+      "rect": {
+        "x": 496,
+        "y": 834,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 50,
+      "tag": "rect",
+      "text": "1행 2열",
+      "rect": {
+        "x": 563,
+        "y": 834,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 51,
+      "tag": "rect",
+      "text": "1행 3열",
+      "rect": {
+        "x": 630,
+        "y": 834,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 52,
+      "tag": "rect",
+      "text": "1행 4열",
+      "rect": {
+        "x": 697,
+        "y": 834,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 53,
+      "tag": "rect",
+      "text": "1행 5열",
+      "rect": {
+        "x": 764,
+        "y": 834,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 54,
+      "tag": "rect",
+      "text": "1행 6열",
+      "rect": {
+        "x": 831,
+        "y": 834,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 55,
+      "tag": "rect",
+      "text": "1행 7열",
+      "rect": {
+        "x": 897,
+        "y": 834,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 56,
+      "tag": "rect",
+      "text": "2행 1열",
+      "rect": {
+        "x": 496,
+        "y": 901,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 57,
+      "tag": "rect",
+      "text": "2행 2열",
+      "rect": {
+        "x": 563,
+        "y": 901,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 58,
+      "tag": "rect",
+      "text": "2행 3열",
+      "rect": {
+        "x": 630,
+        "y": 901,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 59,
+      "tag": "rect",
+      "text": "2행 4열",
+      "rect": {
+        "x": 697,
+        "y": 901,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 60,
+      "tag": "rect",
+      "text": "2행 5열",
+      "rect": {
+        "x": 764,
+        "y": 901,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 61,
+      "tag": "rect",
+      "text": "2행 6열",
+      "rect": {
+        "x": 831,
+        "y": 901,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 62,
+      "tag": "rect",
+      "text": "2행 7열",
+      "rect": {
+        "x": 897,
+        "y": 901,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 63,
+      "tag": "rect",
+      "text": "3행 1열",
+      "rect": {
+        "x": 496,
+        "y": 968,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 64,
+      "tag": "rect",
+      "text": "3행 2열",
+      "rect": {
+        "x": 563,
+        "y": 968,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 65,
+      "tag": "rect",
+      "text": "3행 3열",
+      "rect": {
+        "x": 630,
+        "y": 968,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 66,
+      "tag": "rect",
+      "text": "3행 4열",
+      "rect": {
+        "x": 697,
+        "y": 968,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 67,
+      "tag": "rect",
+      "text": "3행 5열",
+      "rect": {
+        "x": 764,
+        "y": 968,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 68,
+      "tag": "rect",
+      "text": "3행 6열",
+      "rect": {
+        "x": 831,
+        "y": 968,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 69,
+      "tag": "rect",
+      "text": "3행 7열",
+      "rect": {
+        "x": 897,
+        "y": 968,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 70,
+      "tag": "rect",
+      "text": "4행 1열",
+      "rect": {
+        "x": 496,
+        "y": 1035,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 71,
+      "tag": "rect",
+      "text": "4행 2열",
+      "rect": {
+        "x": 563,
+        "y": 1035,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 72,
+      "tag": "rect",
+      "text": "4행 3열",
+      "rect": {
+        "x": 630,
+        "y": 1035,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 73,
+      "tag": "rect",
+      "text": "4행 4열",
+      "rect": {
+        "x": 697,
+        "y": 1035,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 74,
+      "tag": "rect",
+      "text": "4행 5열",
+      "rect": {
+        "x": 764,
+        "y": 1035,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 75,
+      "tag": "rect",
+      "text": "4행 6열",
+      "rect": {
+        "x": 831,
+        "y": 1035,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 76,
+      "tag": "rect",
+      "text": "4행 7열",
+      "rect": {
+        "x": 897,
+        "y": 1035,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 77,
+      "tag": "rect",
+      "text": "5행 1열",
+      "rect": {
+        "x": 496,
+        "y": 1102,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 78,
+      "tag": "rect",
+      "text": "5행 2열",
+      "rect": {
+        "x": 563,
+        "y": 1102,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 79,
+      "tag": "rect",
+      "text": "5행 3열",
+      "rect": {
+        "x": 630,
+        "y": 1102,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 80,
+      "tag": "rect",
+      "text": "5행 4열",
+      "rect": {
+        "x": 697,
+        "y": 1102,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 81,
+      "tag": "rect",
+      "text": "5행 5열",
+      "rect": {
+        "x": 764,
+        "y": 1102,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 82,
+      "tag": "rect",
+      "text": "5행 6열",
+      "rect": {
+        "x": 831,
+        "y": 1102,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 83,
+      "tag": "rect",
+      "text": "5행 7열",
+      "rect": {
+        "x": 897,
+        "y": 1102,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 84,
+      "tag": "rect",
+      "text": "6행 1열",
+      "rect": {
+        "x": 496,
+        "y": 1169,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 85,
+      "tag": "rect",
+      "text": "6행 2열",
+      "rect": {
+        "x": 563,
+        "y": 1169,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 86,
+      "tag": "rect",
+      "text": "6행 3열",
+      "rect": {
+        "x": 630,
+        "y": 1169,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 87,
+      "tag": "rect",
+      "text": "6행 4열",
+      "rect": {
+        "x": 697,
+        "y": 1169,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 88,
+      "tag": "rect",
+      "text": "6행 5열",
+      "rect": {
+        "x": 764,
+        "y": 1169,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 89,
+      "tag": "rect",
+      "text": "6행 6열",
+      "rect": {
+        "x": 831,
+        "y": 1169,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 90,
+      "tag": "rect",
+      "text": "6행 7열",
+      "rect": {
+        "x": 897,
+        "y": 1169,
+        "width": 67,
+        "height": 67
+      },
+      "disabled": false
+    },
+    {
+      "index": 91,
+      "tag": "button",
+      "text": "노랑",
+      "rect": {
+        "x": 1124,
+        "y": 803,
+        "width": 49,
+        "height": 26
+      },
+      "disabled": false
+    },
+    {
+      "index": 92,
+      "tag": "button",
+      "text": "파랑",
+      "rect": {
+        "x": 1179,
+        "y": 803,
+        "width": 49,
+        "height": 26
+      },
+      "disabled": false
+    },
+    {
+      "index": 93,
+      "tag": "button",
+      "text": "오른쪽 돌출",
+      "rect": {
+        "x": 1126,
+        "y": 841,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 94,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1129,
+        "y": 855,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 95,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1149,
+        "y": 864,
+        "width": 41,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 96,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1149,
+        "y": 864,
+        "width": 41,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 97,
+      "tag": "button",
+      "text": "아래 돌출",
+      "rect": {
+        "x": 1211,
+        "y": 841,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 98,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1214,
+        "y": 855,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 99,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1234,
+        "y": 864,
+        "width": 34,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 100,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1234,
+        "y": 864,
+        "width": 34,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 101,
+      "tag": "button",
+      "text": "왼쪽 홈",
+      "rect": {
+        "x": 1296,
+        "y": 841,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 102,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1299,
+        "y": 855,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 103,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1318,
+        "y": 864,
+        "width": 34,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 104,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1318,
+        "y": 864,
+        "width": 34,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 105,
+      "tag": "button",
+      "text": "위 홈",
+      "rect": {
+        "x": 1380,
+        "y": 841,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 106,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1383,
+        "y": 855,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 107,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1403,
+        "y": 864,
+        "width": 34,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 108,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1403,
+        "y": 864,
+        "width": 34,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 109,
+      "tag": "button",
+      "text": "왼쪽 홈 · 오른쪽 돌출",
+      "rect": {
+        "x": 1126,
+        "y": 926,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 110,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1129,
+        "y": 940,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 111,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1149,
+        "y": 948,
+        "width": 41,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 112,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1149,
+        "y": 948,
+        "width": 41,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 113,
+      "tag": "button",
+      "text": "위 홈 · 아래 돌출",
+      "rect": {
+        "x": 1211,
+        "y": 926,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 114,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1214,
+        "y": 940,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 115,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1234,
+        "y": 948,
+        "width": 34,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 116,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1234,
+        "y": 948,
+        "width": 34,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 117,
+      "tag": "button",
+      "text": "위 홈 · 오른쪽 돌출",
+      "rect": {
+        "x": 1296,
+        "y": 926,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 118,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1299,
+        "y": 940,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 119,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1318,
+        "y": 948,
+        "width": 41,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 120,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1318,
+        "y": 948,
+        "width": 41,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 121,
+      "tag": "button",
+      "text": "위 홈 · 오른쪽 돌출 · 아래 돌출",
+      "rect": {
+        "x": 1380,
+        "y": 926,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 122,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1383,
+        "y": 940,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 123,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1403,
+        "y": 948,
+        "width": 41,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 124,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1403,
+        "y": 948,
+        "width": 41,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 125,
+      "tag": "button",
+      "text": "오른쪽 돌출 · 아래 돌출",
+      "rect": {
+        "x": 1126,
+        "y": 1010,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 126,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1129,
+        "y": 1024,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 127,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1149,
+        "y": 1033,
+        "width": 41,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 128,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1149,
+        "y": 1033,
+        "width": 41,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 129,
+      "tag": "button",
+      "text": "왼쪽 홈 · 아래 돌출",
+      "rect": {
+        "x": 1211,
+        "y": 1010,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 130,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1214,
+        "y": 1024,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 131,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1234,
+        "y": 1033,
+        "width": 34,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 132,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1234,
+        "y": 1033,
+        "width": 34,
+        "height": 41
+      },
+      "disabled": false
+    },
+    {
+      "index": 133,
+      "tag": "button",
+      "text": "오른쪽 홈",
+      "rect": {
+        "x": 1296,
+        "y": 1010,
+        "width": 80,
+        "height": 80
+      },
+      "disabled": false
+    },
+    {
+      "index": 134,
+      "tag": "svg",
+      "text": "",
+      "rect": {
+        "x": 1299,
+        "y": 1024,
+        "width": 74,
+        "height": 52
+      },
+      "disabled": false
+    },
+    {
+      "index": 135,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1318,
+        "y": 1033,
+        "width": 34,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 136,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1318,
+        "y": 1033,
+        "width": 34,
+        "height": 34
+      },
+      "disabled": false
+    },
+    {
+      "index": 137,
+      "tag": "button",
+      "text": "계속",
+      "rect": {
+        "x": 1124,
+        "y": 1076,
+        "width": 42,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 138,
+      "tag": "button",
+      "text": "수리",
+      "rect": {
+        "x": 1173,
+        "y": 1076,
+        "width": 42,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 139,
+      "tag": "button",
+      "text": "모루",
+      "rect": {
+        "x": 1221,
+        "y": 1076,
+        "width": 42,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 140,
+      "tag": "button",
+      "text": "도루",
+      "rect": {
+        "x": 1270,
+        "y": 1076,
+        "width": 42,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 141,
+      "tag": "button",
+      "text": "주민",
+      "rect": {
+        "x": 1318,
+        "y": 1076,
+        "width": 42,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 142,
+      "tag": "button",
+      "text": "손",
+      "rect": {
+        "x": 1367,
+        "y": 1076,
+        "width": 31,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 143,
+      "tag": "button",
+      "text": "열쇠",
+      "rect": {
+        "x": 1404,
+        "y": 1076,
+        "width": 42,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 144,
+      "tag": "button",
+      "text": "문",
+      "rect": {
+        "x": 1124,
+        "y": 1113,
+        "width": 31,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 145,
+      "tag": "button",
+      "text": "운반",
+      "rect": {
+        "x": 1162,
+        "y": 1113,
+        "width": 42,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 146,
+      "tag": "button",
+      "text": "쉬다",
+      "rect": {
+        "x": 1210,
+        "y": 1113,
+        "width": 42,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 147,
+      "tag": "button",
+      "text": "열다",
+      "rect": {
+        "x": 1259,
+        "y": 1113,
+        "width": 42,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 148,
+      "tag": "button",
+      "text": "가지다",
+      "rect": {
+        "x": 1307,
+        "y": 1113,
+        "width": 54,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 149,
+      "tag": "button",
+      "text": "아프다",
+      "rect": {
+        "x": 1367,
+        "y": 1113,
+        "width": 54,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 150,
+      "tag": "button",
+      "text": "편하다",
+      "rect": {
+        "x": 1124,
+        "y": 1150,
+        "width": 54,
+        "height": 31
+      },
+      "disabled": false
+    },
+    {
+      "index": 151,
+      "tag": "button",
+      "text": "시작하다",
+      "rect": {
+        "x": 1184,
+        "y": 1150,
+        "width": 65,
+        "height": 31
+      },
+      "disabled": false
+    }
+  ],
+  "screenshot": "/tmp/grad-variants23-20260930/evidence/c/04/002.png",
+  "step": 2,
+  "case": "04"
+}

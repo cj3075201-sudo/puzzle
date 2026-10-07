@@ -1,0 +1,58 @@
+{
+  "tested_HTML": {
+    "bytes": 489539,
+    "sha256": "8fc2c2e5b59b922313471f88979f44f64524917e52dc0d02cb492e44e4ccdbfc"
+  },
+  "final_files": {
+    "플레이.html": {
+      "bytes": 489879,
+      "sha256": "179427d09dc419e52242affc66e1eba5d0d3fd60d7ec4952b70c9748a9f76dd7"
+    },
+    "app.js": {
+      "bytes": 20661,
+      "sha256": "b5e66aaaa34c9df9131eaa25b3e9e8f84483cc9a1c2b69e4380288e4963409ff"
+    },
+    "style.css": {
+      "bytes": 10650,
+      "sha256": "8d7cd728c9cb4777fc695cd492f18659399b49697263508b73c7ae224f9e65b3"
+    },
+    "보기.template.html": {
+      "bytes": 4195,
+      "sha256": "a21c016fbb0c23edd5d061e293ce9c8560907224682e6dddbe1d5d9f1d2b0be0"
+    },
+    "만들기.py": {
+      "bytes": 828,
+      "sha256": "ba987f498c02cb468235df49dce907009508a7add7ee555f0c6d88ff9ef925db"
+    },
+    "core.js": {
+      "bytes": 8573,
+      "sha256": "35b35792bb526e8c8d0a35cb14e5ace2bb7f48b0b63bfdb45155769990572730"
+    },
+    "models.json": {
+      "bytes": 322797,
+      "sha256": "6849534edc0f2c114c14907d9b438243156e650f0899300152fe1f6192b1b12f"
+    },
+    "state.js": {
+      "bytes": 9028,
+      "sha256": "7621bdccbab2e650a9045d503ddfa99902d16904d03747161b5fdd9bf42bcc6e"
+    },
+    "levels.js": {
+      "bytes": 6395,
+      "sha256": "520c17028a5a48a3c251b523db70dafeb45eaeb32cd62864e19136fae9f9fdf7"
+    },
+    "scene.js": {
+      "bytes": 3784,
+      "sha256": "5b9c563164a47606cfd975408ce74fbe3d7fdb52d1310b6ac7e1c99cbc51699c"
+    }
+  },
+  "final_embedded_sources_match": {
+    "core.js": true,
+    "state.js": true,
+    "levels.js": true,
+    "scene.js": true,
+    "app.js": true
+  },
+  "observed_scene_label_change": "水門 → 수문",
+  "scene_difference_proof": "Old embedded scene saved in scene_ui검증버전.js; replacing only that label exactly equals final scene.js.",
+  "note": "ui-build.json source scene snapshot was already Korean when recorded; its embedded tested HTML still had Chinese label. Final build fixes that embedding."
+}

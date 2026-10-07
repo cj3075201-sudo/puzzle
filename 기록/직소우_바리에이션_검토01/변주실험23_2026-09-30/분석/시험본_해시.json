@@ -1,0 +1,74 @@
+{
+  "06": {
+    "sample": "A1",
+    "source": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/변주실험23_2026-09-30/A/플레이.html",
+    "copy": "/tmp/grad-variants23-20260930/cases/06/play.html",
+    "sha256": "f1917b0a98d59184725eb97f406283b092bf8e7885aaf2bb60774aaec3d41c45",
+    "final_sha256": "ff9b006ef4d8749a0bcf0bad2d432ebb40e5efe98186aa8ee56fbe97bf3f1241",
+    "same_as_final": false,
+    "archived_copy": "분석/시험본/A_시험v1.html"
+  },
+  "04": {
+    "sample": "A2",
+    "source": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/변주실험23_2026-09-30/A/플레이.html",
+    "copy": "/tmp/grad-variants23-20260930/cases/04/play.html",
+    "sha256": "f1917b0a98d59184725eb97f406283b092bf8e7885aaf2bb60774aaec3d41c45",
+    "final_sha256": "ff9b006ef4d8749a0bcf0bad2d432ebb40e5efe98186aa8ee56fbe97bf3f1241",
+    "same_as_final": false,
+    "archived_copy": "분석/시험본/A_시험v1.html"
+  },
+  "08": {
+    "sample": "A3",
+    "source": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/변주실험23_2026-09-30/A/플레이.html",
+    "copy": "/tmp/grad-variants23-20260930/cases/08/play.html",
+    "sha256": "f1917b0a98d59184725eb97f406283b092bf8e7885aaf2bb60774aaec3d41c45",
+    "final_sha256": "ff9b006ef4d8749a0bcf0bad2d432ebb40e5efe98186aa8ee56fbe97bf3f1241",
+    "same_as_final": false,
+    "archived_copy": "분석/시험본/A_시험v1.html"
+  },
+  "05": {
+    "sample": "B1",
+    "source": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/변주실험23_2026-09-30/B/플레이.html",
+    "copy": "/tmp/grad-variants23-20260930/cases/05/play.html",
+    "sha256": "04d1eb9aa090646629295254fe8ec46a84f1166698ccd27dd2dba2afe4062325",
+    "final_sha256": "04d1eb9aa090646629295254fe8ec46a84f1166698ccd27dd2dba2afe4062325",
+    "same_as_final": true,
+    "archived_copy": "분석/시험본/B_시험v1.html"
+  },
+  "09": {
+    "sample": "B2",
+    "source": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/변주실험23_2026-09-30/B/플레이.html",
+    "copy": "/tmp/grad-variants23-20260930/cases/09/play.html",
+    "sha256": "04d1eb9aa090646629295254fe8ec46a84f1166698ccd27dd2dba2afe4062325",
+    "final_sha256": "04d1eb9aa090646629295254fe8ec46a84f1166698ccd27dd2dba2afe4062325",
+    "same_as_final": true,
+    "archived_copy": "분석/시험본/B_시험v1.html"
+  },
+  "07": {
+    "sample": "B3",
+    "source": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/변주실험23_2026-09-30/B/플레이.html",
+    "copy": "/tmp/grad-variants23-20260930/cases/07/play.html",
+    "sha256": "04d1eb9aa090646629295254fe8ec46a84f1166698ccd27dd2dba2afe4062325",
+    "final_sha256": "04d1eb9aa090646629295254fe8ec46a84f1166698ccd27dd2dba2afe4062325",
+    "same_as_final": true,
+    "archived_copy": "분석/시험본/B_시험v1.html"
+  },
+  "01": {
+    "source": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐19_사라지는단서/플레이.html",
+    "sha256": "840bea3b4fddf860195c8a9928b2b199086383884b9d6c8ae585652ab2e10247",
+    "final_sha256": "840bea3b4fddf860195c8a9928b2b199086383884b9d6c8ae585652ab2e10247",
+    "same_as_final": true
+  },
+  "02": {
+    "source": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐22_보라색연결/플레이.html",
+    "sha256": "c5ca8418db09e1dd54afa93fbd474be3ca3b11db8e780e417aeb8c7504a62422",
+    "final_sha256": "c5ca8418db09e1dd54afa93fbd474be3ca3b11db8e780e417aeb8c7504a62422",
+    "same_as_final": true
+  },
+  "03": {
+    "source": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/소통변주_12퍼즐/플레이.html",
+    "sha256": "6125378539876d9dea94d169b31129f28d3aa079c080d69a3860e4bd604297f1",
+    "final_sha256": "6125378539876d9dea94d169b31129f28d3aa079c080d69a3860e4bd604297f1",
+    "same_as_final": true
+  }
+}

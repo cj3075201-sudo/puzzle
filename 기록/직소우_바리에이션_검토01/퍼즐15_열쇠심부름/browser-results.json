@@ -1,0 +1,74 @@
+[
+  {
+    "name": "intro closes gate",
+    "pass": true
+  },
+  {
+    "name": "intro restores gate",
+    "pass": true
+  },
+  {
+    "name": "initial speech",
+    "pass": true
+  },
+  {
+    "name": "keeper cannot leave",
+    "pass": true
+  },
+  {
+    "name": "keeper returns",
+    "pass": true
+  },
+  {
+    "name": "empty courier visits",
+    "pass": true
+  },
+  {
+    "name": "empty returns",
+    "pass": true
+  },
+  {
+    "name": "actual graph transfer parses",
+    "pass": true
+  },
+  {
+    "name": "transfer event",
+    "pass": true
+  },
+  {
+    "name": "escape preserves transfer visual",
+    "pass": true
+  },
+  {
+    "name": "key transferred",
+    "pass": true
+  },
+  {
+    "name": "book retained",
+    "pass": true
+  },
+  {
+    "name": "speech updated",
+    "pass": true
+  },
+  {
+    "name": "same sentence restored",
+    "pass": true
+  },
+  {
+    "name": "same sentence now completes",
+    "pass": true
+  },
+  {
+    "name": "courier inside",
+    "pass": true
+  },
+  {
+    "name": "keeper remains",
+    "pass": true
+  },
+  {
+    "name": "reset cancels transfer",
+    "pass": true
+  }
+]

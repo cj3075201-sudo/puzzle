@@ -1,0 +1,529 @@
+{
+  "title": "사라지는 단서 · 직소우 퍼즐",
+  "text": "DO YOU UNDERSTAND? · 플레이 표본 19\n사라지는 단서\n소리 켬\n처음부터\n◇\n\n책과 열쇠를 바꿔 주었다.\n\n교환 완료\n…？\n\n세 주민이 바뀐 물건을 확인하고 인사한다.\n\n푸른 주민 교환함\n책\n갈색 주민 교환함\n열쇠\n등지기 운반틀\n등\n내가 맡은 물건\n비어 있음\n교환 완료\n책과 열쇠를 바꿔 주었다.\n\n푸른 주민은 책, 갈색 주민은 열쇠를 받았다.\n\n다시 해보기\n전달 후 사라진 단서와 현재 위치를 읽는 퍼즐 · 글자 뜻은 한국어로 표시",
+  "viewport": {
+    "width": 1536,
+    "height": 1200
+  },
+  "controls": [
+    {
+      "index": 0,
+      "tag": "button",
+      "text": "소리 켬",
+      "rect": {
+        "x": 1321,
+        "y": 34,
+        "width": 58,
+        "height": 35
+      },
+      "disabled": false
+    },
+    {
+      "index": 1,
+      "tag": "button",
+      "text": "처음부터",
+      "rect": {
+        "x": 1387,
+        "y": 34,
+        "width": 65,
+        "height": 35
+      },
+      "disabled": false
+    },
+    {
+      "index": 2,
+      "tag": "g",
+      "text": "푸른 주민",
+      "rect": {
+        "x": 877,
+        "y": 179,
+        "width": 125,
+        "height": 204
+      },
+      "disabled": false
+    },
+    {
+      "index": 3,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 885,
+        "y": 262,
+        "width": 103,
+        "height": 107
+      },
+      "disabled": false
+    },
+    {
+      "index": 4,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 921,
+        "y": 264,
+        "width": 36,
+        "height": 91
+      },
+      "disabled": false
+    },
+    {
+      "index": 5,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 883,
+        "y": 278,
+        "width": 105,
+        "height": 59
+      },
+      "disabled": false
+    },
+    {
+      "index": 6,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 909,
+        "y": 345,
+        "width": 57,
+        "height": 25
+      },
+      "disabled": false
+    },
+    {
+      "index": 7,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 902,
+        "y": 187,
+        "width": 70,
+        "height": 43
+      },
+      "disabled": false
+    },
+    {
+      "index": 8,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 904,
+        "y": 217,
+        "width": 65,
+        "height": 57
+      },
+      "disabled": false
+    },
+    {
+      "index": 9,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 916,
+        "y": 238,
+        "width": 43,
+        "height": 3
+      },
+      "disabled": false
+    },
+    {
+      "index": 10,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 877,
+        "y": 179,
+        "width": 125,
+        "height": 204
+      },
+      "disabled": false
+    },
+    {
+      "index": 11,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 918,
+        "y": 301,
+        "width": 27,
+        "height": 33
+      },
+      "disabled": false
+    },
+    {
+      "index": 12,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 918,
+        "y": 301,
+        "width": 27,
+        "height": 33
+      },
+      "disabled": false
+    },
+    {
+      "index": 13,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 918,
+        "y": 301,
+        "width": 27,
+        "height": 33
+      },
+      "disabled": false
+    },
+    {
+      "index": 14,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 923,
+        "y": 303,
+        "width": 17,
+        "height": 29
+      },
+      "disabled": false
+    },
+    {
+      "index": 15,
+      "tag": "g",
+      "text": "등지기",
+      "rect": {
+        "x": 1143,
+        "y": 179,
+        "width": 125,
+        "height": 204
+      },
+      "disabled": false
+    },
+    {
+      "index": 16,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1151,
+        "y": 262,
+        "width": 103,
+        "height": 107
+      },
+      "disabled": false
+    },
+    {
+      "index": 17,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1188,
+        "y": 264,
+        "width": 36,
+        "height": 91
+      },
+      "disabled": false
+    },
+    {
+      "index": 18,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1150,
+        "y": 278,
+        "width": 105,
+        "height": 59
+      },
+      "disabled": false
+    },
+    {
+      "index": 19,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1175,
+        "y": 345,
+        "width": 57,
+        "height": 25
+      },
+      "disabled": false
+    },
+    {
+      "index": 20,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1169,
+        "y": 187,
+        "width": 70,
+        "height": 43
+      },
+      "disabled": false
+    },
+    {
+      "index": 21,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1171,
+        "y": 217,
+        "width": 65,
+        "height": 57
+      },
+      "disabled": false
+    },
+    {
+      "index": 22,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1183,
+        "y": 238,
+        "width": 43,
+        "height": 3
+      },
+      "disabled": false
+    },
+    {
+      "index": 23,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 1143,
+        "y": 179,
+        "width": 125,
+        "height": 204
+      },
+      "disabled": false
+    },
+    {
+      "index": 24,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1219,
+        "y": 293,
+        "width": 28,
+        "height": 44
+      },
+      "disabled": false
+    },
+    {
+      "index": 25,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 1219,
+        "y": 293,
+        "width": 28,
+        "height": 44
+      },
+      "disabled": false
+    },
+    {
+      "index": 26,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 1219,
+        "y": 293,
+        "width": 28,
+        "height": 44
+      },
+      "disabled": false
+    },
+    {
+      "index": 27,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 1225,
+        "y": 303,
+        "width": 16,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 28,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 1219,
+        "y": 293,
+        "width": 28,
+        "height": 44
+      },
+      "disabled": false
+    },
+    {
+      "index": 29,
+      "tag": "g",
+      "text": "갈색 주민",
+      "rect": {
+        "x": 536,
+        "y": 188,
+        "width": 125,
+        "height": 200
+      },
+      "disabled": false
+    },
+    {
+      "index": 30,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 543,
+        "y": 267,
+        "width": 111,
+        "height": 102
+      },
+      "disabled": false
+    },
+    {
+      "index": 31,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 587,
+        "y": 272,
+        "width": 34,
+        "height": 93
+      },
+      "disabled": false
+    },
+    {
+      "index": 32,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 547,
+        "y": 284,
+        "width": 105,
+        "height": 56
+      },
+      "disabled": false
+    },
+    {
+      "index": 33,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 570,
+        "y": 348,
+        "width": 60,
+        "height": 26
+      },
+      "disabled": false
+    },
+    {
+      "index": 34,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 562,
+        "y": 197,
+        "width": 78,
+        "height": 35
+      },
+      "disabled": false
+    },
+    {
+      "index": 35,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 569,
+        "y": 222,
+        "width": 65,
+        "height": 55
+      },
+      "disabled": false
+    },
+    {
+      "index": 36,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 579,
+        "y": 245,
+        "width": 43,
+        "height": 3
+      },
+      "disabled": false
+    },
+    {
+      "index": 37,
+      "tag": "rect",
+      "text": "",
+      "rect": {
+        "x": 536,
+        "y": 188,
+        "width": 125,
+        "height": 200
+      },
+      "disabled": false
+    },
+    {
+      "index": 38,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 571,
+        "y": 329,
+        "width": 28,
+        "height": 12
+      },
+      "disabled": false
+    },
+    {
+      "index": 39,
+      "tag": "g",
+      "text": "",
+      "rect": {
+        "x": 571,
+        "y": 329,
+        "width": 28,
+        "height": 12
+      },
+      "disabled": false
+    },
+    {
+      "index": 40,
+      "tag": "circle",
+      "text": "",
+      "rect": {
+        "x": 571,
+        "y": 329,
+        "width": 11,
+        "height": 11
+      },
+      "disabled": false
+    },
+    {
+      "index": 41,
+      "tag": "path",
+      "text": "",
+      "rect": {
+        "x": 582,
+        "y": 334,
+        "width": 18,
+        "height": 6
+      },
+      "disabled": false
+    },
+    {
+      "index": 42,
+      "tag": "button",
+      "text": "다시 해보기",
+      "rect": {
+        "x": 726,
+        "y": 629,
+        "width": 83,
+        "height": 37
+      },
+      "disabled": false
+    }
+  ],
+  "screenshot": "/tmp/grad-variants23-20260930/evidence/c/01/106.png",
+  "step": 106,
+  "case": "01"
+}

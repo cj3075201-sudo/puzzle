@@ -1,0 +1,256 @@
+{
+  "local_links": 50,
+  "missing": [],
+  "links": [
+    {
+      "from": "플레이와_검토.html",
+      "href": "../../../오늘_직소퍼즐_모음.html",
+      "exists": true
+    },
+    {
+      "from": "플레이와_검토.html",
+      "href": "A/플레이.html",
+      "exists": true
+    },
+    {
+      "from": "플레이와_검토.html",
+      "href": "B/플레이.html",
+      "exists": true
+    },
+    {
+      "from": "플레이와_검토.html",
+      "href": "분석/종합보고.md",
+      "exists": true
+    },
+    {
+      "from": "플레이와_검토.html",
+      "href": "분석/종합보고.md",
+      "exists": true
+    },
+    {
+      "from": "플레이와_검토.html",
+      "href": "분석/종합보고.md",
+      "exists": true
+    },
+    {
+      "from": "플레이와_검토.html",
+      "href": "레퍼런스와_설계근거.md",
+      "exists": true
+    },
+    {
+      "from": "플레이와_검토.html",
+      "href": "분석/시험계획.md",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "기록/직소우_바리에이션_검토01/핵심퍼즐24_2026-09-30/플레이와_검토.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/플레이.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "기록/직소우_바리에이션_검토01/변주실험23_2026-09-30/플레이와_비교결과.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9022_%EB%B3%B4%EB%9D%BC%EC%83%89%EC%97%B0%EA%B2%B0/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%EC%86%8C%ED%86%B5%EB%B3%80%EC%A3%BC_12%ED%8D%BC%EC%A6%90/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9013_%EC%B0%A8%EA%B0%80%EC%9A%B4%EC%86%90/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9014_%EC%97%B4%EC%87%A0%EB%A5%BC%EA%B0%80%EC%A7%84%EC%A3%BC%EB%AF%BC/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9015_%EC%97%B4%EC%87%A0%EC%8B%AC%EB%B6%80%EB%A6%84/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9016_%EC%9E%90%EB%A6%AC%EB%B0%94%EA%BE%B8%EA%B8%B0/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9017_%EC%B1%85%EA%B3%BC%EC%97%B4%EC%87%A0/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9018_%EC%9E%A0%EA%B9%90%EB%A7%A1%EC%95%84%EC%A3%BC%EA%B8%B0/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9019_%EC%82%AC%EB%9D%BC%EC%A7%80%EB%8A%94%EB%8B%A8%EC%84%9C/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9020_%EB%88%84%EA%B5%AC%EC%9D%98%EC%86%90/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9021_%EB%A7%90%EC%9D%84%EC%9B%80%EC%A7%81%EC%9D%B4%EB%8A%94%EC%A3%BC%EB%AF%BC/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "오늘_직소퍼즐_모음.html",
+      "href": "%EA%B8%B0%EB%A1%9D/%EC%A7%81%EC%86%8C%EC%9A%B0_%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EA%B2%80%ED%86%A001/%ED%8D%BC%EC%A6%9022_%EB%B3%B4%EB%9D%BC%EC%83%89%EC%97%B0%EA%B2%B0/%ED%94%8C%EB%A0%88%EC%9D%B4.html",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "href": "플레이와_검토.html",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "href": "분석/종합보고.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "href": "분석/독립검산.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "href": "후보와_비교.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "href": "레퍼런스와_설계근거.md",
+      "exists": true
+    },
+    {
+      "from": "후보와_비교.md",
+      "href": "분석/종합보고.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../플레이와_검토.html",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../후보와_비교.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../레퍼런스와_설계근거.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "시험계획.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../A/UI수정_v2/수정기록.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../A/실패관측수정_v3/수정기록.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../B/이전안_빈함회수/설계.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "초견_C_12.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "독립검산.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../B/설계.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../B/상태검사.json",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../B/화면검사.json",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "교차_A_B.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../B/UI수정_v3/수정기록.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../A/설계.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../A/상태시험.json",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "../A/브라우저QA.json",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "초견_C_11.md",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "UI측정.json",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "actions.jsonl",
+      "exists": true
+    },
+    {
+      "from": "분석/종합보고.md",
+      "href": "시험본_해시.json",
+      "exists": true
+    }
+  ]
+}

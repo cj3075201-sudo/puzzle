@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "case": "send",
+      "palette": [
+        "send0",
+        "sendN",
+        "y_e",
+        "y_s",
+        "y_s2",
+        "y_w"
+      ],
+      "opposite_meanings": true,
+      "menu_invariant": true,
+      "unmarked_available": true
+    },
+    {
+      "case": "push",
+      "palette": [
+        "pair0",
+        "pairW",
+        "y_e",
+        "y_e2",
+        "y_s"
+      ],
+      "opposite_meanings": true,
+      "menu_invariant": true,
+      "unmarked_available": true
+    },
+    {
+      "case": "pull",
+      "palette": [
+        "pair0",
+        "pairW",
+        "y_e",
+        "y_e2",
+        "y_s"
+      ],
+      "opposite_meanings": true,
+      "menu_invariant": true,
+      "unmarked_available": true
+    },
+    {
+      "case": "pain",
+      "palette": [
+        "stateW",
+        "y_e"
+      ],
+      "opposite_meanings": true,
+      "menu_invariant": true,
+      "unmarked_available": true
+    }
+  ],
+  "pushPullSamePalette": true,
+  "invalidStateRejected": true,
+  "textBoxes": [
+    {
+      "word": "보내다",
+      "safe": true
+    },
+    {
+      "word": "주민",
+      "safe": true
+    },
+    {
+      "word": "나",
+      "safe": true
+    },
+    {
+      "word": "너",
+      "safe": true
+    },
+    {
+      "word": "밀다",
+      "safe": true
+    },
+    {
+      "word": "나",
+      "safe": true
+    },
+    {
+      "word": "주민",
+      "safe": true
+    },
+    {
+      "word": "당기다",
+      "safe": true
+    },
+    {
+      "word": "나",
+      "safe": true
+    },
+    {
+      "word": "주민",
+      "safe": true
+    },
+    {
+      "word": "손",
+      "safe": true
+    },
+    {
+      "word": "아프다",
+      "safe": true
+    }
+  ],
+  "errors": [],
+  "narrow820NoOverflow": true,
+  "scope": "설계용 전환 화면. 실제 모형 끌기·난도·사람 학습 실측 아님."
+}

@@ -1,0 +1,71 @@
+{
+  "checked": 13,
+  "unchanged": 13,
+  "files": [
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐13_차가운손/플레이.html",
+      "expected": "d3a249ea0c1356b8cfec4ce240e569d383da3c277917ccb6eb889de04d16b731",
+      "actual": "d3a249ea0c1356b8cfec4ce240e569d383da3c277917ccb6eb889de04d16b731"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐14_열쇠를가진주민/플레이.html",
+      "expected": "848ebb73812b8e4073554d64bcf9e101a10a906d24ae70c5cc318429b7018bdb",
+      "actual": "848ebb73812b8e4073554d64bcf9e101a10a906d24ae70c5cc318429b7018bdb"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐15_열쇠심부름/플레이.html",
+      "expected": "89b356480666cb3ef447aba24faf09988dd54125cee7347af3e1c1f04e0bda57",
+      "actual": "89b356480666cb3ef447aba24faf09988dd54125cee7347af3e1c1f04e0bda57"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐16_자리바꾸기/플레이.html",
+      "expected": "325c0ddc30aa18387a7aef05ee02da1d9222834eaf37f30699e1e5c44493ce51",
+      "actual": "325c0ddc30aa18387a7aef05ee02da1d9222834eaf37f30699e1e5c44493ce51"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐17_책과열쇠/플레이.html",
+      "expected": "ffda4db8adf38cb44f8b0a2a6af8654e7445ee2411b0cec6415f8c465e5c981a",
+      "actual": "ffda4db8adf38cb44f8b0a2a6af8654e7445ee2411b0cec6415f8c465e5c981a"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐18_잠깐맡아주기/플레이.html",
+      "expected": "f9d5397d4ee31bb2574cf6cb1b205a1982ff782d318db7a1d0cd69e0359f77df",
+      "actual": "f9d5397d4ee31bb2574cf6cb1b205a1982ff782d318db7a1d0cd69e0359f77df"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐19_사라지는단서/플레이.html",
+      "expected": "840bea3b4fddf860195c8a9928b2b199086383884b9d6c8ae585652ab2e10247",
+      "actual": "840bea3b4fddf860195c8a9928b2b199086383884b9d6c8ae585652ab2e10247"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐20_누구의손/플레이.html",
+      "expected": "a6f91edea6a2560870831632ecc7590f2151d9aa3da09d4ab0698930c4abfd69",
+      "actual": "a6f91edea6a2560870831632ecc7590f2151d9aa3da09d4ab0698930c4abfd69"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐21_말을움직이는주민/플레이.html",
+      "expected": "3ce7257eb881e2911c512d397bc3bd326cc69075eca6e226bdc1338325fb9dbd",
+      "actual": "3ce7257eb881e2911c512d397bc3bd326cc69075eca6e226bdc1338325fb9dbd"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/퍼즐22_보라색연결/플레이.html",
+      "expected": "c5ca8418db09e1dd54afa93fbd474be3ca3b11db8e780e417aeb8c7504a62422",
+      "actual": "c5ca8418db09e1dd54afa93fbd474be3ca3b11db8e780e417aeb8c7504a62422"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/소통변주_12퍼즐/플레이.html",
+      "expected": "6125378539876d9dea94d169b31129f28d3aa079c080d69a3860e4bd604297f1",
+      "actual": "6125378539876d9dea94d169b31129f28d3aa079c080d69a3860e4bd604297f1"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/변주실험23_2026-09-30/A/플레이.html",
+      "expected": "ff9b006ef4d8749a0bcf0bad2d432ebb40e5efe98186aa8ee56fbe97bf3f1241",
+      "actual": "ff9b006ef4d8749a0bcf0bad2d432ebb40e5efe98186aa8ee56fbe97bf3f1241"
+    },
+    {
+      "path": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/변주실험23_2026-09-30/B/플레이.html",
+      "expected": "04d1eb9aa090646629295254fe8ec46a84f1166698ccd27dd2dba2afe4062325",
+      "actual": "04d1eb9aa090646629295254fe8ec46a84f1166698ccd27dd2dba2afe4062325"
+    }
+  ]
+}

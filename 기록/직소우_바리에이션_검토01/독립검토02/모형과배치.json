@@ -1,0 +1,392 @@
+{
+  "status": "unadopted_design_candidate",
+  "coordinate_system": "x right, y down; at is body top-left; no rotations",
+  "unit": "100 drawing pixels per coordinate unit; square body 1x1",
+  "flat_edges": "Any omitted edge region is flat; flat contact is not a grammatical edge.",
+  "tab_profile": {
+    "offset": 0.16,
+    "radius": 0.12,
+    "neck_halfwidth": 0.065,
+    "polygon_circle_quad_segs": 64
+  },
+  "base_models": {
+    "B_IN": {
+      "color": "blue",
+      "size": [
+        1,
+        1
+      ],
+      "ports": [
+        {
+          "side": "N",
+          "offset": 0.5,
+          "kind": "socket"
+        },
+        {
+          "side": "E",
+          "offset": 0.5,
+          "kind": "tab"
+        }
+      ]
+    },
+    "B_SEND_square": {
+      "color": "blue",
+      "size": [
+        1,
+        1
+      ],
+      "ports": [
+        {
+          "side": "N",
+          "offset": 0.5,
+          "kind": "socket"
+        },
+        {
+          "side": "W",
+          "offset": 0.5,
+          "kind": "socket"
+        },
+        {
+          "side": "E",
+          "offset": 0.5,
+          "kind": "tab"
+        }
+      ]
+    },
+    "Y_ES": {
+      "color": "yellow",
+      "size": [
+        1,
+        1
+      ],
+      "ports": [
+        {
+          "side": "E",
+          "offset": 0.5,
+          "kind": "tab"
+        },
+        {
+          "side": "S",
+          "offset": 0.5,
+          "kind": "tab"
+        }
+      ]
+    },
+    "Y_S": {
+      "color": "yellow",
+      "size": [
+        1,
+        1
+      ],
+      "ports": [
+        {
+          "side": "S",
+          "offset": 0.5,
+          "kind": "tab"
+        }
+      ]
+    },
+    "Y_Wsocket": {
+      "color": "yellow",
+      "size": [
+        1,
+        1
+      ],
+      "ports": [
+        {
+          "side": "W",
+          "offset": 0.5,
+          "kind": "socket"
+        }
+      ]
+    },
+    "Y_Wsocket_S": {
+      "color": "yellow",
+      "size": [
+        1,
+        1
+      ],
+      "ports": [
+        {
+          "side": "W",
+          "offset": 0.5,
+          "kind": "socket"
+        },
+        {
+          "side": "S",
+          "offset": 0.5,
+          "kind": "tab"
+        }
+      ]
+    }
+  },
+  "optional_alternate_models": {
+    "B_Ssocket_E": {
+      "color": "blue",
+      "size": [
+        1,
+        1
+      ],
+      "ports": [
+        {
+          "side": "S",
+          "offset": 0.5,
+          "kind": "socket"
+        },
+        {
+          "side": "E",
+          "offset": 0.5,
+          "kind": "tab"
+        }
+      ]
+    },
+    "Y_N_Wsocket": {
+      "color": "yellow",
+      "size": [
+        1,
+        1
+      ],
+      "ports": [
+        {
+          "side": "N",
+          "offset": 0.5,
+          "kind": "tab"
+        },
+        {
+          "side": "W",
+          "offset": 0.5,
+          "kind": "socket"
+        }
+      ]
+    }
+  },
+  "cases": {
+    "two_locations_A": [
+      {
+        "id": "나",
+        "word": "나",
+        "model": "Y_S",
+        "at": [
+          0,
+          -1
+        ]
+      },
+      {
+        "id": "input_resident",
+        "word": "주민",
+        "model": "Y_ES",
+        "at": [
+          -1,
+          0
+        ]
+      },
+      {
+        "id": "보내다",
+        "word": "보내다",
+        "model": "B_SEND_square",
+        "at": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "output_resident",
+        "word": "주민",
+        "model": "Y_Wsocket_S",
+        "at": [
+          1,
+          0
+        ]
+      },
+      {
+        "id": "안",
+        "word": "안",
+        "model": "B_IN",
+        "at": [
+          -1,
+          1
+        ]
+      },
+      {
+        "id": "inside_house",
+        "word": "집",
+        "model": "Y_Wsocket",
+        "at": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "밖",
+        "word": "밖",
+        "model": "B_IN",
+        "at": [
+          1,
+          1
+        ]
+      },
+      {
+        "id": "outside_house",
+        "word": "집",
+        "model": "Y_Wsocket",
+        "at": [
+          2,
+          1
+        ]
+      }
+    ],
+    "two_locations_B": [
+      {
+        "id": "나",
+        "word": "나",
+        "model": "Y_S",
+        "at": [
+          0,
+          -1
+        ]
+      },
+      {
+        "id": "input_resident",
+        "word": "주민",
+        "model": "Y_ES",
+        "at": [
+          -1,
+          0
+        ]
+      },
+      {
+        "id": "보내다",
+        "word": "보내다",
+        "model": "B_SEND_square",
+        "at": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "output_resident",
+        "word": "주민",
+        "model": "Y_Wsocket_S",
+        "at": [
+          1,
+          0
+        ]
+      },
+      {
+        "id": "밖",
+        "word": "밖",
+        "model": "B_IN",
+        "at": [
+          -1,
+          1
+        ]
+      },
+      {
+        "id": "outside_house",
+        "word": "집",
+        "model": "Y_Wsocket",
+        "at": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "안",
+        "word": "안",
+        "model": "B_IN",
+        "at": [
+          1,
+          1
+        ]
+      },
+      {
+        "id": "inside_house",
+        "word": "집",
+        "model": "Y_Wsocket",
+        "at": [
+          2,
+          1
+        ]
+      }
+    ],
+    "two_locations_B_alternate": [
+      {
+        "id": "나",
+        "word": "나",
+        "model": "Y_S",
+        "at": [
+          0,
+          -1
+        ]
+      },
+      {
+        "id": "input_resident",
+        "word": "주민",
+        "model": "Y_ES",
+        "at": [
+          -1,
+          0
+        ]
+      },
+      {
+        "id": "보내다",
+        "word": "보내다",
+        "model": "B_SEND_square",
+        "at": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "output_resident",
+        "word": "주민",
+        "model": "Y_N_Wsocket",
+        "at": [
+          1,
+          0
+        ]
+      },
+      {
+        "id": "밖",
+        "word": "밖",
+        "model": "B_IN",
+        "at": [
+          -1,
+          1
+        ]
+      },
+      {
+        "id": "outside_house",
+        "word": "집",
+        "model": "Y_Wsocket",
+        "at": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "안",
+        "word": "안",
+        "model": "B_Ssocket_E",
+        "at": [
+          1,
+          -1
+        ]
+      },
+      {
+        "id": "inside_house",
+        "word": "집",
+        "model": "Y_Wsocket",
+        "at": [
+          2,
+          -1
+        ]
+      }
+    ]
+  },
+  "meaning": {
+    "two_locations_A": "Input resident attaches 안→집; output resident attaches 밖→집. Na and input resident remain equivalent sending inputs.",
+    "two_locations_B": "Input resident attaches 밖→집; output resident attaches 안→집. Same exterior occupancy as A; swapping only 안/밖 glyphs is equivalent and must remain accepted.",
+    "two_locations_B_alternate": "Same semantic graph as B; output description is above the output resident. Two additional molds; valid alternate, never required."
+  }
+}

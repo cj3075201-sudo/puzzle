@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "completed world restored after browser restart",
+      "pass": true
+    },
+    {
+      "name": "board layout restored",
+      "pass": true
+    },
+    {
+      "name": "assembled speech restored",
+      "pass": true
+    },
+    {
+      "name": "completed UI restored",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

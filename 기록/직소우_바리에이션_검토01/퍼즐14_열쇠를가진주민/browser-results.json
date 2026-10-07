@@ -1,0 +1,62 @@
+[
+  {
+    "name": "first speech",
+    "pass": true
+  },
+  {
+    "name": "second speech",
+    "pass": true
+  },
+  {
+    "name": "ambiguous",
+    "pass": true
+  },
+  {
+    "name": "undo clear",
+    "pass": true
+  },
+  {
+    "name": "graph valid",
+    "pass": true
+  },
+  {
+    "name": "wrong starts walking",
+    "pass": true
+  },
+  {
+    "name": "sound does not reset movement",
+    "pass": true
+  },
+  {
+    "name": "wrong returns",
+    "pass": true
+  },
+  {
+    "name": "wrong preserves puzzle",
+    "pass": true
+  },
+  {
+    "name": "correct completes",
+    "pass": true
+  },
+  {
+    "name": "key moved",
+    "pass": true
+  },
+  {
+    "name": "book stays",
+    "pass": true
+  },
+  {
+    "name": "complete visible",
+    "pass": true
+  },
+  {
+    "name": "reset cancels completion",
+    "pass": true
+  },
+  {
+    "name": "short destination accepted",
+    "pass": true
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "initial keeper inside",
+    "pass": true
+  },
+  {
+    "name": "key requires book",
+    "pass": true
+  },
+  {
+    "name": "location give graph valid",
+    "pass": true
+  },
+  {
+    "name": "exchange in motion",
+    "pass": true
+  },
+  {
+    "name": "book deposited",
+    "pass": true
+  },
+  {
+    "name": "positions changed",
+    "pass": true
+  },
+  {
+    "name": "courier empty",
+    "pass": true
+  },
+  {
+    "name": "updated keeper speech",
+    "pass": true
+  },
+  {
+    "name": "deposit restored",
+    "pass": true
+  },
+  {
+    "name": "position restored",
+    "pass": true
+  },
+  {
+    "name": "puzzle restored",
+    "pass": true
+  },
+  {
+    "name": "stale book recipient is now self",
+    "pass": true
+  },
+  {
+    "name": "correct final transfer",
+    "pass": true
+  },
+  {
+    "name": "completed reload",
+    "pass": true
+  },
+  {
+    "name": "reset cancels exchange",
+    "pass": true
+  },
+  {
+    "name": "book starts at correct hand",
+    "pass": true
+  },
+  {
+    "name": "book targets correct hand",
+    "pass": true
+  },
+  {
+    "name": "same location assembly with changed item succeeds",
+    "pass": true
+  }
+]

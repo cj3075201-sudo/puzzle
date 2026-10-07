@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "palette assembly: [\"주민\",[\"옮기다\",[\"글자\",\"글자\"],\"위\"]]",
+      "pass": true
+    },
+    {
+      "name": "detached quote loses visual quote marker",
+      "pass": true
+    },
+    {
+      "name": "quote marker restored by undo",
+      "pass": true
+    },
+    {
+      "name": "initial NPC reads close",
+      "pass": true
+    },
+    {
+      "name": "starter can be spoken",
+      "pass": true
+    },
+    {
+      "name": "world box moved by starter",
+      "pass": true
+    },
+    {
+      "name": "world undo",
+      "pass": true
+    },
+    {
+      "name": "wrong color rejected",
+      "pass": true
+    },
+    {
+      "name": "pointer drag moved piece",
+      "pass": true
+    },
+    {
+      "name": "disconnected speech rejected",
+      "pass": true
+    },
+    {
+      "name": "drag undo",
+      "pass": true
+    },
+    {
+      "name": "palette assembly: [\"주민\",[\"열다\",\"문\"]]",
+      "pass": true
+    },
+    {
+      "name": "direct opening followed by close",
+      "pass": true
+    },
+    {
+      "name": "palette assembly: [\"주민\",[\"옮기다\",[\"글자\",\"문\"],\"왼쪽\"]]",
+      "pass": true
+    },
+    {
+      "name": "ambiguous door glyph rejected",
+      "pass": true
+    },
+    {
+      "name": "palette assembly: [\"주민\",[\"옮기다\",[\"글자\",[\"아래\",\"문\"]],\"왼쪽\"]]",
+      "pass": true
+    },
+    {
+      "name": "lower door glyph repair",
+      "pass": true
+    },
+    {
+      "name": "palette assembly: [\"주민\",[\"옮기다\",[\"글자\",\"주민\"],\"아래\"]]",
+      "pass": true
+    },
+    {
+      "name": "first root move pauses",
+      "pass": true
+    },
+    {
+      "name": "palette assembly: [\"주민\",[\"열다\",\"문\"]]",
+      "pass": true
+    },
+    {
+      "name": "direct open while board paused",
+      "pass": true
+    },
+    {
+      "name": "failed exit updates closed door",
+      "pass": true
+    },
+    {
+      "name": "failed exit undo restores open",
+      "pass": true
+    },
+    {
+      "name": "palette assembly: [\"주민\",[\"옮기다\",[\"글자\",\"주민\"],\"아래\"]]",
+      "pass": true
+    },
+    {
+      "name": "NPC self-moves root and opens",
+      "pass": true
+    },
+    {
+      "name": "all automatic actions are visible",
+      "pass": true
+    },
+    {
+      "name": "whole automatic chain undo",
+      "pass": true
+    },
+    {
+      "name": "world click finishes puzzle",
+      "pass": true
+    },
+    {
+      "name": "saved completion",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no JS error",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

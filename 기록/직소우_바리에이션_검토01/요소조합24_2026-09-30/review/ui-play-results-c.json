@@ -1,0 +1,138 @@
+{
+  "type": "independent QA after design exposure; no human fun/difficulty claim",
+  "six_ui_html_sha256": "8fc2c2e5b59b922313471f88979f44f64524917e52dc0d02cb492e44e4ccdbfc",
+  "final_html_sha256": "179427d09dc419e52242affc66e1eba5d0d3fd60d7ec4952b70c9748a9f76dd7",
+  "final_state_sha256": "7621bdccbab2e650a9045d503ddfa99902d16904d03747161b5fdd9bf42bcc6e",
+  "rows": [
+    {
+      "level": 1,
+      "mode": "design-exposed independent AI UI QA",
+      "solved": true,
+      "used_hint": false,
+      "path": "수리→말→문→열다→때→왼등→켜짐",
+      "completion_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/038.png",
+      "completion_text": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/038.json",
+      "wait_ms": 1500,
+      "viewport": {
+        "width": 1536,
+        "height": 1200
+      }
+    },
+    {
+      "level": 2,
+      "mode": "design-exposed independent AI UI QA",
+      "solved": true,
+      "used_hint": false,
+      "path": "수리→말→문→열다→때→왼등→꺼짐",
+      "completion_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/074.png",
+      "completion_text": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/074.json",
+      "wait_ms": 1500,
+      "viewport": {
+        "width": 1536,
+        "height": 1200
+      }
+    },
+    {
+      "level": 3,
+      "mode": "design-exposed independent AI UI QA",
+      "solved": true,
+      "used_hint": false,
+      "path": "되감기→수리→○→묶다→왼등; 수리→말→문→열다→때→○→켜짐",
+      "completion_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/136.png",
+      "completion_text": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/136.json",
+      "wait_ms": 1500,
+      "viewport": {
+        "width": 1536,
+        "height": 1200
+      },
+      "failed_previous_strategy_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/082.png",
+      "failed_trace": "이번 부탁의 실제 시험\n칸\t실제 문\t원하는 문\t관측 대상\t결과\n1\t열림\t열림\t금빛등\t통과\n2\t열림\t닫힘\t보랏등\t실패\n3\t닫힘\t열림\t보랏등\t실패\n4\t닫힘\t닫힘\t금빛등\t통과\n"
+    },
+    {
+      "level": 4,
+      "mode": "design-exposed independent AI UI QA",
+      "solved": true,
+      "used_hint": false,
+      "path": "되감기→수리→말→문→열다→때→왼등→켜짐",
+      "completion_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/178.png",
+      "completion_text": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/178.json",
+      "wait_ms": 1500,
+      "viewport": {
+        "width": 1536,
+        "height": 1200
+      },
+      "failed_previous_strategy_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/143.png",
+      "failed_trace": "이번 부탁의 실제 시험\n칸\t실제 문\t원하는 문\t관측 대상\t결과\n1\t열림\t열림\t금빛등\t통과\n2\t닫힘\t열림\t금빛등\t실패\n3\t열림\t닫힘\t금빛등\t실패\n4\t닫힘\t닫힘\t금빛등\t통과\n"
+    },
+    {
+      "level": 5,
+      "mode": "design-exposed independent AI UI QA",
+      "solved": true,
+      "used_hint": false,
+      "path": "되감기→수리→가다→오른쪽; 수리→○→묶다→오른등; 말→문→열다→때→○→켜짐; 종1→왼쪽 이동→종2→종3→오른쪽 이동→종4",
+      "completion_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/281.png",
+      "completion_text": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/281.json",
+      "wait_ms": 1500,
+      "viewport": {
+        "width": 900,
+        "height": 1200
+      },
+      "failed_previous_strategy_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/186.png",
+      "failed_trace": "이번 부탁의 실제 시험\n칸\t실제 문\t원하는 문\t관측 대상\t결과\n1\t닫힘\t닫힘\t미확인\t실패\n2\t닫힘\t열림\t미확인\t실패\n3\t닫힘\t닫힘\t미확인\t실패\n4\t닫힘\t열림\t미확인\t실패\n"
+    },
+    {
+      "level": 6,
+      "mode": "design-exposed independent AI UI QA",
+      "solved": true,
+      "used_hint": false,
+      "path": "되감기→수리→말→문→열다→때→앞등→켜짐",
+      "completion_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/323.png",
+      "completion_text": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/323.json",
+      "wait_ms": 1500,
+      "viewport": {
+        "width": 900,
+        "height": 1200
+      },
+      "failed_previous_strategy_evidence": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/288.png",
+      "failed_trace": "이번 부탁의 실제 시험\n칸\t실제 문\t원하는 문\t관측 대상\t결과\n1\t닫힘\t닫힘\t보랏등\t통과\n2\t열림\t열림\t보랏등\t통과\n3\t닫힘\t열림\t미확인\t실패\n4\t닫힘\t닫힘\t미확인\t실패\n"
+    }
+  ],
+  "storage_reload": {
+    "before": 132,
+    "after": 133,
+    "completed": 136,
+    "observed": "03 2/4, ○금빛등, 정책과 7조각 유지 후 4/4 완료"
+  },
+  "browser_reconnect": {
+    "lobby": 327,
+    "saved_level": 329,
+    "final_reload_wait": 331,
+    "observed": "브라우저 프로세스 종료 후 동일 프로필 재접속. 6개 완료 저장, 03 완료 월드 및 7조각 복귀. 최종 수문 한글 표기 확인"
+  },
+  "widths": [
+    900,
+    1536
+  ],
+  "runtime_injection_used": false,
+  "input_method": "CDP Input physical mouse events; selector only reads control rect and scrolls into view",
+  "runner_errors": [
+    "빈 조립판 #clear 비활성: QA 루틴에서 초기 clear 생략 후 계속",
+    "PTY 4096바이트 한줄 제한: 긴 명령이 잘려 JSON 오류. 짧은 배치로 분할 후 계속"
+  ],
+  "game_blocking_bugs_found": [],
+  "limits": [
+    "여섯 경로 전체는 옛 HTML 해시의 화면 증거. 최종 DOM은 브라우저 재접속/재로드로 03 완료 복귀 및 소스 일치만 추가 검증.",
+    "대표 풀이와 이전 전략 실패를 검증했으며 모든 의미 트리와 조작의 완전 탐색은 아니다.",
+    "01/02는 반전 기초. 네 개 규칙 모든 부분조합의 자동 생성은 구현/입증되지 않았다.",
+    "실제 사람의 초견 시간, 난이도, 재미는 측정하지 않았다."
+  ],
+  "final_dom_source_hash_evidence": "embedded-final-hashes.json",
+  "final_dom_sources_match_files": [
+    "core.js",
+    "state.js",
+    "levels.js",
+    "scene.js",
+    "app.js"
+  ],
+  "final_dom_source_snapshot": 334
+}

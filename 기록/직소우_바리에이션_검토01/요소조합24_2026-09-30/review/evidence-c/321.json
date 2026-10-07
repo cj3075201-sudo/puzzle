@@ -1,0 +1,712 @@
+{
+  "action": {
+    "action": "selector",
+    "selector": "[data-object=\"bell\"]"
+  },
+  "title": "같은 요소, 다른 부탁 · 직소우 6레벨",
+  "text": "DO YOU UNDERSTAND?\n요소 조합 24\n퍼즐 목록\n이 퍼즐 다시 시작\n레벨 06 · 말 + 조건 + 시야\n보는 대상 자체가 바뀔 때\n\n점검 동선의 매 순간, 수리 앞에서 실제로 보는 등이 켜지면 열고 꺼지면 닫아 주세요.\n\n←\n6 / 6\n→\n水門 열림\n수리 자리: 오른쪽 · 3/4 시험\n가림막: 가까운 등만 관측\n왼쪽 자리\n오른쪽 자리\n보랏등 끔\n금빛등 켬\n말 지시판\n공개 일정표\n다음 시험종\n시험 되감기\n○=보랏등\n수리\n수문 관리인\n\n수리는 양손으로 수문 시험을 합니다. 지시판의 말을 고치면 매 신호에 계속 읽고, 말 없이 부탁하면 지금 한 번만 따릅니다. 1–4번은 높은 자리에서 두 등을 모두 볼 수 있고, 5–6번은 가림막 때문에 자기 쪽 등만 봅니다. 물체 클릭은 관찰과 시간 진행입니다.\n\n공개 시험 일정 · 현재 지시판\n공개 시험 일정\n칸\t왼등\t오른등\t금빛\t보랏\t수리 자리\t원하는 문\n1칸\t금빛등\t보랏등\t켜짐\t꺼짐\t오른쪽\t닫힘\n2칸\t보랏등\t금빛등\t꺼짐\t켜짐\t왼쪽\t열림\n3칸\t보랏등\t금빛등\t켜짐\t꺼짐\t오른쪽\t열림\n4칸 ← 다음\t금빛등\t보랏등\t꺼짐\t켜짐\t왼쪽\t닫힘\n\n현재 문: 열림 · 수리 오른쪽 · ○ 보랏등\n\n계속 읽는 말: 앞등 켜짐이면 문 열다; 반대이면 반대 동작\n\n지시판을 고치면 새 부탁의 시험으로 처음부터 검사합니다. 이동·○의 결속은 시험 사이에도 바꿀 수 있습니다. 미관측은 꺼짐이 아닙니다.\n\n이번 부탁의 실제 시험\n칸\t실제 문\t원하는 문\t관측 대상\t결과\n1\t닫힘\t닫힘\t보랏등\t통과\n2\t열림\t열림\t보랏등\t통과\n3\t열림\t열림\t금빛등\t통과\n열/닫 스위치: 등 조건이 참이면 적힌 동작, 거짓이면 반대 동작. 보이지 않음은 꺼짐이 아닌 미확인: 안전닫힘·시험 실패. ○는 같은 실물, 왼등/오른등은 현재 자리, 앞등은 수리가 현재 보는 등.\n수리의 말\n주민 클릭 · 휠 클릭으로 대상 확인\n수리\n말\n문\n열다\n때\n앞등\n켜짐\n\n3칸 통과: 원하는 문 열림, 실제 열림. 앞등 켜짐: 조건 참\n\n들은 이야기\n조립 방법\n수리에게 말하기\n켜짐 조각 선택\n수리\n말\n문\n열다\n때\n앞등\n켜짐\n되돌리기\n조각 삭제\n비우기\n말해 보기\n\n3칸 통과: 원하는 문 열림, 실제 열림. 앞등 켜짐: 조건 참\n\n모형\n모양을 골라 놓기\n노랑\n파랑\n글자\n선택한 조각에 넣기\n수리\n너\n말\n문\n열다\n닫다\n때\n왼등\n오른등\n앞등\n○\n켜짐\n꺼짐\n묶다\n풀다\n가다\n왼쪽\n오른쪽\n\n모형과 글자는 여러 번 쓸 수 있어요.\n\n작은 힌트\n졸프 직소 소통 표본 · 같은 요소를 조합한 6레벨 · 오프라인 플레이와 자동 저장",
+  "viewport": {
+    "width": 900,
+    "height": 1200
+  },
+  "controls": [
+    {
+      "index": 4,
+      "tag": "g",
+      "text": "보랏등 끔",
+      "rect": {
+        "x": 123,
+        "y": -30,
+        "width": 61,
+        "height": 78
+      },
+      "disabled": false
+    },
+    {
+      "index": 5,
+      "tag": "g",
+      "text": "금빛등 켬",
+      "rect": {
+        "x": 702,
+        "y": -30,
+        "width": 61,
+        "height": 78
+      },
+      "disabled": false
+    },
+    {
+      "index": 6,
+      "tag": "g",
+      "text": "말 지시판",
+      "rect": {
+        "x": 289,
+        "y": -27,
+        "width": 61,
+        "height": 78
+      },
+      "disabled": false
+    },
+    {
+      "index": 7,
+      "tag": "g",
+      "text": "공개 일정표",
+      "rect": {
+        "x": 539,
+        "y": -27,
+        "width": 61,
+        "height": 78
+      },
+      "disabled": false
+    },
+    {
+      "index": 8,
+      "tag": "g",
+      "text": "다음 시험종",
+      "rect": {
+        "x": 45,
+        "y": 1,
+        "width": 61,
+        "height": 78
+      },
+      "disabled": false
+    },
+    {
+      "index": 9,
+      "tag": "g",
+      "text": "시험 되감기",
+      "rect": {
+        "x": 779,
+        "y": 1,
+        "width": 61,
+        "height": 78
+      },
+      "disabled": false
+    },
+    {
+      "index": 10,
+      "tag": "g",
+      "text": "수리와 이야기하기",
+      "rect": {
+        "x": 601,
+        "y": -54,
+        "width": 85,
+        "height": 136
+      },
+      "disabled": false
+    },
+    {
+      "index": 11,
+      "tag": "summary",
+      "text": "공개 시험 일정 · 현재 지시판",
+      "rect": {
+        "x": 19,
+        "y": 163,
+        "width": 847,
+        "height": 43
+      },
+      "disabled": false
+    },
+    {
+      "index": 12,
+      "tag": "summary",
+      "text": "들은 이야기",
+      "rect": {
+        "x": 34,
+        "y": 1173,
+        "width": 312,
+        "height": 22
+      },
+      "disabled": false
+    },
+    {
+      "index": 14,
+      "tag": "rect",
+      "text": "1행 1열",
+      "rect": {
+        "x": 410,
+        "y": 849,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 15,
+      "tag": "rect",
+      "text": "1행 2열",
+      "rect": {
+        "x": 470,
+        "y": 849,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 16,
+      "tag": "rect",
+      "text": "1행 3열",
+      "rect": {
+        "x": 531,
+        "y": 849,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 17,
+      "tag": "rect",
+      "text": "1행 4열",
+      "rect": {
+        "x": 591,
+        "y": 849,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 18,
+      "tag": "rect",
+      "text": "1행 5열",
+      "rect": {
+        "x": 652,
+        "y": 849,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 19,
+      "tag": "rect",
+      "text": "1행 6열",
+      "rect": {
+        "x": 712,
+        "y": 849,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 20,
+      "tag": "rect",
+      "text": "1행 7열",
+      "rect": {
+        "x": 772,
+        "y": 849,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 21,
+      "tag": "rect",
+      "text": "2행 1열",
+      "rect": {
+        "x": 410,
+        "y": 910,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 22,
+      "tag": "rect",
+      "text": "2행 2열",
+      "rect": {
+        "x": 470,
+        "y": 910,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 23,
+      "tag": "rect",
+      "text": "2행 3열",
+      "rect": {
+        "x": 531,
+        "y": 910,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 24,
+      "tag": "rect",
+      "text": "2행 4열",
+      "rect": {
+        "x": 591,
+        "y": 910,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 25,
+      "tag": "rect",
+      "text": "2행 5열",
+      "rect": {
+        "x": 652,
+        "y": 910,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 26,
+      "tag": "rect",
+      "text": "2행 6열",
+      "rect": {
+        "x": 712,
+        "y": 910,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 27,
+      "tag": "rect",
+      "text": "2행 7열",
+      "rect": {
+        "x": 772,
+        "y": 910,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 28,
+      "tag": "rect",
+      "text": "3행 1열",
+      "rect": {
+        "x": 410,
+        "y": 970,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 29,
+      "tag": "rect",
+      "text": "3행 2열",
+      "rect": {
+        "x": 470,
+        "y": 970,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 30,
+      "tag": "rect",
+      "text": "3행 3열",
+      "rect": {
+        "x": 531,
+        "y": 970,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 31,
+      "tag": "rect",
+      "text": "3행 4열",
+      "rect": {
+        "x": 591,
+        "y": 970,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 32,
+      "tag": "rect",
+      "text": "3행 5열",
+      "rect": {
+        "x": 652,
+        "y": 970,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 33,
+      "tag": "rect",
+      "text": "3행 6열",
+      "rect": {
+        "x": 712,
+        "y": 970,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 34,
+      "tag": "rect",
+      "text": "3행 7열",
+      "rect": {
+        "x": 772,
+        "y": 970,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 35,
+      "tag": "rect",
+      "text": "4행 1열",
+      "rect": {
+        "x": 410,
+        "y": 1030,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 36,
+      "tag": "rect",
+      "text": "4행 2열",
+      "rect": {
+        "x": 470,
+        "y": 1030,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 37,
+      "tag": "rect",
+      "text": "4행 3열",
+      "rect": {
+        "x": 531,
+        "y": 1030,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 38,
+      "tag": "rect",
+      "text": "4행 4열",
+      "rect": {
+        "x": 591,
+        "y": 1030,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 39,
+      "tag": "rect",
+      "text": "4행 5열",
+      "rect": {
+        "x": 652,
+        "y": 1030,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 40,
+      "tag": "rect",
+      "text": "4행 6열",
+      "rect": {
+        "x": 712,
+        "y": 1030,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 41,
+      "tag": "rect",
+      "text": "4행 7열",
+      "rect": {
+        "x": 772,
+        "y": 1030,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 42,
+      "tag": "rect",
+      "text": "5행 1열",
+      "rect": {
+        "x": 410,
+        "y": 1091,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 43,
+      "tag": "rect",
+      "text": "5행 2열",
+      "rect": {
+        "x": 470,
+        "y": 1091,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 44,
+      "tag": "rect",
+      "text": "5행 3열",
+      "rect": {
+        "x": 531,
+        "y": 1091,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 45,
+      "tag": "rect",
+      "text": "5행 4열",
+      "rect": {
+        "x": 591,
+        "y": 1091,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 46,
+      "tag": "rect",
+      "text": "5행 5열",
+      "rect": {
+        "x": 652,
+        "y": 1091,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 47,
+      "tag": "rect",
+      "text": "5행 6열",
+      "rect": {
+        "x": 712,
+        "y": 1091,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 48,
+      "tag": "rect",
+      "text": "5행 7열",
+      "rect": {
+        "x": 772,
+        "y": 1091,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 49,
+      "tag": "rect",
+      "text": "6행 1열",
+      "rect": {
+        "x": 410,
+        "y": 1151,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 50,
+      "tag": "rect",
+      "text": "6행 2열",
+      "rect": {
+        "x": 470,
+        "y": 1151,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 51,
+      "tag": "rect",
+      "text": "6행 3열",
+      "rect": {
+        "x": 531,
+        "y": 1151,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 52,
+      "tag": "rect",
+      "text": "6행 4열",
+      "rect": {
+        "x": 591,
+        "y": 1151,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 53,
+      "tag": "rect",
+      "text": "6행 5열",
+      "rect": {
+        "x": 652,
+        "y": 1151,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 54,
+      "tag": "rect",
+      "text": "6행 6열",
+      "rect": {
+        "x": 712,
+        "y": 1151,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 55,
+      "tag": "rect",
+      "text": "6행 7열",
+      "rect": {
+        "x": 772,
+        "y": 1151,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 56,
+      "tag": "g",
+      "text": "수리 조각 1행 1열",
+      "rect": {
+        "x": 410,
+        "y": 849,
+        "width": 73,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 57,
+      "tag": "g",
+      "text": "말 조각 1행 2열",
+      "rect": {
+        "x": 470,
+        "y": 849,
+        "width": 73,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 58,
+      "tag": "g",
+      "text": "문 조각 1행 3열",
+      "rect": {
+        "x": 531,
+        "y": 849,
+        "width": 73,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 59,
+      "tag": "g",
+      "text": "열다 조각 1행 4열",
+      "rect": {
+        "x": 591,
+        "y": 849,
+        "width": 73,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 60,
+      "tag": "g",
+      "text": "때 조각 1행 5열",
+      "rect": {
+        "x": 652,
+        "y": 849,
+        "width": 73,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 61,
+      "tag": "g",
+      "text": "앞등 조각 1행 6열",
+      "rect": {
+        "x": 712,
+        "y": 849,
+        "width": 73,
+        "height": 60
+      },
+      "disabled": false
+    },
+    {
+      "index": 62,
+      "tag": "g",
+      "text": "켜짐 조각 1행 7열",
+      "rect": {
+        "x": 772,
+        "y": 849,
+        "width": 60,
+        "height": 60
+      },
+      "disabled": false
+    }
+  ],
+  "screenshot": "/mnt/c/Users/cj307/Desktop/졸프/기록/직소우_바리에이션_검토01/요소조합24_2026-09-30/review/evidence-c/321.png",
+  "step": 321
+}

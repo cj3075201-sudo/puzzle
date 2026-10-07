@@ -1,0 +1,145 @@
+[
+  {
+    "participant": "c",
+    "case": "01",
+    "start_step": 1,
+    "completion_step": 105,
+    "start_at": "2026-09-29T18:14:39.250Z",
+    "completion_at": "2026-09-29T18:16:24.561Z",
+    "elapsed_seconds": 105.311,
+    "first_submit_step": 23,
+    "first_submit_seconds": 28.298,
+    "clicks": 92,
+    "submits": 6,
+    "submit_steps": [
+      23,
+      41,
+      57,
+      75,
+      84,
+      105
+    ],
+    "hint_steps": [],
+    "scrolls": 0,
+    "ui_records": 105,
+    "longest_gap_seconds": 13.622,
+    "longest_gap_steps": [
+      57,
+      58
+    ],
+    "evidence": "분석/evidence/c/01/105.png",
+    "title": "사라지는 단서"
+  },
+  {
+    "participant": "c",
+    "case": "02",
+    "start_step": 1,
+    "completion_step": 32,
+    "start_at": "2026-09-29T18:16:28.027Z",
+    "completion_at": "2026-09-29T18:16:58.388Z",
+    "elapsed_seconds": 30.361,
+    "first_submit_step": 31,
+    "first_submit_seconds": 26.807,
+    "clicks": 29,
+    "submits": 1,
+    "submit_steps": [
+      31
+    ],
+    "hint_steps": [],
+    "scrolls": 0,
+    "ui_records": 32,
+    "longest_gap_seconds": 5.843,
+    "longest_gap_steps": [
+      2,
+      3
+    ],
+    "evidence": "분석/evidence/c/02/032.png",
+    "title": "소리가 나는 문"
+  },
+  {
+    "participant": "c",
+    "case": "02",
+    "start_step": 34,
+    "completion_step": 50,
+    "start_at": "2026-09-29T18:17:04.653Z",
+    "completion_at": "2026-09-29T18:17:17.105Z",
+    "elapsed_seconds": 12.452,
+    "first_submit_step": 49,
+    "first_submit_seconds": 9.115,
+    "clicks": 16,
+    "submits": 1,
+    "submit_steps": [
+      49
+    ],
+    "hint_steps": [],
+    "scrolls": 0,
+    "ui_records": 17,
+    "longest_gap_seconds": 6.316,
+    "longest_gap_steps": [
+      34,
+      35
+    ],
+    "evidence": "분석/evidence/c/02/050.png",
+    "title": "마주 보는 둘"
+  },
+  {
+    "participant": "c",
+    "case": "03",
+    "start_step": 2,
+    "completion_step": 40,
+    "start_at": "2026-09-29T18:17:21.019Z",
+    "completion_at": "2026-09-29T18:17:49.519Z",
+    "elapsed_seconds": 28.5,
+    "first_submit_step": 17,
+    "first_submit_seconds": 13.303,
+    "clicks": 36,
+    "submits": 3,
+    "submit_steps": [
+      17,
+      32,
+      40
+    ],
+    "hint_steps": [],
+    "scrolls": 0,
+    "ui_records": 39,
+    "longest_gap_seconds": 7.142,
+    "longest_gap_steps": [
+      4,
+      5
+    ],
+    "evidence": "분석/evidence/c/03/040.png",
+    "title": "07 질문 조각은 어디에?"
+  },
+  {
+    "participant": "c",
+    "case": "03",
+    "start_step": 45,
+    "completion_step": 129,
+    "start_at": "2026-09-29T18:18:02.883Z",
+    "completion_at": "2026-09-29T18:19:34.016Z",
+    "elapsed_seconds": 91.133,
+    "first_submit_step": 63,
+    "first_submit_seconds": 25.249,
+    "clicks": 80,
+    "submits": 7,
+    "submit_steps": [
+      63,
+      81,
+      87,
+      92,
+      99,
+      112,
+      129
+    ],
+    "hint_steps": [],
+    "scrolls": 0,
+    "ui_records": 85,
+    "longest_gap_seconds": 16.638,
+    "longest_gap_steps": [
+      112,
+      113
+    ],
+    "evidence": "분석/evidence/c/03/129.png",
+    "title": "11 누가 그렇게 말했나?"
+  }
+]

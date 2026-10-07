@@ -1,0 +1,144 @@
+{
+  "passed": 40,
+  "details": [
+    "실제 조립 [\"질문\",[\"이전\",\"책\"]]",
+    "실제 조립 [\"질문\",[\"이전\",\"약\"]]",
+    "실제 조립 [\"질문\",[\"이전\",\"함\"]]",
+    "실제 조립 [\"질문\",[\"지금\",\"표식\"]]",
+    "실제 조립 [\"빗장\",\"풀다\"]",
+    "실제 조립 [\"책\",[\"문\",\"열다\"]]",
+    "실제 조립 [\"약\",[\"문\",\"열다\"]]",
+    "실제 조립 [\"문\",[\"책\",\"있다\"],\"열다\"]",
+    "실제 조립 [\"문\",[\"가지다\",\"약\"],\"열다\"]",
+    "기억/현재의 NPC 발화 조립 [\"질문\",[\"이전\",\"책\"]]",
+    "기억/현재의 NPC 발화 조립 [\"질문\",[\"이전\",\"함\"]]",
+    "기억/현재의 NPC 발화 조립 [\"질문\",\"표식\"]",
+    "같은 질량만으로 내용 판정 불가",
+    "현재 질문에 과거 적재 순서 노출 안함",
+    "과거 핵심 단서는 관계 발화이며 prose 전체번역 아님",
+    "과거 이동 두 번은 실제 로그와 일치",
+    "윗면 표식은 NPC 시야 밖",
+    "옆면 표식 시험은 실제 이동 방향을 표현",
+    "작은 시험 후 원위치 유지",
+    "빗장 한 번은 한 칸만 허용",
+    "실제 밀기와 당기기는 다른 화물",
+    "표식은 화물 아니라 함에 남음",
+    "안쪽 표식의 순간 이동 불가",
+    "문 없는 발송은 실패",
+    "빈 함의 발송은 실패",
+    "모든 걸쇠와 문을 여는 것만으로 완료 불가",
+    "잘못된 배송은 봉인을 유지하고 복귀",
+    "8사건 역산과 배송 {\"loadOrder\":[\"book\",\"medicine\"],\"pastDirection\":1,\"control\":1}",
+    "8사건 역산과 배송 {\"loadOrder\":[\"book\",\"medicine\"],\"pastDirection\":1,\"control\":-1}",
+    "8사건 역산과 배송 {\"loadOrder\":[\"book\",\"medicine\"],\"pastDirection\":-1,\"control\":1}",
+    "8사건 역산과 배송 {\"loadOrder\":[\"book\",\"medicine\"],\"pastDirection\":-1,\"control\":-1}",
+    "8사건 역산과 배송 {\"loadOrder\":[\"medicine\",\"book\"],\"pastDirection\":1,\"control\":1}",
+    "8사건 역산과 배송 {\"loadOrder\":[\"medicine\",\"book\"],\"pastDirection\":1,\"control\":-1}",
+    "8사건 역산과 배송 {\"loadOrder\":[\"medicine\",\"book\"],\"pastDirection\":-1,\"control\":1}",
+    "8사건 역산과 배송 {\"loadOrder\":[\"medicine\",\"book\"],\"pastDirection\":-1,\"control\":-1}",
+    "관측 loadOrder 생략 시 책 행동 유일하지 않음",
+    "관측 pastDirection 생략 시 책 행동 유일하지 않음",
+    "관측 control 생략 시 책 행동 유일하지 않음",
+    "수령구 동등 표현 3개",
+    "한 번 오배송으로 무조사 분류 가능"
+  ],
+  "matrix": [
+    {
+      "loadOrder": [
+        "book",
+        "medicine"
+      ],
+      "pastDirection": 1,
+      "control": 1,
+      "bookAction": "push",
+      "medicineAction": "push"
+    },
+    {
+      "loadOrder": [
+        "book",
+        "medicine"
+      ],
+      "pastDirection": 1,
+      "control": -1,
+      "bookAction": "pull",
+      "medicineAction": "pull"
+    },
+    {
+      "loadOrder": [
+        "book",
+        "medicine"
+      ],
+      "pastDirection": -1,
+      "control": 1,
+      "bookAction": "pull",
+      "medicineAction": "pull"
+    },
+    {
+      "loadOrder": [
+        "book",
+        "medicine"
+      ],
+      "pastDirection": -1,
+      "control": -1,
+      "bookAction": "push",
+      "medicineAction": "push"
+    },
+    {
+      "loadOrder": [
+        "medicine",
+        "book"
+      ],
+      "pastDirection": 1,
+      "control": 1,
+      "bookAction": "pull",
+      "medicineAction": "pull"
+    },
+    {
+      "loadOrder": [
+        "medicine",
+        "book"
+      ],
+      "pastDirection": 1,
+      "control": -1,
+      "bookAction": "push",
+      "medicineAction": "push"
+    },
+    {
+      "loadOrder": [
+        "medicine",
+        "book"
+      ],
+      "pastDirection": -1,
+      "control": 1,
+      "bookAction": "push",
+      "medicineAction": "push"
+    },
+    {
+      "loadOrder": [
+        "medicine",
+        "book"
+      ],
+      "pastDirection": -1,
+      "control": -1,
+      "bookAction": "pull",
+      "medicineAction": "pull"
+    }
+  ],
+  "blindStrategy": [
+    "빗장 풀기",
+    "밀기",
+    "책문 열기",
+    "보내기: 약임을 반송으로 확인",
+    "약문 열기",
+    "보내기",
+    "빗장 풀기",
+    "밀기",
+    "책문 열기",
+    "보내기"
+  ],
+  "limitations": [
+    "오배송 반송을 이용한 내용 확인으로 질문 없는 완주 가능",
+    "정확한 추측 성공 허용; 질문 이력으로 잠그지 않음",
+    "8사건은 개발자 검산이며 플레이 HTML은 고정 사건"
+  ]
+}

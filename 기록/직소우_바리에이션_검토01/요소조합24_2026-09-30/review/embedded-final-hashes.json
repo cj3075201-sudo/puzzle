@@ -1,0 +1,41 @@
+{
+  "method": "read only document.scripts textContent from actual final browser DOM",
+  "hashes": [
+    {
+      "name": "model-data",
+      "bytes": 322815,
+      "sha256": "52aba4978ee10b176e10f55ea114ee8c02273fdc33abdd2892857ecf94923824",
+      "matchesFile": false
+    },
+    {
+      "name": "core.js",
+      "bytes": 8573,
+      "sha256": "35b35792bb526e8c8d0a35cb14e5ace2bb7f48b0b63bfdb45155769990572730",
+      "matchesFile": true
+    },
+    {
+      "name": "state.js",
+      "bytes": 9028,
+      "sha256": "7621bdccbab2e650a9045d503ddfa99902d16904d03747161b5fdd9bf42bcc6e",
+      "matchesFile": true
+    },
+    {
+      "name": "levels.js",
+      "bytes": 6395,
+      "sha256": "520c17028a5a48a3c251b523db70dafeb45eaeb32cd62864e19136fae9f9fdf7",
+      "matchesFile": true
+    },
+    {
+      "name": "scene.js",
+      "bytes": 3784,
+      "sha256": "5b9c563164a47606cfd975408ce74fbe3d7fdb52d1310b6ac7e1c99cbc51699c",
+      "matchesFile": true
+    },
+    {
+      "name": "app.js",
+      "bytes": 20661,
+      "sha256": "b5e66aaaa34c9df9131eaa25b3e9e8f84483cc9a1c2b69e4380288e4963409ff",
+      "matchesFile": true
+    }
+  ]
+}

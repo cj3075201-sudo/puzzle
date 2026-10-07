@@ -1,0 +1,50 @@
+{
+  "at": "2026-09-29T18:55:08.484Z",
+  "checks": [
+    {
+      "name": "only world interaction visible before NPC click",
+      "pass": true
+    },
+    {
+      "name": "default request causes surge through physical ship clicks",
+      "pass": true
+    },
+    {
+      "name": "keeper direct click opens jigsaw conversation",
+      "pass": true
+    },
+    {
+      "name": "mirror handle direct click changes live observation",
+      "pass": true
+    },
+    {
+      "name": "10 pieces assembled through actual palette/cell/word clicks",
+      "pass": true
+    },
+    {
+      "name": "accepted representative policy",
+      "pass": true
+    },
+    {
+      "name": "straddle has outside low inside high and rear outside",
+      "pass": true
+    },
+    {
+      "name": "book delivered through physical ship clicks",
+      "pass": true
+    },
+    {
+      "name": "completion persists reload",
+      "pass": true
+    },
+    {
+      "name": "1536px no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "900px no horizontal overflow",
+      "pass": true
+    }
+  ],
+  "method": "개발자 정답을 알고 실시한 회귀 QA. 실제 포인터 입력으로 배·NPC·거울 및 조립판을 조작. 독립 초견 플레이 아님."
+}

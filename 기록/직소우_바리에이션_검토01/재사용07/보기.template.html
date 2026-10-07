@@ -1,0 +1,60 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>직소우 · 다른 단어와 모형 재사용</title>
+<style>
+@font-face{font-family:Project;src:url(data:font/ttf;base64,__FONT__) format('truetype');font-display:swap}
+*{box-sizing:border-box}body{margin:0;background:#f5f2e9;color:#25343b;font-family:Project,'Malgun Gothic',sans-serif;line-height:1.55}button{font:inherit;cursor:pointer;color:inherit}button:focus-visible{outline:3px solid #355665;outline-offset:3px}main{max-width:1480px;padding:34px 38px 30px;margin:auto}h1{font-size:32px;margin:8px 0 8px;line-height:1.3;letter-spacing:-.8px}h2{font-size:24px;margin:0}.eyebrow{font-size:11px;letter-spacing:2px;color:#6a7375}p{margin:0}.lead{color:#657073;font-size:15px}.rule{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid #d2d4cb;border-bottom:1px solid #d2d4cb;padding:14px 0;margin:20px 0}.rule strong{font-size:17px}.rule span{font-size:13px;color:#647070}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:#fffdf7;border:1px solid #d6d5c9;border-radius:12px;overflow:hidden}.heading{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:18px 22px 0}.heading small{display:block;font-size:12px;color:#607178;margin-bottom:4px}.count{font-size:13px;white-space:nowrap;border:1px solid #cfd4ca;border-radius:18px;padding:5px 10px}.body{display:grid;grid-template-columns:minmax(0,1fr) 204px;align-items:center;padding:0 18px 0 6px}.assembly{display:block;width:100%;height:auto;font-family:Project,'Malgun Gothic',sans-serif;fill:#24323a}.assembly text{user-select:none}.assembly g[data-piece=W],.assembly g[data-piece=N]{cursor:pointer}.palette-title{font-size:12px;color:#667275;margin-bottom:6px}.palette{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.mold{border:1px solid #deded3;background:#f8f7f0;border-radius:7px;padding:0;position:relative;display:flex;flex-direction:column;align-items:center}.mold svg{display:block;width:100%;max-width:68px}.mold small{font-size:10px;color:#586a70;padding-bottom:3px}.mold.chosen{border:2px solid #416c7e;background:#eef3f1}.mold.chosen svg{margin:-1px}.mold[disabled]{cursor:default}.palette-note{font-size:11px;color:#727b7b;margin-top:6px}.meaning{font-size:17px;padding:0 22px 5px;font-weight:600;min-height:33px}.note{font-size:13px;color:#697477;padding:0 22px 14px;min-height:54px}.actions{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 18px;background:#f0efe7;border-top:1px solid #ddddd1}.choices{display:flex;gap:5px}.choices button,.swap{border:1px solid #ccd0c7;border-radius:6px;background:#fffdf7;padding:6px 9px;font-size:12px}.choices button[aria-pressed=true]{background:#304b58;border-color:#304b58;color:#fff}.state-tag{font-size:12px;color:#61716e}.callout{margin-top:20px;border-left:3px solid #718675;background:#e8ede6;padding:13px 16px;font-size:14px}.foot{font-size:12px;color:#667275;margin-top:15px}.detail{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:22px;font-size:13px;color:#617076}.detail b{display:block;margin-bottom:5px;color:#334c56}.small-label{font-size:12px;color:#536971}
+@media(max-width:1000px){main{padding:24px 16px}.grid{grid-template-columns:1fr}.body{grid-template-columns:minmax(0,1fr) 210px}.rule{flex-direction:column;align-items:start}.detail{grid-template-columns:1fr}}
+@media(max-width:580px){.body{grid-template-columns:1fr}.inventory{padding:0 16px 16px}.palette{grid-template-columns:repeat(6,1fr)}.palette .mold svg{max-width:70px}.heading{padding:16px 16px 0}.actions{flex-wrap:wrap}.meaning,.note{padding-left:16px;padding-right:16px}}
+</style>
+<main id="sheet"><span class="eyebrow">JIGSAW LANGUAGE / REUSE 07</span><h1>모형은 줄이고, 배운 관계는 다시 쓰기</h1><p class="lead">대화별 일부 모형만 제시 · 글자를 바꿔 반대 뜻도 표현 · 행동과 상태를 구별</p>
+<div class="rule"><strong>두 갈래 = 연결된 대상이 그 행동을 하는 쪽</strong><span>이번 능동행동 비교의 규칙이다. 위·왼쪽 위치 자체에는 역할 뜻이 없다.<br>기본 원형 연결도 남겨서 문맥으로 읽을 수 있다.</span></div>
+<section class="grid" id="cards"></section>
+<div class="callout"><b>모형 목록은 그대로, 뜻은 바꿀 수 있다.</b> ‘나 ↔ 주민’을 바꿔도 제공되는 모형과 순서는 변하지 않는다. 제한된 목록이 어느 인물을 행동하는 쪽으로 고를지 대신 결정하지 않는다.</div>
+<div class="detail"><div><b>모형을 고르는 기준</b>이번 대화에서 표현할 내용에 필요한 종류를 제시한다. 모든 발견 모형을 매번 펼치지 않으며, 발견 기록과 소모 없는 재사용은 유지한다. 정답 의도가 달라졌다는 이유로 목록을 몰래 바꾸지 않는다.</div><div><b>이 화면의 조작</b>파랑 모형 또는 기본/표시 버튼으로 조립 결과를 비교한다. 대상 글자를 맞바꿀 수 있다. 노랑 모형의 실제 드래그·조립 난도까지 구현한 화면은 아니다.</div></div>
+<p class="foot">사용자 승인 방향의 제한된 설계 비교 · 두 갈래 형상과 6/5/5/2종은 이번 표본 · 한국어 풀이는 설명용이며 본편 전체 문장 번역 기능이 아니다.</p>
+</main>
+<script>
+const DATA=__DATA__;
+const states=Object.fromEntries(Object.keys(DATA.cases).map(id=>[id,{explicit:DATA.cases[id].kind==='action',swap:false}]));
+const noun=id=>id==='self'?'나':id==='resident'?'주민':id==='hand'?'손':'발';
+function read(id,state){
+ const c=DATA.cases[id];
+ if(c.kind==='state'){if(state.explicit)throw Error('이 상태 문형에는 행위자 표시를 적용하지 않는다.');return {kind:'state',subject:state.swap?'foot':'hand',actor:null};}
+ const mid=state.explicit?c.explicit:c.base;
+ const marked=DATA.models[mid][1].filter(p=>p[1]==='socket'&&p[2]==='twin');
+ const sides={N:c.mark==='N'?'resident':'self',W:c.mark==='W'?'resident':'self'};
+ if(state.swap){sides.N=sides.N==='self'?'resident':'self';sides.W=sides.W==='self'?'resident':'self';}
+ if(marked.length===0)return {kind:'action',actor:null,sides,explicit:false};
+ if(marked.length!==1)throw Error('이 비교 문형은 행위자 한 명만 명시한다.');
+ const actor=sides[marked[0][0]];return {kind:'action',actor,patient:actor==='self'?'resident':'self',sides,explicit:true};
+}
+function wording(id,result){
+ if(result.kind==='state')return noun(result.subject)+'이 아프다.';
+ if(!result.explicit)return '누가 행동하는지는 문맥에 남는다.';
+ const tail=id==='send'?'너에게 보낸다.':id==='push'?'민다.':'당긴다.';
+ return (result.actor==='self'?'내가 주민을 ':'주민이 나를 ')+tail;
+}
+function render(id){
+ const c=DATA.cases[id],s=states[id],out=read(id,s);let el=document.getElementById(id);
+ if(!el){el=document.createElement('article');el.className='card';el.id=id;document.getElementById('cards').append(el);}
+ const mid=s.explicit?c.explicit:c.base;
+ el.innerHTML='<div class="heading"><div><small>'+c.title+'</small><h2>'+c.word+'</h2></div><span class="count">모형 '+c.palette.length+'종 · 발화 '+c.pieces+'피스</span></div><div class="body"><div class="board">'+DATA.boards[id+(s.explicit?'_mark':'_plain')]+'</div><div class="inventory"><div class="palette-title">이번 대화의 모형</div><div class="palette"></div><div class="palette-note">파랑 모형을 눌러 비교할 수 있어요.</div></div></div><p class="meaning" aria-live="polite">'+wording(id,out)+'</p><p class="note">'+c.note+'<br><span class="small-label">'+c.reuse+'</span></p><div class="actions"><div class="choices"></div><button class="swap">'+(c.kind==='state'?'손 ↔ 발':'나 ↔ 주민')+' 글자 바꾸기</button></div>';
+ const board=el.querySelector('.board');
+ if(c.kind==='state')board.querySelector('[data-piece=W] text').textContent=noun(out.subject);
+ else for(const side of ['N','W'])board.querySelector('[data-piece='+side+'] text').textContent=noun(out.sides[side]);
+ for(const model of c.palette){
+   const b=document.createElement('button');b.className='mold'+(model===mid?' chosen':'');b.dataset.model=model;
+   const action=DATA.models[model][0]==='blue';b.disabled=!action;
+   b.setAttribute('aria-label',action?(model===c.base?'기본 행동 모형':'관계 표시 행동 모형'):'대상 외곽');
+   if(action)b.setAttribute('aria-pressed',model===mid);
+   b.innerHTML=DATA.minis[model]+'<small>'+(action?(model===c.base?'기본':'표시'):'대상')+'</small>';
+   if(action)b.onclick=()=>{s.explicit=model===c.explicit;render(id);};el.querySelector('.palette').append(b);
+ }
+ const choices=el.querySelector('.choices');
+ if(c.kind==='action')for(const explicit of [false,true]){const b=document.createElement('button');b.dataset.explicit=String(explicit);b.setAttribute('aria-pressed',s.explicit===explicit);b.textContent=explicit?'관계 표시':'기본 연결';b.onclick=()=>{s.explicit=explicit;render(id);};choices.append(b);}
+ else choices.innerHTML='<span class="state-tag">상태 대상 한 곳 · 역할 표시 없음</span>';
+ el.querySelector('.swap').onclick=()=>{s.swap=!s.swap;render(id);};
+ for(const g of board.querySelectorAll('[data-piece=N],[data-piece=W]'))g.onclick=()=>{s.swap=!s.swap;render(id);};
+}
+Object.keys(DATA.cases).forEach(render);
+window.reuseComparison={DATA,states,read,wording,render};
+</script></html>

@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-07",
+  "linked_html_pages": 19,
+  "missing_links": [],
+  "return_link_fix": "원래 모음 파일명도 보존",
+  "state_tests": "요소조합24 state.test.js 47그룹 통과",
+  "visual_check": "Windows Edge에서 모음 화면 렌더 확인",
+  "credential_pattern_matches": 0
+}

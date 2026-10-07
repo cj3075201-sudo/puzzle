@@ -1,0 +1,755 @@
+{
+  "scope": "조립6개. 각 실제 포트 방향·접합·겹침·연속노랑3개 이하 검사. 2B는 두 독립 발화. 게임/학습/재미 검증 아님.",
+  "checks": {
+    "1a": {
+      "pieces": 6,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "actor",
+          "inside",
+          "round"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ],
+        [
+          "house",
+          "inside",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true,
+      "directed_connections": [
+        [
+          "actor",
+          "verb"
+        ],
+        [
+          "house",
+          "inside"
+        ],
+        [
+          "inside",
+          "actor"
+        ],
+        [
+          "object",
+          "verb"
+        ],
+        [
+          "verb",
+          "other"
+        ]
+      ],
+      "components": [
+        [
+          "actor",
+          "house",
+          "inside",
+          "object",
+          "other",
+          "verb"
+        ]
+      ],
+      "yellow_chain_at_most_3": true
+    },
+    "1b": {
+      "pieces": 6,
+      "connections": [
+        [
+          "actor",
+          "verb",
+          "twin"
+        ],
+        [
+          "object",
+          "verb",
+          "round"
+        ],
+        [
+          "object",
+          "inside",
+          "round"
+        ],
+        [
+          "verb",
+          "other",
+          "round"
+        ],
+        [
+          "house",
+          "inside",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true,
+      "directed_connections": [
+        [
+          "actor",
+          "verb"
+        ],
+        [
+          "house",
+          "inside"
+        ],
+        [
+          "inside",
+          "object"
+        ],
+        [
+          "object",
+          "verb"
+        ],
+        [
+          "verb",
+          "other"
+        ]
+      ],
+      "components": [
+        [
+          "actor",
+          "house",
+          "inside",
+          "object",
+          "other",
+          "verb"
+        ]
+      ],
+      "yellow_chain_at_most_3": true
+    },
+    "2a": {
+      "pieces": 3,
+      "connections": [
+        [
+          "hand",
+          "pain",
+          "round"
+        ],
+        [
+          "hand",
+          "cold",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true,
+      "directed_connections": [
+        [
+          "hand",
+          "cold"
+        ],
+        [
+          "hand",
+          "pain"
+        ]
+      ],
+      "components": [
+        [
+          "cold",
+          "hand",
+          "pain"
+        ]
+      ],
+      "yellow_chain_at_most_3": true
+    },
+    "2b": {
+      "pieces": 4,
+      "connections": [
+        [
+          "hand",
+          "pain",
+          "round"
+        ],
+        [
+          "foot",
+          "cold",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true,
+      "directed_connections": [
+        [
+          "foot",
+          "cold"
+        ],
+        [
+          "hand",
+          "pain"
+        ]
+      ],
+      "components": [
+        [
+          "hand",
+          "pain"
+        ],
+        [
+          "cold",
+          "foot"
+        ]
+      ],
+      "yellow_chain_at_most_3": true
+    },
+    "3a": {
+      "pieces": 4,
+      "connections": [
+        [
+          "house",
+          "inside",
+          "round"
+        ],
+        [
+          "inside",
+          "resident",
+          "round"
+        ],
+        [
+          "resident",
+          "go",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true,
+      "directed_connections": [
+        [
+          "house",
+          "inside"
+        ],
+        [
+          "inside",
+          "resident"
+        ],
+        [
+          "resident",
+          "go"
+        ]
+      ],
+      "components": [
+        [
+          "go",
+          "house",
+          "inside",
+          "resident"
+        ]
+      ],
+      "yellow_chain_at_most_3": true
+    },
+    "3b": {
+      "pieces": 4,
+      "connections": [
+        [
+          "resident",
+          "go",
+          "round"
+        ],
+        [
+          "go",
+          "inside",
+          "round"
+        ],
+        [
+          "inside",
+          "house",
+          "round"
+        ]
+      ],
+      "matched": true,
+      "no_overlap": true,
+      "directed_connections": [
+        [
+          "go",
+          "inside"
+        ],
+        [
+          "house",
+          "inside"
+        ],
+        [
+          "resident",
+          "go"
+        ]
+      ],
+      "components": [
+        [
+          "go",
+          "house",
+          "inside",
+          "resident"
+        ]
+      ],
+      "yellow_chain_at_most_3": true
+    }
+  },
+  "boards": {
+    "1a": [
+      {
+        "key": "actor",
+        "color": "yellow",
+        "x": 1,
+        "y": 2,
+        "label": "주민",
+        "ports": [
+          [
+            "S",
+            "tab",
+            "twin"
+          ],
+          [
+            "N",
+            "socket",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "object",
+        "color": "yellow",
+        "x": 0,
+        "y": 3,
+        "label": "나",
+        "ports": [
+          [
+            "E",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "verb",
+        "color": "blue",
+        "x": 1,
+        "y": 3,
+        "label": "주다",
+        "ports": [
+          [
+            "N",
+            "socket",
+            "twin"
+          ],
+          [
+            "W",
+            "socket",
+            "round"
+          ],
+          [
+            "E",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "other",
+        "color": "yellow",
+        "x": 2,
+        "y": 3,
+        "label": "열쇠",
+        "ports": [
+          [
+            "W",
+            "socket",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "house",
+        "color": "yellow",
+        "x": 1,
+        "y": 0,
+        "label": "집",
+        "ports": [
+          [
+            "S",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "inside",
+        "color": "yellow",
+        "x": 1,
+        "y": 1,
+        "label": "안",
+        "ports": [
+          [
+            "N",
+            "socket",
+            "round"
+          ],
+          [
+            "S",
+            "tab",
+            "round"
+          ]
+        ]
+      }
+    ],
+    "1b": [
+      {
+        "key": "actor",
+        "color": "yellow",
+        "x": 1,
+        "y": 2,
+        "label": "나",
+        "ports": [
+          [
+            "S",
+            "tab",
+            "twin"
+          ]
+        ]
+      },
+      {
+        "key": "object",
+        "color": "yellow",
+        "x": 0,
+        "y": 3,
+        "label": "주민",
+        "ports": [
+          [
+            "E",
+            "tab",
+            "round"
+          ],
+          [
+            "N",
+            "socket",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "verb",
+        "color": "blue",
+        "x": 1,
+        "y": 3,
+        "label": "주다",
+        "ports": [
+          [
+            "N",
+            "socket",
+            "twin"
+          ],
+          [
+            "W",
+            "socket",
+            "round"
+          ],
+          [
+            "E",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "other",
+        "color": "yellow",
+        "x": 2,
+        "y": 3,
+        "label": "열쇠",
+        "ports": [
+          [
+            "W",
+            "socket",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "house",
+        "color": "yellow",
+        "x": 0,
+        "y": 1,
+        "label": "집",
+        "ports": [
+          [
+            "S",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "inside",
+        "color": "yellow",
+        "x": 0,
+        "y": 2,
+        "label": "안",
+        "ports": [
+          [
+            "N",
+            "socket",
+            "round"
+          ],
+          [
+            "S",
+            "tab",
+            "round"
+          ]
+        ]
+      }
+    ],
+    "2a": [
+      {
+        "key": "hand",
+        "color": "yellow",
+        "x": 0,
+        "y": 0,
+        "label": "손",
+        "ports": [
+          [
+            "E",
+            "tab",
+            "round"
+          ],
+          [
+            "S",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "pain",
+        "color": "blue",
+        "x": 1,
+        "y": 0,
+        "label": "아프다",
+        "ports": [
+          [
+            "W",
+            "socket",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "cold",
+        "color": "blue",
+        "x": 0,
+        "y": 1,
+        "label": "차갑다",
+        "ports": [
+          [
+            "N",
+            "socket",
+            "round"
+          ]
+        ]
+      }
+    ],
+    "2b": [
+      {
+        "key": "hand",
+        "color": "yellow",
+        "x": 0,
+        "y": 0,
+        "label": "손",
+        "ports": [
+          [
+            "E",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "pain",
+        "color": "blue",
+        "x": 1,
+        "y": 0,
+        "label": "아프다",
+        "ports": [
+          [
+            "W",
+            "socket",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "foot",
+        "color": "yellow",
+        "x": 0,
+        "y": 2,
+        "label": "발",
+        "ports": [
+          [
+            "E",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "cold",
+        "color": "blue",
+        "x": 1,
+        "y": 2,
+        "label": "차갑다",
+        "ports": [
+          [
+            "W",
+            "socket",
+            "round"
+          ]
+        ]
+      }
+    ],
+    "3a": [
+      {
+        "key": "house",
+        "color": "yellow",
+        "x": 0,
+        "y": 0,
+        "label": "집",
+        "ports": [
+          [
+            "S",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "inside",
+        "color": "yellow",
+        "x": 0,
+        "y": 1,
+        "label": "안",
+        "ports": [
+          [
+            "N",
+            "socket",
+            "round"
+          ],
+          [
+            "S",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "resident",
+        "color": "yellow",
+        "x": 0,
+        "y": 2,
+        "label": "주민",
+        "ports": [
+          [
+            "N",
+            "socket",
+            "round"
+          ],
+          [
+            "S",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "go",
+        "color": "blue",
+        "x": 0,
+        "y": 3,
+        "label": "가다",
+        "ports": [
+          [
+            "N",
+            "socket",
+            "round"
+          ]
+        ]
+      }
+    ],
+    "3b": [
+      {
+        "key": "resident",
+        "color": "yellow",
+        "x": 0,
+        "y": 1,
+        "label": "주민",
+        "ports": [
+          [
+            "E",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "go",
+        "color": "blue",
+        "x": 1,
+        "y": 1,
+        "label": "가다",
+        "ports": [
+          [
+            "W",
+            "socket",
+            "round"
+          ],
+          [
+            "E",
+            "tab",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "inside",
+        "color": "yellow",
+        "x": 2,
+        "y": 1,
+        "label": "안",
+        "ports": [
+          [
+            "N",
+            "socket",
+            "round"
+          ],
+          [
+            "W",
+            "socket",
+            "round"
+          ]
+        ]
+      },
+      {
+        "key": "house",
+        "color": "yellow",
+        "x": 2,
+        "y": 0,
+        "label": "집",
+        "ports": [
+          [
+            "S",
+            "tab",
+            "round"
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "width": 496,
+  "checks": [
+    {
+      "name": "reload board",
+      "pass": true
+    },
+    {
+      "name": "reload listener and dialogue",
+      "pass": true
+    },
+    {
+      "name": "reload world",
+      "pass": true
+    },
+    {
+      "name": "responsive no horizontal overflow",
+      "pass": true
+    }
+  ]
+}

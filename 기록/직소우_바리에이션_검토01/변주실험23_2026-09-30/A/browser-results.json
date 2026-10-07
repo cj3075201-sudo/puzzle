@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-29T18:18:57.076Z",
+  "checks": [
+    {
+      "name": "three lobby cards",
+      "pass": true
+    },
+    {
+      "name": "scenario 1 complete via actual speak button",
+      "pass": true
+    },
+    {
+      "name": "scenario 2 complete via actual speak button",
+      "pass": true
+    },
+    {
+      "name": "scenario 3 complete via actual speak button",
+      "pass": true
+    },
+    {
+      "name": "all completions persist reload",
+      "pass": true
+    },
+    {
+      "name": "actual palette and cell clicks produce valid tree",
+      "pass": true
+    },
+    {
+      "name": "wrong initial policy exposes second-cart failure",
+      "pass": true
+    },
+    {
+      "name": "clear empties board",
+      "pass": true
+    },
+    {
+      "name": "undo restores board",
+      "pass": true
+    },
+    {
+      "name": "desktop no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "900px no horizontal overflow",
+      "pass": true
+    }
+  ]
+}

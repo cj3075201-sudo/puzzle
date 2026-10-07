@@ -1,0 +1,58 @@
+[
+  {
+    "name": "initial book inside",
+    "pass": true
+  },
+  {
+    "name": "first move persists",
+    "pass": true
+  },
+  {
+    "name": "not complete after first",
+    "pass": true
+  },
+  {
+    "name": "inside now ambiguous",
+    "pass": true
+  },
+  {
+    "name": "reload both inside",
+    "pass": true
+  },
+  {
+    "name": "reload puzzle",
+    "pass": true
+  },
+  {
+    "name": "key first completed",
+    "pass": true
+  },
+  {
+    "name": "book outside visual",
+    "pass": true
+  },
+  {
+    "name": "completion restored",
+    "pass": true
+  },
+  {
+    "name": "reverse order both outside",
+    "pass": true
+  },
+  {
+    "name": "outside now ambiguous",
+    "pass": true
+  },
+  {
+    "name": "reverse order complete",
+    "pass": true
+  },
+  {
+    "name": "reset cancels movement",
+    "pass": true
+  },
+  {
+    "name": "reaction tracks inside resident",
+    "pass": true
+  }
+]
