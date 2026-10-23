@@ -1,0 +1,2828 @@
+{
+ "Kinopio": {
+  "tris": 7502,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR",
+   "Nose"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR",
+   "Nose": "Head"
+  },
+  "meshes": [
+   "Geo",
+   "Mark"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 84,
+    "seconds": 2.8,
+    "loop": true,
+    "ik_max_reach": 1.0,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Walk",
+    "frames": 10,
+    "seconds": 0.333,
+    "loop": true,
+    "ik_max_reach": 0.884,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Run",
+    "frames": 9,
+    "seconds": 0.3,
+    "loop": true,
+    "ik_max_reach": 0.84,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.808,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 2.776,
+    "ik_overreach": [
+     [
+      "handL",
+      1.062
+     ],
+     [
+      "handL",
+      1.26
+     ],
+     [
+      "handL",
+      1.425
+     ],
+     [
+      "handL",
+      1.542
+     ]
+    ]
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointUp",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookUp",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Beckon",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookBack",
+    "frames": 51,
+    "seconds": 1.7,
+    "loop": false,
+    "ik_max_reach": 0.977,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Nod",
+    "frames": 26,
+    "seconds": 0.867,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HeadTilt",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Reach",
+    "frames": 66,
+    "seconds": 2.2,
+    "loop": false,
+    "ik_max_reach": 0.981,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Gather",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 2.087,
+    "ik_overreach": [
+     [
+      "handR",
+      1.07
+     ],
+     [
+      "handR",
+      1.076
+     ],
+     [
+      "handR",
+      1.132
+     ],
+     [
+      "handR",
+      1.148
+     ]
+    ]
+   },
+   {
+    "clip": "SitIdle",
+    "frames": 108,
+    "seconds": 3.6,
+    "loop": true,
+    "ik_max_reach": 0.955,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Cower",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Kneel",
+    "frames": 78,
+    "seconds": 2.6,
+    "loop": true,
+    "ik_max_reach": 1.238,
+    "ik_overreach": [
+     [
+      "handL",
+      1.12
+     ],
+     [
+      "handL",
+      1.121
+     ],
+     [
+      "handL",
+      1.122
+     ],
+     [
+      "handL",
+      1.123
+     ]
+    ]
+   },
+   {
+    "clip": "Push",
+    "frames": 48,
+    "seconds": 1.6,
+    "loop": false,
+    "ik_max_reach": 1.021,
+    "ik_overreach": [
+     [
+      "footR",
+      1.001
+     ],
+     [
+      "footR",
+      1.003
+     ],
+     [
+      "footR",
+      1.006
+     ],
+     [
+      "footR",
+      1.012
+     ]
+    ]
+   },
+   {
+    "clip": "FileNose",
+    "frames": 60,
+    "seconds": 2.0,
+    "loop": false,
+    "ik_max_reach": 0.985,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HideNose",
+    "frames": 18,
+    "seconds": 0.6,
+    "loop": false,
+    "ik_max_reach": 1.034,
+    "ik_overreach": [
+     [
+      "handL",
+      1.029
+     ],
+     [
+      "handL",
+      1.034
+     ]
+    ]
+   },
+   {
+    "clip": "Grin",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.997,
+    "ik_overreach": []
+   },
+   {
+    "clip": "ShoutWord",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.977,
+    "ik_overreach": []
+   },
+   {
+    "clip": "RunAway",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": true,
+    "ik_max_reach": 0.83,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Sulk",
+    "frames": 120,
+    "seconds": 4.0,
+    "loop": true,
+    "ik_max_reach": 0.971,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Cry",
+    "frames": 60,
+    "seconds": 2.0,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "TugSleeve",
+    "frames": 30,
+    "seconds": 1.0,
+    "loop": false,
+    "ik_max_reach": 0.988,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointSelf",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 1.056,
+    "ik_overreach": [
+     [
+      "handL",
+      1.007
+     ],
+     [
+      "handL",
+      1.028
+     ],
+     [
+      "handL",
+      1.03
+     ],
+     [
+      "handL",
+      1.045
+     ]
+    ]
+   },
+   {
+    "clip": "PointOther",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.996,
+    "ik_overreach": []
+   }
+  ],
+  "speeds": {
+   "Walk": 2.2,
+   "Run": 4.0,
+   "RunAway": 4.0
+  },
+  "height": 0.87
+ },
+ "Hero_Bluebird": {
+  "tris": 12630,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR",
+   "Cape"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR",
+   "Cape": "Body"
+  },
+  "meshes": [
+   "Geo",
+   "Satchel"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 84,
+    "seconds": 2.8,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Walk",
+    "frames": 18,
+    "seconds": 0.6,
+    "loop": true,
+    "ik_max_reach": 0.871,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Run",
+    "frames": 14,
+    "seconds": 0.467,
+    "loop": true,
+    "ik_max_reach": 0.869,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.91,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 2.428,
+    "ik_overreach": [
+     [
+      "handL",
+      1.056
+     ],
+     [
+      "handL",
+      1.209
+     ],
+     [
+      "handL",
+      1.346
+     ],
+     [
+      "handL",
+      1.445
+     ]
+    ]
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointUp",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookUp",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Nod",
+    "frames": 26,
+    "seconds": 0.867,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HeadTilt",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Reach",
+    "frames": 66,
+    "seconds": 2.2,
+    "loop": false,
+    "ik_max_reach": 0.982,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Cower",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Push",
+    "frames": 48,
+    "seconds": 1.6,
+    "loop": false,
+    "ik_max_reach": 1.004,
+    "ik_overreach": [
+     [
+      "footR",
+      1.002
+     ],
+     [
+      "footR",
+      1.003
+     ],
+     [
+      "footR",
+      1.004
+     ]
+    ]
+   },
+   {
+    "clip": "FallTumble",
+    "frames": 30,
+    "seconds": 1.0,
+    "loop": true,
+    "ik_max_reach": 0.0,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LieDown",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.0,
+    "ik_overreach": []
+   },
+   {
+    "clip": "GetUp",
+    "frames": 60,
+    "seconds": 2.0,
+    "loop": false,
+    "ik_max_reach": 1.017,
+    "ik_overreach": [
+     [
+      "footL",
+      1.002
+     ],
+     [
+      "footL",
+      1.006
+     ],
+     [
+      "footL",
+      1.013
+     ],
+     [
+      "footL",
+      1.016
+     ]
+    ]
+   },
+   {
+    "clip": "LookAround",
+    "frames": 75,
+    "seconds": 2.5,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Kneel",
+    "frames": 78,
+    "seconds": 2.6,
+    "loop": true,
+    "ik_max_reach": 0.986,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Shout",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.978,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Shrug",
+    "frames": 30,
+    "seconds": 1.0,
+    "loop": false,
+    "ik_max_reach": 0.991,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Squeeze",
+    "frames": 60,
+    "seconds": 2.0,
+    "loop": false,
+    "ik_max_reach": 0.939,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Carry",
+    "frames": 18,
+    "seconds": 0.6,
+    "loop": true,
+    "ik_max_reach": 0.865,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Startle",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 1.036,
+    "ik_overreach": [
+     [
+      "footL",
+      1.019
+     ],
+     [
+      "footL",
+      1.034
+     ],
+     [
+      "footL",
+      1.036
+     ]
+    ]
+   }
+  ],
+  "speeds": {
+   "Walk": 1.8,
+   "Run": 3.2,
+   "Carry": 1.8
+  },
+  "height": 1.25
+ },
+ "Chief": {
+  "tris": 8526,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR",
+   "Canopy"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR",
+   "Canopy": "Head"
+  },
+  "meshes": [
+   "Geo"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 120,
+    "seconds": 4.0,
+    "loop": true,
+    "ik_max_reach": 0.968,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Walk",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": true,
+    "ik_max_reach": 0.81,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.968,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 1.114,
+    "ik_overreach": [
+     [
+      "handL",
+      1.114
+     ],
+     [
+      "handR",
+      1.114
+     ]
+    ]
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 1.117,
+    "ik_overreach": [
+     [
+      "handL",
+      1.112
+     ],
+     [
+      "handL",
+      1.113
+     ],
+     [
+      "handL",
+      1.114
+     ],
+     [
+      "handL",
+      1.115
+     ]
+    ]
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 1.722,
+    "ik_overreach": [
+     [
+      "handL",
+      1.114
+     ],
+     [
+      "handL",
+      1.119
+     ],
+     [
+      "handL",
+      1.131
+     ],
+     [
+      "handL",
+      1.145
+     ]
+    ]
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.968,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointUp",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.968,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookUp",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.968,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Nod",
+    "frames": 26,
+    "seconds": 0.867,
+    "loop": false,
+    "ik_max_reach": 0.968,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HeadTilt",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.968,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Cower",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.968,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Kneel",
+    "frames": 78,
+    "seconds": 2.6,
+    "loop": true,
+    "ik_max_reach": 1.049,
+    "ik_overreach": [
+     [
+      "handR",
+      1.02
+     ],
+     [
+      "handR",
+      1.021
+     ],
+     [
+      "handR",
+      1.022
+     ],
+     [
+      "handR",
+      1.023
+     ]
+    ]
+   },
+   {
+    "clip": "Greet",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "StandSway",
+    "frames": 120,
+    "seconds": 4.0,
+    "loop": true,
+    "ik_max_reach": 0.977,
+    "ik_overreach": []
+   },
+   {
+    "clip": "TieCord",
+    "frames": 60,
+    "seconds": 2.0,
+    "loop": false,
+    "ik_max_reach": 0.969,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Proclaim",
+    "frames": 120,
+    "seconds": 4.0,
+    "loop": true,
+    "ik_max_reach": 0.978,
+    "ik_overreach": []
+   }
+  ],
+  "speeds": {
+   "Walk": 2.2
+  },
+  "height": 3.0
+ },
+ "Villager_A": {
+  "tris": 6778,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR"
+  },
+  "meshes": [
+   "Geo"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 96,
+    "seconds": 3.2,
+    "loop": true,
+    "ik_max_reach": 0.995,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Walk",
+    "frames": 16,
+    "seconds": 0.533,
+    "loop": true,
+    "ik_max_reach": 0.909,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.659,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 2.427,
+    "ik_overreach": [
+     [
+      "handL",
+      1.076
+     ],
+     [
+      "handL",
+      1.239
+     ],
+     [
+      "handL",
+      1.355
+     ],
+     [
+      "handL",
+      1.43
+     ]
+    ]
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointUp",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookUp",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Beckon",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Nod",
+    "frames": 26,
+    "seconds": 0.867,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HeadTilt",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Reach",
+    "frames": 66,
+    "seconds": 2.2,
+    "loop": false,
+    "ik_max_reach": 0.982,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Gather",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 1.742,
+    "ik_overreach": [
+     [
+      "handR",
+      1.103
+     ],
+     [
+      "handR",
+      1.119
+     ],
+     [
+      "handR",
+      1.122
+     ],
+     [
+      "handR",
+      1.135
+     ]
+    ]
+   },
+   {
+    "clip": "SitIdle",
+    "frames": 108,
+    "seconds": 3.6,
+    "loop": true,
+    "ik_max_reach": 0.795,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Cower",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Kneel",
+    "frames": 78,
+    "seconds": 2.6,
+    "loop": true,
+    "ik_max_reach": 1.041,
+    "ik_overreach": [
+     [
+      "handL",
+      1.001
+     ],
+     [
+      "handL",
+      1.003
+     ],
+     [
+      "handL",
+      1.005
+     ],
+     [
+      "handL",
+      1.007
+     ]
+    ]
+   },
+   {
+    "clip": "Carry",
+    "frames": 16,
+    "seconds": 0.533,
+    "loop": true,
+    "ik_max_reach": 0.908,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Offer",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Crowd",
+    "frames": 60,
+    "seconds": 2.0,
+    "loop": true,
+    "ik_max_reach": 1.002,
+    "ik_overreach": [
+     [
+      "footL",
+      1.002
+     ],
+     [
+      "footR",
+      1.002
+     ]
+    ]
+   },
+   {
+    "clip": "Recoil",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.978,
+    "ik_overreach": []
+   }
+  ],
+  "speeds": {
+   "Walk": 2.2,
+   "Carry": 2.2
+  },
+  "height": 1.48
+ },
+ "Villager_B": {
+  "tris": 6690,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR"
+  },
+  "meshes": [
+   "Geo"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 96,
+    "seconds": 3.2,
+    "loop": true,
+    "ik_max_reach": 0.993,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Walk",
+    "frames": 16,
+    "seconds": 0.533,
+    "loop": true,
+    "ik_max_reach": 0.909,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.65,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 2.432,
+    "ik_overreach": [
+     [
+      "handL",
+      1.072
+     ],
+     [
+      "handL",
+      1.239
+     ],
+     [
+      "handL",
+      1.358
+     ],
+     [
+      "handL",
+      1.433
+     ]
+    ]
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointUp",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookUp",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Beckon",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Nod",
+    "frames": 26,
+    "seconds": 0.867,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HeadTilt",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Reach",
+    "frames": 66,
+    "seconds": 2.2,
+    "loop": false,
+    "ik_max_reach": 0.982,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Gather",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 1.743,
+    "ik_overreach": [
+     [
+      "handR",
+      1.109
+     ],
+     [
+      "handR",
+      1.125
+     ],
+     [
+      "handR",
+      1.128
+     ],
+     [
+      "handR",
+      1.141
+     ]
+    ]
+   },
+   {
+    "clip": "SitIdle",
+    "frames": 108,
+    "seconds": 3.6,
+    "loop": true,
+    "ik_max_reach": 0.793,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Cower",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Kneel",
+    "frames": 78,
+    "seconds": 2.6,
+    "loop": true,
+    "ik_max_reach": 1.04,
+    "ik_overreach": [
+     [
+      "handL",
+      1.001
+     ],
+     [
+      "handL",
+      1.003
+     ],
+     [
+      "handL",
+      1.005
+     ],
+     [
+      "handL",
+      1.007
+     ]
+    ]
+   },
+   {
+    "clip": "Carry",
+    "frames": 16,
+    "seconds": 0.533,
+    "loop": true,
+    "ik_max_reach": 0.908,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Offer",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Crowd",
+    "frames": 60,
+    "seconds": 2.0,
+    "loop": true,
+    "ik_max_reach": 1.002,
+    "ik_overreach": [
+     [
+      "footL",
+      1.002
+     ],
+     [
+      "footR",
+      1.002
+     ]
+    ]
+   },
+   {
+    "clip": "Recoil",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.978,
+    "ik_overreach": []
+   }
+  ],
+  "speeds": {
+   "Walk": 2.2,
+   "Carry": 2.2
+  },
+  "height": 1.37
+ },
+ "Silhouette_A": {
+  "tris": 2826,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR"
+  },
+  "meshes": [
+   "Geo"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 96,
+    "seconds": 3.2,
+    "loop": true,
+    "ik_max_reach": 0.995,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Walk",
+    "frames": 16,
+    "seconds": 0.533,
+    "loop": true,
+    "ik_max_reach": 0.909,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.659,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 2.427,
+    "ik_overreach": [
+     [
+      "handL",
+      1.076
+     ],
+     [
+      "handL",
+      1.239
+     ],
+     [
+      "handL",
+      1.355
+     ],
+     [
+      "handL",
+      1.43
+     ]
+    ]
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointUp",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookUp",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Beckon",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Nod",
+    "frames": 26,
+    "seconds": 0.867,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HeadTilt",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Reach",
+    "frames": 66,
+    "seconds": 2.2,
+    "loop": false,
+    "ik_max_reach": 0.982,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Gather",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 1.742,
+    "ik_overreach": [
+     [
+      "handR",
+      1.103
+     ],
+     [
+      "handR",
+      1.119
+     ],
+     [
+      "handR",
+      1.122
+     ],
+     [
+      "handR",
+      1.135
+     ]
+    ]
+   },
+   {
+    "clip": "SitIdle",
+    "frames": 108,
+    "seconds": 3.6,
+    "loop": true,
+    "ik_max_reach": 0.795,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Cower",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Kneel",
+    "frames": 78,
+    "seconds": 2.6,
+    "loop": true,
+    "ik_max_reach": 1.041,
+    "ik_overreach": [
+     [
+      "handL",
+      1.001
+     ],
+     [
+      "handL",
+      1.003
+     ],
+     [
+      "handL",
+      1.005
+     ],
+     [
+      "handL",
+      1.007
+     ]
+    ]
+   }
+  ],
+  "speeds": {
+   "Walk": 2.2
+  },
+  "height": 1.48
+ },
+ "Mother": {
+  "tris": 5556,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR",
+   "Cloth"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR",
+   "Cloth": "HandR"
+  },
+  "meshes": [
+   "Geo"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 102,
+    "seconds": 3.4,
+    "loop": true,
+    "ik_max_reach": 1.008,
+    "ik_overreach": [
+     [
+      "footL",
+      1.001
+     ],
+     [
+      "footL",
+      1.004
+     ],
+     [
+      "footL",
+      1.005
+     ],
+     [
+      "footL",
+      1.008
+     ]
+    ]
+   },
+   {
+    "clip": "Walk",
+    "frames": 14,
+    "seconds": 0.467,
+    "loop": true,
+    "ik_max_reach": 0.853,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.477,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 1.971,
+    "ik_overreach": [
+     [
+      "handL",
+      1.087
+     ],
+     [
+      "handL",
+      1.286
+     ],
+     [
+      "handL",
+      1.419
+     ],
+     [
+      "handL",
+      1.498
+     ]
+    ]
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointUp",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookUp",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Beckon",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Nod",
+    "frames": 26,
+    "seconds": 0.867,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HeadTilt",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Reach",
+    "frames": 66,
+    "seconds": 2.2,
+    "loop": false,
+    "ik_max_reach": 1.255,
+    "ik_overreach": [
+     [
+      "handR",
+      1.076
+     ],
+     [
+      "handR",
+      1.236
+     ],
+     [
+      "handR",
+      1.237
+     ],
+     [
+      "handR",
+      1.238
+     ]
+    ]
+   },
+   {
+    "clip": "Gather",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 1.508,
+    "ik_overreach": [
+     [
+      "handR",
+      1.055
+     ],
+     [
+      "handR",
+      1.06
+     ],
+     [
+      "handR",
+      1.061
+     ],
+     [
+      "handR",
+      1.063
+     ]
+    ]
+   },
+   {
+    "clip": "SitIdle",
+    "frames": 108,
+    "seconds": 3.6,
+    "loop": true,
+    "ik_max_reach": 1.157,
+    "ik_overreach": [
+     [
+      "handL",
+      1.1
+     ],
+     [
+      "handL",
+      1.101
+     ],
+     [
+      "handL",
+      1.102
+     ],
+     [
+      "handL",
+      1.103
+     ]
+    ]
+   },
+   {
+    "clip": "Cower",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.974,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Kneel",
+    "frames": 78,
+    "seconds": 2.6,
+    "loop": true,
+    "ik_max_reach": 1.431,
+    "ik_overreach": [
+     [
+      "handL",
+      1.384
+     ],
+     [
+      "handL",
+      1.385
+     ],
+     [
+      "handL",
+      1.386
+     ],
+     [
+      "handL",
+      1.387
+     ]
+    ]
+   }
+  ],
+  "speeds": {
+   "Walk": 2.2
+  },
+  "height": 2.0
+ },
+ "Villager_C": {
+  "tris": 6936,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR"
+  },
+  "meshes": [
+   "Geo"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 96,
+    "seconds": 3.2,
+    "loop": true,
+    "ik_max_reach": 0.993,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Walk",
+    "frames": 16,
+    "seconds": 0.533,
+    "loop": true,
+    "ik_max_reach": 0.909,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.667,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 2.452,
+    "ik_overreach": [
+     [
+      "handL",
+      1.083
+     ],
+     [
+      "handL",
+      1.245
+     ],
+     [
+      "handL",
+      1.361
+     ],
+     [
+      "handL",
+      1.435
+     ]
+    ]
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointUp",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookUp",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Beckon",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Nod",
+    "frames": 26,
+    "seconds": 0.867,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HeadTilt",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Reach",
+    "frames": 66,
+    "seconds": 2.2,
+    "loop": false,
+    "ik_max_reach": 0.982,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Gather",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 1.743,
+    "ik_overreach": [
+     [
+      "handR",
+      1.109
+     ],
+     [
+      "handR",
+      1.125
+     ],
+     [
+      "handR",
+      1.128
+     ],
+     [
+      "handR",
+      1.141
+     ]
+    ]
+   },
+   {
+    "clip": "SitIdle",
+    "frames": 108,
+    "seconds": 3.6,
+    "loop": true,
+    "ik_max_reach": 0.793,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Cower",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Kneel",
+    "frames": 78,
+    "seconds": 2.6,
+    "loop": true,
+    "ik_max_reach": 1.04,
+    "ik_overreach": [
+     [
+      "handL",
+      1.001
+     ],
+     [
+      "handL",
+      1.003
+     ],
+     [
+      "handL",
+      1.005
+     ],
+     [
+      "handL",
+      1.007
+     ]
+    ]
+   },
+   {
+    "clip": "Carry",
+    "frames": 16,
+    "seconds": 0.533,
+    "loop": true,
+    "ik_max_reach": 0.908,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Offer",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Crowd",
+    "frames": 60,
+    "seconds": 2.0,
+    "loop": true,
+    "ik_max_reach": 1.002,
+    "ik_overreach": [
+     [
+      "footL",
+      1.002
+     ],
+     [
+      "footR",
+      1.002
+     ]
+    ]
+   },
+   {
+    "clip": "Recoil",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.978,
+    "ik_overreach": []
+   }
+  ],
+  "speeds": {
+   "Walk": 2.2,
+   "Carry": 2.2
+  },
+  "height": 1.37
+ },
+ "Silhouette_B": {
+  "tris": 2790,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR"
+  },
+  "meshes": [
+   "Geo"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 96,
+    "seconds": 3.2,
+    "loop": true,
+    "ik_max_reach": 0.993,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Walk",
+    "frames": 16,
+    "seconds": 0.533,
+    "loop": true,
+    "ik_max_reach": 0.909,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.65,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 2.432,
+    "ik_overreach": [
+     [
+      "handL",
+      1.072
+     ],
+     [
+      "handL",
+      1.239
+     ],
+     [
+      "handL",
+      1.358
+     ],
+     [
+      "handL",
+      1.433
+     ]
+    ]
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "PointUp",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "LookUp",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Beckon",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Nod",
+    "frames": 26,
+    "seconds": 0.867,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "HeadTilt",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Reach",
+    "frames": 66,
+    "seconds": 2.2,
+    "loop": false,
+    "ik_max_reach": 0.982,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Gather",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 1.743,
+    "ik_overreach": [
+     [
+      "handR",
+      1.109
+     ],
+     [
+      "handR",
+      1.125
+     ],
+     [
+      "handR",
+      1.128
+     ],
+     [
+      "handR",
+      1.141
+     ]
+    ]
+   },
+   {
+    "clip": "SitIdle",
+    "frames": 108,
+    "seconds": 3.6,
+    "loop": true,
+    "ik_max_reach": 0.793,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Cower",
+    "frames": 42,
+    "seconds": 1.4,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Kneel",
+    "frames": 78,
+    "seconds": 2.6,
+    "loop": true,
+    "ik_max_reach": 1.04,
+    "ik_overreach": [
+     [
+      "handL",
+      1.001
+     ],
+     [
+      "handL",
+      1.003
+     ],
+     [
+      "handL",
+      1.005
+     ],
+     [
+      "handL",
+      1.007
+     ]
+    ]
+   }
+  ],
+  "speeds": {
+   "Walk": 2.2
+  },
+  "height": 1.37
+ },
+ "Fish": {
+  "tris": 9688,
+  "bones": [
+   "Body",
+   "Head",
+   "JawUpper",
+   "JawLower",
+   "FinL",
+   "FinR",
+   "Spine1",
+   "Spine2",
+   "Tail"
+  ],
+  "parents": {
+   "Body": null,
+   "Head": "Body",
+   "JawUpper": "Head",
+   "JawLower": "Head",
+   "FinL": "Body",
+   "FinR": "Body",
+   "Spine1": "Body",
+   "Spine2": "Spine1",
+   "Tail": "Spine2"
+  },
+  "meshes": [
+   "Geo"
+  ],
+  "clips": [
+   {
+    "clip": "Hidden",
+    "frames": 90,
+    "seconds": 3.0,
+    "loop": true,
+    "body_y": [
+     -10.15,
+     -9.85
+    ],
+    "body_y_start": -10.0,
+    "body_y_end": -10.0
+   },
+   {
+    "clip": "Rise",
+    "frames": 75,
+    "seconds": 2.5,
+    "loop": false,
+    "body_y": [
+     -10.03,
+     1.3
+    ],
+    "body_y_start": -10.0,
+    "body_y_end": 0.0
+   },
+   {
+    "clip": "Idle",
+    "frames": 120,
+    "seconds": 4.0,
+    "loop": true,
+    "body_y": [
+     -0.16,
+     0.16
+    ],
+    "body_y_start": 0.0,
+    "body_y_end": 0.0
+   },
+   {
+    "clip": "OpenMouth",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "body_y": [
+     0.0,
+     0.0
+    ],
+    "body_y_start": 0.0,
+    "body_y_end": 0.0
+   },
+   {
+    "clip": "Swallow",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "body_y": [
+     -0.56,
+     0.46
+    ],
+    "body_y_start": 0.0,
+    "body_y_end": 0.0
+   },
+   {
+    "clip": "Spit",
+    "frames": 36,
+    "seconds": 1.2,
+    "loop": false,
+    "body_y": [
+     -0.25,
+     0.25
+    ],
+    "body_y_start": 0.0,
+    "body_y_end": 0.0
+   },
+   {
+    "clip": "Sink",
+    "frames": 60,
+    "seconds": 2.0,
+    "loop": false,
+    "body_y": [
+     -10.0,
+     0.45
+    ],
+    "body_y_start": 0.0,
+    "body_y_end": -10.0
+   }
+  ],
+  "height": 6.5,
+  "bounds_min": [
+   -5.21,
+   -10.42,
+   -10.72
+  ],
+  "bounds_max": [
+   5.23,
+   6.17,
+   7.04
+  ],
+  "waterline_xy": [
+   [
+    -2.89,
+    2.89
+   ],
+   [
+    -0.67,
+    4.8
+   ]
+  ],
+  "materials": [
+   "M_FishSkin",
+   "M_FishGum",
+   "M_Ink",
+   "M_FishScratch",
+   "M_Pencil",
+   "M_FishEyePale",
+   "M_FishTooth",
+   "M_Paper",
+   "M_Silhouette",
+   "M_PaperBack",
+   "M_TornEdge"
+  ]
+ },
+ "Collector": {
+  "tris": 7200,
+  "bones": [
+   "Hips",
+   "Body",
+   "Head",
+   "LegL",
+   "ShinL",
+   "FootL",
+   "LegR",
+   "ShinR",
+   "FootR",
+   "ArmL",
+   "ForeArmL",
+   "HandL",
+   "ArmR",
+   "ForeArmR",
+   "HandR"
+  ],
+  "parents": {
+   "Hips": null,
+   "Body": "Hips",
+   "Head": "Body",
+   "LegL": "Hips",
+   "ShinL": "LegL",
+   "FootL": "ShinL",
+   "LegR": "Hips",
+   "ShinR": "LegR",
+   "FootR": "ShinR",
+   "ArmL": "Body",
+   "ForeArmL": "ArmL",
+   "HandL": "ForeArmL",
+   "ArmR": "Body",
+   "ForeArmR": "ArmR",
+   "HandR": "ForeArmR"
+  },
+  "meshes": [
+   "Geo"
+  ],
+  "clips": [
+   {
+    "clip": "Idle",
+    "frames": 102,
+    "seconds": 3.4,
+    "loop": true,
+    "ik_max_reach": 0.994,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Walk",
+    "frames": 16,
+    "seconds": 0.533,
+    "loop": true,
+    "ik_max_reach": 0.89,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Carry",
+    "frames": 18,
+    "seconds": 0.6,
+    "loop": true,
+    "ik_max_reach": 0.87,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Grab",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 1.036,
+    "ik_overreach": [
+     [
+      "footL",
+      1.001
+     ],
+     [
+      "footR",
+      1.001
+     ],
+     [
+      "handL",
+      1.017
+     ],
+     [
+      "handL",
+      1.021
+     ]
+    ]
+   },
+   {
+    "clip": "Bow",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "BowHold",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.679,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Rise",
+    "frames": 27,
+    "seconds": 0.9,
+    "loop": false,
+    "ik_max_reach": 2.426,
+    "ik_overreach": [
+     [
+      "handL",
+      1.089
+     ],
+     [
+      "handL",
+      1.246
+     ],
+     [
+      "handL",
+      1.359
+     ],
+     [
+      "handL",
+      1.431
+     ]
+    ]
+   },
+   {
+    "clip": "Recoil",
+    "frames": 24,
+    "seconds": 0.8,
+    "loop": false,
+    "ik_max_reach": 0.978,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Point",
+    "frames": 45,
+    "seconds": 1.5,
+    "loop": false,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   },
+   {
+    "clip": "Talk",
+    "frames": 72,
+    "seconds": 2.4,
+    "loop": true,
+    "ik_max_reach": 0.975,
+    "ik_overreach": []
+   }
+  ],
+  "speeds": {
+   "Walk": 2.2,
+   "Carry": 2.2
+  },
+  "height": 1.5
+ }
+}

@@ -1,0 +1,533 @@
+/* Once Under a Time — 화면 스타일 (2026-10-22 UI 재설계).
+   세계는 “미완성 그림”이지만 화면은 다 만든 손 공책: 종이 결·잉크 붓·연필·붉은 인주.
+   글꼴: 고운바탕(책 글씨) · 나눔손글씨 펜(내가 쓴 추측·메모·연필 메모) — C# UIKit.SetFace로 붙인다.
+   색: 종이 F1EEE6 · 잉크 2B2622 · 연필 5A524A · 회청 C9CCCF/9EA3A8 · 인주 B5452F · 따뜻한 무대 C98A55 · 직소 노랑 E9C76A/파랑 91BECE
+   그림: Assets/Game/Art/UI/*.png (art/tools/make_ui_kit.py, make_ui_kit2.py, make_ui_kit3.py)
+   10/23 2차(make_ui_kit3): 화면의 사람 물건 = 주인공 공책 하나 → 그것만 제 색(크림 종이·파란 줄·붉은 여백선·파랑새 천 제본).
+   조각 색 = 색연필 빗금(노랑 C98F1C / 파랑 366CA4, 바탕 F3E2A9 / D3E3EE). 크리처 세계에서 온 것 = 회백 종이 + 넘치는 숯 선.
+   단추 = 연필로 두른 고리(주 행동은 붉은 연필), 확정 = 붉은 인주 「앎」. */
+
+.ouat-root { flex-grow: 1; color: rgb(43, 38, 34); font-size: 22px; }
+.layer { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.screen { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.vignette { position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url("project://database/Assets/Game/Art/UI/vignette.png"); -unity-background-scale-mode: stretch-to-fill; }
+
+/* ── 공통: 붓 단추 · 잉크 글자 단추 · 닫기 · 테이프 · 입력칸 ── */
+.brush-btn { width: 300px; height: 84px; justify-content: center; align-items: center; padding-right: 34px; background-image: url("project://database/Assets/Game/Art/UI/brush_btn.png"); -unity-slice-left: 90; -unity-slice-right: 110; -unity-slice-top: 0; -unity-slice-bottom: 0; transition: scale 0.15s ease-out, rotate 0.15s ease-out, opacity 0.2s; }
+.brush-red { background-image: url("project://database/Assets/Game/Art/UI/brush_btn_red.png"); }
+.brush-btn-label { color: rgb(43, 38, 34); font-size: 30px; -unity-text-align: middle-center; }
+.brush-red .brush-btn-label { color: rgb(160, 52, 34); }
+.brush-btn:hover { scale: 1.04 1.04; rotate: -1deg; }
+.brush-btn:active { scale: 0.97 0.97; }
+.brush-small { width: 210px; height: 64px; padding-right: 26px; }
+.brush-small .brush-btn-label { font-size: 23px; }
+.is-off { opacity: 0.4; }
+
+.ink-btn { margin-right: 30px; padding: 6px 2px 0 2px; }
+.ink-btn-label { font-size: 24px; color: rgb(74, 67, 60); transition: color 0.15s; }
+.ink-btn-line { height: 14px; width: 0; margin-top: -3px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; transition: width 0.25s ease-out; }
+.ink-btn:hover .ink-btn-label { color: rgb(43, 38, 34); }
+.ink-btn:hover .ink-btn-line { width: 100%; }
+
+.close-x { position: absolute; width: 54px; height: 54px; background-image: url("project://database/Assets/Game/Art/UI/icon_close.png"); opacity: 0.75; transition: scale 0.15s, rotate 0.15s, opacity 0.15s; }
+.close-x:hover { opacity: 1; scale: 1.12 1.12; rotate: 8deg; }
+
+.tape { position: absolute; width: 110px; height: 34px; background-image: url("project://database/Assets/Game/Art/UI/tape.png"); -unity-background-scale-mode: stretch-to-fill; }
+.tape-top { top: -17px; left: 50%; margin-left: -55px; rotate: -4deg; }
+.tape-left { left: -46px; top: 10px; rotate: -34deg; }
+.tape-corner-a { left: -40px; top: -6px; rotate: -38deg; }
+.tape-corner-b { right: -40px; bottom: -4px; rotate: -38deg; }
+
+.field-label { font-size: 17px; color: rgb(122, 110, 98); letter-spacing: 3px; margin-top: 14px; }
+.field-line { height: 20px; margin-top: -10px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; }
+.guess-field { margin: 0; }
+.guess-field .unity-base-text-field__input,
+.guess-field:hover .unity-base-text-field__input,
+.guess-field:focus .unity-base-text-field__input { background-color: rgba(0, 0, 0, 0); border-width: 0; border-radius: 0; padding: 0 4px 0 4px; font-size: 50px; color: rgb(43, 38, 34); --unity-cursor-color: rgb(43, 38, 34); --unity-selection-color: rgba(181, 69, 47, 0.25); }
+.memo-field { margin: 4px 0 0 0; }
+.memo-field .unity-base-text-field__input,
+.memo-field:hover .unity-base-text-field__input,
+.memo-field:focus .unity-base-text-field__input { background-color: rgba(250, 248, 242, 0.55); border-width: 0; border-left-width: 3px; border-left-color: rgba(43, 38, 34, 0.18); border-radius: 0; padding: 6px 10px; min-height: 104px; font-size: 30px; color: rgb(58, 51, 45); white-space: normal; -unity-text-align: upper-left; --unity-cursor-color: rgb(43, 38, 34); --unity-selection-color: rgba(181, 69, 47, 0.25); }
+
+/* 위로 떠오르는 시작 상태들(UIKit.AnimateIn이 붙였다 뗌) */
+.note-start { opacity: 0; translate: 0 8px; }
+.strip-start { opacity: 0; translate: 0 16px; }
+
+/* ── HUD ── */
+.hud { transition: opacity 0.5s; }
+.hud-hidden { opacity: 0; }
+.goal-card { position: absolute; left: 24px; top: 20px; flex-direction: row; align-items: stretch; min-width: 380px; max-width: 660px; padding: 24px 40px 24px 0; background-image: url("project://database/Assets/Game/Art/UI/goal_ticket.png"); -unity-slice-left: 96; -unity-slice-right: 40; -unity-slice-top: 34; -unity-slice-bottom: 34; transition: translate 0.55s ease-out-back, opacity 0.4s; }
+.goal-new { translate: -60px 0; opacity: 0; }
+.goal-stub { width: 80px; align-items: center; justify-content: center; }
+.goal-icon { width: 46px; height: 46px; background-image: url("project://database/Assets/Game/Art/UI/icon_goal.png"); }
+.goal-col { padding-left: 20px; flex-shrink: 1; }
+.goal-place { font-size: 17px; color: rgb(122, 110, 98); letter-spacing: 3px; }
+.goal-text { font-size: 30px; color: rgb(43, 38, 34); margin-top: 2px; white-space: normal; }
+.goal-hint { font-size: 28px; color: rgb(90, 82, 74); margin-top: 4px; white-space: normal; max-width: 500px; }
+
+.journal-btn { position: absolute; right: 28px; top: 14px; align-items: center; transition: rotate 0.15s, scale 0.25s ease-out-back; }
+.journal-btn:hover { rotate: -4deg; scale: 1.06 1.06; }
+.journal-pop { scale: 1.22 1.22; rotate: 6deg; }
+.journal-icon { width: 86px; height: 86px; background-image: url("project://database/Assets/Game/Art/UI/icon_journal.png"); }
+.journal-label { font-size: 32px; color: rgb(43, 38, 34); margin-top: -10px; text-shadow: 0px 0px 5px rgba(250, 248, 242, 0.95); }
+.journal-key { font-size: 14px; color: rgb(122, 110, 98); text-shadow: 0px 0px 4px rgba(250, 248, 242, 0.95); }
+.journal-badge { position: absolute; right: -14px; top: -6px; min-width: 46px; height: 42px; padding: 0 8px 2px 8px; background-image: url("project://database/Assets/Game/Art/UI/ink_blot_red.png"); -unity-background-scale-mode: stretch-to-fill; align-items: center; justify-content: center; rotate: 8deg; transition: scale 0.3s ease-out-back; }
+.badge-pop { scale: 1.7 1.7; }
+.journal-badge-text { font-size: 28px; color: rgb(250, 244, 230); }
+
+.help-note { position: absolute; left: 30px; bottom: 30px; flex-direction: row; align-items: center; padding: 18px 30px 14px 16px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; transition: opacity 0.6s, translate 0.6s ease-in; }
+.help-mouse { width: 62px; height: 62px; margin-right: 10px; background-image: url("project://database/Assets/Game/Art/UI/icon_mouse.png"); -unity-background-scale-mode: scale-to-fit; }
+.help-main { font-size: 34px; color: rgb(43, 38, 34); }
+.help-sub { font-size: 25px; color: rgb(90, 82, 74); margin-top: -2px; }
+.help-gone { opacity: 0; translate: 0 18px; }
+
+.place-banner { position: absolute; left: 0; right: 0; top: 136px; align-items: center; }
+.place-strip { align-items: center; padding: 26px 64px 14px 64px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; }
+.place-name { font-size: 56px; color: rgb(43, 38, 34); letter-spacing: 10px; }
+.place-line { width: 420px; height: 26px; margin-top: -8px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; transition: width 0.9s ease-out; }
+.is-drawing .place-line { width: 0; }
+
+.tooltip { right: auto; bottom: auto; padding: 6px 16px 4px 14px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; }
+.tooltip-text { font-size: 29px; color: rgb(43, 38, 34); }
+
+/* ── 알림 쪽지 ── */
+.toast-layer { align-items: flex-end; padding: 160px 34px 0 0; }
+.toast { max-width: 460px; margin-bottom: 12px; padding: 18px 26px 14px 24px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; transition: translate 0.45s ease-out-back, opacity 0.45s; }
+.toast-start { translate: 90px 0; opacity: 0; }
+.toast-out { translate: 40px 0; opacity: 0; }
+.toast-head { font-size: 29px; color: rgb(181, 69, 47); }
+.toast-text { font-size: 22px; color: rgb(43, 38, 34); white-space: normal; }
+
+/* ── 글자 확정 도장(가운데) ── */
+.stamp-layer { align-items: center; justify-content: center; }
+.stamp-card { width: 520px; padding: 48px 40px 40px 40px; align-items: center; background-image: url("project://database/Assets/Game/Art/UI/paper_panel.png"); -unity-slice-left: 40; -unity-slice-right: 40; -unity-slice-top: 40; -unity-slice-bottom: 40; transition: opacity 0.3s ease-out, scale 0.3s ease-out, translate 0.55s ease-in; }
+.stamp-start { opacity: 0; scale: 1.12 1.12; }
+.stamp-fly { translate: 860px -470px; scale: 0.12 0.12; opacity: 0; }
+.stamp-glyph { width: 184px; height: 184px; margin: 18px 0 18px 0; }
+.stamp-seal { position: absolute; right: 64px; top: 196px; width: 124px; height: 124px; background-image: url("project://database/Assets/Game/Art/UI/icon_confirmed.png"); rotate: -10deg; transition: scale 0.22s ease-out, opacity 0.12s, rotate 0.22s ease-out; }
+.seal-start { scale: 2.6 2.6; opacity: 0; rotate: -34deg; }
+.stamp-guess { font-size: 78px; color: rgb(43, 38, 34); margin-top: 6px; transition: opacity 0.4s, translate 0.4s; }
+.stamp-guess.guess-start { opacity: 0; translate: 0 12px; }
+.stamp-caption { font-size: 21px; color: rgb(122, 110, 98); letter-spacing: 6px; }
+
+/* ── 장 제목·페이드 ── */
+.chapter-title { background-color: rgb(14, 13, 12); }
+.chapter-card { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.chapter-card-none { background-image: url("project://database/Assets/Game/Art/UI/paper_tile.png"); background-repeat: repeat repeat; background-size: 512px 512px; -unity-background-image-tint-color: rgb(90, 88, 84); }
+/* 1장 그림(종·자루가 오른쪽) → 글은 왼쪽 가운데. 연출 띠(위아래 128px) 밖 */
+.chapter-box { position: absolute; left: 168px; top: 400px; }
+.chapter-small { font-size: 30px; letter-spacing: 14px; color: rgb(236, 231, 220); }
+.chapter-big { font-size: 84px; letter-spacing: 6px; color: rgb(246, 242, 232); margin-top: 4px; }
+.chapter-line { width: 420px; height: 30px; margin-top: -8px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(236, 231, 220); transition: width 1.2s ease-out; }
+.is-drawing .chapter-line { width: 0; }
+/* 장 끝 그림(위쪽 1/3에 물고기 입) → 글은 가운데 아래 */
+.chapter-end .chapter-box { left: 0; right: 0; top: 590px; align-items: center; }
+.fader { background-color: rgb(14, 13, 12); }
+
+/* ── 세계 위: 크리처 말(글자 한 줄, 화-11) ── */
+.overhead { position: absolute; }
+.oh-body { transform-origin: 35px 100%; transition: opacity 0.22s ease-out, scale 0.25s ease-out-back, translate 0.22s ease-out; }
+.oh-hidden { opacity: 0; scale: 0.8 0.8; translate: 0 10px; }
+.oh-card { padding: 18px 24px 20px 24px; background-image: url("project://database/Assets/Game/Art/UI/speech_scrap.png"); -unity-slice-left: 30; -unity-slice-right: 30; -unity-slice-top: 30; -unity-slice-bottom: 30; }
+.oh-tail { position: absolute; left: 26px; bottom: -31px; width: 48px; height: 48px; background-image: url("project://database/Assets/Game/Art/UI/speech_tail.png"); }
+.oh-tail-flip { left: auto; right: 26px; scale: -1 1; }
+
+.glyph-line { align-items: center; }
+.gl-row { flex-direction: row; align-items: flex-start; }
+.gl-cell { align-items: center; margin: 0 1px; transition: scale 0.12s; }
+.gl-click:hover { scale: 1.1 1.1; }
+.gl-guess { color: rgb(43, 38, 34); -unity-text-align: upper-center; white-space: nowrap; margin-top: -3px; }
+.gl-guess-ok { color: rgb(43, 38, 34); }
+.gl-translation { color: rgb(43, 38, 34); white-space: normal; max-width: 900px; -unity-text-align: middle-center; padding: 4px 6px; }
+
+.talk-mark { position: absolute; width: 52px; height: 52px; background-image: url("project://database/Assets/Game/Art/UI/talk_mark.png"); transition: opacity 0.3s, scale 0.35s ease-out-back; }
+.talk-start { opacity: 0; scale: 0.4 0.4; }
+
+.world-translation { position: absolute; padding: 10px 18px 6px 18px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; }
+.world-translation-text { font-size: 32px; color: rgb(43, 38, 34); }
+
+.nameplate { position: absolute; align-items: center; padding: 18px 30px 10px 30px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; }
+.nameplate-text { font-size: 36px; color: rgb(43, 38, 34); letter-spacing: 3px; }
+.nameplate-line { width: 150px; height: 18px; margin-top: -6px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; transition: width 0.7s ease-out; }
+.nameplate-pin { position: absolute; left: 50%; top: -10px; width: 16px; height: 16px; margin-left: -8px; background-image: url("project://database/Assets/Game/Art/UI/icon_memo_dot.png"); -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(181, 69, 47); }
+.nameplate.is-drawing .nameplate-line { width: 0; }
+
+/* ── 극 대사 · 회상 ── */
+.stage-line { justify-content: flex-end; align-items: center; padding-bottom: 168px; }   /* 연출 띠(아래 128px) 위 */
+.stage-strip { padding: 26px 60px 14px 60px; min-width: 360px; align-items: center; background-image: url("project://database/Assets/Game/Art/UI/glyph_band.png"); -unity-slice-left: 40; -unity-slice-right: 40; -unity-slice-top: 30; -unity-slice-bottom: 30; transition: opacity 0.4s, translate 0.4s ease-out; }
+.stage-tag { position: absolute; left: -18px; top: -30px; padding: 8px 18px 4px 16px; rotate: -4deg; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; }
+.stage-tag-text { font-size: 28px; color: rgb(90, 82, 74); }
+.flashback { align-items: center; justify-content: center; background-image: url("project://database/Assets/Game/Art/UI/paper_tile.png"); background-repeat: repeat repeat; background-size: 512px 512px; -unity-background-image-tint-color: rgba(236, 226, 206, 0.9); }
+.flashback-strip { padding: 40px 56px 22px 56px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; transition: opacity 0.6s, translate 0.6s ease-out; }
+
+/* ── 연출 띠 · 짚기 · 붙잡기 ── */
+.lb-band { position: absolute; left: -20px; right: -20px; height: 128px; background-image: url("project://database/Assets/Game/Art/UI/letterbox_band.png"); -unity-background-scale-mode: stretch-to-fill; transition: translate 0.7s ease-in-out-sine; }
+.lb-top { top: 0; translate: 0 -140px; }
+.lb-bottom { bottom: 0; scale: 1 -1; translate: 0 140px; }
+.lb-on .lb-band { translate: 0 0; }
+
+.pick-prompt { align-items: center; padding-top: 112px; transition: opacity 0.4s, translate 0.4s; }
+.pick-note { padding: 18px 32px 12px 30px; rotate: -1deg; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; }
+.pick-text { font-size: 40px; color: rgb(43, 38, 34); }
+.pick-arrow { width: 90px; height: 90px; margin-top: 2px; background-image: url("project://database/Assets/Game/Art/UI/ink_arrow.png"); -unity-background-scale-mode: stretch-to-fill; rotate: 48deg; }
+
+.hold-bar { align-items: center; justify-content: flex-end; padding-bottom: 168px; }
+.hold-track { width: 320px; height: 16px; background-image: url("project://database/Assets/Game/Art/UI/pencil_line.png"); -unity-background-scale-mode: stretch-to-fill; }
+.hold-fill { position: absolute; left: 0; top: -8px; height: 32px; width: 0; overflow: hidden; }
+.hold-ink { position: absolute; left: 0; top: 0; width: 320px; height: 32px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; }
+
+.belly { background-color: rgb(6, 6, 7); align-items: center; justify-content: center; }
+#belly-blue { width: 22px; height: 22px; border-radius: 11px; background-color: rgba(47, 95, 208, 0.75); }
+#belly-frag { width: 12px; height: 9px; margin-top: 16px; background-color: rgba(181, 69, 47, 0.6); }
+
+/* ── 대화창 = 펼친 공책 ── */
+.dialogue-screen { background-color: rgba(28, 25, 22, 0.3); transition: background-color 0.45s; }
+.dialogue-screen > .vignette { transition: opacity 0.45s; }
+.dlg-peek { background-color: rgba(0, 0, 0, 0); }
+.dlg-peek > .vignette { opacity: 0; }
+.dlg-spread { position: absolute; left: 80px; top: 40px; width: 1760px; height: 1000px; background-image: url("project://database/Assets/Game/Art/UI/sheet_spread.png"); -unity-background-scale-mode: stretch-to-fill; transition: translate 0.5s ease-in-out-sine, opacity 0.35s; }
+.dlg-start { translate: 0 40px; opacity: 0; }
+.dlg-peek .dlg-spread { translate: 0 700px; }
+
+.dlg-left { position: absolute; left: 84px; top: 64px; width: 750px; height: 880px; }
+.dlg-name { font-size: 48px; color: rgb(43, 38, 34); }
+.dlg-name-line { width: 230px; height: 20px; margin-top: -8px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; }
+.dlg-title { font-size: 21px; color: rgb(122, 110, 98); margin-top: 4px; }
+.dlg-their-row { flex-direction: row; align-items: flex-start; height: 300px; margin-top: 26px; }
+.their-note, .reply-note { padding: 22px 24px 14px 22px; margin-right: 26px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; transition: opacity 0.35s, translate 0.35s ease-out; }
+.reply-note { margin-top: 34px; }
+.note-label { font-size: 27px; color: rgb(106, 98, 90); }
+.their-empty { font-size: 31px; color: rgb(106, 98, 90); margin: 18px 14px; }
+.read-board { position: relative; }
+.clickable { transition: scale 0.12s; }
+.clickable:hover { scale: 1.06 1.06; }
+
+.tray { margin-top: 26px; padding: 36px 26px 20px 32px; background-image: url("project://database/Assets/Game/Art/UI/tray_paper.png"); -unity-slice-left: 44; -unity-slice-right: 44; -unity-slice-top: 44; -unity-slice-bottom: 44; }
+.model-tray { min-height: 160px; }
+.chip-tray { min-height: 250px; margin-top: 34px; }
+.tray-tag { position: absolute; left: -28px; top: -26px; width: 140px; height: 52px; padding-left: 50px; justify-content: center; rotate: -4deg; background-image: url("project://database/Assets/Game/Art/UI/tag_paper.png"); -unity-slice-left: 56; -unity-slice-right: 24; -unity-slice-top: 22; -unity-slice-bottom: 22; }
+.tray-tag-text { font-size: 33px; color: rgb(43, 38, 34); }
+.palette { flex-direction: row; flex-wrap: wrap; }
+.tray-slot { margin: 2px 4px; transition: translate 0.12s, scale 0.12s; }
+.tray-slot:hover { translate: 0 -5px; scale: 1.07 1.07; }
+.chips { flex-direction: row; flex-wrap: wrap; }
+.chip { width: 86px; height: 104px; margin: 4px 6px; padding-top: 8px; align-items: center; -unity-background-scale-mode: stretch-to-fill; transition: translate 0.12s, scale 0.12s; }
+.chip:hover { translate: 0 -5px; scale: 1.05 1.05; }
+.chip-yellow { background-image: url("project://database/Assets/Game/Art/UI/chip_yellow.png"); }
+.chip-blue { background-image: url("project://database/Assets/Game/Art/UI/chip_blue.png"); }
+.chip-glyph { width: 60px; height: 60px; }
+.chip-guess { font-size: 26px; color: rgb(43, 38, 34); max-width: 76px; overflow: hidden; white-space: nowrap; -unity-text-align: middle-center; }
+.chip-guess-none { color: rgba(43, 38, 34, 0.55); }
+.chip-seal { position: absolute; right: -9px; top: -9px; width: 32px; height: 32px; rotate: 12deg; display: none; background-image: url("project://database/Assets/Game/Art/UI/icon_confirmed.png"); }
+.chip-confirmed .chip-seal { display: flex; }
+.chip-memo { position: absolute; left: 9px; top: 9px; width: 10px; height: 10px; display: none; background-image: url("project://database/Assets/Game/Art/UI/icon_memo_dot.png"); }
+.chip-has-memo .chip-memo { display: flex; }
+.drag-chip { position: absolute; opacity: 0.94; rotate: -5deg; scale: 1.08 1.08; }
+.drag-piece { opacity: 0.92; }
+
+.dlg-right { position: absolute; left: 924px; top: 64px; width: 766px; height: 880px; }
+.board-label { font-size: 44px; color: rgb(43, 38, 34); }
+.board-wrap { flex-grow: 1; align-items: center; padding-top: 44px; }
+.board { position: relative; overflow: visible; }
+.board-grid, .joint-layer { position: absolute; left: 0; top: 0; }
+.dlg-feedback { margin-top: 48px; max-width: 640px; font-size: 34px; color: rgb(90, 82, 74); white-space: normal; -unity-text-align: middle-center; transition: opacity 0.3s, translate 0.3s; }
+.dlg-bottom { position: absolute; left: 0; bottom: 4px; flex-direction: row; align-items: center; }
+.speak-btn { position: absolute; right: -34px; bottom: -18px; width: 340px; height: 96px; padding-right: 40px; }
+.speak-btn .brush-btn-label { font-size: 38px; }
+
+.tut-layer { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.tut-note { position: absolute; flex-direction: row; align-items: center; max-width: 440px; padding: 22px 28px 14px 22px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; transition: opacity 0.35s, translate 0.35s ease-out; }
+.tut-num { font-size: 48px; color: rgb(181, 69, 47); margin-right: 10px; }
+.tut-text { font-size: 35px; color: rgb(43, 38, 34); white-space: normal; max-width: 340px; }
+.tut-arrow { position: absolute; opacity: 0.7; background-image: url("project://database/Assets/Game/Art/UI/ink_arrow.png"); -unity-background-scale-mode: stretch-to-fill; }
+.tut-circle { position: absolute; opacity: 0.85; background-image: url("project://database/Assets/Game/Art/UI/ink_circle_red.png"); -unity-background-scale-mode: stretch-to-fill; }
+.drag-layer { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+
+/* ── 조각 ── */
+.piece-guess { color: rgb(43, 38, 34); -unity-text-align: upper-center; white-space: nowrap; }
+.piece-guess-ok { color: rgb(43, 38, 34); }
+
+/* ── 추측 쪽지 ── */
+.guess-screen { background-color: rgba(20, 18, 16, 0.12); }
+.guess-card { position: absolute; width: 460px; padding: 40px 38px 30px 38px; background-image: url("project://database/Assets/Game/Art/UI/paper_panel.png"); -unity-slice-left: 40; -unity-slice-right: 40; -unity-slice-top: 40; -unity-slice-bottom: 40; transition: opacity 0.2s ease-out, scale 0.22s ease-out-back; }
+.guess-card.guess-start { opacity: 0; scale: 0.92 0.92; }
+.guess-top { flex-direction: row; align-items: center; }
+.guess-glyph { width: 128px; height: 128px; margin: 11px; }
+.guess-side { flex-grow: 1; align-items: center; }
+.guess-seal { width: 92px; height: 92px; rotate: -12deg; background-image: url("project://database/Assets/Game/Art/UI/icon_confirmed.png"); }
+.guess-status { font-size: 27px; color: rgb(90, 82, 74); white-space: normal; -unity-text-align: middle-center; }
+.is-confirmed .guess-status { color: rgb(181, 69, 47); }
+.memo-cands { flex-direction: row; flex-wrap: wrap; align-items: center; margin-top: 6px; }
+.cand-head { font-size: 16px; color: rgb(122, 110, 98); margin-right: 6px; }
+.cand { margin: 2px 4px; padding: 0 6px; border-bottom-width: 2px; border-bottom-color: rgba(43, 38, 34, 0.3); }
+.cand:hover { border-bottom-color: rgb(181, 69, 47); }
+.cand-text { font-size: 30px; color: rgb(43, 38, 34); }
+.guess-foot { flex-direction: row; align-items: center; justify-content: space-between; margin-top: 18px; }
+.guess-seen { font-size: 17px; color: rgb(140, 132, 124); }
+
+/* ── 기록 공책 ── */
+.journal-screen { background-color: rgba(28, 25, 22, 0.32); }
+.jr-spread { position: absolute; left: 80px; top: 40px; width: 1760px; height: 1000px; background-image: url("project://database/Assets/Game/Art/UI/sheet_spread.png"); -unity-background-scale-mode: stretch-to-fill; transition: translate 0.4s ease-out, opacity 0.35s; }
+.jr-start { translate: 0 34px; opacity: 0; }
+.jr-left { position: absolute; left: 84px; top: 64px; width: 750px; height: 880px; }
+.jr-head { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+.jr-title { font-size: 52px; color: rgb(43, 38, 34); }
+.jr-count { font-size: 29px; color: rgb(90, 82, 74); margin-bottom: 8px; }
+.jr-title-line { width: 180px; height: 20px; margin-top: -8px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; }
+.jr-grid { flex-direction: row; flex-wrap: wrap; margin-top: 20px; }
+.jr-slot { width: 140px; height: 172px; margin: 4px 5px; padding-top: 12px; align-items: center; transition: scale 0.12s; }
+.jr-slot:hover { scale: 1.06 1.06; }
+.jr-slot-blank:hover { scale: 1 1; }
+.jr-blank { width: 84px; height: 84px; margin-top: 12px; opacity: 0.4; border-width: 1px; border-color: rgba(43, 38, 34, 0.3); background-image: url("project://database/Assets/Game/Art/UI/hatch_tile.png"); background-repeat: repeat repeat; background-size: 128px 128px; }
+.jr-slot-num { position: absolute; left: 24px; top: 6px; font-size: 22px; color: rgba(43, 38, 34, 0.3); }
+.jr-ring { position: absolute; left: -8px; top: 2px; width: 156px; height: 120px; opacity: 0.85; background-image: url("project://database/Assets/Game/Art/UI/ink_circle.png"); -unity-background-scale-mode: stretch-to-fill; }
+.jr-slot-glyph { width: 88px; height: 88px; margin: 4px 0 4px 0; }
+.jr-slot-guess { font-size: 30px; color: rgb(43, 38, 34); max-width: 136px; overflow: hidden; white-space: nowrap; -unity-text-align: upper-center; }
+.jr-slot-guess-ok { color: rgb(43, 38, 34); }
+.jr-slot-guess-none { color: rgba(43, 38, 34, 0.3); }
+.jr-slot-seal { position: absolute; right: 4px; top: 70px; width: 46px; height: 46px; rotate: -14deg; background-image: url("project://database/Assets/Game/Art/UI/icon_confirmed.png"); }
+.jr-slot-memo { position: absolute; left: 18px; top: 16px; width: 10px; height: 10px; background-image: url("project://database/Assets/Game/Art/UI/icon_memo_dot.png"); }
+.jr-slot-new { position: absolute; right: 12px; top: -2px; font-size: 27px; color: rgb(181, 69, 47); }
+.jr-sentences { flex-grow: 1; margin-top: 24px; }
+.jr-scroll { height: 740px; }
+.jr-sentence { margin-bottom: 26px; padding-left: 16px; border-left-width: 3px; border-left-color: rgba(181, 69, 47, 0.55); }
+.jr-sentence-head { font-size: 18px; color: rgb(122, 110, 98); letter-spacing: 2px; }
+.jr-sentence-text { font-size: 29px; color: rgb(43, 38, 34); margin-top: 6px; white-space: normal; }
+.jr-sentence-glyphs { align-items: flex-start; margin-top: 4px; }
+.jr-empty-left { font-size: 33px; color: rgb(106, 98, 90); margin-top: 40px; white-space: normal; }
+.jr-tabs { position: absolute; right: 150px; top: -34px; flex-direction: row; }
+.jr-tab { width: 134px; height: 60px; margin-left: 8px; padding-left: 52px; justify-content: center; opacity: 0.7; translate: 0 12px; background-image: url("project://database/Assets/Game/Art/UI/tag_paper.png"); -unity-slice-left: 56; -unity-slice-right: 24; -unity-slice-top: 22; -unity-slice-bottom: 22; transition: translate 0.2s, opacity 0.2s; }
+.jr-tab:hover { translate: 0 4px; }
+.jr-tab-on { opacity: 1; translate: 0 0; }
+.jr-tab-text { font-size: 32px; color: rgb(43, 38, 34); }
+.jr-right { position: absolute; left: 934px; top: 72px; width: 730px; height: 860px; }
+.jr-empty { font-size: 36px; color: rgb(106, 98, 90); margin-top: 300px; -unity-text-align: middle-center; }
+.jr-detail { transition: opacity 0.25s, translate 0.25s ease-out; }
+.detail-start { opacity: 0; translate: 12px 0; }
+.jr-detail-top { flex-direction: row; align-items: flex-start; }
+.jr-glyph-wrap { width: 230px; height: 230px; margin-right: 34px; }
+.jr-glyph { position: absolute; left: 22px; top: 22px; width: 186px; height: 186px; }
+.jr-seal { position: absolute; right: -18px; bottom: -8px; width: 112px; height: 112px; rotate: -12deg; background-image: url("project://database/Assets/Game/Art/UI/icon_confirmed.png"); }
+.jr-fields { flex-grow: 1; flex-shrink: 1; padding-top: 18px; }
+.jr-guess .unity-base-text-field__input,
+.jr-guess:hover .unity-base-text-field__input,
+.jr-guess:focus .unity-base-text-field__input { font-size: 58px; }
+.jr-status { font-size: 29px; color: rgb(90, 82, 74); margin-top: 12px; white-space: normal; }
+.jr-status-ok { color: rgb(181, 69, 47); }
+.jr-seen { font-size: 18px; color: rgb(140, 132, 124); margin-top: 8px; }
+.jr-memo .unity-base-text-field__input,
+.jr-memo:hover .unity-base-text-field__input,
+.jr-memo:focus .unity-base-text-field__input { min-height: 196px; }
+.jr-mid { flex-direction: row; align-items: flex-start; margin-top: 6px; }
+.jr-sight-col { width: 300px; flex-shrink: 0; }
+.jr-memo-col { flex-grow: 1; flex-shrink: 1; margin-left: 30px; }
+.jr-sight { width: 286px; height: 196px; margin-top: 8px; padding: 12px; background-image: url("project://database/Assets/Game/Art/UI/sketch_frame.png"); -unity-slice-left: 30; -unity-slice-right: 30; -unity-slice-top: 30; -unity-slice-bottom: 30; }
+.jr-sight-has { background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; padding: 14px 14px 16px 14px; }
+.jr-sight-img { flex-grow: 1; -unity-background-image-tint-color: rgb(236, 226, 206); }
+.jr-sight-tape { left: -30px; top: -8px; width: 96px; height: 30px; rotate: -32deg; display: none; }
+.jr-sight-has .jr-sight-tape { display: flex; }
+.jr-sight-empty { position: absolute; left: 20px; top: 20px; right: 20px; bottom: 20px; align-items: center; justify-content: center; background-image: url("project://database/Assets/Game/Art/UI/hatch_tile.png"); background-repeat: repeat repeat; background-size: 128px 128px; -unity-background-image-tint-color: rgba(255, 255, 255, 0.35); }
+.jr-sight-empty-text { font-size: 27px; color: rgba(74, 71, 68, 0.85); background-color: rgba(241, 232, 212, 0.9); padding: 2px 10px; }
+.jr-lines-label { margin-top: 22px; }
+.jr-lines-scroll { height: 214px; }
+.jr-line { margin: 6px 0; align-items: flex-start; }
+.jr-line > .glyph-line { align-items: flex-start; }
+.jr-lines-empty { font-size: 28px; color: rgb(140, 132, 124); }
+.jr-close { right: 44px; top: 40px; }
+
+/* ── 새김: 돌판 · 그림판: 그림책 낱장 ── */
+.inscription-screen { background-color: rgba(24, 21, 18, 0.34); }
+.stone { position: absolute; left: 300px; top: 80px; width: 1320px; height: 780px; padding: 104px 116px 150px 116px; align-items: center; background-image: url("project://database/Assets/Game/Art/UI/stone_tablet.png"); -unity-background-scale-mode: stretch-to-fill; transition: opacity 0.35s, translate 0.35s ease-out; }
+.stone-start { opacity: 0; translate: 0 26px; }
+.stone-label { position: absolute; left: 116px; top: 50px; font-size: 22px; color: rgb(62, 66, 70); letter-spacing: 5px; }
+.stone-boards { flex-grow: 1; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; }
+.stone-board { margin: 8px 22px; }
+.stone-close { right: 34px; top: 26px; }
+.read-btn { position: absolute; left: 50%; margin-left: -175px; bottom: 54px; width: 350px; height: 84px; }
+.read-empty { opacity: 0.75; }
+.stone-result { position: absolute; left: 0; right: 0; top: 880px; align-items: center; }
+.translation-strip { padding: 20px 44px 14px 44px; align-items: center; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; transition: opacity 0.5s, translate 0.5s ease-out; }
+.translation { font-size: 32px; color: rgb(43, 38, 34); margin: 2px 0; }
+.result-note { flex-direction: row; align-items: center; padding: 14px 30px 8px 24px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; transition: opacity 0.3s, translate 0.3s; }
+.result-text { font-size: 37px; color: rgb(74, 67, 60); }
+.result-almost .result-text { color: rgb(160, 110, 30); }
+.almost-mark { width: 50px; height: 50px; margin-right: 10px; background-image: url("project://database/Assets/Game/Art/UI/icon_almost.png"); }
+
+.picture-page { position: absolute; left: 290px; top: 30px; width: 1340px; height: 1020px; padding: 70px 80px 50px 80px; align-items: center; background-image: url("project://database/Assets/Game/Art/UI/picture_page.png"); -unity-background-scale-mode: stretch-to-fill; transition: opacity 0.35s, translate 0.35s ease-out; }
+.page-start { opacity: 0; translate: 0 26px; }
+.page-label { font-size: 20px; color: rgb(122, 110, 98); letter-spacing: 6px; margin-bottom: 12px; }
+.page-picture { width: 1120px; height: 640px; }
+.page-note { font-size: 30px; color: rgb(90, 82, 74); }
+.page-band { margin-top: 14px; padding: 22px 56px 14px 56px; min-width: 520px; background-image: url("project://database/Assets/Game/Art/UI/glyph_band.png"); -unity-slice-left: 40; -unity-slice-right: 40; -unity-slice-top: 30; -unity-slice-bottom: 30; }
+.page-lines { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
+.page-line { margin: 2px 30px; }
+.page-close { right: 40px; top: 34px; }
+
+/* ── 사람 책 낱장 ── */
+.readable-screen { background-color: rgba(24, 21, 18, 0.36); }
+.book-sheet { position: absolute; left: 280px; top: 110px; width: 1360px; height: 860px; flex-direction: row; padding: 96px 96px 90px 84px; background-image: url("project://database/Assets/Game/Art/UI/book_page.png"); -unity-background-scale-mode: stretch-to-fill; transition: opacity 0.35s, translate 0.35s ease-out; }
+.book-pic-frame { width: 560px; height: 420px; margin-right: 58px; margin-top: 16px; flex-shrink: 0; }
+.book-picture { width: 100%; height: 100%; }
+.book-col { flex-grow: 1; flex-shrink: 1; }
+.book-title { font-size: 20px; color: rgb(138, 110, 74); letter-spacing: 6px; }
+.book-rule { width: 130px; height: 14px; margin: 8px 0 20px 0; opacity: 0.7; background-image: url("project://database/Assets/Game/Art/UI/pencil_line.png"); -unity-background-scale-mode: stretch-to-fill; }
+.book-text { font-size: 27px; color: rgb(58, 46, 36); white-space: normal; letter-spacing: 0.5px; -unity-paragraph-spacing: 12px; }
+.book-foot { flex-direction: row; align-items: center; justify-content: space-between; margin-top: 34px; }
+.book-note { font-size: 28px; color: rgb(138, 110, 74); }
+.no-picture .book-col { padding: 0 130px; }
+
+/* ── 제목 · 끝 ── */
+.title-screen, .ending-screen { background-color: rgb(241, 238, 230); background-image: url("project://database/Assets/Game/Art/UI/paper_tile.png"); background-repeat: repeat repeat; background-size: 512px 512px; }
+.title-art { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+.title-box { position: absolute; left: 150px; top: 54px; }
+.title-name { font-size: 100px; color: rgb(43, 38, 34); letter-spacing: 1px; }
+.title-line { width: 640px; height: 34px; margin-top: -12px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; }
+.title-sub { font-size: 28px; color: rgb(74, 67, 60); letter-spacing: 6px; margin-top: 4px; }
+.title-tagline { font-size: 22px; color: rgb(106, 98, 90); margin-top: 6px; }
+.title-menu { position: absolute; left: 130px; top: 470px; padding: 26px 46px 22px 26px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; rotate: -1.2deg; }
+.menu-item { flex-direction: row; align-items: center; margin: 8px 0; padding: 4px 10px 6px 0; transition: translate 0.5s ease-out, opacity 0.5s; }
+.menu-start { opacity: 0; translate: -26px 0; }
+.menu-mark { width: 36px; height: 16px; margin-right: 16px; opacity: 0.3; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; transition: opacity 0.2s, width 0.2s; }
+.menu-item:hover .menu-mark { opacity: 1; width: 44px; }
+.menu-primary .menu-mark { opacity: 1; -unity-background-image-tint-color: rgb(181, 69, 47); }
+.menu-label { font-size: 44px; color: rgb(43, 38, 34); }
+.menu-line { position: absolute; left: 52px; bottom: -4px; width: 0; height: 16px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; transition: width 0.3s ease-out; }
+.menu-item:hover .menu-line { width: 230px; }
+.title-foot { position: absolute; left: 150px; bottom: 26px; font-size: 16px; color: rgb(106, 98, 90); }
+
+.ending-box { position: absolute; left: 150px; top: 170px; transition: opacity 1.2s, translate 1.2s ease-out; }
+.ending-start .ending-box { opacity: 0; translate: 0 20px; }
+.ending-small { font-size: 28px; color: rgb(122, 110, 98); letter-spacing: 12px; }
+.ending-big { font-size: 86px; color: rgb(43, 38, 34); }
+.ending-line { font-size: 26px; color: rgb(74, 67, 60); margin: 16px 0 34px 0; }
+.ending-glyphs { flex-direction: row; flex-wrap: wrap; align-items: flex-end; max-width: 1200px; margin-bottom: 44px; }
+.ending-glyph { align-items: center; margin: 0 12px 10px 0; }
+.ending-glyph-img { width: 60px; height: 60px; }
+.ending-glyph-guess { font-size: 26px; color: rgb(43, 38, 34); }
+.ending-count { font-size: 31px; color: rgb(90, 82, 74); margin-left: 12px; align-self: center; }
+
+/* ── 쪽 넘김(화-12) · 쪽 머리말 · 출구 이름 ── */
+.page-turn { overflow: hidden; }
+.page-sheet { position: absolute; top: -40px; bottom: -40px; left: 2000px; width: 2240px; transform-origin: 0% 50%; }
+.page-sheet-paper { position: absolute; left: 150px; top: 0; bottom: 0; right: 0; background-color: rgb(241, 238, 230); background-image: url("project://database/Assets/Game/Art/UI/paper_tile.png"); background-repeat: repeat repeat; background-size: 512px 512px; }
+.page-curl { position: absolute; left: 0; top: 0; bottom: 0; width: 160px; background-image: url("project://database/Assets/Game/Art/UI/page_curl.png"); -unity-background-scale-mode: stretch-to-fill; }
+.page-header { align-items: center; padding-top: 26px; }
+.page-strip { align-items: center; padding: 16px 54px 12px 54px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; }
+.page-number { font-size: 22px; color: rgb(122, 110, 98); letter-spacing: 8px; }
+.page-name { font-size: 44px; color: rgb(43, 38, 34); letter-spacing: 8px; margin-top: 2px; }
+.page-rule { width: 300px; height: 14px; margin-top: 2px; opacity: 0.8; background-image: url("project://database/Assets/Game/Art/UI/pencil_line.png"); -unity-background-scale-mode: stretch-to-fill; transition: width 0.8s ease-out; }
+.is-drawing .page-rule { width: 0; }
+.tooltip-exit { padding: 8px 22px 6px 50px; background-image: url("project://database/Assets/Game/Art/UI/tag_paper.png"); -unity-slice-left: 56; -unity-slice-right: 24; -unity-slice-top: 22; -unity-slice-bottom: 22; rotate: -3deg; }
+.tooltip-exit .tooltip-text { color: rgb(43, 38, 34); font-size: 32px; }
+
+/* ── 둘레 살피기 표시 · 주인공 속생각 ── */
+.imark-pos { position: absolute; width: 90px; height: 90px; transition: opacity 0.3s; }
+.imark-pos.imark-out { opacity: 0; }
+.imark { width: 90px; height: 90px; align-items: center; justify-content: center; transition: opacity 0.3s ease-out, scale 0.35s ease-out-back; }
+.imark-start { opacity: 0; scale: 0.3 0.3; }
+.imark-ring { position: absolute; left: -6px; top: 4px; width: 102px; height: 82px; background-image: url("project://database/Assets/Game/Art/UI/ink_circle.png"); -unity-background-scale-mode: stretch-to-fill; }
+.imark-icon { width: 54px; height: 54px; -unity-background-scale-mode: scale-to-fit; }
+.imark-talk { background-image: url("project://database/Assets/Game/Art/UI/talk_mark.png"); }
+.imark-touch { background-image: url("project://database/Assets/Game/Art/UI/icon_touch.png"); }
+.imark-eye { background-image: url("project://database/Assets/Game/Art/UI/icon_eye.png"); }
+.imark-exit { background-image: url("project://database/Assets/Game/Art/UI/icon_exit.png"); }
+.imark-tag { position: absolute; top: 80px; padding: 8px 16px 4px 16px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; }
+.imark-label { font-size: 27px; color: rgb(43, 38, 34); white-space: nowrap; }
+
+.thought { position: absolute; padding: 0 0 46px 30px; transition: opacity 0.3s ease-out, scale 0.3s ease-out-back, translate 0.3s ease-out; transform-origin: 0% 100%; }
+.thought-start { opacity: 0; scale: 0.7 0.7; translate: 0 10px; }
+.thought-out { opacity: 0; translate: 0 -12px; }
+.thought-card { max-width: 440px; padding: 18px 30px 16px 30px; background-image: url("project://database/Assets/Game/Art/UI/thought_card.png"); -unity-slice-left: 40; -unity-slice-right: 40; -unity-slice-top: 40; -unity-slice-bottom: 40; }
+.thought-text { font-size: 32px; color: rgb(58, 54, 50); white-space: normal; }
+.thought-dot { position: absolute; background-color: rgb(247, 243, 232); border-width: 2px; border-color: rgba(74, 71, 68, 0.85); }
+.thought-dot-1 { left: 34px; bottom: 26px; width: 18px; height: 18px; border-radius: 9px; }
+.thought-dot-2 { left: 22px; bottom: 10px; width: 12px; height: 12px; border-radius: 6px; }
+.thought-dot-3 { left: 12px; bottom: 0; width: 8px; height: 8px; border-radius: 4px; }
+
+/* ── 밝기 막 · 잠시 멈춤 · 설정 ── */
+.brightness { }
+.pause-screen { background-color: rgba(20, 18, 16, 0.42); }
+.pause-sheet { position: absolute; left: 150px; top: 150px; width: 560px; padding: 56px 56px 46px 58px; background-image: url("project://database/Assets/Game/Art/UI/paper_panel.png"); -unity-slice-left: 40; -unity-slice-right: 40; -unity-slice-top: 40; -unity-slice-bottom: 40; transition: opacity 0.3s, translate 0.3s ease-out; }
+.pause-title { font-size: 54px; color: rgb(43, 38, 34); }
+.pause-title-line { width: 260px; height: 24px; margin-top: -8px; margin-bottom: 18px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; }
+.pause-item .menu-label { font-size: 38px; }
+.pause-confirm { padding: 10px 0 0 4px; transition: opacity 0.3s, translate 0.3s; }
+.pause-confirm-text { font-size: 34px; color: rgb(43, 38, 34); white-space: normal; margin-bottom: 18px; }
+.pause-confirm-row { flex-direction: row; align-items: center; }
+.pause-confirm-row > .brush-btn { margin-right: 26px; }
+
+.settings-screen { background-color: rgba(20, 18, 16, 0.42); }
+.set-spread { position: absolute; left: 80px; top: 40px; width: 1760px; height: 1000px; background-image: url("project://database/Assets/Game/Art/UI/sheet_spread.png"); -unity-background-scale-mode: stretch-to-fill; transition: translate 0.4s ease-out, opacity 0.35s; }
+.set-left { position: absolute; left: 96px; top: 70px; width: 720px; height: 860px; }
+.set-title { font-size: 56px; color: rgb(43, 38, 34); }
+.set-title-line { width: 180px; height: 22px; margin-top: -8px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; }
+.set-tabs { margin-top: 40px; }
+.set-tab .menu-label { font-size: 44px; color: rgb(106, 98, 90); }
+.set-tab-on .menu-label { color: rgb(43, 38, 34); }
+.set-tab-on .menu-line { width: 150px; }
+.set-tab-note { font-size: 29px; color: rgb(90, 82, 74); margin-top: 40px; white-space: normal; max-width: 600px; }
+.set-reset { position: absolute; left: 0; bottom: 6px; }
+.set-right { position: absolute; left: 930px; top: 76px; width: 740px; height: 860px; }
+.set-rows { flex-grow: 1; transition: opacity 0.25s, translate 0.25s ease-out; }
+.set-row { padding: 12px 0 12px 0; border-bottom-width: 1px; border-bottom-color: rgba(90, 82, 74, 0.18); }
+.set-row-main { flex-direction: row; align-items: center; min-height: 52px; }
+.set-row-off { opacity: 0.45; }
+.set-label { width: 210px; font-size: 26px; color: rgb(43, 38, 34); flex-shrink: 0; }
+.set-note { font-size: 24px; color: rgb(106, 98, 90); margin-left: 210px; margin-top: -2px; white-space: normal; }
+.set-choices { flex-direction: row; flex-wrap: wrap; align-items: center; flex-shrink: 1; }
+.set-choice { padding: 4px 14px 2px 14px; margin-right: 6px; align-items: center; justify-content: center; }
+.set-choice-ring { position: absolute; left: -6px; right: -6px; top: -6px; bottom: -8px; opacity: 0; background-image: url("project://database/Assets/Game/Art/UI/ink_circle.png"); -unity-background-scale-mode: stretch-to-fill; transition: opacity 0.15s; }
+.set-choice-on .set-choice-ring { opacity: 0.9; }
+.set-choice:hover .set-choice-ring { opacity: 0.35; }
+.set-choice-on:hover .set-choice-ring { opacity: 0.9; }
+.set-choice-text { font-size: 32px; color: rgb(106, 98, 90); }
+.set-choice-on .set-choice-text { color: rgb(43, 38, 34); }
+.set-stepper { flex-direction: row; align-items: center; }
+.set-step-arrow { font-size: 44px; color: rgb(43, 38, 34); padding: 0 16px 6px 16px; transition: scale 0.12s; }
+.set-step-arrow:hover { scale: 1.25 1.25; color: rgb(181, 69, 47); }
+.set-step-value { font-size: 34px; color: rgb(43, 38, 34); min-width: 260px; -unity-text-align: middle-center; }
+.set-footer { position: absolute; right: -10px; bottom: 0; flex-direction: row; align-items: center; }
+.set-footer > .brush-btn { margin-left: 18px; }
+.set-close { right: 44px; top: 40px; }
+.set-key-row { flex-direction: row; align-items: center; padding: 14px 0; border-bottom-width: 1px; border-bottom-color: rgba(90, 82, 74, 0.18); }
+.set-key { width: 220px; font-size: 26px; color: rgb(43, 38, 34); flex-shrink: 0; }
+.set-key-desc { font-size: 30px; color: rgb(43, 38, 34); white-space: normal; flex-shrink: 1; }
+.keep-note { position: absolute; left: 50%; top: 50%; width: 560px; margin-left: -280px; margin-top: -150px; padding: 40px 44px 30px 44px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; transition: opacity 0.3s, translate 0.3s; }
+.keep-text { font-size: 34px; color: rgb(43, 38, 34); white-space: normal; margin-bottom: 18px; }
+
+.ink-slider { flex-direction: row; align-items: center; height: 52px; padding-left: 4px; }
+.ink-track { width: 380px; height: 16px; background-image: url("project://database/Assets/Game/Art/UI/pencil_line.png"); -unity-background-scale-mode: stretch-to-fill; }
+.ink-fill { position: absolute; left: 0; top: -8px; height: 32px; overflow: hidden; }
+.ink-fill-ink { position: absolute; left: 0; top: 0; width: 380px; height: 32px; background-image: url("project://database/Assets/Game/Art/UI/ink_underline.png"); -unity-background-scale-mode: stretch-to-fill; }
+.ink-knob { position: absolute; top: -5px; width: 26px; height: 26px; background-image: url("project://database/Assets/Game/Art/UI/icon_memo_dot.png"); -unity-background-scale-mode: stretch-to-fill; transition: scale 0.1s; }
+.ink-slider:hover .ink-knob { scale: 1.25 1.25; }
+.ink-value { font-size: 30px; color: rgb(43, 38, 34); margin-left: 26px; min-width: 80px; }
+
+/* ── 가르치는 몸짓 쪽지(대화창, ShowGestureHint) ── */
+.gesture-note { position: absolute; right: 24px; top: -18px; padding: 22px 22px 14px 22px; background-image: url("project://database/Assets/Game/Art/UI/paper_note.png"); -unity-slice-left: 24; -unity-slice-right: 24; -unity-slice-top: 24; -unity-slice-bottom: 24; transition: opacity 0.35s, translate 0.35s ease-out; }
+.gesture-row { flex-direction: row; align-items: center; }
+.gesture-pic { width: 112px; height: 112px; -unity-background-scale-mode: scale-to-fit; }
+.gesture-self { background-image: url("project://database/Assets/Game/Art/UI/gesture_self.png"); }
+.gesture-other { background-image: url("project://database/Assets/Game/Art/UI/gesture_other.png"); }
+.gesture-sep { width: 14px; height: 90px; margin: 0 8px; opacity: 0.55; rotate: 90deg; background-image: url("project://database/Assets/Game/Art/UI/pencil_line.png"); -unity-background-scale-mode: stretch-to-fill; }
+
+/* ── 왕의 띠 벗기기(ShowDecree): 앞면(띠) → 접혀 넘어온 뒷면(사람 글) ── */
+.decree-screen { background-color: rgba(18, 16, 14, 0.66); }
+.decree-stage { position: absolute; transition: opacity 0.35s, translate 0.35s ease-out; }
+.decree-under { position: absolute; left: 0; top: 0; opacity: 0.9; background-image: url("project://database/Assets/Game/Art/UI/picture_page.png"); -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(196, 190, 178); }
+.decree-fill { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.decree-fold-shadow { position: absolute; top: 0; background-image: url("project://database/Assets/Game/Art/UI/peel_shadow.png"); -unity-background-scale-mode: stretch-to-fill; }
+.decree-band-clip { position: absolute; left: 0; top: 0; overflow: hidden; }
+.decree-band { position: absolute; left: 0; top: 0; justify-content: center; align-items: center; }
+.decree-band-fallback { background-image: url("project://database/Assets/Game/Art/UI/glyph_band.png"); -unity-slice-left: 40; -unity-slice-right: 40; -unity-slice-top: 30; -unity-slice-bottom: 30; }
+.decree-flap-shadow { position: absolute; top: 0; scale: -1 1; background-image: url("project://database/Assets/Game/Art/UI/peel_shadow.png"); -unity-background-scale-mode: stretch-to-fill; }
+.decree-flap-clip { position: absolute; top: 0; overflow: hidden; }
+.decree-flap { position: absolute; left: 0; top: 0; }
+.decree-flap-fallback { background-image: url("project://database/Assets/Game/Art/UI/decree_back.png"); -unity-background-scale-mode: stretch-to-fill; }
+.decree-human-text { position: absolute; left: 70px; right: 70px; top: 46px; font-size: 40px; color: rgb(70, 50, 34); white-space: normal; }
+.decree-corner { position: absolute; right: -6px; top: -6px; width: 112px; height: 112px; transform-origin: 100% 0%; background-image: url("project://database/Assets/Game/Art/UI/peel_corner.png"); }
+.decree-arrow { position: absolute; right: 70px; top: -96px; width: 110px; height: 110px; opacity: 0.75; rotate: 200deg; background-image: url("project://database/Assets/Game/Art/UI/ink_arrow.png"); -unity-background-scale-mode: stretch-to-fill; }
+.decree-close { right: -40px; top: -70px; }
+
+/* 띠 밑 크리처 글 한 줄(늘 보임 — 사람 글과 견주기) */
+.decree-strip { position: absolute; left: 50%; translate: -50% 0; padding: 24px 64px 14px 64px; min-width: 420px; align-items: center; background-image: url("project://database/Assets/Game/Art/UI/glyph_band.png"); -unity-slice-left: 40; -unity-slice-right: 40; -unity-slice-top: 30; -unity-slice-bottom: 30; }

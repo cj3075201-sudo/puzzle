@@ -1,0 +1,828 @@
+{
+  "_doc": "Once Under a Time ch1 toon material table. base/shade = sRGB hex. categories: paper (unpainted world + bare-wood creatures; 'hatch': true = diagonal hand hatching in the shade band), painted (fully drawn: hero, human objects, plaza/stage, terracotta towers), line (ink/grey line geometry: unlit flat, double-sided, no outline), silhouette (flat black unlit), sketch (translucent pencil line, unlit, double-sided), light (additive unlit). outline = inverted-hull ink outline colour 2B2622, slightly irregular width.",
+  "ink": "2B2622",
+  "materials": {
+    "M_Paper": {
+      "base": "F1EEE6",
+      "shade": "C9CCCF",
+      "outline": true,
+      "category": "paper",
+      "hatch": true,
+      "note": "ground, walls, rocks, unpainted buildings"
+    },
+    "M_PaperShade": {
+      "base": "E2E0DA",
+      "shade": "9EA3A8",
+      "outline": true,
+      "category": "paper",
+      "hatch": true,
+      "note": "cliff sides, wall feet, darker paper"
+    },
+    "M_StoneDark": {
+      "base": "A9AEB4",
+      "shade": "7A8087",
+      "outline": true,
+      "category": "paper",
+      "hatch": true,
+      "note": "chasm depths, ceiling underside"
+    },
+    "M_Spire": {
+      "base": "AEB8C4",
+      "shade": "8E98A6",
+      "outline": false,
+      "category": "paper",
+      "hatch": true,
+      "note": "background cone spires (far silhouettes)"
+    },
+    "M_Ink": {
+      "base": "2B2622",
+      "shade": "2B2622",
+      "outline": false,
+      "category": "line",
+      "note": "ink line geometry: strokes, unfinished edges, hex paving lines, eyes. unlit flat, double-sided"
+    },
+    "M_Hatch": {
+      "base": "8A9099",
+      "shade": "8A9099",
+      "outline": false,
+      "category": "line",
+      "note": "grey hatch strokes modelled on shadow sides. unlit flat, double-sided"
+    },
+    "M_SketchLine": {
+      "base": "2B2622",
+      "shade": "2B2622",
+      "outline": false,
+      "category": "sketch",
+      "alpha": 0.5,
+      "note": "faint pencil construction lines. unlit, transparent, double-sided"
+    },
+    "M_SketchNose": {
+      "base": "2B2622",
+      "shade": "2B2622",
+      "outline": false,
+      "category": "sketch",
+      "alpha": 0.45,
+      "note": "Kinopio nose = translucent pencil line. unlit, transparent, double-sided, no shadow"
+    },
+    "M_PuppetWood": {
+      "base": "E8C99A",
+      "shade": "C49C6C",
+      "outline": true,
+      "category": "paper",
+      "note": "bare wood of creature puppets (unpainted = creature-world paper category)"
+    },
+    "M_PuppetJoint": {
+      "base": "D8B584",
+      "shade": "AE8A5C",
+      "outline": true,
+      "category": "paper",
+      "note": "ball joints"
+    },
+    "M_PaintRed": {
+      "base": "C23A2E",
+      "shade": "8E2A22",
+      "outline": true,
+      "category": "painted",
+      "note": "brushed-on red paint, ragged edges (faces)"
+    },
+    "M_PaintBlue": {
+      "base": "5B86C9",
+      "shade": "3D6198",
+      "outline": true,
+      "category": "painted",
+      "note": "brushed-on blue paint, ragged edges (faces)"
+    },
+    "M_Bark": {
+      "base": "D9C3A0",
+      "shade": "A8957A",
+      "outline": true,
+      "category": "paper",
+      "hatch": true,
+      "note": "chief tree bark (pale, half-drawn)"
+    },
+    "M_Leaf": {
+      "base": "E4E3D6",
+      "shade": "A7B0AE",
+      "outline": true,
+      "category": "paper",
+      "hatch": true,
+      "note": "chief canopy, unpainted paper leaves"
+    },
+    "M_Terracotta": {
+      "base": "C98A55",
+      "shade": "B5703F",
+      "outline": true,
+      "category": "painted",
+      "note": "domed towers, painted houses"
+    },
+    "M_TerracottaDark": {
+      "base": "B5703F",
+      "shade": "8C5230",
+      "outline": true,
+      "category": "painted",
+      "note": "chimneys, dome caps, trims"
+    },
+    "M_StageWood": {
+      "base": "B07A48",
+      "shade": "82552F",
+      "outline": true,
+      "category": "painted",
+      "note": "stage boards, stairs, finished wood of the plaza"
+    },
+    "M_CurtainRed": {
+      "base": "C23A2E",
+      "shade": "8A2820",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_BackdropNavy": {
+      "base": "2C3E7A",
+      "shade": "1E2B57",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_LampGlow": {
+      "base": "FFD27A",
+      "shade": "FFD27A",
+      "outline": false,
+      "category": "painted",
+      "emission": 1.0,
+      "note": "warm lamp glass. unlit / emissive, put a small point light near"
+    },
+    "M_Bluebird": {
+      "base": "2F5FD0",
+      "shade": "1F3F94",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_BluebirdBelly": {
+      "base": "D9DEE8",
+      "shade": "A9B1C0",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_Beak": {
+      "base": "2B2622",
+      "shade": "17130F",
+      "outline": true,
+      "category": "painted",
+      "note": "beak, legs, eye mask"
+    },
+    "M_CapNavy": {
+      "base": "26305A",
+      "shade": "161C38",
+      "outline": true,
+      "category": "painted",
+      "note": "hunting cap, short cape"
+    },
+    "M_EyeShine": {
+      "base": "FFFDF6",
+      "shade": "FFFDF6",
+      "outline": false,
+      "category": "painted",
+      "note": "tiny eye highlight, unlit"
+    },
+    "M_Brass": {
+      "base": "C8902E",
+      "shade": "8C6420",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_Iron": {
+      "base": "6E7681",
+      "shade": "4A5059",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_Rope": {
+      "base": "C2452F",
+      "shade": "8A2E20",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_Wood": {
+      "base": "A8763F",
+      "shade": "74512B",
+      "outline": true,
+      "category": "painted",
+      "note": "human-made wood (ladder, cart lock block, clock case)"
+    },
+    "M_Leather": {
+      "base": "7E5233",
+      "shade": "563621",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_BookRed": {
+      "base": "C0392B",
+      "shade": "8A2A20",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_BookGreen": {
+      "base": "3E8E4F",
+      "shade": "2A6236",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_BookBlue": {
+      "base": "2E62B5",
+      "shade": "1F447F",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_PageWhite": {
+      "base": "FBF6EA",
+      "shade": "E0D6BF",
+      "outline": true,
+      "category": "painted",
+      "note": "human paper (book pages, Pinocchio page): warmer and brighter than the world paper"
+    },
+    "M_Porcelain": {
+      "base": "F7F4EE",
+      "shade": "C6CCD3",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_Mark": {
+      "base": "B5452F",
+      "shade": "8A3020",
+      "outline": false,
+      "category": "painted",
+      "note": "red mark stripe (Lump_2, Kinopio shoulder). Kinopio/Mark hidden by default"
+    },
+    "M_Fish": {
+      "base": "243B3F",
+      "shade": "152427",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_FishMouth": {
+      "base": "4A1E1E",
+      "shade": "260F0F",
+      "outline": true,
+      "category": "painted"
+    },
+    "M_FishEye": {
+      "base": "E9E2C8",
+      "shade": "E9E2C8",
+      "outline": false,
+      "category": "painted",
+      "emission": 0.6,
+      "note": "pale eye, slight self-glow"
+    },
+    "M_Silhouette": {
+      "base": "141211",
+      "shade": "0D0B0A",
+      "outline": false,
+      "category": "silhouette",
+      "note": "non-talking villagers: flat black, unlit"
+    },
+    "M_Pond": {
+      "base": "0B0A09",
+      "shade": "050404",
+      "outline": false,
+      "category": "silhouette",
+      "note": "black pond surface, unlit flat black"
+    },
+    "M_Light": {
+      "base": "FFF4D6",
+      "shade": "FFF4D6",
+      "outline": false,
+      "category": "light",
+      "alpha": 0.22,
+      "note": "light shaft: unlit additive / transparent, no shadow, fade toward the top (UV v / object Y)"
+    },
+    "M_Pencil": {
+      "base": "474B52",
+      "shade": "474B52",
+      "outline": false,
+      "category": "line",
+      "note": "graphite construction line (opaque, softer than ink): wireframe of the unbuilt part of a form, guide lines"
+    },
+    "M_Smudge": {
+      "base": "5E5953",
+      "shade": "5E5953",
+      "outline": false,
+      "category": "sketch",
+      "alpha": 0.16,
+      "note": "erased graphite smudge decal (transparent, unlit, no shadow)"
+    },
+    "M_TornEdge": {
+      "base": "F4EFE3",
+      "shade": "D6D0C2",
+      "outline": false,
+      "category": "paper",
+      "note": "raw paper showing at torn / missing chunks (reads brighter than the drained drawing)"
+    },
+    "M_PaperBack": {
+      "base": "A9A79F",
+      "shade": "7C8086",
+      "outline": true,
+      "category": "paper",
+      "hatch": true,
+      "note": "inside / back face of a torn paper shell (darker than the outside paper)"
+    },
+    "M_Ground": {
+      "base": "F1EEE6",
+      "shade": "C9CCCF",
+      "outline": false,
+      "category": "paper",
+      "hatch": true,
+      "note": "unpainted walkable ground (outskirts, fall mesa top)"
+    },
+    "M_GroundRoad": {
+      "base": "EAE6DC",
+      "shade": "B2B6BB",
+      "outline": false,
+      "category": "paper",
+      "hatch": true,
+      "note": "roads: a shade darker than paper so paths read from the high camera"
+    },
+    "M_GroundPainted": {
+      "base": "E2CFAA",
+      "shade": "BBA27C",
+      "outline": false,
+      "category": "painted",
+      "note": "plaza: the painted theatre square (fully drawn)"
+    },
+    "M_GroundEarth": {
+      "base": "D2BE9C",
+      "shade": "A8936F",
+      "outline": false,
+      "category": "painted",
+      "note": "field: furrowed earth, half painted"
+    },
+    "M_Cliff": {
+      "base": "E6E4DE",
+      "shade": "9EA3A8",
+      "outline": true,
+      "category": "paper",
+      "hatch": true,
+      "note": "cliff and outcrop faces (shade band hatched)"
+    },
+    "M_WallRock": {
+      "base": "E9E7E1",
+      "shade": "A3A8AE",
+      "outline": false,
+      "category": "paper",
+      "hatch": true,
+      "note": "cave boundary walls (solid lower part)"
+    },
+    "M_Ceiling": {
+      "base": "C6CDD6",
+      "shade": "B4BCC6",
+      "outline": false,
+      "category": "line",
+      "note": "cave ceiling underside: flat unlit pale grey-blue (reads as blank paper sky), mostly out of view. No shadows from it."
+    },
+    "M_PlazaStone1": {
+      "base": "EAD9B6",
+      "shade": "C7B08A",
+      "outline": false,
+      "category": "painted",
+      "note": "painted hex paving stone, light"
+    },
+    "M_PlazaStone2": {
+      "base": "DDC49A",
+      "shade": "B79D74",
+      "outline": false,
+      "category": "painted",
+      "note": "painted hex paving stone, mid"
+    },
+    "M_PlazaStone3": {
+      "base": "CFA97C",
+      "shade": "A88660",
+      "outline": false,
+      "category": "painted",
+      "note": "painted hex paving stone, warm (near the stage)"
+    },
+    "M_UnderGround": {
+      "base": "E8E2D3",
+      "shade": "A9A59B",
+      "outline": false,
+      "category": "paper",
+      "note": "underground walkable paper ground (slice 1). base = in the light pool, shade = drained grey-beige everywhere else"
+    },
+    "M_UnderRoad": {
+      "base": "DDD6C6",
+      "shade": "9C988E",
+      "outline": false,
+      "category": "paper",
+      "note": "drawn path / road strip, a shade darker"
+    },
+    "M_UnderCliff": {
+      "base": "DAD6CC",
+      "shade": "9A9C9E",
+      "outline": true,
+      "category": "paper",
+      "hatch": false,
+      "note": "cliff walls, rocks, pillars (slice 1)"
+    },
+    "M_UnderLow": {
+      "base": "C9CBCB",
+      "shade": "959A9F",
+      "outline": false,
+      "category": "paper",
+      "hatch": false,
+      "note": "lower ground seen below the ledges (vista): cooler and lighter = farther"
+    },
+    "M_VistaGround": {
+      "base": "DEDDD6",
+      "shade": "B0B2B2",
+      "outline": false,
+      "category": "paper",
+      "hatch": false,
+      "note": "ground of the neighbour page seen from this page (cooler, lighter)"
+    },
+    "M_VistaCliff": {
+      "base": "D3D5D6",
+      "shade": "A4A9AE",
+      "outline": true,
+      "category": "paper",
+      "hatch": false,
+      "note": "cliffs/rocks of the neighbour page seen from this page"
+    },
+    "M_UnderDeep": {
+      "base": "60656C",
+      "shade": "43474D",
+      "outline": false,
+      "category": "paper",
+      "hatch": false,
+      "note": "chasm walls below the lower ground, chasm floor, holes: the deepest places"
+    },
+    "M_VistaTerracotta": {
+      "base": "B48C6C",
+      "shade": "8C6D57",
+      "outline": true,
+      "category": "painted",
+      "note": "far painted towers (muted terracotta)"
+    },
+    "M_VistaTerraDark": {
+      "base": "9A7258",
+      "shade": "765644",
+      "outline": true,
+      "category": "painted",
+      "note": "far domes, beams"
+    },
+    "M_VistaCurtain": {
+      "base": "A84B3E",
+      "shade": "7E362D",
+      "outline": true,
+      "category": "painted",
+      "note": "far stage curtain"
+    },
+    "M_VistaNavy": {
+      "base": "3E4A72",
+      "shade": "2C3655",
+      "outline": true,
+      "category": "painted",
+      "note": "far stage backdrop"
+    },
+    "M_VistaWood": {
+      "base": "9C7B5C",
+      "shade": "765C45",
+      "outline": true,
+      "category": "painted",
+      "note": "far stage boards"
+    },
+    "M_VistaPlaza": {
+      "base": "C2B59D",
+      "shade": "9B907D",
+      "outline": false,
+      "category": "painted",
+      "note": "far painted plaza ground"
+    },
+    "M_VistaStone": {
+      "base": "B7A584",
+      "shade": "948469",
+      "outline": false,
+      "category": "painted",
+      "note": "far painted hex stones"
+    },
+    "M_Abyss": {
+      "base": "4F535A",
+      "shade": "3A3D43",
+      "outline": false,
+      "category": "paper",
+      "hatch": false,
+      "note": "the abyss floor far below every plateau (darkest drained value, never lit)"
+    },
+    "M_HatchDark": {
+      "base": "4E5157",
+      "shade": "4E5157",
+      "outline": false,
+      "category": "line",
+      "note": "bold diagonal hand hatching modelled on shaded cliff faces (slice 1). unlit flat, double-sided"
+    },
+    "M_Beam": {
+      "base": "FFF1CF",
+      "shade": "FFF1CF",
+      "outline": false,
+      "category": "light",
+      "alpha": 0.11,
+      "note": "light beam from the ceiling hole to the fall spot. additive; UV v = 0 at the ground -> 1 at the ceiling (fade toward the top); no shadow"
+    },
+    "M_UnderSpire": {
+      "base": "A6AEB9",
+      "shade": "7E8794",
+      "outline": false,
+      "category": "paper",
+      "hatch": false,
+      "note": "blue-grey spires rising from below (vista)"
+    },
+    "M_CaveWall": {
+      "base": "979EA7",
+      "shade": "6F7680",
+      "outline": false,
+      "category": "paper",
+      "hatch": false,
+      "note": "far cave wall, stalactites, columns (vista)"
+    },
+    "M_LightPool": {
+      "base": "FFEFC8",
+      "shade": "FFEFC8",
+      "outline": false,
+      "category": "light",
+      "alpha": 0.45,
+      "note": "additive light pool decal under the ceiling hole. UV v = 0 centre -> 1 rim; fade alpha to 0 at v = 1. No shadow"
+    },
+    "M_Dust": {
+      "base": "FFF4D6",
+      "shade": "FFF4D6",
+      "outline": false,
+      "category": "light",
+      "alpha": 0.8,
+      "note": "dust / paper flecks floating in the beam (additive, unlit, no shadow; may drift slowly)"
+    },
+    "M_BluebirdDeep": {
+      "base": "1E3A96",
+      "shade": "13265F",
+      "outline": true,
+      "category": "painted",
+      "note": "hero: wing primaries, tail, cap feather shade"
+    },
+    "M_PaintWhite": {
+      "base": "F4EFE2",
+      "shade": "C8C0AC",
+      "outline": true,
+      "category": "painted",
+      "note": "brushed-on white paint (Kinopio collar)"
+    },
+    "M_PaintNavy": {
+      "base": "2A3A78",
+      "shade": "1C2752",
+      "outline": true,
+      "category": "painted",
+      "note": "brushed-on navy paint (suspenders, trims)"
+    },
+    "M_PencilBody": {
+      "base": "5A5551",
+      "shade": "5A5551",
+      "outline": false,
+      "category": "sketch",
+      "alpha": 0.55,
+      "note": "graphite construction lines where a creature body is not finished yet (unlit, transparent, double-sided, no shadow)"
+    },
+    "M_PaintRedBrush": {
+      "base": "C23A2E",
+      "shade": "8E2A22",
+      "outline": false,
+      "category": "painted",
+      "note": "dry-brush streaks running off a red paint edge (flush strokes, NO outline)"
+    },
+    "M_PaintBlueBrush": {
+      "base": "5B86C9",
+      "shade": "3D6198",
+      "outline": false,
+      "category": "painted",
+      "note": "dry-brush streaks running off a blue paint edge (flush strokes, NO outline)"
+    },
+    "M_Skin": {
+      "base": "F1C7A2",
+      "shade": "C9946F",
+      "outline": true,
+      "category": "painted",
+      "note": "hero skin (the only fully coloured being)"
+    },
+    "M_Hair": {
+      "base": "1C2138",
+      "shade": "0E1120",
+      "outline": true,
+      "category": "painted",
+      "note": "hero hair: blue-black, darker than the navy cap so cap and hair read apart"
+    },
+    "M_HeroShirt": {
+      "base": "E8EBF1",
+      "shade": "B1B9CA",
+      "outline": true,
+      "category": "painted",
+      "note": "hero loose shirt: grey-white like the bluebird belly"
+    },
+    "M_HeroTrousers": {
+      "base": "343A52",
+      "shade": "1F2438",
+      "outline": true,
+      "category": "painted",
+      "note": "hero dark trousers"
+    },
+    "M_FishSkin": {
+      "base": "3F5D63",
+      "shade": "22363B",
+      "outline": true,
+      "category": "painted",
+      "note": "Fish v2: dark ink-teal paint on the head and nape (stops behind the head -> bare paper)"
+    },
+    "M_FishGum": {
+      "base": "7E2E2A",
+      "shade": "4C1B19",
+      "outline": true,
+      "category": "painted",
+      "note": "Fish v2: inside of the mouth (palate, tongue, gullet rim), a dark red that still reads under dim light"
+    },
+    "M_FishScratch": {
+      "base": "6F8C8E",
+      "shade": "6F8C8E",
+      "outline": false,
+      "category": "line",
+      "note": "Fish v2: scratched light lines on the dark paint (scale arcs, skull plates). unlit, no outline"
+    },
+    "M_FishEyePale": {
+      "base": "D8D1B6",
+      "shade": "A39B82",
+      "outline": false,
+      "category": "painted",
+      "note": "Fish v2: small pale eye. NOT emissive (no self-glow)"
+    },
+    "M_FishTooth": {
+      "base": "EEE6D2",
+      "shade": "B4AA92",
+      "outline": true,
+      "category": "paper",
+      "note": "Fish v2: paper teeth (unpainted)"
+    },
+    "M_BellBronze": {
+      "base": "8A7347",
+      "shade": "5B4A2C",
+      "outline": true,
+      "category": "painted",
+      "note": "plaza bell: a creature copy of a fallen bell, painted bronze (drains; NOT human brass)"
+    },
+    "M_BellInner": {
+      "base": "3E3324",
+      "shade": "2A2218",
+      "outline": false,
+      "category": "painted",
+      "note": "inside of the bell mouth"
+    },
+    "M_DecreeBand": {
+      "base": "E4D9BC",
+      "shade": "ADA184",
+      "outline": true,
+      "category": "paper",
+      "note": "the king's interpretation band: creature paper, yellowed. Face plane carries the glyph texture"
+    },
+    "M_Glass": {
+      "base": "4F9772",
+      "shade": "2F6449",
+      "outline": true,
+      "category": "painted",
+      "keep": true,
+      "note": "human bottle glass (green), keep"
+    },
+    "M_KingSeal": {
+      "base": "5A2240",
+      "shade": "391428",
+      "outline": true,
+      "category": "painted",
+      "keep": true,
+      "note": "the king's wax seal and tie: deep plum (the king's colour), keep"
+    },
+    "M_OfferRed": {
+      "base": "C8302A",
+      "shade": "8C1E1A",
+      "outline": true,
+      "category": "painted",
+      "keep": true,
+      "note": "village offering mark: brush-painted red cloth strip (RedCord, cords on lumps / sacks). KEEP saturation: the one creature-made colour that must read at once"
+    },
+    "M_OfferRedBrush": {
+      "base": "C8302A",
+      "shade": "8C1E1A",
+      "outline": false,
+      "category": "painted",
+      "keep": true,
+      "note": "dry-brush streaks and frayed threads of the red cord (flush strokes, no outline, keep)"
+    },
+    "M_SackDark": {
+      "base": "7F786A",
+      "shade": "57524A",
+      "outline": true,
+      "category": "paper",
+      "note": "inside of a sack, twine lashings, rag folds in deep shade"
+    },
+    "M_Sackcloth": {
+      "base": "CFC3A4",
+      "shade": "978C76",
+      "outline": true,
+      "category": "paper",
+      "hatch": true,
+      "note": "collector sack / rag cloth: creature-woven paper cloth (drains with the world)"
+    },
+    "M_Shaving": {
+      "base": "F0DBB4",
+      "shade": "C9A87C",
+      "outline": true,
+      "category": "paper",
+      "note": "fresh-cut puppet-wood shavings (paler than M_PuppetWood)"
+    },
+    "M_Whetstone": {
+      "base": "B3AFA4",
+      "shade": "7F7C74",
+      "outline": true,
+      "category": "paper",
+      "hatch": true,
+      "note": "nose-filing stone (grey paper-stone)"
+    },
+    "M_HoodInner": {
+      "base": "6B5D4F",
+      "shade": "4A4038",
+      "outline": false,
+      "category": "paper",
+      "note": "Collector: dim recessed face inside the hood (a carved face in shadow, not black)"
+    },
+    "M_FieldSoil": {
+      "base": "9C8F7C",
+      "shade": "6E6457",
+      "outline": false,
+      "category": "paper",
+      "note": "slice 2: dark turned soil of the field beds (the furrows that all run to the pond). Ground_Lines, no shadow"
+    },
+    "M_Flame": {
+      "base": "FF9A3C",
+      "shade": "E46A1E",
+      "outline": false,
+      "category": "painted",
+      "emission": 1.0,
+      "keep": true,
+      "note": "creature torch flame: unlit / emissive orange, put a small warm point light at Torch/Flame"
+    },
+    "M_Mirror": {
+      "base": "C5D3DE",
+      "shade": "8796A5",
+      "outline": true,
+      "category": "painted",
+      "keep": true,
+      "note": "human mirror glass (silvered face), keep. Unity: may add a fake reflection / rim light"
+    },
+    "M_HeroEyeWhite": {
+      "base": "F6F3EC",
+      "shade": "D9D4CA",
+      "outline": false,
+      "category": "painted",
+      "note": "hero eye whites (flush decal, no outline)"
+    },
+    "M_HeroIris": {
+      "base": "2E5BB8",
+      "shade": "1D3C80",
+      "outline": false,
+      "category": "painted",
+      "note": "hero iris: cobalt (bluebird), no outline"
+    },
+    "M_Blush": {
+      "base": "EDB09A",
+      "shade": "D99A84",
+      "outline": false,
+      "category": "painted",
+      "note": "hero cheek blush decal, no outline"
+    },
+    "M_SkinLine": {
+      "base": "B97A5E",
+      "shade": "B97A5E",
+      "outline": false,
+      "category": "line",
+      "note": "soft skin-tone line (lower lid, nose side, ear curl)"
+    },
+    "M_SkinSoft": {
+      "base": "F1C7A2",
+      "shade": "C9946F",
+      "outline": false,
+      "category": "painted",
+      "note": "hero skin WITHOUT outline (nose: an ink ring around it reads as a clown nose)"
+    },
+    "M_HairIn": {
+      "base": "1C2138",
+      "shade": "0E1120",
+      "outline": false,
+      "category": "painted",
+      "note": "inside of the hair shell, no outline"
+    },
+    "M_HairLine": {
+      "base": "3B4A7A",
+      "shade": "3B4A7A",
+      "outline": false,
+      "category": "line",
+      "note": "thin cobalt-grey strand lines drawn on the hair mass"
+    }
+  }
+}

@@ -1,0 +1,10540 @@
+{
+ "meta": {
+  "chapter": 1,
+  "version": "2026-10-23b",
+  "source": "기록/스토리_1챕터_거짓말안_2026-10-23/1챕터_대본_초안.md + 1챕터_낱말표_초안.md + 1챕터_대타_설계초안.md (사용자 판단 전 초안을 제작에 옮김)",
+  "author": "데이터 담당 에이전트(거짓말안 이식)",
+  "readme": "docs/1챕터_진행표.md(진행·장면·갈래), docs/반응목록.md(react·pose·scene), docs/메인요청.md(엔진에 필요한 것). [가정] 표시는 장부에 없는 값.",
+  "conventions": {
+   "pos": "[x, z] 월드 좌표(m), 설계_뼈대 §2 배치 기준. 높이 y는 지형이 정함",
+   "facing": "도(degree). 0 = +Z(북), 90 = +X(동), Unity yaw와 같음",
+   "board": "[가로 칸, 세로 칸]",
+   "when": "{\"all\":[깃발], \"none\":[깃발], \"any\":[깃발]} — 셋 다 생략 가능, 모두 만족해야 참",
+   "goals": "화면에 보이지 않음(화-13). 위에서부터 훑어 when이 참인 것 중 마지막 하나가 길잡이(GuideSystem)의 대상(target)과 90초 생각(thought)을 정한다. text는 F2 개발용",
+   "responses": "위에서부터 먼저 맞는 것(core.js canonical 비교, 갈래 순서 무시). sid = sentences의 같은 문장 id",
+   "understood": "progress가 false여도 듣는 이가 뜻을 알아들은 응답(뜻-01 '써서 통함' 근거로 침). 생략 시 progress 값과 같음",
+   "accept": "추측 판정: 앞뒤 공백·문장부호(.,!?~…) 제거, 안쪽 공백 제거 후 accept 목록과 정확히 같으면 맞음. 유사도 판정은 쓰지 않음",
+   "wordsOffered": "대화의 words 중 플레이어가 이미 본 글자만 칩으로 꺼낸다(뜻-02)",
+   "phases": "단계가 시작될 때 NPC를 그 자리·자세로 옮긴다. 그 뒤 이벤트의 npc 동작이 덮어쓴다",
+   "nudges": "대화에서 진행 안 되는 응답이 afterFails번 쌓이면 한 번 보이는 넛지(뜻은 알려 주지 않음, 뜻-07)",
+   "near": "near:<npc> = 주인공이 그 NPC 3m 안",
+   "exitLocks": "구역 출구 잠금: locked 조건이 참이면 그 출구로 못 넘어감(같은 출구에 여러 줄이면 하나라도 참이면 잠김). react = 막혔을 때 주인공 반응(메인 구현 요청, docs/메인요청.md)",
+   "host": "puzzles[].host / inscriptions[].host = 이 물건(props id)에 붙임(메인 구현 요청)",
+   "image": "inscriptions[].image = Resources/Pictures/<image>.png 그림을 새김 옆에 함께 보임(carved 새김도, 메인 구현 요청)",
+   "cinematic": "scenes[].cinematic = 레터박스 컷(메인: Director.Cinematic 표를 이 값으로)",
+   "reacts": "react 이름 = Director.React 표에 있으면 그것, 없으면 DirectorScenes.cs의 rx_<react>(NpcActor) / 주인공은 rx_<react>() (메인이 TryStoryReact 연결)",
+   "memoryFlags": "갈래 기억 깃발 — 지금 조건에는 안 쓰지만 대사·연출 갈래와 2챕터 시작(키노피오 태도, 소지품)에 넘길 기록"
+  },
+  "schemaExtensions": [
+   "words[].group / words[].hint: 제작 메모",
+   "places[].fullName, village: 지명(가정)",
+   "zones: 트리거·배치용 작은 구역",
+   "npcs[].look(drawn|silhouette|hidden), spawn, facing, count, nameplate",
+   "props: 세계 물건과 상태",
+   "inscriptions[].lines(여러 줄, §4의 sentence 대신), kind(carved=퍼즐 새김 뜻-24 | display=퍼즐 아닌 글 뜻-28②), words(확정 가능 낱말), label, relief, visibleWhen, copies",
+   "readables: 사람 글(주인공이 바로 읽음)",
+   "dialogues[].title, zone, note, responses[].sid/understood/also/note, default.also",
+   "overheads[].id/range/note",
+   "plays[].when/loop/place, lines[].sentence null = 말 없는 자리 맞추기",
+   "puzzles[].pos/zone/opensWhen/auto/repeatable/interaction/note",
+   "phases: 단계별 NPC 자리·자세",
+   "goals[].hint",
+   "scenes: 컷신 id 목록(장면 설명은 docs/반응목록.md)",
+   "translations: 문장 id → 다 읽었을 때 보이는 한국어 문장",
+   "dialogues[].nudges",
+   "exitLocks[]: {area, to, locked(조건), react}",
+   "puzzles[].host / label, inscriptions[].host / image, scenes[].cinematic, props[].attach(주인공·크리처에 붙는 물건)",
+   "exitLocks[]: {area, to, locked(조건), react}",
+   "puzzles[].host / label, inscriptions[].host / image, scenes[].cinematic, props[].attach(주인공·크리처에 붙는 물건)",
+   "exitLocks[]: {area, to, locked(조건), react}",
+   "puzzles[].host / label, inscriptions[].host / image, scenes[].cinematic, props[].attach(주인공·크리처에 붙는 물건)"
+  ],
+  "newAssumptions": [
+   "[가정] 하루 이야기: 떨어진 날 = 막오름 날. 물고기는 이날에만 솟음",
+   "[가정] 귀한손님 = 안 가(뜻은 처음부터 '마을이 모셔서 물고기에게 보내는 귀한 손님'), 반전은 낱말이 아니라 세계에서 옴 — 팀장 결정 전 기본값",
+   "[가정] 키노피오 코: 주인공을 속일 때 한 마디씩 자라고 남몰래 돌에 갊, 참말 고백에 저절로 떨어짐(설명 없음)",
+   "[가정] 왕의 띠 = 선왕 작업 기록 종이를 찢어 크리처 글자를 쓴 것, 뒷면에 사람 글",
+   "[가정] 덩어리는 2막까지 천을 덮어 의자에 모심, 붉은 끈은 3막 밭에서 처음 드러남",
+   "[가정] 그림판·새김 문장, 사람 글 2장, 극 4줄, 소지품(파랑새 배지·나무 새·숟가락), 새 인물(우두머리·죽 주는 이·어미·지킴이·이웃), 모든 반응 연출",
+   "[가정] 바치다 세 갈래: core.js는 한 조각에 들어오는 연결을 둘 받지 않아(multiple_parents) 직-07의 '들어가는 둘' 대신 「우리 → 바치다 →(물고기)(물건)」 나가는 두 갈래로 씀. 새김3(판4) 한 곳만",
+   "[가정] 대화9 칩 10개(설계의 '8개'는 모형 수로 읽음, 직-04)",
+   "[가정] 4-1 고백은 굴 안 벽 그림 대신 껍질 문간에서(구역을 옮기지 않으려고). 문간에서 굴 안 벽 그림 쪽을 짚음",
+   "[가정] 2-1 '수레가 광장 끝을 지나감'은 수거꾼이 가방을 메고 지나가는 것으로(수레 물건은 창고에 하나)",
+   "[가정] 배지 주기 = 대화6 뒤 굴 안에서 키노피오를 한 번 더 누르면 줌(가방을 보고 가슴을 내미는 몸짓이 신호)",
+   "[가정] 출구 잠금(exitLocks)으로 한 방향 진행을 지킴: 길목→광장(촌장 가지), 길목·광장→수레 길, 골목·수레 길→밭(첫 종 전), 골목→굴(껍질 문)"
+  ],
+  "memoryFlags": [
+   "f_hid_nest",
+   "f_opt_gate",
+   "f_opt_plaza",
+   "f_opt_fieldkid",
+   "f_opt_neighbor",
+   "f_scare1",
+   "f_scare2",
+   "f_scare3",
+   "f_d2_you",
+   "f_d2_me",
+   "f_cord_once",
+   "f_cord_twice",
+   "f_d4_crowd",
+   "f_d4_fed",
+   "f_d5_head",
+   "f_d6_line",
+   "f_d6_smudge",
+   "f_d7_rite",
+   "f_d7_draw",
+   "f_d7_cord",
+   "f_d9_rift",
+   "f_ladder",
+   "f_cart_free",
+   "f_musicbox",
+   "f_bag_taken",
+   "f_wood_bird",
+   "f_play_music",
+   "f_bell3",
+   "decree:decree_band",
+   "f_whale_read",
+   "f_end"
+  ]
+ },
+ "village": {
+  "id": "village",
+  "name": "콜로디",
+  "note": "[가정] 피노키오 작가 이름이자 고향 마을. 책에서 나온 가장 바깥 마을. 대안: 밑그림 마을"
+ },
+ "words": [
+  {
+   "id": "나",
+   "color": "yellow",
+   "accept": [
+    "나",
+    "저",
+    "내",
+    "제가",
+    "내가",
+    "나는"
+   ],
+   "note": "1-3 키노피오가 자기 가슴을 짚으며. 확정 대화1. 너와 거울처럼 뒤집힌 꼴(어-08)"
+  },
+  {
+   "id": "너",
+   "color": "yellow",
+   "accept": [
+    "너",
+    "당신",
+    "네",
+    "니",
+    "네가",
+    "너는",
+    "그대"
+   ],
+   "note": "1-3 주인공 가슴을 짚으며. 확정 대화2·대화8(따짐). 대화1에서 그대로 따라 하면 상대를 가리킴"
+  },
+  {
+   "id": "우리",
+   "color": "yellow",
+   "accept": [
+    "우리",
+    "저희",
+    "우리들",
+    "우리둘"
+   ],
+   "note": "1-2 수거꾼 「우리→가져가다→물건」, 2-3 거울 속 둘. 확정 새김2·대화6·8. 함께·같이는 받지 않음"
+  },
+  {
+   "id": "형",
+   "color": "yellow",
+   "accept": [
+    "형",
+    "오빠",
+    "형님",
+    "언니",
+    "누나",
+    "큰애",
+    "형아"
+   ],
+   "note": "2-3 그림 앞 키 재기. 확정 대화6. 아빠·친구는 받지 않음"
+  },
+  {
+   "id": "귀한손님",
+   "color": "yellow",
+   "accept": [
+    "귀한손님",
+    "손님",
+    "귀빈",
+    "귀인",
+    "귀하신분",
+    "모실분",
+    "vip",
+    "제물",
+    "바칠사람",
+    "바쳐질몸",
+    "산제물",
+    "공물",
+    "희생양"
+   ],
+   "note": "[가정] 안 가: 뜻은 처음부터 '마을이 모셔서 물고기에게 보내는 귀한 손님'. 손님 쪽·바침 쪽 둘 다 받음. 선물은 팀장 결정 전이라 받지 않음. 확정 대화1"
+  },
+  {
+   "id": "물고기",
+   "color": "yellow",
+   "accept": [
+    "물고기",
+    "고기",
+    "생선",
+    "큰물고기",
+    "고래",
+    "상어",
+    "물고기들"
+   ],
+   "note": "2-1 무대 소품에 칠한 글자, 3-1 실물. 확정 새김3·대화7"
+  },
+  {
+   "id": "물건",
+   "color": "yellow",
+   "accept": [
+    "물건",
+    "물품",
+    "사람물건",
+    "짐",
+    "물건들"
+   ],
+   "note": "1-2 수거꾼 머리 위. 확정 대화5. 것·보물은 받지 않음(어-04)"
+  },
+  {
+   "id": "몸",
+   "color": "yellow",
+   "accept": [
+    "몸",
+    "몸뚱이",
+    "신체",
+    "몸통",
+    "육체",
+    "몸체"
+   ],
+   "note": "1-5 새김1. 확정 새김1·대화7. 덩어리·껍데기는 받지 않음(합-10 자리)"
+  },
+  {
+   "id": "위",
+   "color": "yellow",
+   "accept": [
+    "위",
+    "위쪽",
+    "윗쪽",
+    "위로",
+    "위에",
+    "하늘",
+    "천장",
+    "꼭대기",
+    "지상",
+    "위세상",
+    "윗세상",
+    "땅위"
+   ],
+   "note": "1-3 빛구멍 손짓. 확정 새김2·대화6. 밖은 받지 않음"
+  },
+  {
+   "id": "안",
+   "color": "yellow",
+   "accept": [
+    "안",
+    "안쪽",
+    "속",
+    "내부",
+    "안에",
+    "안으로",
+    "속으로"
+   ],
+   "note": "1-4 틈에 머리를 넣었다 빼며. 확정 대화2·새김1. 뱃속은 받지 않음"
+  },
+  {
+   "id": "이다",
+   "color": "blue",
+   "accept": [
+    "이다",
+    "이야",
+    "입니다",
+    "이에요",
+    "예요",
+    "다",
+    "임",
+    "이야요"
+   ],
+   "note": "1-3 「너→이다→귀한손님」. 두 노랑 사이에만 옴(읽-06). 확정 대화1. 같다는 받지 않음"
+  },
+  {
+   "id": "가다",
+   "color": "blue",
+   "accept": [
+    "가다",
+    "간다",
+    "가",
+    "가요",
+    "감",
+    "가기",
+    "이동하다",
+    "돌아가다"
+   ],
+   "note": "1-3 「귀한손님→가다→위」. 확정 대화2. 들어가다·오다는 받지 않음, 돌아가다는 받음[가정]"
+  },
+  {
+   "id": "가져가다",
+   "color": "blue",
+   "accept": [
+    "가져가다",
+    "가지고가다",
+    "들고가다",
+    "챙겨가다",
+    "가져가",
+    "가져감",
+    "수거하다",
+    "거두다"
+   ],
+   "note": "1-2 수거꾼. 확정 대화5"
+  },
+  {
+   "id": "바치다",
+   "color": "blue",
+   "accept": [
+    "바치다",
+    "드리다",
+    "올리다",
+    "공양하다",
+    "헌납하다",
+    "주다",
+    "바쳐",
+    "바침",
+    "바친다"
+   ],
+   "note": "2-2 우두머리가 수레 앞에 무릎 꿇고. 확정 새김3·대화5 △. 버리다는 받지 않음"
+  },
+  {
+   "id": "먹다",
+   "color": "blue",
+   "accept": [
+    "먹다",
+    "삼키다",
+    "드시다",
+    "먹어",
+    "먹음",
+    "먹는다",
+    "삼켜",
+    "잡아먹다"
+   ],
+   "note": "2-1 죽 주는 이. 확정 대화4. 먹이다는 받지 않음"
+  },
+  {
+   "id": "뱉다",
+   "color": "blue",
+   "accept": [
+    "뱉다",
+    "내뱉다",
+    "토하다",
+    "게우다",
+    "뱉어내다",
+    "뱉어",
+    "뱉음"
+   ],
+   "note": "3-1 꼬마 주민 「물고기→뱉다」. 확정 대화7. 낳다·돌려주다는 받지 않음"
+  },
+  {
+   "id": "남다",
+   "color": "blue",
+   "accept": [
+    "남다",
+    "남기다",
+    "남아있다",
+    "남겨지다",
+    "남은",
+    "남음",
+    "남아",
+    "남는다"
+   ],
+   "note": "2-1 그림판3, 2-3 의자 등받이. 확정 대화7·새김4. 앉다·쉬다·머물다는 받지 않음"
+  },
+  {
+   "id": "절하다",
+   "color": "blue",
+   "accept": [
+    "절하다",
+    "절",
+    "엎드리다",
+    "인사하다",
+    "경배하다",
+    "절함",
+    "엎드림",
+    "엎드려",
+    "절해"
+   ],
+   "note": "1-5 촌장 「몸→절하다→안」. 확정 새김1. 무서워하다·감사하다는 받지 않음"
+  },
+  {
+   "id": "숨기다",
+   "color": "blue",
+   "accept": [
+    "숨기다",
+    "감추다",
+    "숨겨두다",
+    "숨다",
+    "숨김",
+    "숨겨",
+    "감춤"
+   ],
+   "note": "2-3 옹이 신호 「나→숨기다→물건」. 확정 새김2·대화8. 열다·쉿은 받지 않음"
+  },
+  {
+   "id": "그리다",
+   "color": "blue",
+   "accept": [
+    "그리다",
+    "그려주다",
+    "그림그리다",
+    "칠하다",
+    "그림",
+    "그려",
+    "그린다",
+    "색칠하다"
+   ],
+   "note": "1-5 새김1, 2-3 숯 「나→그리다→너」. 확정 새김1·대화7. 깎다·만들다는 받지 않음"
+  }
+ ],
+ "places": [
+  {
+   "id": "fall",
+   "name": "빛구멍 언덕",
+   "fullName": "콜로디 빛구멍 언덕",
+   "goalName": "빛구멍 언덕",
+   "center": [
+    -55.5,
+    30.0
+   ],
+   "radius": 7,
+   "note": "[가정] 천장 빛구멍 아래 사람 물건 더미. 1막 1-1~1-4"
+  },
+  {
+   "id": "gate",
+   "name": "앉은돌 길목",
+   "fullName": "콜로디 앉은돌 길목",
+   "goalName": "앉은돌 길목",
+   "center": [
+    -28.0,
+    25.0
+   ],
+   "radius": 7,
+   "note": "[가정] 뒤틀린 나무 촌장의 검문, 판1 새김"
+  },
+  {
+   "id": "plaza",
+   "name": "꼭두 광장",
+   "fullName": "콜로디 꼭두 광장",
+   "goalName": "꼭두 광장",
+   "center": [
+    -3.0,
+    13.0
+   ],
+   "radius": 12,
+   "note": "[가정] 극 무대·그림판2·3·종. 2-1, 3-2, 4-2"
+  },
+  {
+   "id": "depot",
+   "name": "수거꾼 창고",
+   "fullName": "콜로디 수거꾼 창고",
+   "goalName": "수거꾼 창고",
+   "center": [
+    15.5,
+    -7.5
+   ],
+   "radius": 7,
+   "note": "[가정] 수레 길 창고. 2-2 가방 되찾기"
+  },
+  {
+   "id": "alley",
+   "name": "삐걱의자 골목",
+   "fullName": "콜로디 삐걱의자 골목",
+   "goalName": "삐걱의자 골목",
+   "center": [
+    23.0,
+    20.0
+   ],
+   "radius": 10,
+   "note": "[가정] 천 덮은 덩어리 의자들, 키노피오 집. 2-3, 3-3, 4-1"
+  },
+  {
+   "id": "hideout",
+   "name": "키노피오의 굴",
+   "fullName": "콜로디 키노피오의 굴",
+   "goalName": "키노피오의 굴",
+   "center": [
+    42.4,
+    29.4
+   ],
+   "radius": 3.6,
+   "note": "[가정] 고목 속 비밀 굴(껍질 문). 2-3, 4-1"
+  },
+  {
+   "id": "field",
+   "name": "기적의 밭",
+   "fullName": "콜로디 기적의 밭",
+   "goalName": "기적의 밭",
+   "center": [
+    40.5,
+    -2.0
+   ],
+   "radius": 11,
+   "note": "[가정] 사람 물건이 꽂힌 밭, 판4. 3-1, 4-3"
+  },
+  {
+   "id": "pond",
+   "name": "먹물 웅덩이",
+   "fullName": "콜로디 먹물 웅덩이",
+   "goalName": "먹물 웅덩이",
+   "center": [
+    58.0,
+    -18.0
+   ],
+   "radius": 8,
+   "note": "[가정] 물고기가 솟는 검은 웅덩이. 3-1, 4-3"
+  }
+ ],
+ "zones": [
+  {
+   "id": "z_hero_start",
+   "place": "fall",
+   "pos": [
+    -57.3,
+    30.9
+   ],
+   "radius": 1
+  },
+  {
+   "id": "z_kid_pile",
+   "place": "fall",
+   "pos": [
+    -53.4,
+    29.4
+   ],
+   "radius": 2.0,
+   "note": "키노피오가 처음 서는 자리"
+  },
+  {
+   "id": "z_fall_gap",
+   "place": "fall",
+   "pos": [
+    -53.55,
+    23.35
+   ],
+   "radius": 0.8,
+   "note": "좁은 틈(아이 하나만) — 빗장 안쪽으로 이어짐"
+  },
+  {
+   "id": "z_gap_side",
+   "place": "fall",
+   "pos": [
+    -53.0,
+    24.6
+   ],
+   "radius": 0.6,
+   "note": "[새] 틈 앞에서 키노피오가 놀리는 자리(대화2)"
+  },
+  {
+   "id": "z_ladder",
+   "place": "fall",
+   "pos": [
+    -51.3,
+    23.75
+   ],
+   "radius": 1.2,
+   "note": "접힌 놋쇠 사다리와 걸쇠"
+  },
+  {
+   "id": "z_ladder_front",
+   "place": "fall",
+   "pos": [
+    -52.0,
+    25.2
+   ],
+   "radius": 0.6,
+   "note": "[새] 사다리 앞 언덕 땅 — 앞장서기 목적지(사다리 장애물 위가 아니게, QA R-1)"
+  },
+  {
+   "id": "z_fall_bolt",
+   "place": "fall",
+   "pos": [
+    -43.8,
+    21.3
+   ],
+   "radius": 1.2,
+   "note": "사다리 아래 크리처 빗장 문"
+  },
+  {
+   "id": "z_kid_wait_below",
+   "place": "fall",
+   "pos": [
+    -44.75,
+    20.25
+   ],
+   "radius": 1,
+   "note": "틈을 지나 빗장 안쪽에 나온 키노피오"
+  },
+  {
+   "id": "z_collector_fall",
+   "place": "fall",
+   "pos": [
+    -55.4,
+    27.2
+   ],
+   "radius": 1.0,
+   "note": "[새] 1-2·1-3 수거꾼 우두머리 자리"
+  },
+  {
+   "id": "z_fall_edge",
+   "place": "fall",
+   "pos": [
+    -60.6,
+    28.4
+   ],
+   "radius": 1.5,
+   "note": "[새] 언덕 가장자리 — 실루엣 수거꾼이 자루를 끌고 드나드는 곳"
+  },
+  {
+   "id": "z_light_spot",
+   "place": "fall",
+   "pos": [
+    -55.0,
+    30.2
+   ],
+   "radius": 1.0,
+   "note": "[새] 빛구멍 바로 아래(1-3 「귀한손님→가다→위」)"
+  },
+  {
+   "id": "z_gate_stone",
+   "place": "gate",
+   "pos": [
+    -28.8,
+    28.3
+   ],
+   "radius": 1.4,
+   "note": "판1 새김 돌"
+  },
+  {
+   "id": "z_chief_gate",
+   "place": "gate",
+   "pos": [
+    -23.4,
+    27.0
+   ],
+   "radius": 1.5,
+   "note": "길을 막은 촌장"
+  },
+  {
+   "id": "z_gate_post",
+   "place": "gate",
+   "pos": [
+    -21.2,
+    25.4
+   ],
+   "radius": 0.7,
+   "note": "[새] 문 기둥 돌(키노피오가 코를 가는 곳)"
+  },
+  {
+   "id": "z_gate_side",
+   "place": "gate",
+   "pos": [
+    -26.4,
+    22.6
+   ],
+   "radius": 1.0,
+   "note": "[새] 지킴이가 서는 길가"
+  },
+  {
+   "id": "z_stage",
+   "place": "plaza",
+   "pos": [
+    -3.34,
+    18.51
+   ],
+   "radius": 5
+  },
+  {
+   "id": "z_doll_seat",
+   "place": "plaza",
+   "pos": [
+    -0.83,
+    20.06
+   ],
+   "radius": 2,
+   "note": "무대 가운데(극 자리 — Director 극 자세가 씀)"
+  },
+  {
+   "id": "z_board",
+   "place": "plaza",
+   "pos": [
+    -4.51,
+    25.7
+   ],
+   "radius": 2.5,
+   "note": "그림판 자리(극장 왼쪽 틀)"
+  },
+  {
+   "id": "z_board_s",
+   "place": "plaza",
+   "pos": [
+    0.43,
+    13.46
+   ],
+   "radius": 2.5,
+   "note": "그림판 자리(극장 오른쪽 틀)"
+  },
+  {
+   "id": "z_board_whale",
+   "place": "plaza",
+   "pos": [
+    -2.15,
+    24.92
+   ],
+   "radius": 1.2,
+   "note": "[새] 그림판2(고래 뱃속) — 지형 ins_board_2 자리"
+  },
+  {
+   "id": "z_board_chair",
+   "place": "plaza",
+   "pos": [
+    1.59,
+    15.65
+   ],
+   "radius": 1.2,
+   "note": "[새] 그림판3(의자 위 옛 인형) + 4-2 새 띠 — 지형 ins_board_3 자리"
+  },
+  {
+   "id": "z_chief_seat",
+   "place": "plaza",
+   "pos": [
+    -2.02,
+    14.19
+   ],
+   "radius": 1.5
+  },
+  {
+   "id": "z_crowd_rows",
+   "place": "plaza",
+   "pos": [
+    -5.5,
+    12.5
+   ],
+   "radius": 6
+  },
+  {
+   "id": "z_back_corner",
+   "place": "plaza",
+   "pos": [
+    -11.0,
+    6.0
+   ],
+   "radius": 1.5
+  },
+  {
+   "id": "z_bell",
+   "place": "plaza",
+   "pos": [
+    6.4,
+    4.4
+   ],
+   "radius": 1.5,
+   "note": "종탑 아래"
+  },
+  {
+   "id": "z_crowd_offer",
+   "place": "plaza",
+   "pos": [
+    -9.0,
+    19.0
+   ],
+   "radius": 3,
+   "note": "주민들이 엎드려 맞는 자리"
+  },
+  {
+   "id": "z_porridge",
+   "place": "plaza",
+   "pos": [
+    -8.2,
+    8.6
+   ],
+   "radius": 1.5,
+   "note": "[새] 죽 가게"
+  },
+  {
+   "id": "z_audience_seat",
+   "place": "plaza",
+   "pos": [
+    -4.4,
+    15.6
+   ],
+   "radius": 1.0,
+   "note": "[새] 3-2 주인공 자리(앉으면 극 시작)"
+  },
+  {
+   "id": "z_pedestal",
+   "place": "plaza",
+   "pos": [
+    -1.29,
+    16.64
+   ],
+   "radius": 1.5,
+   "note": "지형 자리(지금 이야기에서는 안 씀)"
+  },
+  {
+   "id": "z_cart",
+   "place": "depot",
+   "pos": [
+    13.4,
+    -7.2
+   ],
+   "radius": 1.5,
+   "note": "가방 실린 수레"
+  },
+  {
+   "id": "z_cart_lock",
+   "place": "depot",
+   "pos": [
+    13.4,
+    -5.7
+   ],
+   "radius": 0.9,
+   "note": "바퀴 쇠 고정쇠"
+  },
+  {
+   "id": "z_depot",
+   "place": "depot",
+   "pos": [
+    17.0,
+    -9.6
+   ],
+   "radius": 2.5,
+   "note": "창고 앞"
+  },
+  {
+   "id": "z_satchel",
+   "place": "depot",
+   "pos": [
+    16.9,
+    -9.8
+   ],
+   "radius": 0.9,
+   "note": "지형 담당 가방 자리(기둥 고리)"
+  },
+  {
+   "id": "z_depot_barrel",
+   "place": "depot",
+   "pos": [
+    11.2,
+    -8.6
+   ],
+   "radius": 0.8,
+   "note": "[새] 키노피오가 올라가 춤추는 통"
+  },
+  {
+   "id": "z_cord_basket",
+   "place": "depot",
+   "pos": [
+    15.6,
+    -11.4
+   ],
+   "radius": 0.8,
+   "note": "[새] 붉은 끈 바구니"
+  },
+  {
+   "id": "z_mother_house",
+   "place": "alley",
+   "pos": [
+    21.5,
+    21.7
+   ],
+   "radius": 2.0
+  },
+  {
+   "id": "z_lump",
+   "place": "alley",
+   "pos": [
+    19.37,
+    20.97
+   ],
+   "radius": 1.2,
+   "note": "천 덮은 덩어리 의자(어미가 닦음)"
+  },
+  {
+   "id": "z_kid_house",
+   "place": "alley",
+   "pos": [
+    31.16,
+    21.51
+   ],
+   "radius": 1.6,
+   "note": "키노피오 집 문간"
+  },
+  {
+   "id": "z_kid_house_chair",
+   "place": "alley",
+   "pos": [
+    33.21,
+    22.9
+   ],
+   "radius": 0.9,
+   "note": "형 덩어리 의자"
+  },
+  {
+   "id": "z_sawdust",
+   "place": "alley",
+   "pos": [
+    33.75,
+    21.39
+   ],
+   "radius": 0.7,
+   "note": "톱밥 더미"
+  },
+  {
+   "id": "z_crack",
+   "place": "alley",
+   "pos": [
+    30.5,
+    24.6
+   ],
+   "radius": 1.0,
+   "note": "굴로 가는 바위 틈 입구"
+  },
+  {
+   "id": "z_bark_door",
+   "place": "alley",
+   "pos": [
+    33.4,
+    25.7
+   ],
+   "radius": 0.9,
+   "note": "[새] 고목 껍질 문(옹이) — 굴로 들어가는 틈 길 위"
+  },
+  {
+   "id": "z_bark_door_front",
+   "place": "alley",
+   "pos": [
+    32.3,
+    25.33
+   ],
+   "radius": 0.6,
+   "note": "[새] 껍질 문 앞 골목 쪽 땅 — 앞장서기 목적지(문 장애물 위가 아니게, QA R-1)"
+  },
+  {
+   "id": "z_alley_window",
+   "place": "alley",
+   "pos": [
+    29.0,
+    22.4
+   ],
+   "radius": 0.8,
+   "note": "[새] 3-3 이웃이 창 너머로 보는 자리"
+  },
+  {
+   "id": "z_hideout_talk",
+   "place": "hideout",
+   "pos": [
+    42.2,
+    29.0
+   ],
+   "radius": 1.6
+  },
+  {
+   "id": "z_hideout_drawing",
+   "place": "hideout",
+   "pos": [
+    43.4,
+    31.3
+   ],
+   "radius": 1.2,
+   "note": "벽 숯 그림(두 아이와 빛구멍)"
+  },
+  {
+   "id": "z_hideout_stash",
+   "place": "hideout",
+   "pos": [
+    44.6,
+    30.6
+   ],
+   "radius": 1.2
+  },
+  {
+   "id": "z_hideout_nest",
+   "place": "hideout",
+   "pos": [
+    40.5,
+    30.6
+   ],
+   "radius": 1.0
+  },
+  {
+   "id": "z_hideout_door_in",
+   "place": "hideout",
+   "pos": [
+    39.6,
+    28.6
+   ],
+   "radius": 0.6,
+   "note": "[새] 4-1 문 안쪽 키노피오 자리"
+  },
+  {
+   "id": "z_field_pile",
+   "place": "field",
+   "pos": [
+    41.0,
+    1.0
+   ],
+   "radius": 3,
+   "note": "지형 자리(사람 물건이 꽂힌 밭 둔덕)"
+  },
+  {
+   "id": "z_page",
+   "place": "field",
+   "pos": [
+    37.6,
+    -9.2
+   ],
+   "radius": 1.0,
+   "note": "지형 자리(그림판 옆 — 지금 이야기에서는 안 씀)"
+  },
+  {
+   "id": "z_cart_procession",
+   "place": "field",
+   "pos": [
+    40.2,
+    -6.4
+   ],
+   "radius": 2.0
+  },
+  {
+   "id": "z_sign",
+   "place": "field",
+   "pos": [
+    36.8,
+    -8.4
+   ],
+   "radius": 1.5,
+   "note": "판4(기적의 밭 그림 + 세 갈래 새김)"
+  },
+  {
+   "id": "z_field_stone",
+   "place": "field",
+   "pos": [
+    47.0,
+    -6.6
+   ],
+   "radius": 0.9,
+   "note": "[새] 밭둑 돌(3-1 키노피오가 숨어 코를 감)"
+  },
+  {
+   "id": "z_pond_stop",
+   "place": "field",
+   "pos": [
+    46.4,
+    -9.0
+   ],
+   "radius": 3,
+   "note": "웅덩이가 보이는 밭 끝 — 3-1 물고기 장면"
+  },
+  {
+   "id": "z_pond_edge",
+   "place": "pond",
+   "pos": [
+    51.41,
+    -12.47
+   ],
+   "radius": 1.6,
+   "note": "웅덩이 가 — 3-1 어미, 4-3 촌장"
+  },
+  {
+   "id": "z_pond_bank",
+   "place": "pond",
+   "pos": [
+    54.53,
+    -11.47
+   ],
+   "radius": 1.4,
+   "note": "웅덩이 끝 — 4-3 주인공이 서면 물이 부풂"
+  },
+  {
+   "id": "z_pond_center",
+   "place": "pond",
+   "pos": [
+    58.0,
+    -18.0
+   ],
+   "radius": 3
+  },
+  {
+   "id": "z_pond_stone",
+   "place": "pond",
+   "pos": [
+    50.21,
+    -21.63
+   ],
+   "radius": 1.5,
+   "note": "웅덩이 둘레 돌(꾸밈)"
+  },
+  {
+   "id": "z_lump_spat",
+   "place": "pond",
+   "pos": [
+    52.4,
+    -13.4
+   ],
+   "radius": 0.8,
+   "note": "[새] 물고기가 뱉은 덩어리·띠가 떨어지는 곳"
+  },
+  {
+   "id": "z_lineup_front",
+   "place": "pond",
+   "pos": [
+    54.85,
+    -10.21
+   ],
+   "radius": 0.8,
+   "note": "[새] 줄 맨 앞(slice3 pond_lineup3 0번) — 지킴이"
+  },
+  {
+   "id": "z_lineup_hide",
+   "place": "pond",
+   "pos": [
+    51.38,
+    -10.85
+   ],
+   "radius": 0.8,
+   "note": "[새] 뒷줄 틈(pond_lineup3 11번) — 따짐 갈래 키노피오. 우두머리(3번)와 1.3 m 떨어짐(QA P0-2)"
+  },
+  {
+   "id": "z_chief_pond",
+   "place": "pond",
+   "pos": [
+    53.2,
+    -13.2
+   ],
+   "radius": 1.2,
+   "note": "[새] 웅덩이 앞 촌장(줄 안쪽, 웅덩이에서 6.8 m) — 대화9"
+  },
+  {
+   "id": "z_pond_lineup",
+   "place": "pond",
+   "pos": [
+    51.6,
+    -11.6
+   ],
+   "radius": 4.5,
+   "note": "[새] 짚기 화면 가운데"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "kinopio",
+   "name": "키노피오",
+   "model": "Kinopio",
+   "look": "drawn",
+   "home": "fall",
+   "spawn": [
+    -53.4,
+    29.4
+   ],
+   "facing": 250,
+   "talkable": true,
+   "note": "작은 목각 아이. 코 = 반투명 연필 선. [가정] 속이면 한 마디 자라고 몰래 갊",
+   "nameplate": true
+  },
+  {
+   "id": "collector_boss",
+   "name": "수거꾼 우두머리",
+   "model": "Collector",
+   "look": "drawn",
+   "home": "depot",
+   "spawn": [
+    16.4,
+    -11.4
+   ],
+   "facing": 300,
+   "talkable": true,
+   "note": "그려진 수거꾼(지게). 대화1·대화5. 1막은 언덕, 2막부터 창고"
+  },
+  {
+   "id": "collectors",
+   "name": "수거꾼",
+   "model": "Silhouette",
+   "look": "silhouette",
+   "home": "depot",
+   "spawn": [
+    15.8,
+    -4.4
+   ],
+   "facing": 200,
+   "talkable": false,
+   "count": 3,
+   "note": "말 못 하는 실루엣 수거꾼(대-31)"
+  },
+  {
+   "id": "chief",
+   "name": "촌장",
+   "model": "Chief",
+   "look": "drawn",
+   "home": "gate",
+   "spawn": [
+    -23.4,
+    27.0
+   ],
+   "facing": 250,
+   "talkable": true,
+   "note": "뒤틀린 나무 촌장. 대화3·대화9"
+  },
+  {
+   "id": "gate_a",
+   "name": "길목 주민",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "gate",
+   "spawn": [
+    -32.3,
+    21.7
+   ],
+   "facing": 20,
+   "talkable": false
+  },
+  {
+   "id": "gate_b",
+   "name": "길목 주민",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "gate",
+   "spawn": [
+    -25.9,
+    21.5
+   ],
+   "facing": 340,
+   "talkable": true,
+   "note": "골라서 말 거는 주민(d_opt_gate)"
+  },
+  {
+   "id": "crowd_gate",
+   "name": "주민",
+   "model": "Silhouette",
+   "look": "silhouette",
+   "home": "gate",
+   "spawn": [
+    -31.8,
+    27.9
+   ],
+   "facing": 160,
+   "talkable": false,
+   "count": 4
+  },
+  {
+   "id": "watcher",
+   "name": "지킴이",
+   "model": "Silhouette",
+   "look": "silhouette",
+   "home": "gate",
+   "spawn": [
+    -26.4,
+    22.6
+   ],
+   "facing": 20,
+   "talkable": false,
+   "note": "[가정] 막대기를 든 실루엣 아이. 대화3 「나→가다→안」일 때만 나와 광장까지 따라옴, 4-3 줄 맨 앞"
+  },
+  {
+   "id": "plaza_a",
+   "name": "광장 주민",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "plaza",
+   "spawn": [
+    -9.0,
+    19.0
+   ],
+   "facing": 120,
+   "talkable": true,
+   "note": "2-1 「우리→절하다→귀한손님」"
+  },
+  {
+   "id": "porridge",
+   "name": "죽 주는 이",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "plaza",
+   "spawn": [
+    -6.35,
+    7.03
+   ],
+   "facing": 300.0,
+   "talkable": true,
+   "note": "[가정] 배 불룩한 주민. 대화4"
+  },
+  {
+   "id": "actor_a",
+   "name": "배우",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "plaza",
+   "spawn": [
+    -0.8,
+    21.59
+   ],
+   "facing": 248.0,
+   "talkable": false
+  },
+  {
+   "id": "actor_b",
+   "name": "배우",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "plaza",
+   "spawn": [
+    -0.83,
+    20.06
+   ],
+   "facing": 248.0,
+   "talkable": false
+  },
+  {
+   "id": "actor_c",
+   "name": "배우",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "plaza",
+   "spawn": [
+    0.25,
+    18.99
+   ],
+   "facing": 248.0,
+   "talkable": false
+  },
+  {
+   "id": "crowd_plaza",
+   "name": "주민",
+   "model": "Silhouette",
+   "look": "silhouette",
+   "home": "plaza",
+   "spawn": [
+    -5.5,
+    13.0
+   ],
+   "facing": 68,
+   "talkable": false,
+   "count": 6
+  },
+  {
+   "id": "mother",
+   "name": "어미",
+   "model": "Mother",
+   "look": "drawn",
+   "home": "alley",
+   "spawn": [
+    21.5,
+    21.7
+   ],
+   "facing": 205,
+   "talkable": true,
+   "note": "배가 불룩 뒤틀린 어미. 2-3 의자 닦기, 3-1 대화7"
+  },
+  {
+   "id": "neighbor",
+   "name": "이웃",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "alley",
+   "spawn": [
+    29.2,
+    26.06
+   ],
+   "facing": 200,
+   "talkable": true,
+   "note": "3-3 창 너머 「너→이다→귀한손님」. 창 안(걷는 땅 밖) — 걷지 않고 제자리(slice3)"
+  },
+  {
+   "id": "crowd_alley",
+   "name": "주민",
+   "model": "Silhouette",
+   "look": "silhouette",
+   "home": "alley",
+   "spawn": [
+    20.5,
+    18.6
+   ],
+   "facing": 70,
+   "talkable": false,
+   "count": 4
+  },
+  {
+   "id": "field_elder",
+   "name": "밭 어른",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "field",
+   "spawn": [
+    42.2,
+    2.6
+   ],
+   "facing": 230,
+   "talkable": false,
+   "note": "3-1 꼬마 입을 막고 「몸→남다」"
+  },
+  {
+   "id": "field_kid",
+   "name": "꼬마 주민",
+   "model": "Villager",
+   "look": "drawn",
+   "home": "field",
+   "spawn": [
+    43.2,
+    1.8
+   ],
+   "facing": 230,
+   "talkable": true,
+   "note": "3-1 「물고기→뱉다」"
+  },
+  {
+   "id": "crowd_field",
+   "name": "주민",
+   "model": "Silhouette",
+   "look": "silhouette",
+   "home": "field",
+   "spawn": [
+    44.0,
+    -3.0
+   ],
+   "facing": 140,
+   "talkable": false,
+   "count": 5
+  },
+  {
+   "id": "fish",
+   "name": "물고기",
+   "model": "Fish",
+   "look": "hidden",
+   "home": "pond",
+   "spawn": [
+    58.0,
+    -18.0
+   ],
+   "facing": 315,
+   "talkable": false,
+   "note": "왕의 배달꾼. 막오름 날에만 솟음"
+  }
+ ],
+ "props": [
+  {
+   "id": "fall_pile",
+   "place": "fall",
+   "pos": [
+    -55.0,
+    30.0
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "떨어진 사람 물건 더미"
+  },
+  {
+   "id": "light_beam",
+   "place": "fall",
+   "pos": [
+    -55.0,
+    30.0
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "천장 구멍 빛줄기"
+  },
+  {
+   "id": "ladder",
+   "place": "fall",
+   "pos": [
+    -51.3,
+    23.75
+   ],
+   "states": [
+    "folded",
+    "unfolded"
+   ],
+   "initial": "folded",
+   "note": "놋쇠 사다리(사람 걸쇠)"
+  },
+  {
+   "id": "bolt_fall",
+   "place": "fall",
+   "pos": [
+    -43.8,
+    21.3
+   ],
+   "states": [
+    "closed",
+    "lifted"
+   ],
+   "initial": "closed",
+   "note": "크리처 빗장 문(빗장은 안쪽)",
+   "facing": 57
+  },
+  {
+   "id": "look_book",
+   "place": "fall",
+   "pos": [
+    -57.9,
+    28.4
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "같이 떨어진 책 — 누르면 rd_pinocchio",
+   "model": "Junk_Book",
+   "facing": 40,
+   "inspect": "『피노키오의 모험』"
+  },
+  {
+   "id": "look_umbrella",
+   "place": "fall",
+   "pos": [
+    -53.6,
+    33.3
+   ],
+   "states": [
+    "default"
+   ],
+   "model": "Junk_Umbrella",
+   "facing": 200,
+   "inspect": "뒤집힌 우산"
+  },
+  {
+   "id": "look_clock",
+   "place": "fall",
+   "pos": [
+    -58.7,
+    32.9
+   ],
+   "states": [
+    "default"
+   ],
+   "model": "Junk_Clock",
+   "facing": 120,
+   "inspect": "멈춘 시계"
+  },
+  {
+   "id": "sack",
+   "place": "fall",
+   "pos": [
+    -57.3,
+    30.9
+   ],
+   "states": [
+    "hidden",
+    "closed",
+    "open"
+   ],
+   "initial": "hidden",
+   "note": "[새] 수거꾼 자루(Sack / Sack_Open). closed = 주인공이 담김",
+   "model": "Sack"
+  },
+  {
+   "id": "hero_bag",
+   "place": "fall",
+   "pos": [
+    -57.3,
+    30.9
+   ],
+   "states": [
+    "worn",
+    "taken",
+    "back"
+   ],
+   "initial": "worn",
+   "note": "[새] 주인공 가방(몸 메시에서 떼어 낸 Satchel 부위) — taken이면 숨김",
+   "attach": "hero"
+  },
+  {
+   "id": "hero_cord",
+   "place": "gate",
+   "pos": [
+    -23.4,
+    27.0
+   ],
+   "states": [
+    "none",
+    "once",
+    "twice"
+   ],
+   "initial": "none",
+   "note": "[새] 망토 붉은 끈(RedCord, 피벗 = 매듭). once 한 번 묶음 / twice 두 번 감음",
+   "attach": "hero",
+   "model": "RedCord"
+  },
+  {
+   "id": "hero_spoon",
+   "place": "depot",
+   "pos": [
+    13.4,
+    -7.2
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 대화5 덤 숟가락 — 주인공 손",
+   "attach": "hero"
+  },
+  {
+   "id": "gate_stone",
+   "place": "gate",
+   "pos": [
+    -28.8,
+    28.3
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "판1 새김 돌",
+   "facing": 235
+  },
+  {
+   "id": "stage",
+   "place": "plaza",
+   "pos": [
+    0.0,
+    20.4
+   ],
+   "states": [
+    "rehearsal",
+    "idle",
+    "ceremony"
+   ],
+   "initial": "rehearsal",
+   "note": "막이 반쯤 열린 무대",
+   "facing": 248.0
+  },
+  {
+   "id": "fish_prop",
+   "place": "plaza",
+   "pos": [
+    0.45,
+    18.21
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "입 벌린 물고기 소품. 몸통에 「물고기」 글자(ins_fish_prop)",
+   "facing": 248.0
+  },
+  {
+   "id": "lump_prop",
+   "place": "plaza",
+   "pos": [
+    -1.2,
+    22.29
+   ],
+   "states": [
+    "offstage",
+    "onchair"
+   ],
+   "initial": "offstage",
+   "note": "극 소품 덩어리와 의자(붉은 끈)",
+   "facing": 248.0
+  },
+  {
+   "id": "board",
+   "place": "plaza",
+   "pos": [
+    -3.31,
+    26.18
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "그림판 틀",
+   "facing": 248.0
+  },
+  {
+   "id": "bell",
+   "place": "plaza",
+   "pos": [
+    8.4,
+    5.2
+   ],
+   "states": [
+    "still",
+    "ring"
+   ],
+   "initial": "still",
+   "note": "[새] 광장 종(Bell). ring = 흔들림"
+  },
+  {
+   "id": "band_new",
+   "place": "plaza",
+   "pos": [
+    1.59,
+    15.65
+   ],
+   "states": [
+    "hidden",
+    "posted",
+    "peeled"
+   ],
+   "initial": "hidden",
+   "note": "[새] 그림판3 위에 붙은 새 띠(DecreeOpen) 「우리→바치다→귀한손님」. 누르면 띠 벗기기 화면(decree_band/decree_human). peeled = 젖혀져 사람 글(HumanText)이 드러남. 사람 글 [가정 문장]: 작업 기록 마흔한째 장. / 바깥 둘레는 아직 비어 있다. 오늘 끝 마을의 아이들을 그렸으나 끝까지 칠하지 못했다. / 붓은 안쪽 방 책상에 둔다. / 위로 가는 길도 이 붓으로 그려야 한다. 그러려면 먼저 / (찢김)",
+   "model": "DecreeOpen",
+   "inspect": "그림판 위 새 띠"
+  },
+  {
+   "id": "sawdust_trail",
+   "place": "plaza",
+   "pos": [
+    4.0,
+    12.0
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 3-2 뒤 키노피오 자리 → 골목 쪽 나무 부스러기 자국(띄엄띄엄)",
+   "model": "SawdustBits"
+  },
+  {
+   "id": "torches",
+   "place": "plaza",
+   "pos": [
+    4.0,
+    2.0
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 4-2 덜 그려진 횃불 줄(광장 → 밭)",
+   "model": "Torch"
+  },
+  {
+   "id": "audience_seat",
+   "place": "plaza",
+   "pos": [
+    -4.4,
+    15.6
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "[새] 3-2 주인공 빈자리(키노피오가 옆자리를 두드림). 누르거나 들어서면 극(QA P1-2)",
+   "model": "Chair",
+   "facing": 60,
+   "inspect": "빈자리"
+  },
+  {
+   "id": "cart",
+   "place": "depot",
+   "pos": [
+    13.4,
+    -7.2
+   ],
+   "states": [
+    "loaded_stuck",
+    "at_pond",
+    "emptied"
+   ],
+   "initial": "loaded_stuck",
+   "note": "바칠 것을 실은 수레(OfferingPile = Items). 바퀴 쇠 고정쇠",
+   "facing": 90
+  },
+  {
+   "id": "satchel",
+   "place": "depot",
+   "pos": [
+    17.78,
+    -10.05
+   ],
+   "states": [
+    "on_cart",
+    "taken"
+   ],
+   "initial": "on_cart",
+   "note": "[새] 수레 꼭대기의 주인공 가방(지형은 창고 기둥 고리 [17.78,-10.05]에 둠 — 메인요청 참고)",
+   "facing": 270
+  },
+  {
+   "id": "cord_basket",
+   "place": "depot",
+   "pos": [
+    15.6,
+    -11.4
+   ],
+   "states": [
+    "open",
+    "closed"
+   ],
+   "initial": "open",
+   "note": "[새] 붉은 끈 뭉치가 가득한 바구니(설명 없음)",
+   "model": "CordBasket"
+  },
+  {
+   "id": "boss_bag",
+   "place": "depot",
+   "pos": [
+    16.4,
+    -11.4
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 우두머리가 받쳐 들고 가는 주인공 가방(1-3 ~ 2-2 도착, QA P1-9) — 주인공 Satchel과 같은 모양",
+   "attach": "collector_boss"
+  },
+  {
+   "id": "chairs",
+   "place": "alley",
+   "pos": [
+    20.0,
+    19.6
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "집집 의자 위 천 덮은 덩어리(alley_seated_lumps). 등받이 새김 ins_chair_back"
+  },
+  {
+   "id": "brother_knot2",
+   "place": "alley",
+   "pos": [
+    34.24,
+    23.27
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 형 덩어리 끈의 둘째 고리(대화3 두 번 감음 갈래면 shown — 같은 매듭, QA P2-6)"
+  },
+  {
+   "id": "brother_lump",
+   "place": "alley",
+   "pos": [
+    34.24,
+    23.27
+   ],
+   "states": [
+    "covered",
+    "uncovered"
+   ],
+   "initial": "covered",
+   "note": "[새] 형 덩어리(Lump_Brother, 목에 붉은 끈) — 천 덮개. 3-3에서 걷음",
+   "model": "Lump_Brother",
+   "facing": 250,
+   "inspect": "천 덮인 덩어리"
+  },
+  {
+   "id": "cord_hook",
+   "place": "alley",
+   "pos": [
+    31.9,
+    21.0
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "[새] 문 옆 빈 고리와 끊어진 붉은 끈 한 가닥",
+   "inspect": "빈 고리",
+   "model": "CordHook"
+  },
+  {
+   "id": "kid_workbench",
+   "place": "alley",
+   "pos": [
+    33.75,
+    21.39
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "[새] 숫돌·톱밥·깎다 만 나무 새 여럿(NoseFileStone + SawdustPile)",
+   "model": "KidWorkbench",
+   "inspect": "숫돌과 부스러기"
+  },
+  {
+   "id": "bark_door",
+   "place": "alley",
+   "pos": [
+    33.4,
+    25.7
+   ],
+   "states": [
+    "closed",
+    "open"
+   ],
+   "initial": "closed",
+   "note": "[새] 고목 껍질 문, 옹이 구멍(4-1 코끝이 삐죽). 굴로 가는 틈 길을 막음",
+   "inspect": "껍질 문",
+   "model": "BarkDoor"
+  },
+  {
+   "id": "door_nose",
+   "place": "alley",
+   "pos": [
+    33.4,
+    25.7
+   ],
+   "states": [
+    "hidden",
+    "long",
+    "short"
+   ],
+   "initial": "hidden",
+   "note": "[새] 4-1 옹이 구멍으로 삐죽 나온 연필 코끝(BarkDoor Knot 자리). long = 갈지 못한 긴 코, short = 고백에 조각이 떨어진 뒤(QA P1-6)"
+  },
+  {
+   "id": "kid_badge",
+   "place": "hideout",
+   "pos": [
+    42.2,
+    28.8
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 키노피오 가슴의 파랑새 배지(파란 반짝임)",
+   "attach": "kinopio"
+  },
+  {
+   "id": "stash",
+   "place": "hideout",
+   "pos": [
+    45.2,
+    31.0
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "바치지 않고 숨긴 사람 물건",
+   "model": "HiddenStash",
+   "inspect": "숨긴 물건"
+  },
+  {
+   "id": "music_box",
+   "place": "hideout",
+   "pos": [
+    41.4,
+    30.6
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "[새] 오르골 — pz_musicbox",
+   "model": "MusicBox"
+  },
+  {
+   "id": "mirror_shard",
+   "place": "hideout",
+   "pos": [
+    44.4,
+    31.9
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "[새] 놀이",
+   "inspect": "거울 조각",
+   "model": "MirrorShard"
+  },
+  {
+   "id": "spin_top",
+   "place": "hideout",
+   "pos": [
+    41.2,
+    28.4
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "[새] 놀이",
+   "inspect": "팽이",
+   "model": "SpinTop"
+  },
+  {
+   "id": "hide_nest",
+   "place": "hideout",
+   "pos": [
+    40.6,
+    31.2
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "[새] 숨기기 놀이 자리(둥지 헝겊 밑) — 키노피오가 나무 새를 숨기는 곳",
+   "inspect": "둥지 헝겊",
+   "model": "ClothCover"
+  },
+  {
+   "id": "wall_drawing",
+   "place": "hideout",
+   "pos": [
+    43.6,
+    31.6
+   ],
+   "states": [
+    "plain",
+    "line",
+    "smudge"
+   ],
+   "initial": "plain",
+   "note": "[새] 벽 숯 그림(WallDrawing Face). 그림: plain = Pictures/wall_drawing, line = wall_drawing_line(큰 아이→빛구멍 선), smudge = wall_drawing_rubbed(큰 아이 얼굴 번짐). wall_hero가 shown이면 wall_drawing_3(파랑 망토 아이 추가) — line·smudge와 겹칠 때는 line/rubbed 우선 [가정]",
+   "model": "WallDrawing",
+   "inspect": "숯 그림"
+  },
+  {
+   "id": "wall_hero",
+   "place": "hideout",
+   "pos": [
+    43.9,
+    31.6
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 숯 그림 속 파랑 망토 아이(키노피오가 그려 넣음)"
+  },
+  {
+   "id": "whetstone_hideout",
+   "place": "hideout",
+   "pos": [
+    44.6,
+    27.6
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "굴 구석 숫돌·부스러기(설명 없음). 숨기기 놀이 자리 하나",
+   "model": "NoseFileStone",
+   "inspect": "숫돌 옆 부스러기"
+  },
+  {
+   "id": "tracks",
+   "place": "field",
+   "pos": [
+    44.0,
+    -9.0
+   ],
+   "states": [
+    "hidden",
+    "visible"
+   ],
+   "initial": "hidden",
+   "note": "수레 자국(밭 → 웅덩이)"
+  },
+  {
+   "id": "sign",
+   "place": "field",
+   "pos": [
+    36.8,
+    -8.4
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "판4 그림판 받침(기적의 밭 그림 + 세 갈래 새김)",
+   "facing": 120
+  },
+  {
+   "id": "field_stone",
+   "place": "field",
+   "pos": [
+    46.76,
+    -6.35
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "[새] 밭둑 돌(키노피오가 숨어 코를 감)",
+   "facing": 136.0,
+   "model": "NoseFileStone"
+  },
+  {
+   "id": "pond",
+   "place": "pond",
+   "pos": [
+    58.0,
+    -18.0
+   ],
+   "states": [
+    "still",
+    "awake"
+   ],
+   "initial": "still"
+  },
+  {
+   "id": "pond_stone",
+   "place": "pond",
+   "pos": [
+    49.93,
+    -21.76
+   ],
+   "states": [
+    "default"
+   ],
+   "note": "웅덩이 둘레 돌(꾸밈)",
+   "facing": 25
+  },
+  {
+   "id": "lump_spat",
+   "place": "pond",
+   "pos": [
+    52.4,
+    -13.4
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 물고기가 뱉은 덩어리(Lump_4 + RedCord)",
+   "model": "Lump_4"
+  },
+  {
+   "id": "band_spat",
+   "place": "pond",
+   "pos": [
+    52.9,
+    -12.8
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 물고기가 뱉은 말린 띠(DecreeScroll)",
+   "model": "DecreeScroll"
+  },
+  {
+   "id": "kid_hand",
+   "place": "pond",
+   "pos": [
+    54.53,
+    -11.47
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 4-3 함께 갈래: 손 끌어당기기 장치 자리(보이지 않는 누름 자리)"
+  },
+  {
+   "id": "kid_cord",
+   "place": "pond",
+   "pos": [
+    54.53,
+    -11.47
+   ],
+   "states": [
+    "hidden",
+    "shown"
+   ],
+   "initial": "hidden",
+   "note": "[새] 대화9 「우리→가다→안」: 키노피오 목에 묶는 붉은 끈",
+   "attach": "kinopio",
+   "model": "RedCord"
+  }
+ ],
+ "sentences": {
+  "s_i": "나",
+  "s_you": "너",
+  "s_we": "우리",
+  "s_bro": "형",
+  "s_guest": "귀한손님",
+  "s_in": "안",
+  "s_fish": "물고기",
+  "s_thing": "물건",
+  "s_up": "위",
+  "s_you_hide": [
+   "너",
+   [
+    "숨기다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_i_bow": [
+   "나",
+   [
+    "절하다"
+   ]
+  ],
+  "s_i_guest": [
+   "나",
+   [
+    "이다",
+    [
+     "귀한손님"
+    ]
+   ]
+  ],
+  "s_guest_is_i": [
+   "귀한손님",
+   [
+    "이다",
+    [
+     "나"
+    ]
+   ]
+  ],
+  "s_you_guest": [
+   "너",
+   [
+    "이다",
+    [
+     "귀한손님"
+    ]
+   ]
+  ],
+  "s_you_thing": [
+   "너",
+   [
+    "이다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_i_thing": [
+   "나",
+   [
+    "이다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_my_guest": [
+   "나",
+   [
+    "귀한손님"
+   ]
+  ],
+  "s_guest_up": [
+   "귀한손님",
+   [
+    "가다",
+    [
+     "위"
+    ]
+   ]
+  ],
+  "s_guest_in": [
+   "귀한손님",
+   [
+    "가다",
+    [
+     "안"
+    ]
+   ]
+  ],
+  "s_you_go_in": [
+   "너",
+   [
+    "가다",
+    [
+     "안"
+    ]
+   ]
+  ],
+  "s_i_go_in": [
+   "나",
+   [
+    "가다",
+    [
+     "안"
+    ]
+   ]
+  ],
+  "s_you_go": [
+   "너",
+   [
+    "가다"
+   ]
+  ],
+  "s_you_go_up": [
+   "너",
+   [
+    "가다",
+    [
+     "위"
+    ]
+   ]
+  ],
+  "s_we_take": [
+   "우리",
+   [
+    "가져가다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_we_offer": [
+   "우리",
+   [
+    "바치다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_we_offer_guest": [
+   "우리",
+   [
+    "바치다",
+    [
+     "귀한손님"
+    ]
+   ]
+  ],
+  "s_guest_offer": [
+   "귀한손님",
+   [
+    "바치다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_guest_take": [
+   "귀한손님",
+   [
+    "가져가다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_i_take": [
+   "나",
+   [
+    "가져가다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_my_thing": [
+   "나",
+   [
+    "물건"
+   ]
+  ],
+  "s_guest_eat": [
+   "귀한손님",
+   [
+    "먹다"
+   ]
+  ],
+  "s_i_eat": [
+   "나",
+   [
+    "먹다"
+   ]
+  ],
+  "s_you_eat": [
+   "너",
+   [
+    "먹다"
+   ]
+  ],
+  "s_we_bow_guest": [
+   "우리",
+   [
+    "절하다",
+    [
+     "귀한손님"
+    ]
+   ]
+  ],
+  "s_in_draw_body": [
+   "안",
+   [
+    "그리다",
+    [
+     "몸"
+    ]
+   ]
+  ],
+  "s_body_bow_in": [
+   "몸",
+   [
+    "절하다",
+    [
+     "안"
+    ]
+   ]
+  ],
+  "s_i_hide": [
+   "나",
+   [
+    "숨기다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_we_hide": [
+   "우리",
+   [
+    "숨기다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_we_up": [
+   "우리",
+   [
+    "가다",
+    [
+     "위"
+    ]
+   ]
+  ],
+  "s_we_in": [
+   "우리",
+   [
+    "가다",
+    [
+     "안"
+    ]
+   ]
+  ],
+  "s_bro_in": [
+   "형",
+   [
+    "가다",
+    [
+     "안"
+    ]
+   ]
+  ],
+  "s_bro_up": [
+   "형",
+   [
+    "가다",
+    [
+     "위"
+    ]
+   ]
+  ],
+  "s_draw_you": [
+   "나",
+   [
+    "그리다",
+    [
+     "너"
+    ]
+   ]
+  ],
+  "s_body_remain": [
+   "몸",
+   [
+    "남다"
+   ]
+  ],
+  "s_guest_body_remain": [
+   "귀한손님",
+   [
+    "몸",
+    [
+     "남다"
+    ]
+   ]
+  ],
+  "s_fish_spit_bare": [
+   "물고기",
+   [
+    "뱉다"
+   ]
+  ],
+  "s_fish_spit": [
+   "물고기",
+   [
+    "뱉다",
+    [
+     "몸"
+    ]
+   ]
+  ],
+  "s_fish_eat_thing": [
+   "물고기",
+   [
+    "먹다",
+    [
+     "물건"
+    ]
+   ]
+  ],
+  "s_fish_eat_guest": [
+   "물고기",
+   [
+    "먹다",
+    [
+     "귀한손님"
+    ]
+   ]
+  ],
+  "s_offer_fish": [
+   "우리",
+   [
+    "바치다",
+    [
+     "물고기"
+    ],
+    [
+     "물건"
+    ]
+   ]
+  ]
+ },
+ "translations": {
+  "s_i": "나",
+  "s_you": "너",
+  "s_we": "우리",
+  "s_bro": "형",
+  "s_guest": "귀한 손님",
+  "s_in": "안",
+  "s_fish": "물고기",
+  "s_thing": "물건",
+  "s_up": "위",
+  "s_you_hide": "너는 물건을 숨긴다",
+  "s_i_bow": "나는 절한다",
+  "s_i_guest": "나는 귀한 손님이다",
+  "s_guest_is_i": "귀한 손님은 나다",
+  "s_you_guest": "너는 귀한 손님이다",
+  "s_you_thing": "너는 물건이다",
+  "s_i_thing": "나는 물건이다",
+  "s_my_guest": "나의 귀한 손님",
+  "s_guest_up": "귀한 손님은 위로 간다",
+  "s_guest_in": "귀한 손님은 안으로 간다",
+  "s_you_go_in": "너는 안으로 간다",
+  "s_i_go_in": "나는 안으로 간다",
+  "s_you_go": "너는 간다",
+  "s_you_go_up": "너는 위로 간다",
+  "s_we_take": "우리는 물건을 가져간다",
+  "s_we_offer": "우리는 물건을 바친다",
+  "s_we_offer_guest": "우리는 귀한 손님을 바친다",
+  "s_guest_offer": "귀한 손님은 물건을 바친다",
+  "s_guest_take": "귀한 손님은 물건을 가져간다",
+  "s_i_take": "나는 물건을 가져간다",
+  "s_my_thing": "나의 물건",
+  "s_guest_eat": "귀한 손님은 먹는다",
+  "s_i_eat": "나는 먹는다",
+  "s_you_eat": "너는 먹는다",
+  "s_we_bow_guest": "우리는 귀한 손님에게 절한다",
+  "s_in_draw_body": "안이 몸을 그린다",
+  "s_body_bow_in": "몸은 안에 절한다",
+  "s_i_hide": "나는 물건을 숨긴다",
+  "s_we_hide": "우리는 물건을 숨긴다",
+  "s_we_up": "우리는 위로 간다",
+  "s_we_in": "우리는 안으로 간다",
+  "s_bro_in": "형은 안으로 갔다",
+  "s_bro_up": "형은 위로 갔다",
+  "s_draw_you": "나는 너를 그린다",
+  "s_body_remain": "몸은 남는다",
+  "s_guest_body_remain": "귀한 손님의 몸은 남는다",
+  "s_fish_spit_bare": "물고기가 뱉는다",
+  "s_fish_spit": "물고기는 몸을 뱉는다",
+  "s_fish_eat_thing": "물고기는 물건을 먹는다",
+  "s_fish_eat_guest": "물고기는 귀한 손님을 먹는다",
+  "s_offer_fish": "우리는 물고기에게 물건을 바친다"
+ },
+ "inscriptions": [
+  {
+   "id": "ins_gate",
+   "label": "앉은돌 길목의 그림판 돌",
+   "place": "gate",
+   "pos": [
+    -28.8,
+    28.3
+   ],
+   "kind": "carved",
+   "confirms": true,
+   "lines": [
+    "s_in_draw_body",
+    "s_body_bow_in"
+   ],
+   "words": [
+    "안",
+    "그리다",
+    "몸",
+    "절하다"
+   ],
+   "host": "gate_stone",
+   "image": "ins_board_carve",
+   "picture": "제페토가 통나무를 깎는 그림(위는 이미 인형, 아래는 아직 통나무)",
+   "note": "새김1(판1, 뜻-24). 왕의 풀이 1 '그려 준 몸은 고마워하라' [가정 문장]. 줄마다 판정"
+  },
+  {
+   "id": "ins_board_whale",
+   "label": "꼭두 광장 그림판",
+   "place": "plaza",
+   "pos": [
+    -2.15,
+    24.92
+   ],
+   "kind": "display",
+   "confirms": false,
+   "lines": [
+    "s_guest_in"
+   ],
+   "picture": "고래 뱃속 — 촛불 옆 제페토에게 달려가는 피노키오",
+   "note": "그림판2(표시 글, 뜻-28②). 낱말을 다 알면 '귀한 손님은 안으로 간다'. 띠 모서리 밑 사람 글씨는 4-2 뒤에 rd_book_page_whale로 읽힘"
+  },
+  {
+   "id": "ins_board_chair",
+   "label": "꼭두 광장 그림판",
+   "place": "plaza",
+   "pos": [
+    1.59,
+    15.65
+   ],
+   "kind": "carved",
+   "confirms": true,
+   "lines": [
+    "s_body_remain"
+   ],
+   "words": [
+    "몸",
+    "남다"
+   ],
+   "image": "ins_board_chair",
+   "picture": "의자에 기대 놓인 옛 나무 인형과 진짜 아이가 된 피노키오",
+   "note": "새김4(판3, 퍼즐 새김). 극 바로 앞 남다 확정 기회(어-18). 왕의 풀이 3 '껍데기는 남는다'"
+  },
+  {
+   "id": "ins_fish_prop",
+   "label": "물고기 소품의 글자",
+   "place": "plaza",
+   "pos": [
+    0.45,
+    18.21
+   ],
+   "kind": "display",
+   "confirms": false,
+   "lines": [
+    "s_fish"
+   ],
+   "host": "fish_prop",
+   "note": "2-1 소품 몸통에 칠한 글자(표시 글)"
+  },
+  {
+   "id": "ins_chair_back",
+   "label": "의자 등받이 글자",
+   "place": "alley",
+   "pos": [
+    20.0,
+    19.6
+   ],
+   "kind": "display",
+   "confirms": false,
+   "lines": [
+    "s_guest_body_remain"
+   ],
+   "host": "chairs",
+   "copies": [
+    [
+     14.32,
+     19.19
+    ],
+    [
+     19.37,
+     20.97
+    ],
+    [
+     24.53,
+     22.65
+    ],
+    [
+     22.0,
+     17.2
+    ],
+    [
+     17.4,
+     15.6
+    ]
+   ],
+   "note": "2-3 표시 글 「귀한손님→몸→남다」 — 남다를 모르면 한 줄 글자, 귀한손님 밑에만 내 추측"
+  },
+  {
+   "id": "ins_brothers",
+   "label": "굴 벽의 새김",
+   "place": "hideout",
+   "pos": [
+    40.9,
+    32.3
+   ],
+   "kind": "carved",
+   "confirms": true,
+   "lines": [
+    "s_we_up",
+    "s_we_hide"
+   ],
+   "words": [
+    "우리",
+    "가다",
+    "위",
+    "숨기다",
+    "물건"
+   ],
+   "note": "새김2(형제가 새긴 줄 [가정]). 퍼즐 새김. 숯 그림(wall_drawing) 옆 둥지 위 벽"
+  },
+  {
+   "id": "ins_field_board",
+   "label": "기적의 밭 그림판",
+   "place": "field",
+   "pos": [
+    36.8,
+    -8.4
+   ],
+   "kind": "carved",
+   "confirms": true,
+   "lines": [
+    "s_offer_fish"
+   ],
+   "words": [
+    "우리",
+    "바치다",
+    "물고기",
+    "물건"
+   ],
+   "host": "sign",
+   "image": "ins_board_field",
+   "picture": "달밤 기적의 밭 — 금화를 심는 피노키오, 엿보는 여우와 고양이",
+   "note": "새김3(판4, 1챕터 유일한 세 갈래 읽기). 4글자라 하나만 틀리면 거의 맞음(뜻-27). 왕의 풀이 4 [가정 문장]"
+  },
+  {
+   "id": "ins_chair_leg",
+   "label": "의자 다리에 긁은 글자",
+   "place": "alley",
+   "pos": [
+    34.0,
+    22.9
+   ],
+   "kind": "display",
+   "confirms": false,
+   "lines": [
+    "s_bro"
+   ],
+   "host": "brother_lump",
+   "note": "3-3 서툰 손으로 긁은 「형」"
+  }
+ ],
+ "readables": [
+  {
+   "id": "rd_pinocchio",
+   "label": "피노키오의 모험",
+   "place": "fall",
+   "pos": [
+    -58.4,
+    30.6
+   ],
+   "attached": "look_book",
+   "picture": "『피노키오의 모험』 속표지 — 긴 코 나무 인형과 나무토막",
+   "text": "옛날 옛적에…\n“임금님!” 하고 어린 독자들은 바로 말하겠지요.\n아니에요, 얘들아, 틀렸어요.\n옛날 옛적에, 나무토막 하나가 있었어요.",
+   "note": "같이 떨어진 책(콜로디 1883 첫 문장, 저작권 만료)"
+  },
+  {
+   "id": "rd_page_carve",
+   "label": "찢긴 책 낱장 — 깎이는 꼭두각시",
+   "place": "gate",
+   "pos": [
+    -30.4,
+    26.9
+   ],
+   "facing": 120,
+   "text": "제페토 할아버지가 나무토막으로 꼭두각시를 깎기 시작했다. 눈을 깎자, 눈이 할아버지를 빤히 바라보았다. 코를 깎자, 코가 자라기 시작했다. 자르고 또 잘라도 코는 자꾸만 길어졌다.",
+   "note": "[가정 문장] 탐험 보상 — 원작 3장 줄임(콜로디 1883, 저작권 만료). 판1 왕의 풀이('그려 준 몸은 고마워하라')와 맞대기. 코가 자란다는 첫 단서"
+  },
+  {
+   "id": "rd_page_theatre",
+   "label": "찢긴 책 낱장 — 인형극장",
+   "place": "depot",
+   "pos": [
+    18.4,
+    -6.4
+   ],
+   "facing": 250,
+   "text": "불먹보는 양고기를 구울 장작이 모자라자, 꼭두각시 하나를 불 속에 넣으라고 했다. 피노키오가 외쳤다. “그 친구 대신 저를 넣으세요!” 불먹보는 크게 재채기를 하더니, 아무도 불에 넣지 않았다.",
+   "note": "[가정 문장] 원작 11장 줄임. 남 대신 가겠다는 말 — 4-3 대화9와 맞대기"
+  },
+  {
+   "id": "rd_page_nose",
+   "label": "찢긴 책 낱장 — 길어진 코",
+   "place": "alley",
+   "pos": [
+    16.8,
+    17.6
+   ],
+   "facing": 30,
+   "text": "요정이 금화를 어디 두었느냐고 묻자, 피노키오는 잃어버렸다고 거짓말을 했다. 그러자 이미 긴 코가 두 뼘이나 더 자랐다. 거짓말을 할 때마다 코는 더 길어져서, 피노키오는 문 쪽으로 고개를 돌릴 수도 없었다.",
+   "note": "[가정 문장] 원작 17장 줄임. 키노피오 코 신호의 원작 쪽 단서(설명은 하지 않음)"
+  },
+  {
+   "id": "rd_page_chair",
+   "label": "찢긴 그림책 한 장",
+   "place": "hideout",
+   "pos": [
+    44.6,
+    29.0
+   ],
+   "facing": 220,
+   "text": "아침에 눈을 뜬 피노키오는 거울 속에서 진짜 아이를 보았다. 곁의 의자에는 커다란 나무 꼭두각시가 고개를 꺾은 채 기대어 있었다. “꼭두각시였을 때 나는 얼마나 우스웠던지! 이제 진짜 아이가 되어서 정말 기뻐!”",
+   "note": "[가정 문장] 원작 36장 줄임. 굴의 숨긴 물건 속 '찢긴 그림책 한 장'(대본 2-3). 판3 왕의 풀이('껍데기는 남는다')와 맞대기"
+  },
+  {
+   "id": "rd_page_field",
+   "label": "찢긴 책 낱장 — 기적의 밭",
+   "place": "field",
+   "pos": [
+    37.6,
+    -9.2
+   ],
+   "facing": 120,
+   "text": "여우와 고양이가 말했다. “기적의 밭에 금화를 묻고 물을 주면, 하룻밤 새 금화가 주렁주렁 열린 나무가 자란단다.” 피노키오는 금화를 묻고 밤새 기다렸다. 이튿날 와 보니 구덩이는 텅 비어 있었다. 나뭇가지 위의 앵무새가 깔깔 웃었다. “바보 같으니. 돈은 땅에 묻는다고 열리지 않아.”",
+   "note": "원작 18~19장 줄임(옛 rd_page 글). 판4 왕의 풀이('바치면 몇 배로 돌아온다')와 맞대기"
+  },
+  {
+   "id": "rd_book_page_whale",
+   "label": "그림판 띠 밑의 사람 글",
+   "place": "plaza",
+   "pos": [
+    -2.7,
+    24.2
+   ],
+   "visibleWhen": {
+    "all": [
+     "f_band_peeled"
+    ]
+   },
+   "picture": "고래 뱃속 그림(찢긴 책 낱장)",
+   "text": "피노키오는 상어 뱃속에서 아버지를 만났다. 둘은 함께 헤엄쳐 밖으로 나왔다.",
+   "note": "[가정 문장, 콜로디 35장 줄임] 그림판2 띠 모서리가 젖혀진 뒤 보임 — 대화9 「귀한손님→가다→위」의 근거"
+  }
+ ],
+ "dialogues": [
+  {
+   "id": "d1_collector",
+   "title": "수거꾼 우두머리에게 내가 누군지 말하기",
+   "npc": "collector_boss",
+   "place": "fall",
+   "zone": "z_collector_fall",
+   "opensWhen": {
+    "all": [
+     "f_board_open"
+    ],
+    "none": [
+     "f_d1"
+    ]
+   },
+   "their": "s_you_thing",
+   "board": [
+    4,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w"
+   ],
+   "words": [
+    "나",
+    "너",
+    "이다",
+    "귀한손님",
+    "물건"
+   ],
+   "note": "조각 순서 튜토리얼(대-13). 필요한 뜻: 내가 귀한손님이다. 키노피오 말을 그대로 따라 하면 상대를 가리킴(첫 번째 겁)",
+   "responses": [
+    {
+     "sid": "s_i_guest",
+     "spec": [
+      "나",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "collector_drop_sack_bow",
+     "set": [
+      "f_d1"
+     ],
+     "also": [
+      [
+       "kinopio",
+       "kid_grin_hidenose"
+      ]
+     ]
+    },
+    {
+     "sid": "s_guest_is_i",
+     "spec": [
+      "귀한손님",
+      [
+       "이다",
+       [
+        "나"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "collector_scan_then_bow",
+     "set": [
+      "f_d1",
+      "f_d1_doubt"
+     ],
+     "also": [
+      [
+       "kinopio",
+       "kid_grin_hidenose"
+      ]
+     ],
+     "note": "2-2에서 이 우두머리는 처음부터 반쯤만 엎드림"
+    },
+    {
+     "sid": "s_you_guest",
+     "spec": [
+      "너",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "collector_recoil_flee",
+     "set": [
+      "f_scare1"
+     ],
+     "also": [
+      [
+       "kinopio",
+       "kid_laugh_tap_hero"
+      ]
+     ],
+     "understood": true,
+     "note": "첫 번째 겁 — 자기를 손님이라 부른 줄 알고 뒷걸음, 실루엣들이 흩어졌다 돌아옴"
+    },
+    {
+     "sid": "s_i_thing",
+     "spec": [
+      "나",
+      [
+       "이다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "collector_open_sack",
+     "also": [
+      [
+       "kinopio",
+       "kid_facepalm"
+      ]
+     ],
+     "understood": true,
+     "note": "반가워하며 자루 입구를 벌림"
+    },
+    {
+     "sid": "s_my_guest",
+     "spec": [
+      "나",
+      [
+       "귀한손님"
+      ]
+     ],
+     "progress": false,
+     "react": "collector_look_around",
+     "understood": false,
+     "note": "'나의 귀한손님'(읽-02) — 그 손님을 찾아 두리번"
+    }
+   ],
+   "default": {
+    "react": "collector_tilt",
+    "also": [
+     [
+      "kinopio",
+      "kid_tap_hero_chest"
+     ]
+    ]
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "kinopio",
+     "react": "kid_tap_hero_chest",
+     "say": "s_you_guest",
+     "note": "주인공 가슴을 짚은 채 「너→이다→귀한손님」을 다시 띄움(시점 바꾸기만 남김)"
+    },
+    {
+     "afterFails": 4,
+     "npc": "kinopio",
+     "react": "kid_tap_self_then_hero",
+     "say": "s_i",
+     "note": "자기 가슴 「나」 → 주인공 가슴을 번갈아 짚음(나/너 뒤집기 시범)"
+    }
+   ]
+  },
+  {
+   "id": "d2_kid_gap",
+   "title": "틈 앞의 키노피오에게 부탁하기",
+   "npc": "kinopio",
+   "place": "fall",
+   "zone": "z_gap_side",
+   "opensWhen": {
+    "all": [
+     "f_tease"
+    ],
+    "none": [
+     "f_d2"
+    ]
+   },
+   "their": "s_you_go_in",
+   "board": [
+    4,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_s"
+   ],
+   "words": [
+    "나",
+    "너",
+    "이다",
+    "가다",
+    "안",
+    "위"
+   ],
+   "note": "대-29 장치 결합. 상대 말을 그대로 돌려주면 통함(이번엔 너 = 키노피오) — 대화1과 맞대기(직-25 A)",
+   "responses": [
+    {
+     "sid": "s_you_go_in",
+     "spec": [
+      "너",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_blink_laugh_squeeze",
+     "set": [
+      "f_d2",
+      "f_d2_you"
+     ]
+    },
+    {
+     "sid": "s_i_go_in",
+     "spec": [
+      "나",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_pull_hero_out",
+     "set": [
+      "f_d2",
+      "f_d2_me"
+     ],
+     "also": [
+      [
+       "hero",
+       "hero_squeeze_stuck"
+      ]
+     ],
+     "note": "주인공이 어깨까지 끼어 버둥 → 키노피오가 발목을 잡아 빼 주고 직접 들어감"
+    },
+    {
+     "sid": "s_you_go_up",
+     "spec": [
+      "너",
+      [
+       "가다",
+       [
+        "위"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "kid_jump_look",
+     "understood": true
+    },
+    {
+     "sid": "s_you_go",
+     "spec": [
+      "너",
+      [
+       "가다"
+      ]
+     ],
+     "progress": false,
+     "react": "kid_walk_off_tilt",
+     "understood": false,
+     "note": "안이 빠짐 — 길 아래로 걷다 돌아보고 갸웃"
+    }
+   ],
+   "default": {
+    "react": "kid_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "kinopio",
+     "react": "kid_head_in_gap",
+     "say": "s_in",
+     "note": "틈에 머리를 넣었다 빼며 자기를 가리킴"
+    },
+    {
+     "afterFails": 4,
+     "npc": "kinopio",
+     "react": "kid_head_in_gap",
+     "say": "s_you_go_in",
+     "note": "한 번 더, 자기 말을 다시 띄움"
+    }
+   ]
+  },
+  {
+   "id": "d3_chief_gate",
+   "title": "길목을 막은 촌장에게 답하기",
+   "npc": "chief",
+   "place": "gate",
+   "zone": "z_chief_gate",
+   "opensWhen": {
+    "all": [
+     "f_gate_met"
+    ],
+    "none": [
+     "f_d3"
+    ]
+   },
+   "their": "s_guest_in",
+   "board": [
+    4,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_ws",
+    "m_n"
+   ],
+   "words": [
+    "나",
+    "너",
+    "이다",
+    "귀한손님",
+    "가다",
+    "안",
+    "위",
+    "몸"
+   ],
+   "note": "필요한 뜻: 내가 귀한손님이다(그래서 들어간다)",
+   "responses": [
+    {
+     "sid": "s_i_guest",
+     "spec": [
+      "나",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "chief_kneel_tie",
+     "set": [
+      "f_d3",
+      "f_cord_once"
+     ]
+    },
+    {
+     "sid": "s_i_go_in",
+     "spec": [
+      "나",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "chief_tie_twice",
+     "set": [
+      "f_d3",
+      "f_cord_twice",
+      "f_d3_watch"
+     ],
+     "note": "끈을 두 번 감고 지킴이를 붙임 → 4-3 줄 맨 앞"
+    },
+    {
+     "sid": "s_guest_in",
+     "spec": [
+      "귀한손님",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "chief_nod_wait",
+     "understood": true,
+     "note": "되읊기 — 끄덕이고 그 손님을 기다림"
+    },
+    {
+     "sid": "s_you_guest",
+     "spec": [
+      "너",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "chief_branches_shake",
+     "set": [
+      "f_scare2"
+     ],
+     "also": [
+      [
+       "gate_a",
+       "villager_recoil"
+      ],
+      [
+       "gate_b",
+       "villager_recoil"
+      ]
+     ],
+     "understood": true,
+     "note": "두 번째 겁"
+    },
+    {
+     "sid": "s_guest_up",
+     "spec": [
+      "귀한손님",
+      [
+       "가다",
+       [
+        "위"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "chief_stare_kid",
+     "also": [
+      [
+       "kinopio",
+       "kid_hide_behind_hero"
+      ]
+     ],
+     "understood": true,
+     "note": "키노피오가 한 말 — 촌장 말과 어긋남을 눈으로 봄"
+    }
+   ],
+   "default": {
+    "react": "chief_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "kinopio",
+     "react": "kid_tap_chest_bow",
+     "note": "주인공 가슴을 짚고 촌장에게 고개 숙이는 시늉"
+    },
+    {
+     "afterFails": 4,
+     "npc": "chief",
+     "react": "chief_nod_wait",
+     "say": "s_guest_in",
+     "note": "촌장이 같은 말을 다시"
+    }
+   ]
+  },
+  {
+   "id": "d4_porridge",
+   "title": "죽을 내미는 주민에게 답하기",
+   "npc": "porridge",
+   "place": "plaza",
+   "zone": "z_porridge",
+   "opensWhen": {
+    "all": [
+     "f_plaza_met"
+    ],
+    "none": [
+     "f_d4"
+    ]
+   },
+   "their": "s_guest_eat",
+   "board": [
+    3,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_ws",
+    "m_n"
+   ],
+   "words": [
+    "나",
+    "너",
+    "이다",
+    "귀한손님",
+    "먹다",
+    "물건",
+    "가다"
+   ],
+   "note": "필요한 뜻: 이 죽을 누가 먹을지",
+   "responses": [
+    {
+     "sid": "s_i_eat",
+     "spec": [
+      "나",
+      [
+       "먹다"
+      ]
+     ],
+     "progress": true,
+     "react": "porridge_bell_crowd",
+     "set": [
+      "f_d4",
+      "f_d4_crowd"
+     ],
+     "also": [
+      [
+       "hero",
+       "hero_eat_grimace"
+      ],
+      [
+       "kinopio",
+       "kid_eat_all_drag"
+      ]
+     ]
+    },
+    {
+     "sid": "s_guest_eat",
+     "spec": [
+      "귀한손님",
+      [
+       "먹다"
+      ]
+     ],
+     "progress": true,
+     "react": "porridge_spoonfeed",
+     "set": [
+      "f_d4",
+      "f_d4_fed"
+     ],
+     "also": [
+      [
+       "hero",
+       "hero_eat_grimace"
+      ],
+      [
+       "kinopio",
+       "kid_cover_laugh"
+      ]
+     ]
+    },
+    {
+     "sid": "s_you_eat",
+     "spec": [
+      "너",
+      [
+       "먹다"
+      ]
+     ],
+     "progress": true,
+     "react": "porridge_eat_follow",
+     "set": [
+      "f_d4",
+      "f_d4_teacher"
+     ],
+     "note": "제가 먹고 주인공을 따라다니며 물건마다 이름 한 글자 → 2-2까지"
+    },
+    {
+     "sid": "s_you_guest",
+     "spec": [
+      "너",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "porridge_drop_flee",
+     "set": [
+      "f_scare3"
+     ],
+     "also": [
+      [
+       "kinopio",
+       "kid_right_pot"
+      ]
+     ],
+     "understood": true,
+     "note": "세 번째 겁"
+    }
+   ],
+   "default": {
+    "react": "porridge_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "porridge",
+     "react": "porridge_ladle_alternate",
+     "note": "국자를 주인공 입과 자기 입에 번갈아 들이밂"
+    },
+    {
+     "afterFails": 4,
+     "npc": "porridge",
+     "react": "porridge_ladle_alternate",
+     "say": "s_guest_eat",
+     "note": "한 번 더"
+    }
+   ]
+  },
+  {
+   "id": "d5_collector_cart",
+   "title": "가방을 바치려는 우두머리에게 말하기",
+   "npc": "collector_boss",
+   "place": "depot",
+   "zone": "z_cart",
+   "opensWhen": {
+    "all": [
+     "f_depot_met"
+    ],
+    "none": [
+     "f_d5"
+    ]
+   },
+   "their": "s_we_offer",
+   "board": [
+    4,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_ws",
+    "m_n",
+    "m_s"
+   ],
+   "words": [
+    "나",
+    "너",
+    "이다",
+    "귀한손님",
+    "물건",
+    "가져가다",
+    "바치다",
+    "가다"
+   ],
+   "note": "필요한 뜻: 가방은 내 것이고 내가 가져간다. 어느 말이든 가방 끈이 고정쇠에 물려 있어 주인공이 풂(pz_cart)",
+   "responses": [
+    {
+     "sid": "s_guest_take",
+     "spec": [
+      "귀한손님",
+      [
+       "가져가다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "boss_bow_spoon",
+     "set": [
+      "f_d5",
+      "f_d5_spoon"
+     ],
+     "note": "바로 이마를 박고 사람 숟가락을 덤으로 → 끝까지 손에 듦"
+    },
+    {
+     "sid": "s_i_take",
+     "spec": [
+      "나",
+      [
+       "가져가다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "boss_step_aside",
+     "set": [
+      "f_d5",
+      "f_d5_latch"
+     ],
+     "note": "멈칫하다 길을 비킴 → 4-3에서 줄 틈을 열어 줌"
+    },
+    {
+     "sid": "s_my_thing",
+     "spec": [
+      "나",
+      [
+       "물건"
+      ]
+     ],
+     "progress": true,
+     "react": "boss_bag_on_head",
+     "set": [
+      "f_d5",
+      "f_d5_head"
+     ],
+     "note": "'나의 물건' — 의식처럼 주인공 머리 위에 두 손을 얹음"
+    },
+    {
+     "sid": "s_guest_offer",
+     "spec": [
+      "귀한손님",
+      [
+       "바치다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "boss_push_bag_deeper",
+     "understood": true,
+     "note": "'손님이 물건을 바친다' — 감격해 가방을 더 밀어 넣음"
+    }
+   ],
+   "default": {
+    "react": "boss_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "collector_boss",
+     "react": "boss_look_bag_hero_cart",
+     "note": "가방 → 주인공 → 수레를 번갈아 봄"
+    },
+    {
+     "afterFails": 2,
+     "npc": "kinopio",
+     "react": "kid_poke_strap",
+     "note": "가방 끈을 막대기로 콕(손은 못 댐)"
+    },
+    {
+     "afterFails": 4,
+     "npc": "kinopio",
+     "react": "kid_tap_hero_chest",
+     "note": "주인공 가슴을 짚고 가방을 가리킴(“네 것”)"
+    }
+   ]
+  },
+  {
+   "id": "d6_kid_drawing",
+   "title": "형 그림 앞의 키노피오에게 말하기",
+   "npc": "kinopio",
+   "place": "hideout",
+   "zone": "z_hideout_drawing",
+   "opensWhen": {
+    "all": [
+     "f_bro_shown"
+    ],
+    "none": [
+     "f_d6"
+    ]
+   },
+   "their": "s_bro_in",
+   "board": [
+    2,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_ws",
+    "m_n",
+    "m_we",
+    "m_w",
+    "m_s"
+   ],
+   "words": [
+    "나",
+    "너",
+    "우리",
+    "형",
+    "이다",
+    "귀한손님",
+    "가다",
+    "안",
+    "위",
+    "숨기다"
+   ],
+   "note": "필요한 뜻: 형에 대해 무언가 말해 줌. 셋 다 4-1 벽 그림·눈길로 돌아옴. 2×3 판, 가운데 모형(m_ns) 없음 → 세 조각은 **처음으로 꼭 한 번 꺾음**(ㄱ자) — 키노피오 곁에서 배우는 꺾기(QA P1-10). 대화7(2×3)·대화8(2×2)에서 다시 씀",
+   "responses": [
+    {
+     "sid": "s_bro_up",
+     "spec": [
+      "형",
+      [
+       "가다",
+       [
+        "위"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_line_to_hole",
+     "set": [
+      "f_d6",
+      "f_d6_line"
+     ]
+    },
+    {
+     "sid": "s_we_up",
+     "spec": [
+      "우리",
+      [
+       "가다",
+       [
+        "위"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_shake_hands",
+     "set": [
+      "f_d6",
+      "f_d6_promise"
+     ]
+    },
+    {
+     "sid": "s_bro_in",
+     "spec": [
+      "형",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_smudge_face",
+     "set": [
+      "f_d6",
+      "f_d6_smudge"
+     ],
+     "note": "되읊기 — 엄지로 큰 아이 얼굴을 번지게 함"
+    },
+    {
+     "sid": "s_i_go_in",
+     "spec": [
+      "나",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "kid_freeze_fiddle",
+     "understood": true
+    },
+    {
+     "sid": "s_i_guest",
+     "spec": [
+      "나",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "kid_cover_mouth_smile",
+     "understood": true
+    }
+   ],
+   "default": {
+    "react": "kid_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 1,
+     "npc": "kinopio",
+     "react": "kid_point_bro_hole",
+     "note": "큰 아이와 빛구멍을 번갈아 짚음"
+    },
+    {
+     "afterFails": 2,
+     "npc": "kinopio",
+     "react": "kid_demo_bend",
+     "note": "숯으로 큰 아이에서 옆으로 긋다 아래로 꺾어 긋는 ㄱ자 선을 벽에 그려 보임(꺾기 시범)"
+    },
+    {
+     "afterFails": 4,
+     "npc": "kinopio",
+     "react": "kid_demo_bend",
+     "say": "s_bro_in",
+     "note": "꺾기 시범을 한 번 더 + 자기 말을 다시 띄움"
+    }
+   ]
+  },
+  {
+   "id": "d7_mother_lump",
+   "title": "덩어리를 안은 어미에게 답하기",
+   "npc": "mother",
+   "place": "pond",
+   "zone": "z_pond_edge",
+   "opensWhen": {
+    "all": [
+     "f_fish_seen"
+    ],
+    "none": [
+     "f_d7"
+    ]
+   },
+   "their": "s_body_remain",
+   "board": [
+    2,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_ws",
+    "m_n",
+    "m_s",
+    "m_we",
+    "m_w"
+   ],
+   "words": [
+    "나",
+    "이다",
+    "귀한손님",
+    "몸",
+    "남다",
+    "물고기",
+    "뱉다",
+    "먹다",
+    "안",
+    "그리다",
+    "물건"
+   ],
+   "note": "필요한 뜻: 이 덩어리가 무엇인지. 2×3 판, 가운데 모형 없음 — 세 조각은 꺾음(대화6에서 배운 것). 키노피오는 돌 뒤에서 안 나옴(옆이 빈 첫 순간)",
+   "responses": [
+    {
+     "sid": "s_body_remain",
+     "spec": [
+      "몸",
+      [
+       "남다"
+      ]
+     ],
+     "progress": true,
+     "react": "mother_sigh_carry",
+     "set": [
+      "f_d7",
+      "f_d7_rite"
+     ]
+    },
+    {
+     "sid": "s_fish_spit",
+     "spec": [
+      "물고기",
+      [
+       "뱉다",
+       [
+        "몸"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "mother_freeze_flee",
+     "set": [
+      "f_d7",
+      "f_d7_truth"
+     ],
+     "also": [
+      [
+       "crowd_field",
+       "crowd_bow_deeper"
+      ]
+     ],
+     "note": "본 대로 — 아무도 안 일어남, 어미는 떠남 → 4-3 어미 자리가 빔"
+    },
+    {
+     "sid": "s_in_draw_body",
+     "spec": [
+      "안",
+      [
+       "그리다",
+       [
+        "몸"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "mother_brow_lump",
+     "set": [
+      "f_d7",
+      "f_d7_draw"
+     ],
+     "also": [
+      [
+       "crowd_field",
+       "crowd_bow_pond"
+      ]
+     ],
+     "note": "사실을 말했는데 축복으로 들림"
+    },
+    {
+     "sid": "s_guest_body_remain",
+     "spec": [
+      "귀한손님",
+      [
+       "몸",
+       [
+        "남다"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "mother_cord_compare",
+     "set": [
+      "f_d7",
+      "f_d7_cord"
+     ]
+    },
+    {
+     "sid": "s_fish_eat_thing",
+     "spec": [
+      "물고기",
+      [
+       "먹다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "mother_nod_offer",
+     "understood": true
+    }
+   ],
+   "default": {
+    "react": "mother_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "mother",
+     "react": "mother_push_lump",
+     "note": "덩어리를 더 들이밂"
+    },
+    {
+     "afterFails": 4,
+     "npc": "mother",
+     "react": "mother_push_lump",
+     "say": "s_body_remain",
+     "note": "같은 말을 한 번 더"
+    }
+   ]
+  },
+  {
+   "id": "d8_kid_trunk",
+   "title": "닫힌 굴 속 키노피오",
+   "npc": "kinopio",
+   "place": "alley",
+   "zone": "z_bark_door",
+   "opensWhen": {
+    "all": [
+     "f_trunk_heard"
+    ],
+    "none": [
+     "f_d8"
+    ]
+   },
+   "their": "s_i_guest",
+   "board": [
+    2,
+    2
+   ],
+   "models": [
+    "m_e",
+    "m_ws",
+    "m_n",
+    "m_s",
+    "m_ne",
+    "m_w",
+    "m_we",
+    "m_ns"
+   ],
+   "words": [
+    "나",
+    "너",
+    "우리",
+    "형",
+    "이다",
+    "귀한손님",
+    "가다",
+    "안",
+    "위",
+    "숨기다",
+    "물건",
+    "물고기",
+    "먹다"
+   ],
+   "note": "문 너머 일대일. 키노피오가 처음으로 자기를 두고 하는 말(코 조각이 저절로 떨어짐). 2×2 판 — 세 조각은 꼭 꺾음. 필요한 뜻: 고백에 내 마음(따짐/떠안음/함께)",
+   "responses": [
+    {
+     "sid": "s_you_guest",
+     "spec": [
+      "너",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_door_open_bowed",
+     "set": [
+      "f_d8",
+      "f_d8_accuse"
+     ],
+     "note": "따짐 → 줄 맨 뒤 주민 틈에 숨음"
+    },
+    {
+     "sid": "s_i_guest",
+     "spec": [
+      "나",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_door_burst_knot",
+     "set": [
+      "f_d8",
+      "f_d8_take"
+     ],
+     "note": "떠안음 → 주인공 바로 옆"
+    },
+    {
+     "sid": "s_we_up",
+     "spec": [
+      "우리",
+      [
+       "가다",
+       [
+        "위"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_door_slow_musicbox",
+     "set": [
+      "f_d8",
+      "f_d8_together"
+     ]
+    },
+    {
+     "sid": "s_we_in",
+     "spec": [
+      "우리",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_door_slow_musicbox",
+     "set": [
+      "f_d8",
+      "f_d8_together"
+     ]
+    },
+    {
+     "sid": "s_we_hide",
+     "spec": [
+      "우리",
+      [
+       "숨기다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_door_slow_musicbox",
+     "set": [
+      "f_d8",
+      "f_d8_together"
+     ]
+    },
+    {
+     "sid": "s_bro_up",
+     "spec": [
+      "형",
+      [
+       "가다",
+       [
+        "위"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_door_slow_musicbox",
+     "set": [
+      "f_d8",
+      "f_d8_together"
+     ]
+    },
+    {
+     "sid": "s_fish_eat_guest",
+     "spec": [
+      "물고기",
+      [
+       "먹다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "kid_nose_withdraw",
+     "understood": true
+    }
+   ],
+   "default": {
+    "react": "kid_door_silent"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "kinopio",
+     "react": "kid_musicbox_click",
+     "note": "굴 속에서 오르골을 막대기로 건드리는 딸깍 + 문 너머 「우리」 한 글자"
+    },
+    {
+     "afterFails": 4,
+     "npc": "kinopio",
+     "react": "kid_demo_bend_door",
+     "note": "옹이 틈으로 코끝이 옆으로 갔다 아래로(ㄱ자 꺾기) + 껍질 긁는 소리"
+    },
+    {
+     "afterFails": 6,
+     "npc": "kinopio",
+     "react": "kid_demo_bend_door",
+     "note": "한 번 더"
+    }
+   ]
+  },
+  {
+   "id": "d9_chief_pond",
+   "title": "웅덩이 앞의 촌장",
+   "npc": "chief",
+   "place": "pond",
+   "zone": "z_chief_pond",
+   "opensWhen": {
+    "all": [
+     "f_lineup"
+    ],
+    "none": [
+     "f_d9"
+    ]
+   },
+   "their": "s_guest_in",
+   "board": [
+    3,
+    2
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_ws",
+    "m_n",
+    "m_s",
+    "m_ne"
+   ],
+   "words": [
+    "나",
+    "우리",
+    "이다",
+    "귀한손님",
+    "가다",
+    "안",
+    "위",
+    "물고기",
+    "뱉다",
+    "몸"
+   ],
+   "note": "길목과 같은 줄로 맞배치. 필요한 뜻: 내가(귀한손님으로) 들어간다",
+   "responses": [
+    {
+     "sid": "s_i_guest",
+     "spec": [
+      "나",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "chief_kneel_rooted",
+     "set": [
+      "f_d9"
+     ]
+    },
+    {
+     "sid": "s_i_go_in",
+     "spec": [
+      "나",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "chief_bow_open",
+     "set": [
+      "f_d9"
+     ],
+     "note": "지킴이가 있으면 끈 끝을 놓아 줌"
+    },
+    {
+     "sid": "s_we_in",
+     "spec": [
+      "우리",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "chief_tie_kid",
+     "set": [
+      "f_d9",
+      "f_d9_two"
+     ],
+     "note": "끈 하나를 더 꺼내 키노피오에게 — 둘이 나란히(삼킴 방식보다 앞섬)"
+    },
+    {
+     "sid": "s_guest_up",
+     "spec": [
+      "귀한손님",
+      [
+       "가다",
+       [
+        "위"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "chief_look_up_all",
+     "set": [
+      "f_d9",
+      "f_d9_up"
+     ],
+     "note": "모두 처음으로 위를 올려다봄"
+    },
+    {
+     "sid": "s_fish_spit",
+     "spec": [
+      "물고기",
+      [
+       "뱉다",
+       [
+        "몸"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "chief_turn_some_leave",
+     "set": [
+      "f_d9_rift"
+     ],
+     "understood": true,
+     "say": "s_guest_in",
+     "note": "몇이 줄에서 빠져 골목 덩어리 의자 쪽으로"
+    }
+   ],
+   "default": {
+    "react": "chief_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "chief",
+     "react": "chief_staff_tap",
+     "note": "지팡이로 웅덩이 끝을 짚음"
+    },
+    {
+     "afterFails": 4,
+     "npc": "chief",
+     "react": "chief_staff_tap",
+     "say": "s_guest_in",
+     "note": "같은 말을 한 번 더"
+    }
+   ]
+  },
+  {
+   "id": "d_play_hide",
+   "title": "숨기기 놀이 — 키노피오에게 말하기",
+   "npc": "kinopio",
+   "place": "hideout",
+   "zone": "z_hideout_talk",
+   "opensWhen": {
+    "all": [
+     "f_hideout_met"
+    ],
+    "none": [
+     "f_hide_game"
+    ]
+   },
+   "their": "s_i_hide",
+   "board": [
+    3,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_s",
+    "m_n"
+   ],
+   "words": [
+    "나",
+    "너",
+    "우리",
+    "이다",
+    "숨기다",
+    "물건",
+    "가다",
+    "안",
+    "위"
+   ],
+   "note": "2-3 둘째 굴 놀이(대-29: 말로 키노피오를 움직여 물건을 숨기게 함). 키노피오가 옹이 신호 말 「나→숨기다→물건」으로 놀이를 청함. 숨기다·우리를 써서 통함(대화8 함께 갈래 대비). 진행 조건 — 끝나야 「형」 장면",
+   "responses": [
+    {
+     "sid": "s_you_hide",
+     "spec": [
+      "너",
+      [
+       "숨기다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_hide_bird",
+     "set": [
+      "f_hide_game",
+      "f_seek_on"
+     ],
+     "note": "키노피오가 나무 새를 숨김 → 주인공이 굴에서 찾기(둥지 헝겊 밑)"
+    },
+    {
+     "sid": "s_i_hide",
+     "spec": [
+      "나",
+      [
+       "숨기다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_give_bird",
+     "set": [
+      "f_hide_game",
+      "f_hide_me"
+     ],
+     "note": "되읊기 — 나무 새를 내 손에 쥐여 주고 눈을 가림 → 주인공이 숨길 자리를 고름 → 키노피오가 찾음"
+    },
+    {
+     "sid": "s_we_hide",
+     "spec": [
+      "우리",
+      [
+       "숨기다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "kid_hide_together",
+     "set": [
+      "f_hide_game",
+      "f_hide_we"
+     ],
+     "note": "둘이 함께 숨긴 물건을 둥지 헝겊 밑으로"
+    },
+    {
+     "sid": "s_you_go_in",
+     "spec": [
+      "너",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "kid_into_nest",
+     "understood": true
+    }
+   ],
+   "default": {
+    "react": "kid_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "kinopio",
+     "react": "kid_point_stash_lips",
+     "say": "s_i_hide",
+     "note": "숨긴 물건 더미를 가리키고 손가락을 입에"
+    },
+    {
+     "afterFails": 4,
+     "npc": "kinopio",
+     "react": "kid_tap_hero_chest",
+     "say": "s_i_hide",
+     "note": "주인공 가슴을 짚음(“네가”)"
+    }
+   ]
+  },
+  {
+   "id": "d_opt_gate",
+   "title": "엎드린 길목 주민에게 말하기",
+   "npc": "gate_b",
+   "place": "gate",
+   "zone": "z_gate_side",
+   "opensWhen": {
+    "all": [
+     "f_gate_met"
+    ],
+    "none": [
+     "f_opt_gate"
+    ]
+   },
+   "their": "s_body_bow_in",
+   "board": [
+    3,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_ws",
+    "m_n"
+   ],
+   "words": [
+    "나",
+    "이다",
+    "귀한손님",
+    "몸",
+    "절하다",
+    "안",
+    "그리다",
+    "가다"
+   ],
+   "note": "골라서 하는 대화. 몸·절하다·안(새김1과 같은 낱말)을 써서 확정할 기회",
+   "responses": [
+    {
+     "sid": "s_body_bow_in",
+     "spec": [
+      "몸",
+      [
+       "절하다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "villager_bow_inward_stone",
+     "set": [
+      "f_opt_gate"
+     ],
+     "note": "되읊기 — 함께 안쪽으로 절하고 새김 돌(판1)을 짚음"
+    },
+    {
+     "sid": "s_in_draw_body",
+     "spec": [
+      "안",
+      [
+       "그리다",
+       [
+        "몸"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "villager_point_stone_nod",
+     "set": [
+      "f_opt_gate"
+     ],
+     "note": "새김1 첫 줄 — 판1 그림(깎는 할아버지)을 짚고 끄덕"
+    },
+    {
+     "sid": "s_i_guest",
+     "spec": [
+      "나",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "villager_prostrate_quick",
+     "understood": true
+    }
+   ],
+   "default": {
+    "react": "villager_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "gate_b",
+     "react": "villager_bow_inward_stone",
+     "say": "s_body_bow_in"
+    },
+    {
+     "afterFails": 4,
+     "npc": "gate_b",
+     "react": "villager_point_stone_nod"
+    }
+   ]
+  },
+  {
+   "id": "d_opt_plaza",
+   "title": "엎드린 광장 주민에게 말하기",
+   "npc": "plaza_a",
+   "place": "plaza",
+   "zone": "z_crowd_offer",
+   "opensWhen": {
+    "all": [
+     "f_plaza_met"
+    ],
+    "none": [
+     "f_opt_plaza",
+     "f_bell2"
+    ]
+   },
+   "their": "s_we_bow_guest",
+   "board": [
+    3,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_ws",
+    "m_n"
+   ],
+   "words": [
+    "나",
+    "너",
+    "우리",
+    "이다",
+    "귀한손님",
+    "절하다",
+    "먹다",
+    "가다"
+   ],
+   "note": "골라서 하는 대화. 우리(단서가 약한 낱말)·절하다를 써서 확정할 기회",
+   "responses": [
+    {
+     "sid": "s_we_bow_guest",
+     "spec": [
+      "우리",
+      [
+       "절하다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "villager_bow_with_crowd",
+     "set": [
+      "f_opt_plaza"
+     ],
+     "note": "되읊기 — 둘레 주민까지 다 함께 한 번 더 절함(우리 = 무리)"
+    },
+    {
+     "sid": "s_i_bow",
+     "spec": [
+      "나",
+      [
+       "절하다"
+      ]
+     ],
+     "progress": true,
+     "react": "villager_panic_bow_back",
+     "set": [
+      "f_opt_plaza"
+     ],
+     "note": "귀한 손님이 절한다 — 놀라 더 깊이 맞절"
+    },
+    {
+     "sid": "s_you_guest",
+     "spec": [
+      "너",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "villager_recoil",
+     "understood": true,
+     "note": "겁(골라서 하는 대화 — 깔기 셋으로 세지 않음)"
+    }
+   ],
+   "default": {
+    "react": "villager_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "plaza_a",
+     "react": "villager_bow_with_crowd",
+     "say": "s_we_bow_guest"
+    },
+    {
+     "afterFails": 4,
+     "npc": "plaza_a",
+     "react": "villager_bow_with_crowd"
+    }
+   ]
+  },
+  {
+   "id": "d_opt_fieldkid",
+   "title": "꼬마 주민에게 말하기",
+   "npc": "field_kid",
+   "place": "field",
+   "zone": "z_pond_stop",
+   "opensWhen": {
+    "all": [
+     "f_fish_seen"
+    ],
+    "none": [
+     "f_opt_fieldkid",
+     "f_bell2"
+    ]
+   },
+   "their": "s_fish_spit_bare",
+   "board": [
+    3,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_ws",
+    "m_n"
+   ],
+   "words": [
+    "나",
+    "이다",
+    "몸",
+    "남다",
+    "물고기",
+    "뱉다",
+    "먹다",
+    "물건"
+   ],
+   "note": "골라서 하는 대화. 물고기·뱉다를 써서 확정할 기회(본 대로 말하는 아이)",
+   "responses": [
+    {
+     "sid": "s_fish_spit",
+     "spec": [
+      "물고기",
+      [
+       "뱉다",
+       [
+        "몸"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "fieldkid_nod_hard_pulled",
+     "set": [
+      "f_opt_fieldkid"
+     ],
+     "note": "본 대로 — 꼬마가 세게 끄덕이고 웅덩이를 가리킴, 어른이 끌어당김"
+    },
+    {
+     "sid": "s_fish_eat_thing",
+     "spec": [
+      "물고기",
+      [
+       "먹다",
+       [
+        "물건"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "fieldkid_mime_swallow",
+     "set": [
+      "f_opt_fieldkid"
+     ],
+     "note": "꼬마가 두 팔로 삼키는 시늉"
+    },
+    {
+     "sid": "s_body_remain",
+     "spec": [
+      "몸",
+      [
+       "남다"
+      ]
+     ],
+     "progress": false,
+     "react": "fieldkid_look_elder",
+     "understood": true,
+     "note": "어른 말 — 꼬마가 어른을 보고 갸웃"
+    }
+   ],
+   "default": {
+    "react": "villager_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "field_kid",
+     "react": "fieldkid_mime_swallow",
+     "say": "s_fish_spit_bare"
+    },
+    {
+     "afterFails": 4,
+     "npc": "field_kid",
+     "react": "fieldkid_nod_hard_pulled"
+    }
+   ]
+  },
+  {
+   "id": "d_opt_neighbor",
+   "title": "창 너머 이웃에게 말하기",
+   "npc": "neighbor",
+   "place": "alley",
+   "zone": "z_alley_window",
+   "opensWhen": {
+    "all": [
+     "f_cloth_lifted"
+    ],
+    "none": [
+     "f_opt_neighbor",
+     "f_d8"
+    ]
+   },
+   "their": "s_you_guest",
+   "board": [
+    3,
+    3
+   ],
+   "models": [
+    "m_e",
+    "m_we",
+    "m_w",
+    "m_ws",
+    "m_n"
+   ],
+   "words": [
+    "나",
+    "너",
+    "형",
+    "이다",
+    "귀한손님",
+    "가다",
+    "안",
+    "위",
+    "몸",
+    "남다"
+   ],
+   "note": "골라서 하는 대화(3-3 뒤). 형 이야기를 마을 쪽에서 한 번 더",
+   "responses": [
+    {
+     "sid": "s_i_guest",
+     "spec": [
+      "나",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "neighbor_nod_hook",
+     "set": [
+      "f_opt_neighbor"
+     ],
+     "note": "다정하게 끄덕 → 빈 고리를 다시 쓸고 고목 쪽을 봄"
+    },
+    {
+     "sid": "s_bro_in",
+     "spec": [
+      "형",
+      [
+       "가다",
+       [
+        "안"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "neighbor_freeze_bow",
+     "set": [
+      "f_opt_neighbor"
+     ],
+     "note": "굳음 → 키노피오 집 의자 쪽으로 고개 숙임(형도 손님이었다)"
+    },
+    {
+     "sid": "s_guest_body_remain",
+     "spec": [
+      "귀한손님",
+      [
+       "몸",
+       [
+        "남다"
+       ]
+      ]
+     ],
+     "progress": true,
+     "react": "neighbor_freeze_bow",
+     "set": [
+      "f_opt_neighbor"
+     ]
+    },
+    {
+     "sid": "s_you_guest",
+     "spec": [
+      "너",
+      [
+       "이다",
+       [
+        "귀한손님"
+       ]
+      ]
+     ],
+     "progress": false,
+     "react": "neighbor_recoil",
+     "understood": true
+    }
+   ],
+   "default": {
+    "react": "villager_tilt"
+   },
+   "nudges": [
+    {
+     "afterFails": 2,
+     "npc": "neighbor",
+     "react": "neighbor_nod_hook",
+     "say": "s_you_guest"
+    },
+    {
+     "afterFails": 4,
+     "npc": "neighbor",
+     "react": "neighbor_freeze_bow"
+    }
+   ]
+  }
+ ],
+ "overheads": [
+  {
+   "id": "oh_boss_fall",
+   "npc": "collector_boss",
+   "sentence": "s_you_thing",
+   "when": {
+    "all": [
+     "f_board_open"
+    ],
+    "none": [
+     "f_d1"
+    ]
+   },
+   "range": 9,
+   "note": "대화1 their"
+  },
+  {
+   "id": "oh_kid_tease",
+   "npc": "kinopio",
+   "sentence": "s_you_go_in",
+   "when": {
+    "all": [
+     "f_tease"
+    ],
+    "none": [
+     "f_d2"
+    ]
+   },
+   "range": 9,
+   "note": "1-4 놀림"
+  },
+  {
+   "id": "oh_gate_a",
+   "npc": "gate_a",
+   "sentence": "s_body_bow_in",
+   "when": {
+    "all": [
+     "f_gate_met"
+    ],
+    "none": [
+     "f_d3"
+    ]
+   },
+   "range": 8,
+   "note": "앉은 주민들이 안쪽으로 절할 때"
+  },
+  {
+   "id": "oh_gate_b",
+   "npc": "gate_b",
+   "sentence": "s_body_bow_in",
+   "when": {
+    "all": [
+     "f_gate_met"
+    ],
+    "none": [
+     "f_d3"
+    ]
+   },
+   "range": 8
+  },
+  {
+   "id": "oh_chief_gate",
+   "npc": "chief",
+   "sentence": "s_guest_in",
+   "when": {
+    "all": [
+     "f_gate_met"
+    ],
+    "none": [
+     "f_d3"
+    ]
+   },
+   "range": 9,
+   "note": "대화3 their"
+  },
+  {
+   "id": "oh_plaza_a",
+   "npc": "plaza_a",
+   "sentence": "s_we_bow_guest",
+   "when": {
+    "all": [
+     "f_plaza_met"
+    ],
+    "none": [
+     "f_bell2"
+    ]
+   },
+   "range": 7,
+   "note": "2-1 엎드린 주민"
+  },
+  {
+   "id": "oh_porridge",
+   "npc": "porridge",
+   "sentence": "s_guest_eat",
+   "when": {
+    "all": [
+     "f_plaza_met"
+    ],
+    "none": [
+     "f_d4"
+    ]
+   },
+   "range": 8,
+   "note": "대화4 their"
+  },
+  {
+   "id": "oh_teacher",
+   "npc": "porridge",
+   "sentence": "s_thing",
+   "when": {
+    "all": [
+     "f_d4_teacher"
+    ],
+    "none": [
+     "f_bag_back"
+    ]
+   },
+   "range": 6,
+   "note": "대화4 「너→먹다」 갈래: 따라다니며 물건마다 이름 한 글자 [가정: 「물건」 하나로]"
+  },
+  {
+   "id": "oh_boss_depot",
+   "npc": "collector_boss",
+   "sentence": "s_we_offer",
+   "when": {
+    "all": [
+     "f_depot_met"
+    ],
+    "none": [
+     "f_d5"
+    ]
+   },
+   "range": 9,
+   "note": "대화5 their"
+  },
+  {
+   "id": "oh_kid_hide",
+   "npc": "kinopio",
+   "sentence": "s_i_hide",
+   "when": {
+    "all": [
+     "f_hideout_met"
+    ],
+    "none": [
+     "f_hide_game"
+    ]
+   },
+   "range": 7,
+   "note": "숨기기 놀이 청함(d_play_hide their)"
+  },
+  {
+   "id": "oh_gate_b_opt",
+   "npc": "gate_b",
+   "sentence": "s_body_bow_in",
+   "when": {
+    "all": [
+     "f_d3"
+    ],
+    "none": [
+     "f_opt_gate"
+    ]
+   },
+   "range": 6,
+   "note": "골라서 하는 대화 신호(길을 지나간 뒤에도 안쪽으로 절함)"
+  },
+  {
+   "id": "oh_kid_bro",
+   "npc": "kinopio",
+   "sentence": "s_bro_in",
+   "when": {
+    "all": [
+     "f_bro_shown"
+    ],
+    "none": [
+     "f_d6"
+    ]
+   },
+   "range": 7,
+   "note": "대화6 their"
+  },
+  {
+   "id": "oh_boss_field",
+   "npc": "collector_boss",
+   "sentence": "s_we_offer",
+   "when": {
+    "all": [
+     "f_field_met"
+    ],
+    "none": [
+     "f_fish_seen"
+    ]
+   },
+   "range": 12,
+   "note": "3-1 수레를 기울이며"
+  },
+  {
+   "id": "oh_field_kid",
+   "npc": "field_kid",
+   "sentence": "s_fish_spit_bare",
+   "when": {
+    "all": [
+     "f_fish_seen"
+    ],
+    "none": [
+     "f_d7"
+    ]
+   },
+   "range": 10
+  },
+  {
+   "id": "oh_field_elder",
+   "npc": "field_elder",
+   "sentence": "s_body_remain",
+   "when": {
+    "all": [
+     "f_fish_seen"
+    ],
+    "none": [
+     "f_d7"
+    ]
+   },
+   "range": 10
+  },
+  {
+   "id": "oh_mother",
+   "npc": "mother",
+   "sentence": "s_body_remain",
+   "when": {
+    "all": [
+     "f_fish_seen"
+    ],
+    "none": [
+     "f_d7"
+    ]
+   },
+   "range": 8,
+   "note": "대화7 their"
+  },
+  {
+   "id": "oh_neighbor",
+   "npc": "neighbor",
+   "sentence": "s_you_guest",
+   "when": {
+    "all": [
+     "f_cloth_lifted"
+    ],
+    "none": [
+     "f_d8"
+    ]
+   },
+   "range": 8,
+   "note": "3-3 창 너머 이웃 [가정]"
+  },
+  {
+   "id": "oh_chief_pond",
+   "npc": "chief",
+   "sentence": "s_guest_in",
+   "when": {
+    "all": [
+     "f_lineup"
+    ],
+    "none": [
+     "f_d9"
+    ]
+   },
+   "range": 10,
+   "note": "대화9 their"
+  }
+ ],
+ "plays": [
+  {
+   "id": "play_rehearsal",
+   "title": "극 연습(말 없음)",
+   "place": "plaza",
+   "loop": true,
+   "when": {
+    "all": [
+     "f_plaza_met"
+    ],
+    "none": [
+     "f_bell2"
+    ]
+   },
+   "note": "막이 반쯤 열린 채 배우들이 말 없이 자리만 맞춤 — 물건을 밀어 놓고 물러서 물고기 입 앞이 빈 채로 멈춤. 붉은 끈 배우·가슴 짚기는 3-2 본 극에서 처음(QA P2-5: 반전 예고 줄임)",
+   "lines": [
+    {
+     "sentence": null,
+     "stage": "배우들이 소품 물건을 물고기 소품 앞으로 밀어 놓고 물러섬 — 입 앞 빈자리",
+     "pose": "rehearse_1",
+     "seconds": 6
+    }
+   ]
+  },
+  {
+   "id": "play_day",
+   "title": "막오름 날의 극",
+   "place": "plaza",
+   "loop": false,
+   "when": {
+    "all": [
+     "f_play_started"
+    ]
+   },
+   "note": "줄마다 낱말을 다 알면 문장, 모르면 낱글자 + 내 추측(뜻-28②). 2번 줄 = 주인공이 오늘 한 바로 그 줄",
+   "lines": [
+    {
+     "sentence": "s_we_offer",
+     "stage": "배우들이 소품 물건을 물고기 소품 앞에 밀어 놓음",
+     "pose": "rehearse_1",
+     "seconds": 6
+    },
+    {
+     "sentence": "s_i_guest",
+     "stage": "붉은 끈을 맨 작은 배우가 나와 자기 가슴을 짚음",
+     "pose": "rehearse_2",
+     "seconds": 7
+    },
+    {
+     "sentence": "s_guest_in",
+     "stage": "물고기 소품 입이 그 배우 위로 닫힘. 북 한 번",
+     "pose": "rehearse_3",
+     "seconds": 7
+    },
+    {
+     "sentence": "s_body_remain",
+     "stage": "붉은 끈을 맨 덩어리 소품이 의자에 놓이고 관객이 절함",
+     "pose": "rehearse_4",
+     "seconds": 7
+    }
+   ]
+  }
+ ],
+ "puzzles": [
+  {
+   "id": "pz_ladder",
+   "type": "latch",
+   "place": "fall",
+   "zone": "z_ladder",
+   "pos": [
+    -51.3,
+    23.75
+   ],
+   "host": "ladder",
+   "needs": "player",
+   "opensWhen": {
+    "all": [
+     "f_at_latch"
+    ]
+   },
+   "set": [
+    "f_ladder"
+   ],
+   "interaction": "hold:1.2",
+   "label": "사람 걸쇠 풀기",
+   "note": "장치1. 키노피오가 걸쇠에 손을 뻗었다 거둠(자격)"
+  },
+  {
+   "id": "pz_bolt_fall",
+   "type": "drawnBolt",
+   "place": "fall",
+   "zone": "z_fall_bolt",
+   "pos": [
+    -43.8,
+    21.3
+   ],
+   "host": "bolt_fall",
+   "needs": "kinopio",
+   "auto": true,
+   "opensWhen": {
+    "all": [
+     "f_d2"
+    ]
+   },
+   "set": [],
+   "note": "대화2 뒤 키노피오가 틈으로 들어가 빗장을 어깨로 들어 올림(sc_kid_squeeze)"
+  },
+  {
+   "id": "pz_cart",
+   "type": "latch",
+   "place": "depot",
+   "zone": "z_cart_lock",
+   "pos": [
+    13.4,
+    -5.9
+   ],
+   "host": "cart",
+   "needs": "player",
+   "opensWhen": {
+    "all": [
+     "f_d5"
+    ]
+   },
+   "set": [
+    "f_cart_free"
+   ],
+   "interaction": "hold:1.2",
+   "label": "가방 끈 풀기",
+   "note": "장치2. 가방 끈이 바퀴 쇠 고정쇠에 물림 — 크리처는 자격이 없음"
+  },
+  {
+   "id": "pz_musicbox",
+   "type": "latch",
+   "place": "hideout",
+   "pos": [
+    41.4,
+    30.6
+   ],
+   "host": "music_box",
+   "needs": "player",
+   "opensWhen": {
+    "all": [
+     "f_hideout_met"
+    ]
+   },
+   "set": [
+    "f_musicbox"
+   ],
+   "interaction": "hold:1.6",
+   "label": "오르골 돌리기",
+   "note": "놀이(진행 조건 아님). 키노피오가 막대기로 밀어 줌"
+  },
+  {
+   "id": "pz_pick",
+   "type": "pick",
+   "place": "pond",
+   "zone": "z_pond_lineup",
+   "pos": [
+    -5.5,
+    12.5
+   ],
+   "needs": "player",
+   "opensWhen": {
+    "all": [
+     "f_pick_on"
+    ],
+    "none": [
+     "f_picked"
+    ]
+   },
+   "target": "kinopio",
+   "wrongReact": "villager_lift_head",
+   "set": [
+    "f_picked"
+   ],
+   "note": "장치4(따짐 갈래). 줄 선 주민 사이 파란 반짝임·긴 코끝을 짚음. 메인: 짚기 카메라를 이 zone으로"
+  },
+  {
+   "id": "pz_pull",
+   "type": "latch",
+   "place": "pond",
+   "zone": "z_pond_bank",
+   "pos": [
+    54.53,
+    -11.47
+   ],
+   "host": "kid_hand",
+   "needs": "player",
+   "opensWhen": {
+    "all": [
+     "f_pull_on"
+    ]
+   },
+   "set": [
+    "f_pulled"
+   ],
+   "interaction": "hold:2.0",
+   "label": "손 끌어당기기",
+   "note": "장치4(함께 갈래). 물고기가 솟자 키노피오가 손을 빼려 함 → 누르고 있기"
+  }
+ ],
+ "exitLocks": [
+  {
+   "area": "a_gate",
+   "to": "a_plaza",
+   "locked": {
+    "none": [
+     "f_gate_open"
+    ]
+   },
+   "react": "hero_blocked_branches",
+   "note": "촌장 가지가 길을 막음(1-5)"
+  },
+  {
+   "area": "a_gate",
+   "to": "a_cart",
+   "locked": {
+    "none": [
+     "f_bag_back"
+    ]
+   },
+   "react": "hero_blocked_soft",
+   "note": "남쪽 계단은 2-2 뒤에"
+  },
+  {
+   "area": "a_plaza",
+   "to": "a_cart",
+   "locked": {
+    "none": [
+     "f_d4"
+    ]
+   },
+   "react": "hero_blocked_soft",
+   "note": "죽 소동(대화4) 뒤에 수레 따라감"
+  },
+  {
+   "area": "a_alley",
+   "to": "a_hideout",
+   "locked": {
+    "none": [
+     "f_door_open"
+    ]
+   },
+   "react": "hero_blocked_soft",
+   "note": "껍질 문(2-3 옹이 신호 전)"
+  },
+  {
+   "area": "a_alley",
+   "to": "a_hideout",
+   "locked": {
+    "all": [
+     "f_kid_fled"
+    ],
+    "none": [
+     "f_d8"
+    ]
+   },
+   "react": "hero_blocked_soft",
+   "note": "4-1 닫힌 굴"
+  },
+  {
+   "area": "a_alley",
+   "to": "a_field",
+   "locked": {
+    "none": [
+     "f_bell1"
+    ]
+   },
+   "react": "hero_blocked_soft",
+   "note": "첫 종 전에는 밭으로 안 감"
+  },
+  {
+   "area": "a_cart",
+   "to": "a_field",
+   "locked": {
+    "none": [
+     "f_bell1"
+    ]
+   },
+   "react": "hero_blocked_soft"
+  }
+ ],
+ "phases": [
+  {
+   "id": "P0_intro",
+   "when": {
+    "none": [
+     "f_d1"
+    ]
+   },
+   "npcs": {
+    "collector_boss": {
+     "at": "z_collector_fall",
+     "pose": "stand"
+    },
+    "collectors": {
+     "at": "z_fall_edge",
+     "pose": "carry"
+    },
+    "chief": {
+     "at": "z_chief_gate",
+     "pose": "block"
+    },
+    "gate_a": {
+     "at": [
+      -32.3,
+      21.7
+     ],
+     "pose": "sit"
+    },
+    "gate_b": {
+     "at": [
+      -25.9,
+      21.5
+     ],
+     "pose": "sit"
+    },
+    "crowd_gate": {
+     "at": [
+      -31.8,
+      27.9
+     ],
+     "pose": "sit"
+    },
+    "plaza_a": {
+     "at": "z_crowd_offer",
+     "pose": "stand"
+    },
+    "porridge": {
+     "at": [
+      -6.35,
+      7.03
+     ],
+     "pose": "stand"
+    },
+    "actor_a": {
+     "at": [
+      -0.8,
+      21.59
+     ],
+     "pose": "stand"
+    },
+    "actor_b": {
+     "at": [
+      -0.83,
+      20.06
+     ],
+     "pose": "stand"
+    },
+    "actor_c": {
+     "at": [
+      0.25,
+      18.99
+     ],
+     "pose": "stand"
+    },
+    "crowd_plaza": {
+     "at": [
+      -5.5,
+      13.0
+     ],
+     "pose": "watch"
+    },
+    "mother": {
+     "at": "z_lump",
+     "pose": "wipe"
+    },
+    "crowd_alley": {
+     "at": [
+      22.5,
+      17.6
+     ],
+     "pose": "wipe"
+    },
+    "field_elder": {
+     "at": [
+      42.2,
+      2.6
+     ],
+     "pose": "stand"
+    },
+    "field_kid": {
+     "at": [
+      43.2,
+      1.8
+     ],
+     "pose": "stand"
+    },
+    "crowd_field": {
+     "at": [
+      44.0,
+      -3.0
+     ],
+     "pose": "stand"
+    }
+   },
+   "note": "이웃(neighbor)은 창 안(걷는 땅 밖) — 단계로 옮기지 않음(slice3)"
+  },
+  {
+   "id": "P1_hill",
+   "when": {
+    "all": [
+     "f_d1"
+    ],
+    "none": [
+     "f_gate_open"
+    ]
+   },
+   "npcs": {
+    "collector_boss": {
+     "at": "z_cart",
+     "pose": "stand"
+    },
+    "collectors": {
+     "at": [
+      15.8,
+      -4.4
+     ],
+     "pose": "carry"
+    },
+    "chief": {
+     "at": "z_chief_gate",
+     "pose": "block"
+    }
+   },
+   "note": "우두머리는 가방을 받쳐 들고 언덕 가장자리로 나간 뒤 창고로(sc_d1_after)"
+  },
+  {
+   "id": "P2_plaza",
+   "when": {
+    "all": [
+     "f_gate_open"
+    ],
+    "none": [
+     "f_d4"
+    ]
+   },
+   "npcs": {
+    "chief": {
+     "at": "z_chief_seat",
+     "pose": "stand"
+    },
+    "gate_a": {
+     "at": [
+      -32.3,
+      21.7
+     ],
+     "pose": "sit"
+    },
+    "gate_b": {
+     "at": [
+      -25.9,
+      21.5
+     ],
+     "pose": "sit"
+    },
+    "crowd_plaza": {
+     "at": "z_crowd_offer",
+     "pose": "prostrate"
+    },
+    "plaza_a": {
+     "at": [
+      -7.4,
+      21.6
+     ],
+     "pose": "prostrate"
+    }
+   }
+  },
+  {
+   "id": "P3_depot",
+   "when": {
+    "all": [
+     "f_d4"
+    ],
+    "none": [
+     "f_bag_back"
+    ]
+   },
+   "npcs": {
+    "collector_boss": {
+     "at": "z_cart",
+     "pose": "kneel"
+    },
+    "collectors": {
+     "at": "z_depot",
+     "pose": "stand"
+    },
+    "crowd_plaza": {
+     "at": [
+      -5.5,
+      13.0
+     ],
+     "pose": "watch"
+    }
+   }
+  },
+  {
+   "id": "P4_hideout",
+   "when": {
+    "all": [
+     "f_bag_back"
+    ],
+    "none": [
+     "f_bell1"
+    ]
+   },
+   "npcs": {
+    "collector_boss": {
+     "at": "z_cart",
+     "pose": "stand"
+    },
+    "mother": {
+     "at": "z_lump",
+     "pose": "wipe"
+    },
+    "crowd_alley": {
+     "at": [
+      22.5,
+      17.6
+     ],
+     "pose": "wipe"
+    }
+   }
+  },
+  {
+   "id": "P5_field",
+   "when": {
+    "all": [
+     "f_bell1"
+    ],
+    "none": [
+     "f_d7"
+    ]
+   },
+   "npcs": {
+    "collector_boss": {
+     "at": "z_cart_procession",
+     "pose": "stand"
+    },
+    "collectors": {
+     "at": [
+      39.6,
+      -9.0
+     ],
+     "pose": "carry"
+    },
+    "mother": {
+     "at": [
+      46.0,
+      -4.6
+     ],
+     "pose": "stand"
+    },
+    "crowd_alley": {
+     "at": [
+      45.7,
+      0.6
+     ],
+     "pose": "stand"
+    },
+    "crowd_plaza": {
+     "at": [
+      35.7,
+      -2.3
+     ],
+     "pose": "stand"
+    },
+    "field_elder": {
+     "at": [
+      47.4,
+      -9.6
+     ],
+     "pose": "stand"
+    },
+    "field_kid": {
+     "at": [
+      48.2,
+      -10.2
+     ],
+     "pose": "stand"
+    },
+    "crowd_field": {
+     "at": [
+      44.3,
+      -2.9
+     ],
+     "pose": "stand"
+    },
+    "chief": {
+     "at": "z_chief_seat",
+     "pose": "stand"
+    }
+   }
+  },
+  {
+   "id": "P6_play",
+   "when": {
+    "all": [
+     "f_d7"
+    ],
+    "none": [
+     "f_play_done"
+    ]
+   },
+   "npcs": {
+    "crowd_plaza": {
+     "at": "z_crowd_rows",
+     "pose": "sit"
+    },
+    "gate_a": {
+     "at": [
+      -9.0,
+      13.0
+     ],
+     "pose": "sit"
+    },
+    "gate_b": {
+     "at": [
+      -8.6,
+      11.2
+     ],
+     "pose": "sit"
+    },
+    "plaza_a": {
+     "at": [
+      -9.4,
+      9.6
+     ],
+     "pose": "sit"
+    },
+    "field_elder": {
+     "at": [
+      -4.6,
+      8.6
+     ],
+     "pose": "sit"
+    },
+    "field_kid": {
+     "at": [
+      -3.4,
+      9.0
+     ],
+     "pose": "sit"
+    },
+    "chief": {
+     "at": "z_chief_seat",
+     "pose": "stand"
+    },
+    "collector_boss": {
+     "at": [
+      -10.6,
+      14.4
+     ],
+     "pose": "stand"
+    },
+    "mother": {
+     "at": "z_lump",
+     "pose": "wipe",
+     "when": {
+      "none": [
+       "f_d7_truth"
+      ]
+     }
+    }
+   },
+   "note": "관객 = 광장 주민 무리 + 이름 있는 주민(자리가 0.9 m 안에서 겹치지 않게 — 검사기). 골목·밭 무리는 그 자리에 둠"
+  },
+  {
+   "id": "P7_house",
+   "when": {
+    "all": [
+     "f_play_done"
+    ],
+    "none": [
+     "f_final_call"
+    ]
+   },
+   "npcs": {
+    "crowd_alley": {
+     "at": [
+      22.5,
+      17.6
+     ],
+     "pose": "stand"
+    },
+    "crowd_plaza": {
+     "at": [
+      -5.5,
+      13.0
+     ],
+     "pose": "watch"
+    },
+    "chief": {
+     "at": "z_chief_seat",
+     "pose": "stand"
+    }
+   }
+  },
+  {
+   "id": "P8_lineup",
+   "when": {
+    "all": [
+     "f_final_call"
+    ]
+   },
+   "npcs": {
+    "chief": {
+     "at": "z_chief_pond",
+     "pose": "stand"
+    },
+    "watcher": {
+     "at": [
+      54.85,
+      -10.21
+     ],
+     "pose": "hold_cord",
+     "when": {
+      "all": [
+       "f_d3_watch"
+      ]
+     }
+    },
+    "plaza_a": {
+     "at": [
+      53.91,
+      -10.66
+     ],
+     "pose": "line_up"
+    },
+    "gate_a": {
+     "at": [
+      53.04,
+      -11.22
+     ],
+     "pose": "line_up"
+    },
+    "collector_boss": {
+     "at": [
+      52.24,
+      -11.89
+     ],
+     "pose": "line_up"
+    },
+    "mother": {
+     "at": [
+      51.53,
+      -12.65
+     ],
+     "pose": "line_up",
+     "when": {
+      "none": [
+       "f_d7_truth"
+      ]
+     }
+    },
+    "porridge": {
+     "at": [
+      50.92,
+      -13.49
+     ],
+     "pose": "line_up"
+    },
+    "field_elder": {
+     "at": [
+      50.41,
+      -14.4
+     ],
+     "pose": "line_up"
+    },
+    "field_kid": {
+     "at": [
+      50.02,
+      -15.36
+     ],
+     "pose": "line_up"
+    },
+    "gate_b": {
+     "at": [
+      54.67,
+      -8.84
+     ],
+     "pose": "line_up"
+    },
+    "actor_a": {
+     "at": [
+      53.48,
+      -9.36
+     ],
+     "pose": "line_up"
+    },
+    "actor_b": {
+     "at": [
+      52.38,
+      -10.03
+     ],
+     "pose": "line_up"
+    },
+    "kinopio": {
+     "at": "z_lineup_hide",
+     "pose": "cower",
+     "when": {
+      "all": [
+       "f_d8_accuse"
+      ]
+     }
+    },
+    "actor_c": {
+     "at": [
+      49.73,
+      -12.83
+     ],
+     "pose": "line_up"
+    },
+    "crowd_plaza": {
+     "at": [
+      45.2,
+      -6.0
+     ],
+     "pose": "line_up"
+    },
+    "crowd_alley": {
+     "at": [
+      42.0,
+      -2.0
+     ],
+     "pose": "line_up"
+    },
+    "crowd_gate": {
+     "at": [
+      45.4,
+      -12.6
+     ],
+     "pose": "line_up"
+    },
+    "crowd_field": {
+     "at": [
+      40.4,
+      -9.2
+     ],
+     "pose": "line_up"
+    },
+    "collectors": {
+     "at": [
+      37.4,
+      -3.6
+     ],
+     "pose": "line_up"
+    }
+   },
+   "note": "이름 있는 주민 = slice3 pond_lineup3 자리(앞줄 0~7, 뒷줄 8~15). 실루엣 무리는 밭 길을 따라 줄 뒤에. 우두머리 줄 틈(f_d5_latch)·어미 빈자리(f_d7_truth, 4번)는 sc_pond_lineup이 맞춤. 이웃은 창 안에 남음"
+  }
+ ],
+ "goals": [
+  {
+   "when": {
+    "all": [
+     "f_start"
+    ]
+   },
+   "text": "주변 살펴보기",
+   "place": "fall",
+   "target": "look_book",
+   "thought": "같이 떨어진 물건이… 흩어져 있다."
+  },
+  {
+   "when": {
+    "all": [
+     "f_board_open"
+    ]
+   },
+   "text": "수거꾼 우두머리에게 답하기",
+   "place": "fall",
+   "target": "collector_boss"
+  },
+  {
+   "when": {
+    "all": [
+     "f_kid_leading"
+    ]
+   },
+   "text": "키노피오 따라가기",
+   "place": "fall",
+   "target": "kinopio"
+  },
+  {
+   "when": {
+    "all": [
+     "f_at_latch"
+    ]
+   },
+   "text": "사다리 걸쇠 풀기",
+   "place": "fall",
+   "target": "pz_ladder",
+   "thought": "저 걸쇠… 사람 물건이다."
+  },
+  {
+   "when": {
+    "all": [
+     "f_tease"
+    ]
+   },
+   "text": "틈 앞의 키노피오에게 말하기",
+   "place": "fall",
+   "target": "kinopio"
+  },
+  {
+   "when": {
+    "all": [
+     "f_path_open"
+    ]
+   },
+   "text": "앉은돌 길목으로",
+   "place": "gate",
+   "target": "gate"
+  },
+  {
+   "when": {
+    "all": [
+     "f_gate_met"
+    ]
+   },
+   "text": "길목을 막은 촌장에게 답하기",
+   "place": "gate",
+   "target": "chief"
+  },
+  {
+   "when": {
+    "all": [
+     "f_gate_open"
+    ]
+   },
+   "text": "꼭두 광장으로",
+   "place": "plaza",
+   "target": "plaza"
+  },
+  {
+   "when": {
+    "all": [
+     "f_plaza_met"
+    ]
+   },
+   "text": "죽을 내미는 주민에게 답하기",
+   "place": "plaza",
+   "target": "porridge"
+  },
+  {
+   "when": {
+    "all": [
+     "f_cart_seen"
+    ]
+   },
+   "text": "가방 메고 간 수거꾼 따라가기",
+   "place": "depot",
+   "target": "depot"
+  },
+  {
+   "when": {
+    "all": [
+     "f_depot_met"
+    ]
+   },
+   "text": "가방을 바치려는 우두머리에게 말하기",
+   "place": "depot",
+   "target": "collector_boss",
+   "thought": "내 가방… 저 수레 위에 있어."
+  },
+  {
+   "when": {
+    "all": [
+     "f_d5"
+    ]
+   },
+   "text": "가방 끈 풀기",
+   "place": "depot",
+   "target": "pz_cart"
+  },
+  {
+   "when": {
+    "all": [
+     "f_bag_back"
+    ]
+   },
+   "text": "키노피오 따라 골목으로",
+   "place": "alley",
+   "target": "kinopio"
+  },
+  {
+   "when": {
+    "all": [
+     "f_door_open"
+    ]
+   },
+   "text": "껍질 문 안으로",
+   "place": "hideout",
+   "target": "hideout"
+  },
+  {
+   "when": {
+    "all": [
+     "f_hideout_met"
+    ]
+   },
+   "text": "숨기기 놀이 — 키노피오에게 말하기",
+   "place": "hideout",
+   "target": "kinopio"
+  },
+  {
+   "when": {
+    "all": [
+     "f_seek_on"
+    ],
+    "none": [
+     "f_hide_done"
+    ]
+   },
+   "text": "숨긴 나무 새 찾기",
+   "place": "hideout",
+   "target": "hide_nest"
+  },
+  {
+   "when": {
+    "all": [
+     "f_hide_me"
+    ],
+    "none": [
+     "f_hide_done"
+    ]
+   },
+   "text": "나무 새 숨길 자리 고르기",
+   "place": "hideout",
+   "target": "stash"
+  },
+  {
+   "when": {
+    "all": [
+     "f_hide_done"
+    ]
+   },
+   "text": "벽 그림 앞으로",
+   "place": "hideout",
+   "target": "wall_drawing"
+  },
+  {
+   "when": {
+    "all": [
+     "f_bro_shown"
+    ]
+   },
+   "text": "형 그림 앞의 키노피오에게 말하기",
+   "place": "hideout",
+   "target": "kinopio"
+  },
+  {
+   "when": {
+    "all": [
+     "f_bell1"
+    ]
+   },
+   "text": "행렬 따라 밭 끝으로",
+   "place": "field",
+   "target": "cart"
+  },
+  {
+   "when": {
+    "all": [
+     "f_fish_seen"
+    ]
+   },
+   "text": "덩어리를 안은 어미에게 답하기",
+   "place": "pond",
+   "target": "mother"
+  },
+  {
+   "when": {
+    "all": [
+     "f_bell2"
+    ]
+   },
+   "text": "광장 극 빈자리에 앉기",
+   "place": "plaza",
+   "target": "audience_seat"
+  },
+  {
+   "when": {
+    "all": [
+     "f_play_done"
+    ]
+   },
+   "text": "부스러기 자국 따라 키노피오 집으로",
+   "place": "alley",
+   "target": "brother_lump",
+   "thought": "부스러기가… 골목 쪽으로 이어져 있다."
+  },
+  {
+   "when": {
+    "all": [
+     "f_kid_fled"
+    ]
+   },
+   "text": "닫힌 굴의 키노피오",
+   "place": "alley",
+   "target": "bark_door"
+  },
+  {
+   "when": {
+    "all": [
+     "f_confess_go"
+    ]
+   },
+   "text": "키노피오 따라 벽 그림 앞으로",
+   "place": "hideout",
+   "target": "wall_drawing"
+  },
+  {
+   "when": {
+    "all": [
+     "f_confessed"
+    ]
+   },
+   "text": "광장으로",
+   "place": "plaza",
+   "target": "plaza"
+  },
+  {
+   "when": {
+    "all": [
+     "f_band_seen"
+    ]
+   },
+   "text": "새 띠 벗기기",
+   "place": "plaza",
+   "target": "band_new"
+  },
+  {
+   "when": {
+    "all": [
+     "f_final_call"
+    ]
+   },
+   "text": "웅덩이까지 늘어선 줄로",
+   "place": "pond",
+   "target": "chief"
+  },
+  {
+   "when": {
+    "all": [
+     "f_lineup"
+    ]
+   },
+   "text": "웅덩이 앞의 촌장에게 답하기",
+   "place": "pond",
+   "target": "chief"
+  },
+  {
+   "when": {
+    "all": [
+     "f_d9"
+    ]
+   },
+   "text": "",
+   "place": "pond",
+   "hide": true
+  },
+  {
+   "when": {
+    "all": [
+     "f_pick_on"
+    ],
+    "none": [
+     "f_picked"
+    ]
+   },
+   "text": "줄에서 키노피오 짚기",
+   "place": "pond",
+   "target": "kinopio"
+  },
+  {
+   "when": {
+    "all": [
+     "f_pull_on"
+    ],
+    "none": [
+     "f_pulled"
+    ]
+   },
+   "text": "키노피오 손 끌어당기기",
+   "place": "pond",
+   "target": "pz_pull"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc_wake",
+   "place": "fall",
+   "cinematic": true,
+   "note": "1-1 떨어짐"
+  },
+  {
+   "id": "sc_sack",
+   "place": "fall",
+   "shows": [
+    "s_we_take",
+    "s_guest"
+   ],
+   "cinematic": true,
+   "note": "1-2 자루"
+  },
+  {
+   "id": "sc_first_words",
+   "place": "fall",
+   "shows": [
+    "s_i",
+    "s_you",
+    "s_you_guest",
+    "s_you_thing"
+   ],
+   "cinematic": true,
+   "note": "1-3 첫 말, 판이 열림"
+  },
+  {
+   "id": "sc_d1_after",
+   "place": "fall",
+   "shows": [
+    "s_we_take",
+    "s_guest_up"
+   ],
+   "note": "1-3 결과: 가방을 가져감, 첫 거짓말과 코"
+  },
+  {
+   "id": "sc_kid_reach_latch",
+   "place": "fall",
+   "note": "1-4 걸쇠 앞 자격"
+  },
+  {
+   "id": "sc_ladder_tease",
+   "place": "fall",
+   "shows": [
+    "s_in",
+    "s_you_go_in"
+   ],
+   "note": "1-4 사다리 뒤 놀림"
+  },
+  {
+   "id": "sc_kid_squeeze",
+   "place": "fall",
+   "note": "대화2 결과: 틈으로 들어가 빗장을 듦"
+  },
+  {
+   "id": "sc_gate_check",
+   "place": "gate",
+   "shows": [
+    "s_body_bow_in",
+    "s_guest_in"
+   ],
+   "cinematic": true,
+   "note": "1-5 검문"
+  },
+  {
+   "id": "sc_gate_pass",
+   "place": "gate",
+   "note": "대화3 결과: 통행증이라는 거짓, 문 기둥에 코 갈기"
+  },
+  {
+   "id": "sc_plaza_welcome",
+   "place": "plaza",
+   "shows": [
+    "s_we_bow_guest",
+    "s_guest_eat"
+   ],
+   "note": "2-1 광장 대접"
+  },
+  {
+   "id": "sc_cart_passes",
+   "place": "plaza",
+   "note": "대화4 결과: 가방이 수레 길로"
+  },
+  {
+   "id": "sc_depot_arrive",
+   "place": "depot",
+   "shows": [
+    "s_we_offer",
+    "s_thing",
+    "s_up",
+    "s_in"
+   ],
+   "note": "2-2 창고, 키노피오 놀이, 바구니 뚜껑"
+  },
+  {
+   "id": "sc_d5_after",
+   "place": "depot",
+   "note": "대화5 결과: 고정쇠"
+  },
+  {
+   "id": "sc_bag_back",
+   "place": "depot",
+   "note": "장치2 뒤: 가방, 골목 쪽 손짓"
+  },
+  {
+   "id": "sc_alley_walk",
+   "place": "alley",
+   "note": "2-3 골목: 천 덮은 덩어리, 자기 집 창 가리기"
+  },
+  {
+   "id": "sc_knot_knock",
+   "place": "alley",
+   "shows": [
+    "s_i_hide"
+   ],
+   "note": "2-3 옹이 신호, 껍질 문"
+  },
+  {
+   "id": "sc_hideout_show",
+   "place": "hideout",
+   "note": "2-3 굴: 숨긴 물건, 나무 새 선물"
+  },
+  {
+   "id": "sc_play_mirror",
+   "place": "hideout",
+   "shows": [
+    "s_we"
+   ],
+   "note": "놀이: 거울"
+  },
+  {
+   "id": "sc_play_musicbox",
+   "place": "hideout",
+   "shows": [
+    "s_we_up"
+   ],
+   "note": "놀이: 오르골(코 그대로 — 참말)"
+  },
+  {
+   "id": "sc_play_top",
+   "place": "hideout",
+   "note": "놀이: 팽이"
+  },
+  {
+   "id": "sc_play_charcoal",
+   "place": "hideout",
+   "shows": [
+    "s_draw_you"
+   ],
+   "note": "놀이: 숯 그림"
+  },
+  {
+   "id": "sc_seek_found",
+   "place": "hideout",
+   "note": "숨기기 놀이: 둥지 헝겊 밑에서 나무 새를 찾음 — 키노피오가 깔깔, 벽 그림 쪽으로"
+  },
+  {
+   "id": "sc_kid_seeks",
+   "place": "hideout",
+   "note": "숨기기 놀이: 내가 숨긴 자리를 키노피오가 두 군데 헛짚고 찾음"
+  },
+  {
+   "id": "sc_hide_together",
+   "place": "hideout",
+   "shows": [
+    "s_we"
+   ],
+   "note": "숨기기 놀이: 둘이 함께 숨긴 물건을 헝겊 밑으로 「우리」"
+  },
+  {
+   "id": "sc_kid_brother",
+   "place": "hideout",
+   "shows": [
+    "s_bro",
+    "s_bro_in"
+   ],
+   "note": "2-3 「형」"
+  },
+  {
+   "id": "sc_d6_after",
+   "place": "hideout",
+   "note": "대화6 결과: 가방을 보고 가슴을 내밂(배지 신호)"
+  },
+  {
+   "id": "sc_badge_gift",
+   "place": "hideout",
+   "note": "선물: 파랑새 배지"
+  },
+  {
+   "id": "sc_first_bell",
+   "place": "hideout",
+   "note": "첫 종소리"
+  },
+  {
+   "id": "sc_field_procession",
+   "place": "field",
+   "note": "3-1 수레 행렬"
+  },
+  {
+   "id": "sc_fish_rises",
+   "place": "pond",
+   "shows": [
+    "s_we_offer",
+    "s_fish",
+    "s_fish_spit_bare",
+    "s_body_remain",
+    "s_guest_up"
+   ],
+   "cinematic": true,
+   "note": "3-1 물고기(핵심)"
+  },
+  {
+   "id": "sc_bells_many",
+   "place": "pond",
+   "note": "대화7 뒤 종이 연달아"
+  },
+  {
+   "id": "sc_audience_sits",
+   "place": "plaza",
+   "note": "3-2 관객이 앉음"
+  },
+  {
+   "id": "sc_take_seat",
+   "place": "plaza",
+   "note": "3-2 주인공이 앉음 → 극"
+  },
+  {
+   "id": "sc_after_play",
+   "place": "plaza",
+   "cinematic": true,
+   "note": "3-2 막이 닫히고 모두 붉은 끈을 봄, 빈자리"
+  },
+  {
+   "id": "sc_cloth_lifted",
+   "place": "alley",
+   "shows": [
+    "s_you_guest"
+   ],
+   "cinematic": true,
+   "note": "3-3 천을 걷음 — 배신"
+  },
+  {
+   "id": "sc_trunk_voice",
+   "place": "alley",
+   "shows": [
+    "s_i_guest"
+   ],
+   "note": "4-1 옹이 속 고백 한 줄"
+  },
+  {
+   "id": "sc_door_opens",
+   "place": "alley",
+   "cinematic": true,
+   "note": "4-1 대화8 결과: 갈래대로 문이 열리고 키노피오가 굴 안 벽 그림 쪽으로"
+  },
+  {
+   "id": "sc_confession",
+   "place": "hideout",
+   "cinematic": true,
+   "note": "4-1 고백(글자 없음) — 벽 그림 앞(대화6 결과가 보임)과 둘째 종"
+  },
+  {
+   "id": "sc_band_glint",
+   "place": "plaza",
+   "shows": [
+    "s_we_offer_guest"
+   ],
+   "note": "4-2 새 띠(띠 글자는 띠 벗기기 화면에서 — 메인: bandSentence = s_we_offer_guest)"
+  },
+  {
+   "id": "sc_final_call",
+   "place": "plaza",
+   "note": "4-2 뒤 지팡이 소리, 행렬"
+  },
+  {
+   "id": "sc_pond_lineup",
+   "place": "pond",
+   "shows": [
+    "s_guest_in"
+   ],
+   "cinematic": true,
+   "note": "4-3 줄"
+  },
+  {
+   "id": "sc_lineup_place",
+   "place": "pond",
+   "note": "이어하기: 줄 자리만 다시 맞춤(카메라 없음)"
+  },
+  {
+   "id": "sc_d9_after",
+   "place": "pond",
+   "note": "대화9 결과: 촌장이 비켜 서고 주인공이 웅덩이 끝으로 걸어감"
+  },
+  {
+   "id": "sc_end_two",
+   "place": "pond",
+   "cinematic": true,
+   "note": "끝: 「우리→가다→안」 둘이 나란히"
+  },
+  {
+   "id": "sc_end_jump",
+   "place": "pond",
+   "cinematic": true,
+   "note": "끝: 떠안음 — 키노피오가 스스로 뛰어듦"
+  },
+  {
+   "id": "sc_end_rise",
+   "place": "pond",
+   "cinematic": true,
+   "note": "끝: 물이 부풂(따짐·함께 갈래 장치4 전)"
+  },
+  {
+   "id": "sc_end_kid_runs",
+   "place": "pond",
+   "cinematic": true,
+   "note": "끝: 짚힌 키노피오가 달려옴"
+  },
+  {
+   "id": "sc_end_pull",
+   "place": "pond",
+   "cinematic": true,
+   "note": "끝: 손을 끌어당김"
+  },
+  {
+   "id": "sc_swallow",
+   "place": "pond",
+   "cinematic": true,
+   "note": "끝: 삼킴"
+  },
+  {
+   "id": "sc_belly",
+   "place": "pond",
+   "cinematic": true,
+   "note": "끝: 뱃속"
+  },
+  {
+   "id": "sc_chapter_card",
+   "place": "pond",
+   "cinematic": true,
+   "note": "1장 끝"
+  }
+ ],
+ "events": [
+  {
+   "id": "ev_start",
+   "on": "start",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "hide"
+    ],
+    [
+     "npc",
+     "watcher",
+     "hide"
+    ],
+    [
+     "set",
+     "f_start"
+    ],
+    [
+     "scene",
+     "sc_wake"
+    ],
+    [
+     "goal"
+    ]
+   ]
+  },
+  {
+   "id": "ev_load_alone",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "hide"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_start"
+    ],
+    "none": [
+     "f_sacked"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_watcher_off",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "watcher",
+     "hide"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_d3_watch"
+    ]
+   }
+  },
+  {
+   "id": "ev_look_book_again",
+   "on": "touch:look_book",
+   "do": [
+    [
+     "read",
+     "rd_pinocchio"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_look_book"
+    ]
+   },
+   "note": "같은 방아쇠의 '다시'를 먼저 둬야 첫 번 사건이 깃발을 세운 뒤 또 돌지 않음"
+  },
+  {
+   "id": "ev_look_book",
+   "on": "touch:look_book",
+   "do": [
+    [
+     "read",
+     "rd_pinocchio"
+    ],
+    [
+     "thought",
+     "내가 읽던 책… 같이 떨어졌나.",
+     3.4
+    ],
+    [
+     "set",
+     "f_look_book"
+    ],
+    [
+     "set",
+     "f_look_any"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_look_book"
+    ]
+   },
+   "note": "생각1"
+  },
+  {
+   "id": "ev_look_umbrella",
+   "on": "touch:look_umbrella",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ],
+    [
+     "set",
+     "f_look_any"
+    ]
+   ]
+  },
+  {
+   "id": "ev_look_clock",
+   "on": "touch:look_clock",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ],
+    [
+     "set",
+     "f_look_any"
+    ]
+   ]
+  },
+  {
+   "id": "ev_sack_walk",
+   "on": "enter:z_collector_fall",
+   "do": [
+    [
+     "set",
+     "f_look_any"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_start"
+    ],
+    "none": [
+     "f_look_any"
+    ]
+   },
+   "note": "물건을 안 누르고 수거꾼 쪽으로 걸어가도 1-2가 시작(QA P2-2)"
+  },
+  {
+   "id": "ev_sack",
+   "on": "flag:f_look_any",
+   "do": [
+    [
+     "wait",
+     1.4
+    ],
+    [
+     "set",
+     "f_sacked"
+    ],
+    [
+     "scene",
+     "sc_sack"
+    ],
+    [
+     "scene",
+     "sc_first_words"
+    ],
+    [
+     "board",
+     "open"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "gesture",
+     "both"
+    ],
+    [
+     "dialogue",
+     "d1_collector"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_sacked"
+    ]
+   }
+  },
+  {
+   "id": "ev_talk_kid_d1",
+   "on": "talk:kinopio",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "react",
+     "kid_tap_hero_chest"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_board_open"
+    ],
+    "none": [
+     "f_d1"
+    ]
+   }
+  },
+  {
+   "id": "ev_d1_done",
+   "on": "done:d1_collector",
+   "do": [
+    [
+     "music",
+     "music_village2"
+    ],
+    [
+     "set",
+     "f_bag_taken"
+    ],
+    [
+     "scene",
+     "sc_d1_after"
+    ],
+    [
+     "thought",
+     "위로… 돌아갈 수 있다는 건가.",
+     3.6
+    ],
+    [
+     "set",
+     "f_kid_leading"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_ladder_front"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "note": "생각2"
+  },
+  {
+   "id": "ev_load_lead_ladder",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_ladder_front"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_kid_leading"
+    ],
+    "none": [
+     "f_at_latch"
+    ]
+   }
+  },
+  {
+   "id": "ev_kid_at_latch",
+   "on": "arrive:kinopio",
+   "do": [
+    [
+     "scene",
+     "sc_kid_reach_latch"
+    ],
+    [
+     "set",
+     "f_at_latch"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_kid_leading"
+    ],
+    "none": [
+     "f_at_latch"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_latch",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_gap_side"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "pose",
+     "stand"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_at_latch"
+    ],
+    "none": [
+     "f_path_open"
+    ]
+   }
+  },
+  {
+   "id": "ev_gap_try",
+   "on": "enter:z_fall_gap",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_stuck_gap"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_path_open",
+     "f_tease"
+    ]
+   }
+  },
+  {
+   "id": "ev_ladder",
+   "on": "puzzle:pz_ladder",
+   "do": [
+    [
+     "prop",
+     "ladder",
+     "unfolded"
+    ],
+    [
+     "scene",
+     "sc_ladder_tease"
+    ],
+    [
+     "set",
+     "f_tease"
+    ],
+    [
+     "goal"
+    ]
+   ]
+  },
+  {
+   "id": "ev_d2_done",
+   "on": "done:d2_kid_gap",
+   "do": [
+    [
+     "scene",
+     "sc_kid_squeeze"
+    ],
+    [
+     "prop",
+     "bolt_fall",
+     "lifted"
+    ],
+    [
+     "set",
+     "f_path_open"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "gate"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ]
+  },
+  {
+   "id": "ev_load_lead_gate",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "gate"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_path_open"
+    ],
+    "none": [
+     "f_gate_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_gate",
+   "on": "enter:gate",
+   "do": [
+    [
+     "set",
+     "f_gate_met"
+    ],
+    [
+     "scene",
+     "sc_gate_check"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_path_open"
+    ],
+    "none": [
+     "f_gate_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_gate",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_gate_met"
+    ],
+    "none": [
+     "f_d3"
+    ]
+   }
+  },
+  {
+   "id": "ev_d3_watch",
+   "on": "done:d3_chief_gate",
+   "do": [
+    [
+     "npc",
+     "watcher",
+     "show"
+    ],
+    [
+     "npc",
+     "watcher",
+     "warp",
+     "z_gate_side"
+    ],
+    [
+     "npc",
+     "watcher",
+     "follow"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d3_watch"
+    ]
+   }
+  },
+  {
+   "id": "ev_d3_done",
+   "on": "done:d3_chief_gate",
+   "do": [
+    [
+     "scene",
+     "sc_gate_pass"
+    ],
+    [
+     "set",
+     "f_gate_open"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "plaza"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ]
+  },
+  {
+   "id": "ev_load_lead_plaza",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "plaza"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_gate_open"
+    ],
+    "none": [
+     "f_plaza_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_watcher",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "watcher",
+     "show"
+    ],
+    [
+     "npc",
+     "watcher",
+     "warp",
+     "player"
+    ],
+    [
+     "npc",
+     "watcher",
+     "follow"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d3_watch"
+    ],
+    "none": [
+     "f_watcher_parked"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_watcher_park",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "watcher",
+     "show"
+    ],
+    [
+     "npc",
+     "watcher",
+     "warp",
+     "z_crowd_offer"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_watcher_parked"
+    ],
+    "none": [
+     "f_final_call"
+    ]
+   }
+  },
+  {
+   "id": "ev_plaza",
+   "on": "enter:plaza",
+   "do": [
+    [
+     "set",
+     "f_plaza_met"
+    ],
+    [
+     "play",
+     "play_rehearsal",
+     "start"
+    ],
+    [
+     "prop",
+     "stage",
+     "rehearsal"
+    ],
+    [
+     "scene",
+     "sc_plaza_welcome"
+    ],
+    [
+     "companion",
+     "kinopio",
+     true
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_gate_open"
+    ],
+    "none": [
+     "f_plaza_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_watcher_park",
+   "on": "enter:plaza",
+   "do": [
+    [
+     "set",
+     "f_watcher_parked"
+    ],
+    [
+     "npc",
+     "watcher",
+     "stay"
+    ],
+    [
+     "npc",
+     "watcher",
+     "moveTo",
+     "z_crowd_offer"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d3_watch"
+    ],
+    "none": [
+     "f_watcher_parked"
+    ]
+   },
+   "note": "지킴이는 광장까지"
+  },
+  {
+   "id": "ev_load_plaza_kid",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ],
+    [
+     "companion",
+     "kinopio",
+     true
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_plaza_met"
+    ],
+    "none": [
+     "f_d4"
+    ]
+   }
+  },
+  {
+   "id": "ev_d4_teacher",
+   "on": "done:d4_porridge",
+   "do": [
+    [
+     "npc",
+     "porridge",
+     "follow"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d4_teacher"
+    ]
+   }
+  },
+  {
+   "id": "ev_d4_done",
+   "on": "done:d4_porridge",
+   "do": [
+    [
+     "sound",
+     "cart",
+     0.4,
+     0.9
+    ],
+    [
+     "scene",
+     "sc_cart_passes"
+    ],
+    [
+     "set",
+     "f_cart_seen"
+    ],
+    [
+     "clear",
+     "f_kid_follow"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "depot"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ]
+  },
+  {
+   "id": "ev_load_lead_depot",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "depot"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_cart_seen"
+    ],
+    "none": [
+     "f_depot_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_depot",
+   "on": "enter:depot",
+   "do": [
+    [
+     "set",
+     "f_depot_met"
+    ],
+    [
+     "scene",
+     "sc_depot_arrive"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_cart_seen"
+    ],
+    "none": [
+     "f_depot_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_depot",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_depot_barrel"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_depot_met"
+    ],
+    "none": [
+     "f_bag_back"
+    ]
+   }
+  },
+  {
+   "id": "ev_d5_done",
+   "on": "done:d5_collector_cart",
+   "do": [
+    [
+     "scene",
+     "sc_d5_after"
+    ],
+    [
+     "goal"
+    ]
+   ]
+  },
+  {
+   "id": "ev_teacher_home",
+   "on": "puzzle:pz_cart",
+   "do": [
+    [
+     "npc",
+     "porridge",
+     "stay"
+    ],
+    [
+     "npc",
+     "porridge",
+     "moveTo",
+     "z_porridge"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d4_teacher"
+    ]
+   }
+  },
+  {
+   "id": "ev_bag",
+   "on": "puzzle:pz_cart",
+   "do": [
+    [
+     "prop",
+     "satchel",
+     "taken"
+    ],
+    [
+     "prop",
+     "hero_bag",
+     "back"
+    ],
+    [
+     "set",
+     "f_bag_back"
+    ],
+    [
+     "scene",
+     "sc_bag_back"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_bark_door_front"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ]
+  },
+  {
+   "id": "ev_load_lead_alley",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_bark_door_front"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_bag_back"
+    ],
+    "none": [
+     "f_door_open"
+    ]
+   }
+  },
+  {
+   "id": "ev_alley",
+   "on": "enter:alley",
+   "do": [
+    [
+     "set",
+     "f_alley_met"
+    ],
+    [
+     "scene",
+     "sc_alley_walk"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_bark_door_front"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_bag_back"
+    ],
+    "none": [
+     "f_alley_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_knock",
+   "on": "arrive:kinopio",
+   "do": [
+    [
+     "scene",
+     "sc_knot_knock"
+    ],
+    [
+     "prop",
+     "bark_door",
+     "open"
+    ],
+    [
+     "set",
+     "f_door_open"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_hideout_talk"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_bag_back"
+    ],
+    "none": [
+     "f_door_open"
+    ]
+   }
+  },
+  {
+   "id": "ev_door_early",
+   "on": "touch:bark_door",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_door_open"
+    ]
+   }
+  },
+  {
+   "id": "ev_hideout",
+   "on": "enter:hideout",
+   "do": [
+    [
+     "music",
+     "music_hideout"
+    ],
+    [
+     "set",
+     "f_hideout_met"
+    ],
+    [
+     "scene",
+     "sc_hideout_show"
+    ],
+    [
+     "set",
+     "f_wood_bird"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_door_open"
+    ],
+    "none": [
+     "f_hideout_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_door",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_hideout_talk"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_door_open"
+    ],
+    "none": [
+     "f_hideout_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_hideout",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_hideout_talk"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hideout_met"
+    ],
+    "none": [
+     "f_bell1"
+    ]
+   }
+  },
+  {
+   "id": "ev_stash",
+   "on": "touch:stash",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_seek_on",
+     "f_hide_me"
+    ]
+   }
+  },
+  {
+   "id": "ev_stash_after",
+   "on": "touch:stash",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hide_done"
+    ]
+   }
+  },
+  {
+   "id": "ev_whet",
+   "on": "touch:whetstone_hideout",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_seek_on",
+     "f_hide_me"
+    ]
+   }
+  },
+  {
+   "id": "ev_whet_after",
+   "on": "touch:whetstone_hideout",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hide_done"
+    ]
+   }
+  },
+  {
+   "id": "ev_nest",
+   "on": "touch:hide_nest",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_seek_on",
+     "f_hide_me"
+    ]
+   }
+  },
+  {
+   "id": "ev_nest_after",
+   "on": "touch:hide_nest",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hide_done"
+    ]
+   }
+  },
+  {
+   "id": "ev_seek_wrong_stash",
+   "on": "touch:stash",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "react",
+     "kid_giggle_hidden"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_seek_on"
+    ],
+    "none": [
+     "f_hide_done"
+    ]
+   }
+  },
+  {
+   "id": "ev_seek_wrong_whet",
+   "on": "touch:whetstone_hideout",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "react",
+     "kid_giggle_hidden"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_seek_on"
+    ],
+    "none": [
+     "f_hide_done"
+    ]
+   }
+  },
+  {
+   "id": "ev_seek_found",
+   "on": "touch:hide_nest",
+   "do": [
+    [
+     "scene",
+     "sc_seek_found"
+    ],
+    [
+     "set",
+     "f_hide_done"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_hideout_drawing"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_seek_on"
+    ],
+    "none": [
+     "f_hide_done"
+    ]
+   },
+   "note": "둥지 헝겊 밑에서 나무 새를 찾음"
+  },
+  {
+   "id": "ev_hide_me_stash",
+   "on": "touch:stash",
+   "do": [
+    [
+     "set",
+     "f_hid_stash"
+    ],
+    [
+     "scene",
+     "sc_kid_seeks"
+    ],
+    [
+     "set",
+     "f_hide_done"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_hideout_drawing"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hide_me"
+    ],
+    "none": [
+     "f_hide_done"
+    ]
+   }
+  },
+  {
+   "id": "ev_hide_me_whet",
+   "on": "touch:whetstone_hideout",
+   "do": [
+    [
+     "set",
+     "f_hid_whet"
+    ],
+    [
+     "scene",
+     "sc_kid_seeks"
+    ],
+    [
+     "set",
+     "f_hide_done"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_hideout_drawing"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hide_me"
+    ],
+    "none": [
+     "f_hide_done"
+    ]
+   }
+  },
+  {
+   "id": "ev_hide_me_nest",
+   "on": "touch:hide_nest",
+   "do": [
+    [
+     "set",
+     "f_hid_nest"
+    ],
+    [
+     "scene",
+     "sc_kid_seeks"
+    ],
+    [
+     "set",
+     "f_hide_done"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_hideout_drawing"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hide_me"
+    ],
+    "none": [
+     "f_hide_done"
+    ]
+   }
+  },
+  {
+   "id": "ev_hide_we",
+   "on": "done:d_play_hide",
+   "do": [
+    [
+     "scene",
+     "sc_hide_together"
+    ],
+    [
+     "set",
+     "f_hide_done"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_hideout_drawing"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hide_we"
+    ]
+   }
+  },
+  {
+   "id": "ev_mirror",
+   "on": "touch:mirror_shard",
+   "do": [
+    [
+     "scene",
+     "sc_play_mirror"
+    ],
+    [
+     "set",
+     "f_play_mirror"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hideout_met"
+    ],
+    "none": [
+     "f_play_mirror"
+    ]
+   }
+  },
+  {
+   "id": "ev_top",
+   "on": "touch:spin_top",
+   "do": [
+    [
+     "scene",
+     "sc_play_top"
+    ],
+    [
+     "set",
+     "f_play_top"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hideout_met"
+    ],
+    "none": [
+     "f_play_top"
+    ]
+   }
+  },
+  {
+   "id": "ev_music",
+   "on": "puzzle:pz_musicbox",
+   "do": [
+    [
+     "scene",
+     "sc_play_musicbox"
+    ],
+    [
+     "set",
+     "f_play_music"
+    ]
+   ]
+  },
+  {
+   "id": "ev_bro",
+   "on": "enter:z_hideout_drawing|arrive:kinopio",
+   "do": [
+    [
+     "scene",
+     "sc_kid_brother"
+    ],
+    [
+     "set",
+     "f_bro_shown"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hide_done"
+    ],
+    "none": [
+     "f_bro_shown"
+    ]
+   },
+   "note": "숨기기 놀이 뒤 키노피오가 벽 그림 앞으로 앞장 → 닿으면(또는 주인공이 먼저 들어서면) 「형」"
+  },
+  {
+   "id": "ev_charcoal",
+   "on": "touch:wall_drawing",
+   "do": [
+    [
+     "scene",
+     "sc_play_charcoal"
+    ],
+    [
+     "prop",
+     "wall_hero",
+     "shown"
+    ],
+    [
+     "set",
+     "f_play_draw"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_hideout_met"
+    ],
+    "none": [
+     "f_play_draw"
+    ]
+   }
+  },
+  {
+   "id": "ev_d6_done",
+   "on": "done:d6_kid_drawing",
+   "do": [
+    [
+     "scene",
+     "sc_d6_after"
+    ],
+    [
+     "set",
+     "f_bell1"
+    ],
+    [
+     "scene",
+     "sc_first_bell"
+    ],
+    [
+     "prop",
+     "cart",
+     "at_pond"
+    ],
+    [
+     "companion",
+     "kinopio",
+     true
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ],
+   "note": "대화6 뒤 바로 첫 종(넛지, QA P1-1). 배지는 밭에 닿기 전까지 줄 수 있음"
+  },
+  {
+   "id": "ev_badge",
+   "on": "talk:kinopio",
+   "do": [
+    [
+     "scene",
+     "sc_badge_gift"
+    ],
+    [
+     "prop",
+     "kid_badge",
+     "shown"
+    ],
+    [
+     "set",
+     "f_badge"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d6"
+    ],
+    "none": [
+     "f_badge",
+     "f_field_met"
+    ]
+   },
+   "note": "[가정] 대화6 뒤(밭에 닿기 전) 키노피오를 한 번 더 누르면 배지를 꽂아 줌"
+  },
+  {
+   "id": "ev_load_field",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ],
+    [
+     "companion",
+     "kinopio",
+     true
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_bell1"
+    ],
+    "none": [
+     "f_fish_seen"
+    ]
+   }
+  },
+  {
+   "id": "ev_field",
+   "on": "enter:field",
+   "do": [
+    [
+     "set",
+     "f_field_met"
+    ],
+    [
+     "music",
+     "music_procession"
+    ],
+    [
+     "loop",
+     "crowd",
+     "crowd_murmur",
+     0.4
+    ],
+    [
+     "loop",
+     "cart",
+     "cart_heavy",
+     0.5
+    ],
+    [
+     "prop",
+     "tracks",
+     "visible"
+    ],
+    [
+     "scene",
+     "sc_field_procession"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_bell1"
+    ],
+    "none": [
+     "f_field_met"
+    ]
+   }
+  },
+  {
+   "id": "ev_fish",
+   "on": "enter:z_pond_stop",
+   "do": [
+    [
+     "set",
+     "f_fish_seen"
+    ],
+    [
+     "clear",
+     "f_kid_follow"
+    ],
+    [
+     "scene",
+     "sc_fish_rises"
+    ],
+    [
+     "prop",
+     "cart",
+     "emptied"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_field_met"
+    ],
+    "none": [
+     "f_fish_seen"
+    ]
+   }
+  },
+  {
+   "id": "ev_fish_far",
+   "on": "enter:pond",
+   "do": [
+    [
+     "set",
+     "f_fish_seen"
+    ],
+    [
+     "clear",
+     "f_kid_follow"
+    ],
+    [
+     "scene",
+     "sc_fish_rises"
+    ],
+    [
+     "prop",
+     "cart",
+     "emptied"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_field_met"
+    ],
+    "none": [
+     "f_fish_seen"
+    ]
+   },
+   "note": "밭 끝 자리를 거치지 않고 웅덩이에 닿아도"
+  },
+  {
+   "id": "ev_load_fish",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_field_stone"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "pose",
+     "sulk"
+    ],
+    [
+     "npc",
+     "mother",
+     "warp",
+     "z_pond_edge"
+    ],
+    [
+     "npc",
+     "mother",
+     "pose",
+     "kneel"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_fish_seen"
+    ],
+    "none": [
+     "f_d7"
+    ]
+   }
+  },
+  {
+   "id": "ev_d7_done",
+   "on": "done:d7_mother_lump",
+   "do": [
+    [
+     "stoploop",
+     "crowd"
+    ],
+    [
+     "scene",
+     "sc_bells_many"
+    ],
+    [
+     "set",
+     "f_bell2"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "plaza"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ]
+  },
+  {
+   "id": "ev_load_lead_play",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "plaza"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_bell2"
+    ],
+    "none": [
+     "f_audience"
+    ]
+   }
+  },
+  {
+   "id": "ev_audience",
+   "on": "enter:plaza",
+   "do": [
+    [
+     "set",
+     "f_audience"
+    ],
+    [
+     "sound",
+     "bell_near",
+     0.9
+    ],
+    [
+     "music",
+     ""
+    ],
+    [
+     "loop",
+     "crowd",
+     "crowd_murmur",
+     0.35
+    ],
+    [
+     "play",
+     "play_rehearsal",
+     "stop"
+    ],
+    [
+     "prop",
+     "stage",
+     "idle"
+    ],
+    [
+     "scene",
+     "sc_audience_sits"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_bell2"
+    ],
+    "none": [
+     "f_audience"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_audience",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     [
+      -3.4,
+      15.9
+     ]
+    ],
+    [
+     "npc",
+     "kinopio",
+     "pose",
+     "sit"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_audience"
+    ],
+    "none": [
+     "f_play_done"
+    ]
+   }
+  },
+  {
+   "id": "ev_play_start",
+   "on": "enter:z_audience_seat|touch:audience_seat",
+   "do": [
+    [
+     "set",
+     "f_play_started"
+    ],
+    [
+     "scene",
+     "sc_take_seat"
+    ],
+    [
+     "prop",
+     "stage",
+     "ceremony"
+    ],
+    [
+     "play",
+     "play_day",
+     "start"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_audience"
+    ],
+    "none": [
+     "f_play_started"
+    ]
+   },
+   "note": "빈자리를 누르거나 들어서면(QA P1-2)"
+  },
+  {
+   "id": "ev_seat_early",
+   "on": "touch:audience_seat",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_audience"
+    ]
+   }
+  },
+  {
+   "id": "ev_play_end",
+   "on": "playEnd:play_day",
+   "do": [
+    [
+     "scene",
+     "sc_after_play"
+    ],
+    [
+     "prop",
+     "sawdust_trail",
+     "shown"
+    ],
+    [
+     "set",
+     "f_play_done"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_kid_house"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "hide"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ]
+  },
+  {
+   "id": "ev_load_house",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "hide"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_play_done"
+    ],
+    "none": [
+     "f_cloth_lifted"
+    ]
+   }
+  },
+  {
+   "id": "ev_hook",
+   "on": "touch:cord_hook",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ]
+  },
+  {
+   "id": "ev_workbench",
+   "on": "touch:kid_workbench",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ]
+  },
+  {
+   "id": "ev_cloth_early",
+   "on": "touch:brother_lump",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_play_done"
+    ]
+   },
+   "note": "2막에는 천 덮인 덩어리 — 걷지 않음"
+  },
+  {
+   "id": "ev_cloth_knot",
+   "on": "touch:brother_lump",
+   "do": [
+    [
+     "prop",
+     "brother_knot2",
+     "shown"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_play_done",
+     "f_cord_twice"
+    ],
+    "none": [
+     "f_cloth_lifted"
+    ]
+   },
+   "note": "대화3 두 번 감음 갈래면 형 덩어리 매듭도 두 번(QA P2-6)"
+  },
+  {
+   "id": "ev_cloth",
+   "on": "touch:brother_lump",
+   "do": [
+    [
+     "prop",
+     "brother_lump",
+     "uncovered"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "scene",
+     "sc_cloth_lifted"
+    ],
+    [
+     "set",
+     "f_cloth_lifted"
+    ],
+    [
+     "set",
+     "f_kid_fled"
+    ],
+    [
+     "prop",
+     "bark_door",
+     "closed"
+    ],
+    [
+     "prop",
+     "door_nose",
+     "long"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_hideout_door_in"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_play_done"
+    ],
+    "none": [
+     "f_cloth_lifted"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_trunk",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_hideout_door_in"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_kid_fled"
+    ],
+    "none": [
+     "f_d8"
+    ]
+   }
+  },
+  {
+   "id": "ev_trunk_again",
+   "on": "touch:bark_door",
+   "do": [
+    [
+     "dialogue",
+     "d8_kid_trunk"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_trunk_heard"
+    ],
+    "none": [
+     "f_d8"
+    ]
+   }
+  },
+  {
+   "id": "ev_trunk",
+   "on": "touch:bark_door",
+   "do": [
+    [
+     "set",
+     "f_trunk_heard"
+    ],
+    [
+     "scene",
+     "sc_trunk_voice"
+    ],
+    [
+     "dialogue",
+     "d8_kid_trunk"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_kid_fled"
+    ],
+    "none": [
+     "f_trunk_heard"
+    ]
+   }
+  },
+  {
+   "id": "ev_d8_done",
+   "on": "done:d8_kid_trunk",
+   "do": [
+    [
+     "prop",
+     "door_nose",
+     "hidden"
+    ],
+    [
+     "prop",
+     "bark_door",
+     "open"
+    ],
+    [
+     "scene",
+     "sc_door_opens"
+    ],
+    [
+     "set",
+     "f_confess_go"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "lead",
+     "z_hideout_drawing"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ],
+   "note": "문이 갈래대로 열리고 키노피오가 벽 그림 앞으로 앞장(대화6 결과를 다시 보게, QA P1-5)"
+  },
+  {
+   "id": "ev_confess",
+   "on": "arrive:kinopio|enter:z_hideout_drawing",
+   "do": [
+    [
+     "set",
+     "f_confessed"
+    ],
+    [
+     "scene",
+     "sc_confession"
+    ],
+    [
+     "set",
+     "f_bell3"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_confess_go"
+    ],
+    "none": [
+     "f_confessed"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_confess",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_hideout_drawing"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_confess_go"
+    ],
+    "none": [
+     "f_confessed"
+    ]
+   }
+  },
+  {
+   "id": "ev_d8_side",
+   "on": "sceneEnd:sc_confession",
+   "do": [
+    [
+     "companion",
+     "kinopio",
+     true
+    ]
+   ],
+   "when": {
+    "any": [
+     "f_d8_take",
+     "f_d8_together"
+    ]
+   }
+  },
+  {
+   "id": "ev_d8_away",
+   "on": "sceneEnd:sc_confession",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "moveTo",
+     "z_back_corner"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d8_accuse"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_side",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "player"
+    ],
+    [
+     "companion",
+     "kinopio",
+     true
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_confessed"
+    ],
+    "any": [
+     "f_d8_take",
+     "f_d8_together"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_away",
+   "on": "load",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "show"
+    ],
+    [
+     "npc",
+     "kinopio",
+     "warp",
+     "z_back_corner"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d8_accuse",
+     "f_confessed"
+    ],
+    "none": [
+     "f_final_call"
+    ]
+   }
+  },
+  {
+   "id": "ev_band",
+   "on": "enter:plaza",
+   "do": [
+    [
+     "set",
+     "f_band_seen"
+    ],
+    [
+     "music",
+     "music_truth",
+     0.25
+    ],
+    [
+     "prop",
+     "band_new",
+     "posted"
+    ],
+    [
+     "scene",
+     "sc_band_glint"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_confessed"
+    ],
+    "none": [
+     "f_band_seen"
+    ]
+   }
+  },
+  {
+   "id": "ev_band_touch",
+   "on": "touch:band_new",
+   "do": [
+    [
+     "decree",
+     "decree_band",
+     "decree_human"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_band_seen"
+    ],
+    "none": [
+     "f_band_peeled"
+    ]
+   },
+   "note": "장치3 띠 벗기기(사람 종이 — 주인공만). 다 벗기면 decree:decree_band"
+  },
+  {
+   "id": "ev_band_touch_after",
+   "on": "touch:band_new",
+   "do": [
+    [
+     "hero",
+     "react",
+     "hero_inspect"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_band_seen"
+    ]
+   }
+  },
+  {
+   "id": "ev_band_peel",
+   "on": "decree:decree_band",
+   "do": [
+    [
+     "prop",
+     "band_new",
+     "peeled"
+    ],
+    [
+     "thought",
+     "붓… 안쪽에 있다.",
+     3.6
+    ],
+    [
+     "set",
+     "f_band_peeled"
+    ],
+    [
+     "glint",
+     "rd_book_page_whale"
+    ],
+    [
+     "wait",
+     3.0
+    ],
+    [
+     "scene",
+     "sc_final_call"
+    ],
+    [
+     "prop",
+     "torches",
+     "shown"
+    ],
+    [
+     "glint",
+     "rd_book_page_whale"
+    ],
+    [
+     "set",
+     "f_final_call"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ],
+   "note": "생각3"
+  },
+  {
+   "id": "ev_whale_read",
+   "on": "read:rd_book_page_whale",
+   "do": [
+    [
+     "set",
+     "f_whale_read"
+    ]
+   ]
+  },
+  {
+   "id": "ev_rd_page_carve",
+   "on": "read:rd_page_carve",
+   "do": [
+    [
+     "set",
+     "f_rd_page_carve"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_rd_page_carve"
+    ]
+   },
+   "note": "탐험 보상 — 원작 낱장(기록용 깃발)"
+  },
+  {
+   "id": "ev_rd_page_theatre",
+   "on": "read:rd_page_theatre",
+   "do": [
+    [
+     "set",
+     "f_rd_page_theatre"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_rd_page_theatre"
+    ]
+   },
+   "note": "탐험 보상 — 원작 낱장(기록용 깃발)"
+  },
+  {
+   "id": "ev_rd_page_nose",
+   "on": "read:rd_page_nose",
+   "do": [
+    [
+     "set",
+     "f_rd_page_nose"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_rd_page_nose"
+    ]
+   },
+   "note": "탐험 보상 — 원작 낱장(기록용 깃발)"
+  },
+  {
+   "id": "ev_rd_page_chair",
+   "on": "read:rd_page_chair",
+   "do": [
+    [
+     "set",
+     "f_rd_page_chair"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_rd_page_chair"
+    ]
+   },
+   "note": "탐험 보상 — 원작 낱장(기록용 깃발)"
+  },
+  {
+   "id": "ev_rd_page_field",
+   "on": "read:rd_page_field",
+   "do": [
+    [
+     "set",
+     "f_rd_page_field"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_rd_page_field"
+    ]
+   },
+   "note": "탐험 보상 — 원작 낱장(기록용 깃발)"
+  },
+  {
+   "id": "ev_lineup",
+   "on": "enter:field",
+   "do": [
+    [
+     "set",
+     "f_lineup"
+    ],
+    [
+     "sound",
+     "bell_near",
+     0.9
+    ],
+    [
+     "loop",
+     "crowd",
+     "crowd_murmur",
+     0.4
+    ],
+    [
+     "scene",
+     "sc_pond_lineup"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_final_call"
+    ],
+    "none": [
+     "f_lineup"
+    ]
+   }
+  },
+  {
+   "id": "ev_load_lineup",
+   "on": "load",
+   "do": [
+    [
+     "scene",
+     "sc_lineup_place"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_lineup"
+    ],
+    "none": [
+     "f_fish_final"
+    ]
+   },
+   "note": "이어하기: 줄 자리를 다시 맞춤"
+  },
+  {
+   "id": "ev_d9_done",
+   "on": "done:d9_chief_pond",
+   "do": [
+    [
+     "scene",
+     "sc_d9_after"
+    ],
+    [
+     "goal"
+    ],
+    [
+     "save"
+    ]
+   ],
+   "note": "sc_d9_after가 주인공을 웅덩이 끝으로 걸어 보내고, 끝 사건은 sceneEnd:sc_d9_after로 시작(이미 끝 자리 안에 서 있어도 — QA P0-4)"
+  },
+  {
+   "id": "ev_edge_two",
+   "on": "sceneEnd:sc_d9_after|enter:z_pond_bank",
+   "do": [
+    [
+     "set",
+     "f_fish_final"
+    ],
+    [
+     "prop",
+     "pond",
+     "awake"
+    ],
+    [
+     "scene",
+     "sc_end_two"
+    ],
+    [
+     "scene",
+     "sc_swallow"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d9",
+     "f_d9_two"
+    ],
+    "none": [
+     "f_fish_final"
+    ]
+   }
+  },
+  {
+   "id": "ev_edge_take",
+   "on": "sceneEnd:sc_d9_after|enter:z_pond_bank",
+   "do": [
+    [
+     "set",
+     "f_fish_final"
+    ],
+    [
+     "prop",
+     "pond",
+     "awake"
+    ],
+    [
+     "scene",
+     "sc_end_jump"
+    ],
+    [
+     "scene",
+     "sc_swallow"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d9",
+     "f_d8_take"
+    ],
+    "none": [
+     "f_fish_final",
+     "f_d9_two"
+    ]
+   }
+  },
+  {
+   "id": "ev_edge_accuse",
+   "on": "sceneEnd:sc_d9_after|enter:z_pond_bank",
+   "do": [
+    [
+     "set",
+     "f_fish_final"
+    ],
+    [
+     "prop",
+     "pond",
+     "awake"
+    ],
+    [
+     "scene",
+     "sc_end_rise"
+    ],
+    [
+     "set",
+     "f_pick_on"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d9",
+     "f_d8_accuse"
+    ],
+    "none": [
+     "f_fish_final",
+     "f_d9_two"
+    ]
+   }
+  },
+  {
+   "id": "ev_edge_together",
+   "on": "sceneEnd:sc_d9_after|enter:z_pond_bank",
+   "do": [
+    [
+     "set",
+     "f_fish_final"
+    ],
+    [
+     "prop",
+     "pond",
+     "awake"
+    ],
+    [
+     "scene",
+     "sc_end_rise"
+    ],
+    [
+     "prop",
+     "kid_hand",
+     "shown"
+    ],
+    [
+     "set",
+     "f_pull_on"
+    ],
+    [
+     "goal"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d9",
+     "f_d8_together"
+    ],
+    "none": [
+     "f_fish_final",
+     "f_d9_two"
+    ]
+   }
+  },
+  {
+   "id": "ev_pick",
+   "on": "puzzle:pz_pick",
+   "do": [
+    [
+     "scene",
+     "sc_end_kid_runs"
+    ],
+    [
+     "scene",
+     "sc_swallow"
+    ]
+   ]
+  },
+  {
+   "id": "ev_pull",
+   "on": "puzzle:pz_pull",
+   "do": [
+    [
+     "scene",
+     "sc_end_pull"
+    ],
+    [
+     "scene",
+     "sc_swallow"
+    ]
+   ]
+  },
+  {
+   "id": "ev_end",
+   "on": "sceneEnd:sc_swallow",
+   "do": [
+    [
+     "stoploop",
+     "crowd"
+    ],
+    [
+     "scene",
+     "sc_belly"
+    ],
+    [
+     "scene",
+     "sc_chapter_card"
+    ],
+    [
+     "set",
+     "f_end"
+    ],
+    [
+     "chapterEnd",
+     "chapter2"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_kid_lead",
+   "on": "talk:kinopio",
+   "do": [
+    [
+     "npc",
+     "kinopio",
+     "react",
+     "kid_beckon"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_kid_leading"
+    ],
+    "none": [
+     "f_tease"
+    ]
+   }
+  },
+  {
+   "id": "ev_talk_boss_late",
+   "on": "talk:collector_boss",
+   "do": [
+    [
+     "npc",
+     "collector_boss",
+     "react",
+     "boss_bow"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d5"
+    ]
+   }
+  },
+  {
+   "id": "ev_talk_chief_plaza",
+   "on": "talk:chief",
+   "do": [
+    [
+     "npc",
+     "chief",
+     "react",
+     "chief_bow"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d3"
+    ],
+    "none": [
+     "f_lineup"
+    ]
+   }
+  },
+  {
+   "id": "ev_talk_mother_alley",
+   "on": "talk:mother",
+   "do": [
+    [
+     "npc",
+     "mother",
+     "react",
+     "mother_bow"
+    ]
+   ],
+   "when": {
+    "none": [
+     "f_fish_seen"
+    ]
+   }
+  },
+  {
+   "id": "ev_talk_porridge_late",
+   "on": "talk:porridge",
+   "do": [
+    [
+     "npc",
+     "porridge",
+     "react",
+     "porridge_offer_again"
+    ]
+   ],
+   "when": {
+    "all": [
+     "f_d4"
+    ]
+   }
+  },
+  {
+   "id": "ev_talk_gate_a",
+   "on": "talk:gate_a",
+   "do": [
+    [
+     "npc",
+     "gate_a",
+     "react",
+     "villager_prostrate"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_gate_b",
+   "on": "talk:gate_b",
+   "do": [
+    [
+     "npc",
+     "gate_b",
+     "react",
+     "villager_prostrate"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_plaza_a",
+   "on": "talk:plaza_a",
+   "do": [
+    [
+     "npc",
+     "plaza_a",
+     "react",
+     "villager_prostrate"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_actor_a",
+   "on": "talk:actor_a",
+   "do": [
+    [
+     "npc",
+     "actor_a",
+     "react",
+     "villager_prostrate"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_actor_b",
+   "on": "talk:actor_b",
+   "do": [
+    [
+     "npc",
+     "actor_b",
+     "react",
+     "villager_prostrate"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_actor_c",
+   "on": "talk:actor_c",
+   "do": [
+    [
+     "npc",
+     "actor_c",
+     "react",
+     "villager_prostrate"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_neighbor",
+   "on": "talk:neighbor",
+   "do": [
+    [
+     "npc",
+     "neighbor",
+     "react",
+     "villager_prostrate"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_field_elder",
+   "on": "talk:field_elder",
+   "do": [
+    [
+     "npc",
+     "field_elder",
+     "react",
+     "villager_prostrate"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_field_kid",
+   "on": "talk:field_kid",
+   "do": [
+    [
+     "npc",
+     "field_kid",
+     "react",
+     "villager_prostrate"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_crowd_gate",
+   "on": "talk:crowd_gate",
+   "do": [
+    [
+     "npc",
+     "crowd_gate",
+     "react",
+     "silhouette_bow"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_crowd_plaza",
+   "on": "talk:crowd_plaza",
+   "do": [
+    [
+     "npc",
+     "crowd_plaza",
+     "react",
+     "silhouette_bow"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_crowd_alley",
+   "on": "talk:crowd_alley",
+   "do": [
+    [
+     "npc",
+     "crowd_alley",
+     "react",
+     "silhouette_bow"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_crowd_field",
+   "on": "talk:crowd_field",
+   "do": [
+    [
+     "npc",
+     "crowd_field",
+     "react",
+     "silhouette_bow"
+    ]
+   ]
+  },
+  {
+   "id": "ev_talk_collectors",
+   "on": "talk:collectors",
+   "do": [
+    [
+     "npc",
+     "collectors",
+     "react",
+     "silhouette_bow"
+    ]
+   ]
+  }
+ ],
+ "areas": [
+  {
+   "id": "a_fall",
+   "name": "빛구멍 언덕",
+   "places": [
+    "fall"
+   ],
+   "shape": [
+    {
+     "c": [
+      -55.6,
+      30.0
+     ],
+     "r": 6.6
+    },
+    {
+     "line": [
+      [
+       -50.7,
+       23.1
+      ],
+      [
+       -47.26,
+       18.19
+      ],
+      [
+       -43.8,
+       21.3
+      ],
+      [
+       -39.9,
+       24.3
+      ]
+     ],
+     "w": 2.0
+    },
+    {
+     "line": [
+      [
+       -55.2,
+       20.8
+      ],
+      [
+       -48.5,
+       19.6
+      ]
+     ],
+     "w": 1.3
+    }
+   ],
+   "bounds": [
+    -63.0,
+    -42.0,
+    17.0,
+    38.4
+   ],
+   "camera": {
+    "yaw": 100,
+    "pitch": 22,
+    "distance": 12.0,
+    "fov": 34
+   },
+   "exits": [
+    {
+     "to": "a_gate",
+     "pos": [
+      -39.9,
+      24.3
+     ],
+     "radius": 1.0,
+     "spawn": [
+      -35.9,
+      24.4
+     ],
+     "face": 90,
+     "label": "사다리 아래로",
+     "note": "pos = 이 구역의 출구(빗장 너머 다리 머리), spawn = 목적 구역에서 서는 자리"
+    }
+   ]
+  },
+  {
+   "id": "a_gate",
+   "name": "앉은돌 길목",
+   "places": [
+    "gate"
+   ],
+   "shape": [
+    {
+     "line": [
+      [
+       -38.4,
+       24.4
+      ],
+      [
+       -33.6,
+       24.4
+      ]
+     ],
+     "w": 1.6
+    },
+    {
+     "c": [
+      -28.0,
+      25.0
+     ],
+     "r": 5.0
+    },
+    {
+     "line": [
+      [
+       -24.5,
+       24.8
+      ],
+      [
+       -20.3,
+       24.6
+      ]
+     ],
+     "w": 2.2
+    },
+    {
+     "line": [
+      [
+       -28.0,
+       21.0
+      ],
+      [
+       -28.0,
+       19.1
+      ]
+     ],
+     "w": 1.3
+    }
+   ],
+   "bounds": [
+    -40.0,
+    -19.2,
+    19.4,
+    30.2
+   ],
+   "camera": {
+    "yaw": 96,
+    "pitch": 24,
+    "distance": 12.0,
+    "fov": 34
+   },
+   "exits": [
+    {
+     "to": "a_fall",
+     "pos": [
+      -38.3,
+      24.4
+     ],
+     "radius": 0.8,
+     "spawn": [
+      -51.8,
+      26.9
+     ],
+     "face": 280,
+     "label": "언덕으로",
+     "note": "pos = 다리 서쪽 끝, spawn = 언덕 위 사다리 머리"
+    },
+    {
+     "to": "a_plaza",
+     "pos": [
+      -20.3,
+      24.6
+     ],
+     "radius": 1.5,
+     "spawn": [
+      -11.8,
+      23.8
+     ],
+     "face": 100,
+     "label": "광장 쪽",
+     "note": "pos = 문 기둥 사이 길 끝(내리막 계단 머리)"
+    },
+    {
+     "to": "a_cart",
+     "pos": [
+      -28.0,
+      19.15
+     ],
+     "radius": 1.3,
+     "spawn": [
+      8.6,
+      -8.8
+     ],
+     "face": 80,
+     "label": "수레 길",
+     "note": "pos = 남쪽 바위 틈 내리막 계단 머리"
+    }
+   ]
+  },
+  {
+   "id": "a_cart",
+   "name": "수레 길",
+   "places": [
+    "depot"
+   ],
+   "shape": [
+    {
+     "c": [
+      14.5,
+      -7.6
+     ],
+     "r": 5.6
+    },
+    {
+     "line": [
+      [
+       8.6,
+       -3.6
+      ],
+      [
+       18.0,
+       -4.6
+      ],
+      [
+       27.6,
+       -4.9
+      ]
+     ],
+     "w": 1.6
+    },
+    {
+     "line": [
+      [
+       5.6,
+       -9.2
+      ],
+      [
+       10.0,
+       -9.6
+      ]
+     ],
+     "w": 1.2
+    },
+    {
+     "line": [
+      [
+       19.0,
+       -10.0
+      ],
+      [
+       21.8,
+       -10.0
+      ]
+     ],
+     "w": 2.4
+    }
+   ],
+   "bounds": [
+    3.5,
+    28.5,
+    -15.0,
+    0.0
+   ],
+   "camera": {
+    "yaw": 96,
+    "pitch": 25,
+    "distance": 13.0,
+    "fov": 34
+   },
+   "mood": {
+    "ambient": 0.64,
+    "keyIntensity": 0.22,
+    "drain": 0.6
+   },
+   "exits": [
+    {
+     "to": "a_plaza",
+     "pos": [
+      8.6,
+      -3.5
+     ],
+     "radius": 1.2,
+     "spawn": [
+      4.6,
+      2.2
+     ],
+     "face": 310,
+     "label": "광장 쪽",
+     "note": "pos = 광장 계단 발치"
+    },
+    {
+     "to": "a_field",
+     "pos": [
+      27.6,
+      -4.9
+     ],
+     "radius": 1.4,
+     "spawn": [
+      32.4,
+      -4.6
+     ],
+     "face": 100,
+     "label": "밭 쪽",
+     "note": "pos = 동쪽 수레 길 끝"
+    },
+    {
+     "to": "a_gate",
+     "pos": [
+      5.8,
+      -9.2
+     ],
+     "radius": 1.2,
+     "spawn": [
+      -28.0,
+      21.6
+     ],
+     "face": 0,
+     "label": "길목 쪽",
+     "note": "pos = 서쪽 선반 길 끝(길목 남쪽 계단으로 이어짐)"
+    }
+   ]
+  },
+  {
+   "id": "a_plaza",
+   "name": "꼭두 광장",
+   "places": [
+    "plaza"
+   ],
+   "shape": [
+    {
+     "c": [
+      -3.0,
+      13.0
+     ],
+     "r": 11.2
+    },
+    {
+     "line": [
+      [
+       -14.0,
+       24.4
+      ],
+      [
+       -5.0,
+       25.0
+      ],
+      [
+       1.2,
+       20.0
+      ]
+     ],
+     "w": 2.6
+    },
+    {
+     "line": [
+      [
+       4.0,
+       9.8
+      ],
+      [
+       10.4,
+       12.3
+      ]
+     ],
+     "w": 1.6
+    },
+    {
+     "line": [
+      [
+       2.0,
+       3.0
+      ],
+      [
+       6.0,
+       0.6
+      ]
+     ],
+     "w": 2.0
+    }
+   ],
+   "bounds": [
+    -13.5,
+    8.5,
+    -0.5,
+    29.0
+   ],
+   "camera": {
+    "yaw": 102,
+    "pitch": 24,
+    "distance": 14.0,
+    "fov": 34
+   },
+   "mood": {
+    "ambient": 0.72,
+    "keyIntensity": 0.28,
+    "drain": 0.3,
+    "note": "가장 칠해진 곳이지만 땅 밑: 윗면도 등불 웅덩이보다 어둡게(AreaSystem이 읽는 덮어쓰기 값)"
+   },
+   "exits": [
+    {
+     "to": "a_gate",
+     "pos": [
+      -14.0,
+      24.4
+     ],
+     "radius": 1.5,
+     "spawn": [
+      -23.2,
+      23.5
+     ],
+     "face": 270,
+     "label": "길목 쪽",
+     "note": "pos = 길목 계단 발치(서쪽), spawn = 길목 문 안쪽"
+    },
+    {
+     "to": "a_alley",
+     "pos": [
+      10.4,
+      12.3
+     ],
+     "radius": 1.4,
+     "spawn": [
+      15.4,
+      16.6
+     ],
+     "face": 70,
+     "label": "골목 쪽",
+     "note": "pos = 무대 남쪽 끝을 돌아 나가는 좁은 길 끝"
+    },
+    {
+     "to": "a_cart",
+     "pos": [
+      6.0,
+      0.6
+     ],
+     "radius": 1.3,
+     "spawn": [
+      11.0,
+      -4.0
+     ],
+     "face": 120,
+     "label": "수레 길",
+     "note": "pos = 종탑 옆 내리막 계단 머리(남동)"
+    }
+   ]
+  },
+  {
+   "id": "a_alley",
+   "name": "삐걱의자 골목",
+   "places": [
+    "alley"
+   ],
+   "shape": [
+    {
+     "line": [
+      [
+       13.0,
+       15.6
+      ],
+      [
+       18.5,
+       18.6
+      ],
+      [
+       24.5,
+       20.8
+      ],
+      [
+       29.6,
+       21.4
+      ]
+     ],
+     "w": 2.4
+    },
+    {
+     "c": [
+      33.4,
+      22.5
+     ],
+     "r": 2.3
+    },
+    {
+     "line": [
+      [
+       30.2,
+       24.55
+      ],
+      [
+       34.4,
+       26.1
+      ],
+      [
+       35.9,
+       27.1
+      ]
+     ],
+     "w": 0.6
+    },
+    {
+     "line": [
+      [
+       28.4,
+       19.0
+      ],
+      [
+       28.9,
+       18.2
+      ]
+     ],
+     "w": 1.0
+    }
+   ],
+   "bounds": [
+    10.5,
+    36.0,
+    12.0,
+    26.5
+   ],
+   "camera": {
+    "yaw": 72,
+    "pitch": 25,
+    "distance": 13.0,
+    "fov": 34
+   },
+   "mood": {
+    "ambient": 0.66,
+    "keyIntensity": 0.24,
+    "drain": 0.5
+   },
+   "exits": [
+    {
+     "to": "a_plaza",
+     "pos": [
+      13.2,
+      15.4
+     ],
+     "radius": 1.4,
+     "spawn": [
+      6.8,
+      10.6
+     ],
+     "face": 250,
+     "label": "광장 쪽",
+     "note": "pos = 골목 서쪽 끝"
+    },
+    {
+     "to": "a_field",
+     "pos": [
+      28.9,
+      18.3
+     ],
+     "radius": 1.1,
+     "spawn": [
+      34.4,
+      7.4
+     ],
+     "face": 160,
+     "label": "밭 쪽",
+     "note": "pos = 남쪽 난간 틈 내리막 계단 머리"
+    },
+    {
+     "to": "a_hideout",
+     "pos": [
+      35.6,
+      26.9
+     ],
+     "radius": 0.8,
+     "spawn": [
+      39.6,
+      28.2
+     ],
+     "face": 60,
+     "label": "틈새",
+     "note": "pos = 키노피오 집 옆 바위 틈 끝(폭 약 0.9m: 키노피오는 쉽게, 주인공은 비집고)"
+    }
+   ]
+  },
+  {
+   "id": "a_field",
+   "name": "기적의 밭 · 먹물 웅덩이",
+   "places": [
+    "field",
+    "pond"
+   ],
+   "shape": [
+    {
+     "c": [
+      40.5,
+      -4.0
+     ],
+     "r": 9.6
+    },
+    {
+     "c": [
+      58.0,
+      -18.0
+     ],
+     "r": 11.4
+    },
+    {
+     "line": [
+      [
+       32.7,
+       10.0
+      ],
+      [
+       36.0,
+       3.0
+      ],
+      [
+       38.6,
+       -3.2
+      ]
+     ],
+     "w": 1.6
+    },
+    {
+     "line": [
+      [
+       30.0,
+       -4.9
+      ],
+      [
+       35.0,
+       -4.2
+      ]
+     ],
+     "w": 1.6
+    },
+    {
+     "line": [
+      [
+       40.2,
+       -6.4
+      ],
+      [
+       49.0,
+       -11.4
+      ]
+     ],
+     "w": 3.4
+    }
+   ],
+   "bounds": [
+    28.0,
+    59.0,
+    -22.0,
+    11.5
+   ],
+   "camera": {
+    "yaw": 128,
+    "pitch": 26,
+    "distance": 15.0,
+    "fov": 36
+   },
+   "mood": {
+    "ambient": 0.6,
+    "keyIntensity": 0.2,
+    "drain": 0.62
+   },
+   "exits": [
+    {
+     "to": "a_alley",
+     "pos": [
+      32.9,
+      9.7
+     ],
+     "radius": 1.2,
+     "spawn": [
+      26.8,
+      20.0
+     ],
+     "face": 300,
+     "label": "골목 쪽",
+     "note": "pos = 골목에서 내려오는 긴 계단 발치(북)"
+    },
+    {
+     "to": "a_cart",
+     "pos": [
+      30.0,
+      -4.9
+     ],
+     "radius": 1.4,
+     "spawn": [
+      24.0,
+      -4.9
+     ],
+     "face": 270,
+     "label": "수레 길",
+     "note": "pos = 서쪽 수레 길 끝"
+    }
+   ]
+  },
+  {
+   "id": "a_hideout",
+   "name": "키노피오의 비밀 굴",
+   "places": [
+    "hideout"
+   ],
+   "shape": [
+    {
+     "c": [
+      42.4,
+      29.4
+     ],
+     "r": 3.6
+    },
+    {
+     "line": [
+      [
+       37.0,
+       27.45
+      ],
+      [
+       39.0,
+       28.0
+      ]
+     ],
+     "w": 0.6
+    }
+   ],
+   "bounds": [
+    36.2,
+    48.2,
+    24.2,
+    34.4
+   ],
+   "camera": {
+    "yaw": 52,
+    "pitch": 29,
+    "distance": 8.0,
+    "fov": 38
+   },
+   "mood": {
+    "note": "AreaSystem Moods에 a_hideout 칸이 없음 → 추가 필요: ambient (0.36,0.31,0.26) key (0.85,0.70,0.52) 0.30 drain 0.30 bg (0.20,0.17,0.15). 따뜻함은 옹이구멍 빛줄기·등불이 만듦"
+   },
+   "exits": [
+    {
+     "to": "a_alley",
+     "pos": [
+      37.6,
+      27.55
+     ],
+     "radius": 0.7,
+     "spawn": [
+      30.9,
+      24.6
+     ],
+     "face": 240,
+     "label": "골목으로",
+     "note": "pos = 뿌리 굴 입구(남서)"
+    }
+   ]
+  }
+ ]
+}

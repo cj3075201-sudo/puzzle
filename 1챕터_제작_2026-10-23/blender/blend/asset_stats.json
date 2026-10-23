@@ -1,0 +1,4239 @@
+{
+ "Hero_Bluebird": {
+  "group": "characters",
+  "tris": 5168,
+  "parts": {
+   "LegL": 226,
+   "LegR": 226,
+   "Body": 1740,
+   "Tail": 60,
+   "WingL": 308,
+   "WingR": 308,
+   "Head": 1280,
+   "EyeL": 116,
+   "EyeR": 116,
+   "Beak": 64,
+   "Crest": 60,
+   "Cap": 406,
+   "Cape": 258
+  },
+  "size": [
+   0.72,
+   0.76,
+   1.05
+  ],
+  "min": [
+   -0.36,
+   -0.32,
+   0.01
+  ],
+  "max": [
+   0.36,
+   0.44,
+   1.06
+  ],
+  "materials": [
+   "M_Beak",
+   "M_Bluebird",
+   "M_BluebirdBelly",
+   "M_Brass",
+   "M_CapNavy",
+   "M_EyeShine",
+   "M_Ink",
+   "M_Leather"
+  ],
+  "hierarchy": [
+   "Body",
+   "  Cape",
+   "  Head",
+   "    Beak",
+   "    Cap",
+   "    Crest",
+   "    EyeL",
+   "    EyeR",
+   "  Tail",
+   "  WingL",
+   "  WingR",
+   "LegL",
+   "LegR"
+  ],
+  "note": ""
+ },
+ "Kinopio": {
+  "group": "characters",
+  "tris": 2860,
+  "parts": {
+   "LegL": 280,
+   "LegR": 280,
+   "Body": 1268,
+   "Mark": 36,
+   "ArmL": 306,
+   "ArmR": 280,
+   "Head": 108,
+   "EyeL": 64,
+   "EyeR": 110,
+   "Nose": 128
+  },
+  "size": [
+   0.38,
+   0.64,
+   0.87
+  ],
+  "min": [
+   -0.18,
+   -0.55,
+   0.0
+  ],
+  "max": [
+   0.2,
+   0.09,
+   0.87
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Mark",
+   "M_PaintBlue",
+   "M_PaintRed",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_SketchNose"
+  ],
+  "hierarchy": [
+   "Body",
+   "  ArmL",
+   "  ArmR",
+   "  Head",
+   "    EyeL",
+   "    EyeR",
+   "    Nose",
+   "  Mark",
+   "LegL",
+   "LegR"
+  ],
+  "note": ""
+ },
+ "Chief": {
+  "group": "characters",
+  "tris": 4000,
+  "parts": {
+   "LegL": 392,
+   "LegR": 392,
+   "Body": 860,
+   "ArmL": 376,
+   "ArmR": 376,
+   "Head": 696,
+   "Canopy": 780,
+   "EyeL": 64,
+   "EyeR": 64
+  },
+  "size": [
+   3.64,
+   2.26,
+   3.16
+  ],
+  "min": [
+   -1.88,
+   -0.97,
+   -0.01
+  ],
+  "max": [
+   1.76,
+   1.29,
+   3.16
+  ],
+  "materials": [
+   "M_Bark",
+   "M_Ink",
+   "M_Leaf",
+   "M_PaintRed",
+   "M_Paper",
+   "M_PaperShade",
+   "M_PuppetJoint"
+  ],
+  "hierarchy": [
+   "Body",
+   "  ArmL",
+   "  ArmR",
+   "  Head",
+   "    Canopy",
+   "    EyeL",
+   "    EyeR",
+   "LegL",
+   "LegR"
+  ],
+  "note": ""
+ },
+ "Mother": {
+  "group": "characters",
+  "tris": 3486,
+  "parts": {
+   "LegL": 280,
+   "LegR": 280,
+   "Body": 2008,
+   "ArmL": 306,
+   "ArmR": 280,
+   "Head": 100,
+   "EyeL": 64,
+   "Cloth": 168
+  },
+  "size": [
+   0.88,
+   0.82,
+   2.18
+  ],
+  "min": [
+   -0.5,
+   -0.48,
+   -0.16
+  ],
+  "max": [
+   0.37,
+   0.33,
+   2.01
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PaintRed",
+   "M_Paper",
+   "M_PuppetJoint",
+   "M_PuppetWood"
+  ],
+  "hierarchy": [
+   "Body",
+   "  ArmL",
+   "  ArmR",
+   "    Cloth",
+   "  Head",
+   "    EyeL",
+   "LegL",
+   "LegR"
+  ],
+  "note": ""
+ },
+ "Villager_A": {
+  "group": "characters",
+  "tris": 2418,
+  "parts": {
+   "LegL": 280,
+   "LegR": 280,
+   "Body": 1024,
+   "ArmL": 280,
+   "ArmR": 306,
+   "Head": 120,
+   "EyeL": 64,
+   "EyeR": 64
+  },
+  "size": [
+   0.53,
+   0.25,
+   1.81
+  ],
+  "min": [
+   -0.27,
+   -0.14,
+   0.0
+  ],
+  "max": [
+   0.25,
+   0.12,
+   1.81
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PaintRed",
+   "M_PuppetJoint",
+   "M_PuppetWood"
+  ],
+  "hierarchy": [
+   "Body",
+   "  ArmL",
+   "  ArmR",
+   "  Head",
+   "    EyeL",
+   "    EyeR",
+   "LegL",
+   "LegR"
+  ],
+  "note": ""
+ },
+ "Villager_B": {
+  "group": "characters",
+  "tris": 2778,
+  "parts": {
+   "LegL": 280,
+   "LegR": 252,
+   "Body": 1432,
+   "ArmL": 280,
+   "ArmR": 306,
+   "Head": 100,
+   "EyeL": 64,
+   "EyeR": 64
+  },
+  "size": [
+   0.87,
+   0.35,
+   1.2
+  ],
+  "min": [
+   -0.44,
+   -0.18,
+   0.0
+  ],
+  "max": [
+   0.43,
+   0.17,
+   1.2
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PaintRed",
+   "M_PuppetJoint",
+   "M_PuppetWood"
+  ],
+  "hierarchy": [
+   "Body",
+   "  ArmL",
+   "  ArmR",
+   "  Head",
+   "    EyeL",
+   "    EyeR",
+   "LegL",
+   "LegR"
+  ],
+  "note": ""
+ },
+ "Villager_C": {
+  "group": "characters",
+  "tris": 2964,
+  "parts": {
+   "LegL": 280,
+   "LegR": 280,
+   "Body": 1532,
+   "ArmL": 280,
+   "ArmR": 308,
+   "Head": 110,
+   "EyeL": 64,
+   "EyeR": 110
+  },
+  "size": [
+   0.75,
+   0.65,
+   1.38
+  ],
+  "min": [
+   -0.38,
+   -0.44,
+   -0.04
+  ],
+  "max": [
+   0.37,
+   0.21,
+   1.34
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PaintRed",
+   "M_PuppetJoint",
+   "M_PuppetWood"
+  ],
+  "hierarchy": [
+   "Body",
+   "  ArmL",
+   "  ArmR",
+   "  Head",
+   "    EyeL",
+   "    EyeR",
+   "LegL",
+   "LegR"
+  ],
+  "note": ""
+ },
+ "Silhouette_A": {
+  "group": "characters",
+  "tris": 1640,
+  "parts": {
+   "LegL": 280,
+   "LegR": 280,
+   "Body": 440,
+   "ArmL": 280,
+   "ArmR": 280,
+   "Head": 80
+  },
+  "size": [
+   0.6,
+   0.33,
+   1.67
+  ],
+  "min": [
+   -0.3,
+   -0.18,
+   0.0
+  ],
+  "max": [
+   0.29,
+   0.15,
+   1.67
+  ],
+  "materials": [
+   "M_Silhouette"
+  ],
+  "hierarchy": [
+   "Body",
+   "  ArmL",
+   "  ArmR",
+   "  Head",
+   "LegL",
+   "LegR"
+  ],
+  "note": ""
+ },
+ "Silhouette_B": {
+  "group": "characters",
+  "tris": 1272,
+  "parts": {
+   "LegL": 280,
+   "LegR": 280,
+   "Body": 108,
+   "ArmL": 280,
+   "ArmR": 280,
+   "Head": 44
+  },
+  "size": [
+   0.88,
+   0.34,
+   1.13
+  ],
+  "min": [
+   -0.44,
+   -0.17,
+   0.0
+  ],
+  "max": [
+   0.44,
+   0.17,
+   1.13
+  ],
+  "materials": [
+   "M_Silhouette"
+  ],
+  "hierarchy": [
+   "Body",
+   "  ArmL",
+   "  ArmR",
+   "  Head",
+   "LegL",
+   "LegR"
+  ],
+  "note": ""
+ },
+ "Lump_1": {
+  "group": "characters",
+  "tris": 1084,
+  "parts": {
+   "Body": 1084
+  },
+  "size": [
+   0.71,
+   0.62,
+   0.53
+  ],
+  "min": [
+   -0.36,
+   -0.31,
+   0.0
+  ],
+  "max": [
+   0.35,
+   0.31,
+   0.53
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PuppetJoint",
+   "M_PuppetWood"
+  ],
+  "hierarchy": [
+   "Body"
+  ],
+  "note": ""
+ },
+ "Lump_2": {
+  "group": "characters",
+  "tris": 1136,
+  "parts": {
+   "Body": 1084,
+   "Mark": 52
+  },
+  "size": [
+   0.65,
+   0.57,
+   0.69
+  ],
+  "min": [
+   -0.33,
+   -0.3,
+   0.0
+  ],
+  "max": [
+   0.32,
+   0.27,
+   0.69
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Mark",
+   "M_PaintRed",
+   "M_PuppetJoint",
+   "M_PuppetWood"
+  ],
+  "hierarchy": [
+   "Body",
+   "  Mark"
+  ],
+  "note": ""
+ },
+ "Lump_3": {
+  "group": "characters",
+  "tris": 1092,
+  "parts": {
+   "Body": 1092
+  },
+  "size": [
+   0.87,
+   0.78,
+   0.48
+  ],
+  "min": [
+   -0.44,
+   -0.39,
+   -0.08
+  ],
+  "max": [
+   0.43,
+   0.39,
+   0.4
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PuppetJoint",
+   "M_PuppetWood"
+  ],
+  "hierarchy": [
+   "Body"
+  ],
+  "note": ""
+ },
+ "Fish": {
+  "group": "characters",
+  "tris": 3432,
+  "parts": {
+   "Body": 1396,
+   "Tail": 88,
+   "JawUpper": 796,
+   "Eye": 232,
+   "JawLower": 816,
+   "FinL": 52,
+   "FinR": 52
+  },
+  "size": [
+   4.62,
+   9.92,
+   5.07
+  ],
+  "min": [
+   -2.31,
+   -4.42,
+   -2.35
+  ],
+  "max": [
+   2.31,
+   5.5,
+   2.71
+  ],
+  "materials": [
+   "M_Fish",
+   "M_FishEye",
+   "M_FishMouth",
+   "M_Ink",
+   "M_Paper"
+  ],
+  "hierarchy": [
+   "Body",
+   "  FinL",
+   "  FinR",
+   "  JawLower",
+   "  JawUpper",
+   "    Eye",
+   "  Tail"
+  ],
+  "note": ""
+ },
+ "Puppet": {
+  "group": "characters",
+  "tris": 2656,
+  "parts": {
+   "LegL": 280,
+   "LegR": 280,
+   "Body": 880,
+   "Head": 128,
+   "EyeL": 64,
+   "EyeR": 64,
+   "ArmL": 256,
+   "ArmR": 256,
+   "Rope": 448
+  },
+  "size": [
+   0.55,
+   0.83,
+   1.41
+  ],
+  "min": [
+   -0.3,
+   -0.38,
+   0.01
+  ],
+  "max": [
+   0.25,
+   0.45,
+   1.42
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_Rope"
+  ],
+  "hierarchy": [
+   "Body",
+   "  ArmL",
+   "  ArmR",
+   "  Head",
+   "    EyeL",
+   "    EyeR",
+   "LegL",
+   "LegR",
+   "Rope"
+  ],
+  "note": "Root = Stage/PuppetSpot (seat-front floor). Seat top 0.47 above root. Rope = human rope; hide/animate it when untied."
+ },
+ "Ladder": {
+  "group": "props",
+  "tris": 1360,
+  "parts": {
+   "Base": 688,
+   "Upper": 452,
+   "Latch": 220
+  },
+  "size": [
+   0.55,
+   0.18,
+   1.62
+  ],
+  "min": [
+   -0.28,
+   -0.13,
+   0.0
+  ],
+  "max": [
+   0.28,
+   0.05,
+   1.62
+  ],
+  "materials": [
+   "M_Brass",
+   "M_Ink",
+   "M_Iron",
+   "M_Leather",
+   "M_Wood"
+  ],
+  "hierarchy": [
+   "Base",
+   "  Latch",
+   "  Upper"
+  ],
+  "note": "Human object: fully finished, original colours (wood, brass hinges, iron feet, leather strap). Folded pose. Upper pivot = hinge at top of Base (local X axis). To unfold: rotate Upper local X by 180 deg (~3.1 m). Latch holds Upper to Base near the foot."
+ },
+ "Latch": {
+  "group": "props",
+  "tris": 220,
+  "parts": {
+   "Plate": 192,
+   "Hasp": 28
+  },
+  "size": [
+   0.22,
+   0.08,
+   0.49
+  ],
+  "min": [
+   -0.11,
+   -0.07,
+   -0.29
+  ],
+  "max": [
+   0.11,
+   0.01,
+   0.2
+  ],
+  "materials": [
+   "M_Brass",
+   "M_Ink",
+   "M_Iron"
+  ],
+  "hierarchy": [
+   "Plate",
+   "  Hasp"
+  ],
+  "note": "Hasp pivot = hinge axis (local X). Open: rotate Hasp local X ~ -100deg. Mount on a -Y facing surface; root = plate centre bottom."
+ },
+ "DrawnBar": {
+  "group": "props",
+  "tris": 1630,
+  "parts": {
+   "Frame": 611,
+   "Lines": 761,
+   "Bar": 258
+  },
+  "size": [
+   3.42,
+   0.59,
+   1.67
+  ],
+  "min": [
+   -1.71,
+   -0.3,
+   0.0
+  ],
+  "max": [
+   1.71,
+   0.29,
+   1.67
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_SketchLine",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Frame",
+   "  Bar",
+   "  Lines"
+  ],
+  "note": "Left post built, right post built only to ~0.8 m (pencil above, its bracket only drawn). Bar = the drawn bolt (paper core + heavy ink). Bar pivot = bar centre. Passage width between posts 1.34 m, passage along Y."
+ },
+ "Gap": {
+  "group": "props",
+  "tris": 1635,
+  "parts": {
+   "Wall": 1278,
+   "Lines": 357
+  },
+  "size": [
+   4.82,
+   1.6,
+   4.34
+  ],
+  "min": [
+   -2.43,
+   -0.79,
+   -0.12
+  ],
+  "max": [
+   2.39,
+   0.81,
+   4.22
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge",
+   "M_StoneDark"
+  ],
+  "hierarchy": [
+   "Wall",
+   "  Lines"
+  ],
+  "note": "Slit ~0.33-0.4 m wide at x=0, passage along Y, 2.4 m high under a chock stone. Upper courses of both rocks only drawn (pencil). Hero (0.72 m) cannot pass, Kinopio (~0.5 m) squeezes through. Leave a 0.35 m collider gap."
+ },
+ "Cart": {
+  "group": "props",
+  "tris": 2294,
+  "parts": {
+   "Frame": 746,
+   "Lines": 611,
+   "WheelL": 322,
+   "WheelR": 443,
+   "WheelLock": 172
+  },
+  "size": [
+   1.62,
+   2.55,
+   1.33
+  ],
+  "min": [
+   -0.76,
+   -1.55,
+   -0.04
+  ],
+  "max": [
+   0.87,
+   1.0,
+   1.29
+  ],
+  "materials": [
+   "M_Brass",
+   "M_Hatch",
+   "M_Ink",
+   "M_Iron",
+   "M_PaintRed",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Frame",
+   "  Lines",
+   "  WheelL",
+   "  WheelLock",
+   "  WheelR"
+  ],
+  "note": "Front (-Y Blender / +Z Unity) = handles. Near wheel WheelL built; far wheel WheelR exists only as a pencil circle (line materials, still spins with its pivot). Right board and right handle only drawn, back board stops half way. WheelLock = human iron clamp on WheelL."
+ },
+ "Chair": {
+  "group": "props",
+  "tris": 1439,
+  "parts": {
+   "Main": 855,
+   "Lines": 582,
+   "Face": 2
+  },
+  "size": [
+   0.74,
+   0.75,
+   1.56
+  ],
+  "min": [
+   -0.36,
+   -0.3,
+   -0.06
+  ],
+  "max": [
+   0.38,
+   0.45,
+   1.5
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Main",
+   "  Face",
+   "  Lines"
+  ],
+  "note": "Seat top z=0.5 (Unity y). Lump sits at seat centre. Back-right leg and the backrest's top-right shoulder exist only in pencil. Face = UV quad on the backrest front for the inscription glyph texture."
+ },
+ "Stage": {
+  "group": "props",
+  "tris": 2554,
+  "parts": {
+   "Main": 2204,
+   "StageProp": 128,
+   "Latch": 220,
+   "Face": 2
+  },
+  "size": [
+   6.1,
+   4.91,
+   4.81
+  ],
+  "min": [
+   -3.05,
+   -2.91,
+   0.0
+  ],
+  "max": [
+   3.05,
+   2.0,
+   4.81
+  ],
+  "materials": [
+   "M_BackdropNavy",
+   "M_Brass",
+   "M_CurtainRed",
+   "M_Ink",
+   "M_Iron",
+   "M_LampGlow",
+   "M_Paper",
+   "M_StageWood",
+   "M_Terracotta",
+   "M_TerracottaDark"
+  ],
+  "hierarchy": [
+   "Main",
+   "  Face",
+   "  PuppetSpot (empty)",
+   "  StageProp",
+   "    Latch"
+  ],
+  "note": "Platform top 0.8 m. PuppetSpot empty = seat-front floor (seat top 0.47 above it, seat back +0.42..+0.5 m behind). StageProp = movable stand, child Latch (brass) pins it. Face = UV quad on the front skirt (left of the steps) for the engraved line. Lamps: 4 x M_LampGlow boxes on the front edge at local (+-2.6/+-1.2, y=-1.85, z=1.25) - put small warm point lights there."
+ },
+ "PictureBoard": {
+  "group": "props",
+  "tris": 352,
+  "parts": {
+   "Board": 350,
+   "Face": 2
+  },
+  "size": [
+   2.68,
+   0.16,
+   3.22
+  ],
+  "min": [
+   -1.34,
+   -0.05,
+   0.0
+  ],
+  "max": [
+   1.34,
+   0.11,
+   3.22
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PageWhite",
+   "M_StageWood",
+   "M_Terracotta"
+  ],
+  "hierarchy": [
+   "Board",
+   "  Face"
+  ],
+  "note": "Face = 2.32 x 1.52 m UV quad (picture + five lines of glyphs as a texture). Painted (fully drawn, the king's board)."
+ },
+ "StoneTablet": {
+  "group": "props",
+  "tris": 1332,
+  "parts": {
+   "Tablet": 559,
+   "Lines": 771,
+   "Face": 2
+  },
+  "size": [
+   1.66,
+   0.88,
+   1.84
+  ],
+  "min": [
+   -0.77,
+   -0.44,
+   -0.13
+  ],
+  "max": [
+   0.89,
+   0.44,
+   1.7
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Tablet",
+   "  Face",
+   "  Lines"
+  ],
+  "note": "Top-right shoulder of the slab never carved (torn stone + pencil contour); plinth half drawn. Face = 1.0 x 1.1 m UV quad for the glyph line."
+ },
+ "Signpost": {
+  "group": "props",
+  "tris": 649,
+  "parts": {
+   "Post": 114,
+   "Lines": 217,
+   "Paint": 316,
+   "Face": 2
+  },
+  "size": [
+   1.64,
+   0.35,
+   1.96
+  ],
+  "min": [
+   -0.69,
+   -0.19,
+   -0.0
+  ],
+  "max": [
+   0.95,
+   0.16,
+   1.96
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintRed",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_Smudge"
+  ],
+  "hierarchy": [
+   "Post",
+   "  Face",
+   "  Lines",
+   "  Paint"
+  ],
+  "note": "Face = 1.1 x 0.45 m UV quad (two lines of glyphs); a red brush shape lies 3 mm in front of it on the left half, stopping mid-board. Arrow tip and a second lower board only drawn in pencil."
+ },
+ "Fence_DrawnBar": {
+  "group": "props",
+  "tris": 2089,
+  "parts": {
+   "Fence": 1022,
+   "Lines": 459,
+   "Gate": 352,
+   "Bar": 256
+  },
+  "size": [
+   6.3,
+   0.48,
+   1.76
+  ],
+  "min": [
+   -3.1,
+   -0.33,
+   -0.12
+  ],
+  "max": [
+   3.2,
+   0.14,
+   1.64
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_Smudge"
+  ],
+  "hierarchy": [
+   "Fence",
+   "  Bar",
+   "  Gate",
+   "  Lines"
+  ],
+  "note": "Gate 1.6 m between x=-0.85..0.85, hinge at x=-0.8 (Gate local Z axis). Bar (drawn bolt) on the -Y side, lift it up. Kid-size opening 0.33 m between posts x=2.0 and 2.4. Last post and the last rail section exist only in pencil."
+ },
+ "FishProp": {
+  "group": "props",
+  "tris": 576,
+  "parts": {
+   "Prop": 576
+  },
+  "size": [
+   2.5,
+   0.27,
+   2.31
+  ],
+  "min": [
+   -1.25,
+   -0.1,
+   0.0
+  ],
+  "max": [
+   1.25,
+   0.17,
+   2.31
+  ],
+  "materials": [
+   "M_Fish",
+   "M_FishEye",
+   "M_Ink",
+   "M_Paper",
+   "M_StageWood"
+  ],
+  "hierarchy": [
+   "Prop"
+  ],
+  "note": "Flat cut-out fish head facing -Y (Unity +Z); an actor stands at (0,0,0) inside the open mouth (mouth opening 0.48..1.25 m high, ~2 m wide)."
+ },
+ "Junk_Book": {
+  "group": "props",
+  "tris": 180,
+  "parts": {
+   "Item": 180
+  },
+  "size": [
+   0.32,
+   0.45,
+   0.08
+  ],
+  "min": [
+   -0.17,
+   -0.18,
+   -0.0
+  ],
+  "max": [
+   0.15,
+   0.27,
+   0.07
+  ],
+  "materials": [
+   "M_BookRed",
+   "M_Brass",
+   "M_PageWhite",
+   "M_Rope"
+  ],
+  "hierarchy": [
+   "Item"
+  ],
+  "note": "Red hardcover. For green/blue variants tint M_BookGreen/M_BookBlue in Unity or use ItemPile."
+ },
+ "Junk_Umbrella": {
+  "group": "props",
+  "tris": 204,
+  "parts": {
+   "Item": 204
+  },
+  "size": [
+   0.26,
+   1.16,
+   0.33
+  ],
+  "min": [
+   -0.13,
+   -0.59,
+   0.0
+  ],
+  "max": [
+   0.13,
+   0.57,
+   0.33
+  ],
+  "materials": [
+   "M_BookRed",
+   "M_Brass",
+   "M_Iron",
+   "M_Rope",
+   "M_Wood"
+  ],
+  "hierarchy": [
+   "Item"
+  ],
+  "note": ""
+ },
+ "Junk_Clock": {
+  "group": "props",
+  "tris": 300,
+  "parts": {
+   "Item": 300
+  },
+  "size": [
+   0.26,
+   0.1,
+   0.35
+  ],
+  "min": [
+   -0.13,
+   -0.06,
+   -0.01
+  ],
+  "max": [
+   0.13,
+   0.05,
+   0.34
+  ],
+  "materials": [
+   "M_BookBlue",
+   "M_Brass",
+   "M_Ink",
+   "M_Porcelain"
+  ],
+  "hierarchy": [
+   "Item"
+  ],
+  "note": ""
+ },
+ "Junk_Shoe": {
+  "group": "props",
+  "tris": 180,
+  "parts": {
+   "Item": 180
+  },
+  "size": [
+   0.11,
+   0.27,
+   0.2
+  ],
+  "min": [
+   -0.05,
+   -0.16,
+   0.0
+  ],
+  "max": [
+   0.05,
+   0.11,
+   0.2
+  ],
+  "materials": [
+   "M_BookRed",
+   "M_Iron",
+   "M_Leather"
+  ],
+  "hierarchy": [
+   "Item"
+  ],
+  "note": ""
+ },
+ "Junk_Teacup": {
+  "group": "props",
+  "tris": 220,
+  "parts": {
+   "Item": 220
+  },
+  "size": [
+   0.22,
+   0.22,
+   0.09
+  ],
+  "min": [
+   -0.11,
+   -0.11,
+   0.0
+  ],
+  "max": [
+   0.11,
+   0.11,
+   0.09
+  ],
+  "materials": [
+   "M_BookBlue",
+   "M_Porcelain"
+  ],
+  "hierarchy": [
+   "Item"
+  ],
+  "note": ""
+ },
+ "Junk_Lantern": {
+  "group": "props",
+  "tris": 160,
+  "parts": {
+   "Item": 160
+  },
+  "size": [
+   0.18,
+   0.18,
+   0.37
+  ],
+  "min": [
+   -0.09,
+   -0.09,
+   0.0
+  ],
+  "max": [
+   0.09,
+   0.09,
+   0.37
+  ],
+  "materials": [
+   "M_Brass",
+   "M_Iron",
+   "M_Porcelain"
+  ],
+  "hierarchy": [
+   "Item"
+  ],
+  "note": "Unlit fallen lantern (glass = M_Porcelain)."
+ },
+ "ItemPile": {
+  "group": "props",
+  "tris": 2266,
+  "parts": {
+   "Pile": 2266
+  },
+  "size": [
+   2.12,
+   1.69,
+   0.57
+  ],
+  "min": [
+   -1.06,
+   -0.85,
+   0.0
+  ],
+  "max": [
+   1.06,
+   0.84,
+   0.57
+  ],
+  "materials": [
+   "M_BookBlue",
+   "M_BookGreen",
+   "M_BookRed",
+   "M_Brass",
+   "M_Ink",
+   "M_Iron",
+   "M_Leather",
+   "M_PageWhite",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Porcelain",
+   "M_Rope",
+   "M_Wood"
+  ],
+  "hierarchy": [
+   "Pile"
+  ],
+  "note": ""
+ },
+ "PinocchioPage": {
+  "group": "props",
+  "tris": 344,
+  "parts": {
+   "Page": 248,
+   "Face": 96
+  },
+  "size": [
+   0.46,
+   0.6,
+   0.15
+  ],
+  "min": [
+   -0.24,
+   -0.3,
+   -0.0
+  ],
+  "max": [
+   0.23,
+   0.3,
+   0.14
+  ],
+  "materials": [
+   "M_PageWhite"
+  ],
+  "hierarchy": [
+   "Page",
+   "  Face"
+  ],
+  "note": "Lies flat on the ground, top = Unity +Y. Face = curled UV grid (0..1) for the page picture (Pinocchio plate 3) + text. Torn edge on the left (-X Blender / +X Unity)."
+ },
+ "Mound": {
+  "group": "props",
+  "tris": 828,
+  "parts": {
+   "Main": 828
+  },
+  "size": [
+   6.0,
+   1.5,
+   0.65
+  ],
+  "min": [
+   -3.0,
+   -0.75,
+   0.0
+  ],
+  "max": [
+   3.0,
+   0.75,
+   0.65
+  ],
+  "materials": [
+   "M_BookBlue",
+   "M_Brass",
+   "M_Hatch",
+   "M_Ink",
+   "M_PageWhite",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Porcelain",
+   "M_Rope"
+  ],
+  "hierarchy": [
+   "Main"
+  ],
+  "note": ""
+ },
+ "LampPost": {
+  "group": "props",
+  "tris": 552,
+  "parts": {
+   "Post": 552
+  },
+  "size": [
+   0.71,
+   0.32,
+   2.94
+  ],
+  "min": [
+   -0.17,
+   -0.16,
+   0.0
+  ],
+  "max": [
+   0.54,
+   0.16,
+   2.94
+  ],
+  "materials": [
+   "M_Brass",
+   "M_Iron",
+   "M_LampGlow"
+  ],
+  "hierarchy": [
+   "Post"
+  ],
+  "note": "Plaza = finished. Lamp glass (M_LampGlow) centre at local (0.38, 2.6 up, 0) Blender x -> Unity -x. Add a warm point light there (range ~6 m)."
+ },
+ "House_1": {
+  "group": "village",
+  "tris": 3763,
+  "parts": {
+   "House": 612,
+   "Lines": 3151
+  },
+  "size": [
+   6.09,
+   4.06,
+   5.8
+  ],
+  "min": [
+   -2.89,
+   -1.92,
+   -0.56
+  ],
+  "max": [
+   3.19,
+   2.15,
+   5.25
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_SketchLine",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "House",
+   "Lines"
+  ],
+  "note": "Outskirts (~20 % built). Paper drum built only up to a torn edge (0.4 m at the back, ~2.3 m front-left); the rest of the drum, the dome and the chimney exist as pencil construction. Ground door only drawn, real tiny door 1.35 m up. House = solid shell (collider), Lines = ink/pencil (unlit, no collider)."
+ },
+ "House_2": {
+  "group": "village",
+  "tris": 4955,
+  "parts": {
+   "House": 1698,
+   "Lines": 3257
+  },
+  "size": [
+   6.1,
+   4.39,
+   6.57
+  ],
+  "min": [
+   -3.0,
+   -2.28,
+   -0.1
+  ],
+  "max": [
+   3.1,
+   2.11,
+   6.47
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_SketchLine",
+   "M_Smudge",
+   "M_Terracotta",
+   "M_TerracottaDark",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "House",
+   "Lines"
+  ],
+  "note": "~45 % built. Lower drum built (torn down to 1.2 m at the back), upper drum only a painted wedge facing front-left, the rest pencil. Cone roof only as an outline. Ground door 0.55 x 0.85 m (too small for anyone)."
+ },
+ "House_3": {
+  "group": "village",
+  "tris": 4183,
+  "parts": {
+   "House": 2196,
+   "Lines": 1987
+  },
+  "size": [
+   5.67,
+   4.91,
+   6.84
+  ],
+  "min": [
+   -2.71,
+   -2.5,
+   -0.49
+  ],
+  "max": [
+   2.96,
+   2.41,
+   6.35
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_SketchLine",
+   "M_Smudge",
+   "M_Terracotta",
+   "M_TerracottaDark",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "House",
+   "Lines"
+  ],
+  "note": "~70 % built. Hall walls painted above ~1.5 m; the front-right top corner was never built (pencil box edges, torn paper, rubble). Pitched roof drawn only as its outline with one strip of tiles built at the left. Corner tower built, dome 2/3."
+ },
+ "House_4": {
+  "group": "village",
+  "tris": 3482,
+  "parts": {
+   "House": 2342,
+   "Lines": 1140
+  },
+  "size": [
+   3.92,
+   3.97,
+   7.15
+  ],
+  "min": [
+   -1.95,
+   -1.99,
+   -0.1
+  ],
+  "max": [
+   1.97,
+   1.98,
+   7.05
+  ],
+  "materials": [
+   "M_Ink",
+   "M_LampGlow",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Terracotta",
+   "M_TerracottaDark"
+  ],
+  "hierarchy": [
+   "House",
+   "Lines"
+  ],
+  "note": "~95 % built, next to the plaza: painted except the ragged foot. Last third of the balcony + railing, one chimney and one upper window are still only drawn."
+ },
+ "Tower_Dome": {
+  "group": "village",
+  "tris": 4110,
+  "parts": {
+   "House": 2796,
+   "Lines": 1314
+  },
+  "size": [
+   6.93,
+   6.49,
+   8.75
+  ],
+  "min": [
+   -3.44,
+   -3.27,
+   -0.1
+  ],
+  "max": [
+   3.5,
+   3.22,
+   8.65
+  ],
+  "materials": [
+   "M_Ink",
+   "M_LampGlow",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Terracotta",
+   "M_TerracottaDark"
+  ],
+  "hierarchy": [
+   "House",
+   "Lines"
+  ],
+  "note": "Big plaza tower: fully built and painted (the finished world). Some windows glow (M_LampGlow) - put warm point lights inside. Ground arch door faces -Y (Unity +Z)."
+ },
+ "Paving_Hex": {
+  "group": "village",
+  "tris": 982,
+  "parts": {
+   "Lines": 982
+  },
+  "size": [
+   7.98,
+   7.57,
+   0.0
+  ],
+  "min": [
+   -3.98,
+   -3.75,
+   0.01
+  ],
+  "max": [
+   3.99,
+   3.82,
+   0.01
+  ],
+  "materials": [
+   "M_Ink"
+  ],
+  "hierarchy": [
+   "Lines"
+  ],
+  "note": "8.0 x 8.0 m decal of hex stone outlines (flat M_Ink strips 1 cm above ground). Tile it; rotate 0/60/120 deg to hide repetition. Double-sided not needed (faces up)."
+ },
+ "Paving_HexBroken": {
+  "group": "village",
+  "tris": 332,
+  "parts": {
+   "Lines": 332
+  },
+  "size": [
+   8.01,
+   7.52,
+   0.0
+  ],
+  "min": [
+   -4.0,
+   -3.75,
+   0.01
+  ],
+  "max": [
+   4.01,
+   3.77,
+   0.01
+  ],
+  "materials": [
+   "M_Ink"
+  ],
+  "hierarchy": [
+   "Lines"
+  ],
+  "note": "8.0 x 8.0 m decal of hex stone outlines (flat M_Ink strips 1 cm above ground). Tile it; rotate 0/60/120 deg to hide repetition. Double-sided not needed (faces up)."
+ },
+ "Spire_1": {
+  "group": "village",
+  "tris": 15,
+  "parts": {
+   "Spire": 15
+  },
+  "size": [
+   6.55,
+   6.7,
+   19.0
+  ],
+  "min": [
+   -2.99,
+   -3.59,
+   -1.0
+  ],
+  "max": [
+   3.57,
+   3.11,
+   18.0
+  ],
+  "materials": [
+   "M_Spire"
+  ],
+  "hierarchy": [
+   "Spire"
+  ],
+  "note": "Background silhouette spire (no outline material). Base sinks 1 m below ground."
+ },
+ "Spire_2": {
+  "group": "village",
+  "tris": 140,
+  "parts": {
+   "Spire": 140
+  },
+  "size": [
+   11.91,
+   9.27,
+   29.3
+  ],
+  "min": [
+   -4.53,
+   -4.61,
+   -1.0
+  ],
+  "max": [
+   7.38,
+   4.67,
+   28.3
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Spire"
+  ],
+  "hierarchy": [
+   "Spire"
+  ],
+  "note": "Background silhouette spire (no outline material). Base sinks 1 m below ground."
+ },
+ "Spire_3": {
+  "group": "village",
+  "tris": 125,
+  "parts": {
+   "Spire": 125
+  },
+  "size": [
+   13.31,
+   13.22,
+   41.3
+  ],
+  "min": [
+   -6.25,
+   -6.46,
+   -1.0
+  ],
+  "max": [
+   7.05,
+   6.75,
+   40.3
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Spire"
+  ],
+  "hierarchy": [
+   "Spire"
+  ],
+  "note": "Background silhouette spire (no outline material). Base sinks 1 m below ground."
+ },
+ "Cliff_1": {
+  "group": "village",
+  "tris": 1276,
+  "parts": {
+   "Cliff": 1276
+  },
+  "size": [
+   7.79,
+   5.76,
+   6.13
+  ],
+  "min": [
+   -3.76,
+   -2.99,
+   -6.07
+  ],
+  "max": [
+   4.03,
+   2.78,
+   0.07
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Cliff"
+  ],
+  "note": "Walkable top at local 0 (root = top-surface centre). Stepped sides go down; place so tops meet the walk level."
+ },
+ "Cliff_2": {
+  "group": "village",
+  "tris": 2038,
+  "parts": {
+   "Cliff": 2038
+  },
+  "size": [
+   10.18,
+   6.98,
+   8.16
+  ],
+  "min": [
+   -4.61,
+   -3.19,
+   -8.1
+  ],
+  "max": [
+   5.57,
+   3.79,
+   0.07
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Cliff"
+  ],
+  "note": "Walkable top at local 0 (root = top-surface centre). Stepped sides go down; place so tops meet the walk level."
+ },
+ "Cliff_3": {
+  "group": "village",
+  "tris": 850,
+  "parts": {
+   "Cliff": 850
+  },
+  "size": [
+   6.56,
+   4.05,
+   5.1
+  ],
+  "min": [
+   -3.17,
+   -2.04,
+   -5.04
+  ],
+  "max": [
+   3.4,
+   2.01,
+   0.06
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Cliff"
+  ],
+  "note": "Walkable top at local 0 (root = top-surface centre). Stepped sides go down; place so tops meet the walk level."
+ },
+ "CaveWall_1": {
+  "group": "village",
+  "tris": 1026,
+  "parts": {
+   "Wall": 1026
+  },
+  "size": [
+   12.48,
+   2.82,
+   13.63
+  ],
+  "min": [
+   -6.2,
+   -1.38,
+   -0.08
+  ],
+  "max": [
+   6.28,
+   1.44,
+   13.55
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Wall"
+  ],
+  "note": "Straight 12 m segment, front faces -Y (Unity +Z = toward the village). Ragged top edge finished by loose ink strokes."
+ },
+ "CaveWall_2": {
+  "group": "village",
+  "tris": 1034,
+  "parts": {
+   "Wall": 1034
+  },
+  "size": [
+   12.44,
+   3.95,
+   15.11
+  ],
+  "min": [
+   -6.25,
+   -2.57,
+   -0.23
+  ],
+  "max": [
+   6.19,
+   1.38,
+   14.88
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Wall"
+  ],
+  "note": "Straight 12 m segment with a buttress bulge (x=+1.5)."
+ },
+ "CaveWall_3": {
+  "group": "village",
+  "tris": 1026,
+  "parts": {
+   "Wall": 1026
+  },
+  "size": [
+   12.84,
+   4.3,
+   14.29
+  ],
+  "min": [
+   -6.29,
+   -3.05,
+   -0.23
+  ],
+  "max": [
+   6.55,
+   1.26,
+   14.06
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Wall"
+  ],
+  "note": "Concave corner: 90 deg arc of radius 7.6 m, centre at (0,-7.6) i.e. in front; ends at about (+-5.4, -2.2) facing the centre."
+ },
+ "Rock_1": {
+  "group": "village",
+  "tris": 134,
+  "parts": {
+   "Rock": 134
+  },
+  "size": [
+   1.25,
+   1.39,
+   0.66
+  ],
+  "min": [
+   -0.68,
+   -0.59,
+   -0.02
+  ],
+  "max": [
+   0.57,
+   0.81,
+   0.64
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Rock"
+  ],
+  "note": ""
+ },
+ "Rock_2": {
+  "group": "village",
+  "tris": 138,
+  "parts": {
+   "Rock": 138
+  },
+  "size": [
+   2.58,
+   2.51,
+   1.42
+  ],
+  "min": [
+   -1.3,
+   -1.01,
+   -0.01
+  ],
+  "max": [
+   1.28,
+   1.49,
+   1.41
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Rock"
+  ],
+  "note": ""
+ },
+ "Rock_3": {
+  "group": "village",
+  "tris": 138,
+  "parts": {
+   "Rock": 138
+  },
+  "size": [
+   4.63,
+   4.55,
+   2.8
+  ],
+  "min": [
+   -2.63,
+   -1.83,
+   -0.03
+  ],
+  "max": [
+   2.0,
+   2.72,
+   2.77
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Rock"
+  ],
+  "note": ""
+ },
+ "Pond": {
+  "group": "village",
+  "tris": 744,
+  "parts": {
+   "Surface": 154,
+   "Rim": 590
+  },
+  "size": [
+   16.3,
+   14.52,
+   0.42
+  ],
+  "min": [
+   -8.31,
+   -7.27,
+   -0.09
+  ],
+  "max": [
+   7.99,
+   7.26,
+   0.33
+  ],
+  "materials": [
+   "M_Hatch",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Pond"
+  ],
+  "hierarchy": [
+   "Rim",
+   "Surface"
+  ],
+  "note": "Black pond radius ~6.5 m. Surface is a separate child (hide/animate when the Fish bursts up). Rim = paper lip + stones."
+ },
+ "LightShaft": {
+  "group": "village",
+  "tris": 160,
+  "parts": {
+   "Shaft": 160
+  },
+  "size": [
+   10.0,
+   10.0,
+   28.0
+  ],
+  "min": [
+   -5.0,
+   -5.0,
+   0.0
+  ],
+  "max": [
+   5.0,
+   5.0,
+   28.0
+  ],
+  "materials": [
+   "M_Light"
+  ],
+  "hierarchy": [
+   "Shaft"
+  ],
+  "note": "Two nested open cones (bottom r 5 / 3.8, top r 3 / 2.4, height 28). UV v = 0 at the floor .. 1 at the ceiling for a fade. Pivot = bottom centre."
+ },
+ "CeilingHole": {
+  "group": "village",
+  "tris": 956,
+  "parts": {
+   "Ceiling": 956
+  },
+  "size": [
+   28.0,
+   28.0,
+   5.51
+  ],
+  "min": [
+   -14.0,
+   -14.0,
+   -2.71
+  ],
+  "max": [
+   14.0,
+   14.0,
+   2.8
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_StoneDark"
+  ],
+  "hierarchy": [
+   "Ceiling"
+  ],
+  "note": "Ring slab (outer r 14, jagged hole r ~3.5, 2.5 m thick). Pivot = centre of the hole on the slab underside; place at ceiling height above LightShaft."
+ },
+ "Sketch_Wall_1": {
+  "group": "dressing",
+  "tris": 1825,
+  "parts": {
+   "Solid": 584,
+   "Lines": 841,
+   "Hatch": 400
+  },
+  "size": [
+   5.95,
+   0.78,
+   3.7
+  ],
+  "min": [
+   -2.95,
+   -0.44,
+   0.0
+  ],
+  "max": [
+   3.0,
+   0.34,
+   3.7
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Hatch",
+   "Lines",
+   "Solid"
+  ],
+  "note": "Built only up to a torn, wandering paper top (inside face visible through the tear); the planned wall above is pencil construction (posts, courses, brace) with hatching running on past the torn edge. Front faces -Y (Unity +Z). Solid = collider, Lines/Hatch = unlit."
+ },
+ "Sketch_Wall_2": {
+  "group": "dressing",
+  "tris": 1568,
+  "parts": {
+   "Solid": 455,
+   "Lines": 785,
+   "Hatch": 328
+  },
+  "size": [
+   5.15,
+   0.5,
+   4.05
+  ],
+  "min": [
+   -2.55,
+   -0.27,
+   0.0
+  ],
+  "max": [
+   2.6,
+   0.24,
+   4.05
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Hatch",
+   "Lines",
+   "Solid"
+  ],
+  "note": "Built only up to a torn, wandering paper top (inside face visible through the tear); the planned wall above is pencil construction (posts, courses, brace) with hatching running on past the torn edge. Front faces -Y (Unity +Z). Solid = collider, Lines/Hatch = unlit."
+ },
+ "Sketch_Wall_3": {
+  "group": "dressing",
+  "tris": 2085,
+  "parts": {
+   "Solid": 738,
+   "Lines": 979,
+   "Hatch": 368
+  },
+  "size": [
+   4.7,
+   3.7,
+   3.25
+  ],
+  "min": [
+   -2.95,
+   -0.45,
+   0.0
+  ],
+  "max": [
+   1.75,
+   3.25,
+   3.25
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Hatch",
+   "Lines",
+   "Solid"
+  ],
+  "note": "Built only up to a torn, wandering paper top (inside face visible through the tear); the planned wall above is pencil construction (posts, courses, brace) with hatching running on past the torn edge. Front faces -Y (Unity +Z). Solid = collider, Lines/Hatch = unlit."
+ },
+ "Sketch_Tree_1": {
+  "group": "dressing",
+  "tris": 1857,
+  "parts": {
+   "Trunk": 376,
+   "Lines": 803,
+   "Crown": 678
+  },
+  "size": [
+   2.99,
+   2.57,
+   5.24
+  ],
+  "min": [
+   -1.41,
+   -1.25,
+   -0.04
+  ],
+  "max": [
+   1.58,
+   1.32,
+   5.21
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Leaf",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Crown",
+   "Lines",
+   "Trunk"
+  ],
+  "note": "Trunk built as a bark shell only up to a slanted torn edge (inside visible); upper trunk = two ink contours + pencil rings, branches ink, crown ink scribble with one paper clump torn open. Crown pivot = crown centre (sway)."
+ },
+ "Sketch_Tree_2": {
+  "group": "dressing",
+  "tris": 1917,
+  "parts": {
+   "Trunk": 448,
+   "Lines": 761,
+   "Crown": 708
+  },
+  "size": [
+   3.55,
+   2.94,
+   4.41
+  ],
+  "min": [
+   -1.67,
+   -1.51,
+   -0.04
+  ],
+  "max": [
+   1.88,
+   1.43,
+   4.38
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Leaf",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Crown",
+   "Lines",
+   "Trunk"
+  ],
+  "note": "Trunk built as a bark shell only up to a slanted torn edge (inside visible); upper trunk = two ink contours + pencil rings, branches ink, crown ink scribble with one paper clump torn open. Crown pivot = crown centre (sway)."
+ },
+ "Sketch_Tree_3": {
+  "group": "dressing",
+  "tris": 1235,
+  "parts": {
+   "Trunk": 368,
+   "Lines": 727,
+   "Crown": 140
+  },
+  "size": [
+   2.53,
+   1.99,
+   3.93
+  ],
+  "min": [
+   -1.19,
+   -0.87,
+   -0.04
+  ],
+  "max": [
+   1.33,
+   1.12,
+   3.89
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Crown",
+   "Lines",
+   "Trunk"
+  ],
+  "note": "Trunk built as a bark shell only up to a slanted torn edge (inside visible); upper trunk = two ink contours + pencil rings, branches ink, crown ink scribble with one paper clump torn open. Crown pivot = crown centre (sway)."
+ },
+ "Sketch_Fence_1": {
+  "group": "dressing",
+  "tris": 1197,
+  "parts": {
+   "Solid": 764,
+   "Lines": 433
+  },
+  "size": [
+   4.5,
+   0.2,
+   1.54
+  ],
+  "min": [
+   -2.12,
+   -0.13,
+   -0.12
+  ],
+  "max": [
+   2.38,
+   0.08,
+   1.42
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_SketchLine",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Lines",
+   "Solid"
+  ],
+  "note": "First posts are real puppet wood (ball-joint tops), rails torn off where the wood stops; the rest of the fence is pencil posts/rails fading out. Runs along local X."
+ },
+ "Sketch_Fence_2": {
+  "group": "dressing",
+  "tris": 933,
+  "parts": {
+   "Solid": 496,
+   "Lines": 437
+  },
+  "size": [
+   3.5,
+   0.2,
+   1.65
+  ],
+  "min": [
+   -1.62,
+   -0.12,
+   -0.12
+  ],
+  "max": [
+   1.88,
+   0.08,
+   1.53
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_SketchLine",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Lines",
+   "Solid"
+  ],
+  "note": "First posts are real puppet wood (ball-joint tops), rails torn off where the wood stops; the rest of the fence is pencil posts/rails fading out. Runs along local X."
+ },
+ "Sketch_Arch": {
+  "group": "dressing",
+  "tris": 771,
+  "parts": {
+   "Solid": 312,
+   "Lines": 459
+  },
+  "size": [
+   5.14,
+   0.84,
+   5.13
+  ],
+  "min": [
+   -2.57,
+   -0.39,
+   -0.42
+  ],
+  "max": [
+   2.57,
+   0.45,
+   4.72
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_SketchLine",
+   "M_Smudge"
+  ],
+  "hierarchy": [
+   "Lines",
+   "Solid"
+  ],
+  "note": "Arch: left pier and the left half of the voussoirs are built paper stone; the right pier stops after two stones (rest = pencil boxes) and the right half of the arch exists only as ink/pencil outline. Opening 2.6 m wide, faces -Y."
+ },
+ "Scrap_Paper_1": {
+  "group": "dressing",
+  "tris": 108,
+  "parts": {
+   "Scrap": 108
+  },
+  "size": [
+   0.39,
+   0.38,
+   0.35
+  ],
+  "min": [
+   -0.19,
+   -0.2,
+   0.0
+  ],
+  "max": [
+   0.2,
+   0.18,
+   0.35
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_Pencil"
+  ],
+  "hierarchy": [
+   "Scrap"
+  ],
+  "note": "Paper scrap on the ground (no collider needed)."
+ },
+ "Scrap_Paper_2": {
+  "group": "dressing",
+  "tris": 188,
+  "parts": {
+   "Scrap": 188
+  },
+  "size": [
+   0.91,
+   0.63,
+   0.1
+  ],
+  "min": [
+   -0.45,
+   -0.34,
+   -0.01
+  ],
+  "max": [
+   0.46,
+   0.29,
+   0.09
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_Pencil"
+  ],
+  "hierarchy": [
+   "Scrap"
+  ],
+  "note": "Paper scrap on the ground (no collider needed)."
+ },
+ "Scrap_Paper_3": {
+  "group": "dressing",
+  "tris": 188,
+  "parts": {
+   "Scrap": 188
+  },
+  "size": [
+   0.95,
+   0.65,
+   0.23
+  ],
+  "min": [
+   -0.46,
+   -0.33,
+   0.0
+  ],
+  "max": [
+   0.49,
+   0.32,
+   0.23
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_Pencil"
+  ],
+  "hierarchy": [
+   "Scrap"
+  ],
+  "note": "Paper scrap on the ground (no collider needed)."
+ },
+ "Stair_Sketch": {
+  "group": "dressing",
+  "tris": 1159,
+  "parts": {
+   "Solid": 448,
+   "Lines": 711
+  },
+  "size": [
+   1.54,
+   4.82,
+   3.18
+  ],
+  "min": [
+   -0.78,
+   -0.21,
+   -0.14
+  ],
+  "max": [
+   0.76,
+   4.61,
+   3.04
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_SketchLine",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Lines",
+   "Solid"
+  ],
+  "note": "Three solid steps, the 4th torn half-way across, then stairs drawn only as lines climbing toward +Y (Unity -Z) into nothing. Not walkable beyond the solid steps."
+ },
+ "Bench_Puppet": {
+  "group": "dressing",
+  "tris": 1252,
+  "parts": {
+   "Seat": 448,
+   "Lines": 612,
+   "Legs": 192
+  },
+  "size": [
+   1.98,
+   0.58,
+   1.1
+  ],
+  "min": [
+   -0.91,
+   -0.29,
+   -0.08
+  ],
+  "max": [
+   1.07,
+   0.29,
+   1.02
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Legs",
+   "Lines",
+   "Seat"
+  ],
+  "note": "Creature bench (seat 0.45 m). Left end built (puppet wood, blue paint brushed on, ball-jointed legs); the plank is torn at ~70 % and the right end + its two legs exist only in pencil. Backrest only drawn."
+ },
+ "Barrel": {
+  "group": "dressing",
+  "tris": 1465,
+  "parts": {
+   "Main": 460,
+   "Lines": 1005
+  },
+  "size": [
+   1.22,
+   0.78,
+   1.0
+  ],
+  "min": [
+   -0.39,
+   -0.39,
+   -0.05
+  ],
+  "max": [
+   0.83,
+   0.39,
+   0.95
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintRed",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetWood",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Main",
+   "Lines"
+  ],
+  "note": "Creature barrel built stave by stave: the front-left staves exist (bare wood, red brushed on the top band, some still short), the back staves and the rim are pencil; inked hoops run on as pencil ellipses. Lid leans on the floor."
+ },
+ "Crate": {
+  "group": "dressing",
+  "tris": 1119,
+  "parts": {
+   "Main": 784,
+   "Lines": 335
+  },
+  "size": [
+   0.75,
+   0.8,
+   0.79
+  ],
+  "min": [
+   -0.38,
+   -0.4,
+   -0.09
+  ],
+  "max": [
+   0.38,
+   0.4,
+   0.69
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaperBack",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Main",
+   "Lines"
+  ],
+  "note": "Creature crate 0.6 m: bottom, back and left walls built from separate planks (inside visible), one front plank torn half-way; the front, right and lid exist only as pencil edges."
+ },
+ "Basket": {
+  "group": "dressing",
+  "tris": 1580,
+  "parts": {
+   "Main": 574,
+   "Lines": 1006
+  },
+  "size": [
+   0.42,
+   0.41,
+   0.44
+  ],
+  "min": [
+   -0.21,
+   -0.2,
+   0.0
+  ],
+  "max": [
+   0.21,
+   0.21,
+   0.44
+  ],
+  "materials": [
+   "M_BookRed",
+   "M_Brass",
+   "M_Ink",
+   "M_PageWhite",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetWood",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Main",
+   "Lines"
+  ],
+  "note": "Kinopio's gathering basket (0.42 m with handle): weave stops at a torn rim on the right, handle half built / half a pencil arc. Inside: a red book and a brass spoon (human, finished). Hand point = handle top (local z 0.42)."
+ },
+ "Lantern_Hanging": {
+  "group": "dressing",
+  "tris": 592,
+  "parts": {
+   "Post": 356,
+   "Lines": 8,
+   "Lamp": 228
+  },
+  "size": [
+   0.93,
+   0.36,
+   3.13
+  ],
+  "min": [
+   -0.18,
+   -0.18,
+   0.0
+  ],
+  "max": [
+   0.75,
+   0.18,
+   3.13
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Iron",
+   "M_LampGlow",
+   "M_StageWood",
+   "M_TerracottaDark"
+  ],
+  "hierarchy": [
+   "Lamp",
+   "Lines",
+   "Post"
+  ],
+  "note": "Plaza lamp (finished/painted): carved post on a stepped foot, curled arm with a brace, cage lantern hanging from a hook. Lamp pivot = hook (swing). Glow at local (0.6, 2.48 up). Add a small warm point light there in Unity."
+ },
+ "Banner_Unfinished": {
+  "group": "dressing",
+  "tris": 980,
+  "parts": {
+   "Pole": 116,
+   "Cloth": 864
+  },
+  "size": [
+   1.05,
+   0.28,
+   4.54
+  ],
+  "min": [
+   -0.14,
+   -0.14,
+   0.0
+  ],
+  "max": [
+   0.91,
+   0.14,
+   4.54
+  ],
+  "materials": [
+   "M_BackdropNavy",
+   "M_CurtainRed",
+   "M_Ink",
+   "M_Paper",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_StageWood",
+   "M_TerracottaDark",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Cloth",
+   "Pole"
+  ],
+  "note": "Banner near the plaza: top half painted red with a navy corner, the brush stops mid-cloth; below a torn edge the cloth is not made yet - only its pencil outline and swallowtail. Cloth pivot = top edge (sway)."
+ },
+ "Rubble_1": {
+  "group": "dressing",
+  "tris": 273,
+  "parts": {
+   "Rubble": 72,
+   "Lines": 201
+  },
+  "size": [
+   2.16,
+   1.29,
+   1.91
+  ],
+  "min": [
+   -1.21,
+   -0.43,
+   -0.16
+  ],
+  "max": [
+   0.96,
+   0.86,
+   1.76
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge"
+  ],
+  "hierarchy": [
+   "Lines",
+   "Rubble"
+  ],
+  "note": "Paper-stone rubble; the wall it came from still stands as a pencil outline above it (with an erased smudge)."
+ },
+ "Rubble_2": {
+  "group": "dressing",
+  "tris": 309,
+  "parts": {
+   "Rubble": 108,
+   "Lines": 201
+  },
+  "size": [
+   2.99,
+   2.1,
+   1.89
+  ],
+  "min": [
+   -1.59,
+   -0.9,
+   -0.14
+  ],
+  "max": [
+   1.4,
+   1.2,
+   1.74
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Paper",
+   "M_PaperShade",
+   "M_Pencil",
+   "M_Smudge"
+  ],
+  "hierarchy": [
+   "Lines",
+   "Rubble"
+  ],
+  "note": "Paper-stone rubble; the wall it came from still stands as a pencil outline above it (with an erased smudge)."
+ },
+ "PaintPot": {
+  "group": "dressing",
+  "tris": 1198,
+  "parts": {
+   "Pot": 592,
+   "Lines": 606
+  },
+  "size": [
+   0.75,
+   0.49,
+   0.7
+  ],
+  "min": [
+   -0.23,
+   -0.25,
+   0.0
+  ],
+  "max": [
+   0.52,
+   0.24,
+   0.7
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintRed",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetWood",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Lines",
+   "Pot"
+  ],
+  "note": "Creature paint pot (red) with a brush, for the 'prepare' pose. The pot wall stops at a torn line (rim = pencil), the brush handle's upper half is pencil."
+ },
+ "Brush_Big": {
+  "group": "dressing",
+  "tris": 1390,
+  "parts": {
+   "Handle": 380,
+   "Lines": 796,
+   "Bristles": 56,
+   "InkPool": 158
+  },
+  "size": [
+   4.08,
+   3.38,
+   5.41
+  ],
+  "min": [
+   -1.81,
+   -1.54,
+   -0.75
+  ],
+  "max": [
+   2.27,
+   1.84,
+   4.66
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_StageWood",
+   "M_TerracottaDark",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Bristles",
+   "Handle",
+   "InkPool",
+   "Lines"
+  ],
+  "note": "Relic: a giant drawing brush stuck in the ground, leaning ~20 deg, ink pooled around it. The handle is built only ~60 % up (torn, inside visible), the rest is pencil contour + rings + the end knob outline. Not a human object."
+ },
+ "FX_InkRing": {
+  "group": "dressing",
+  "tris": 80,
+  "parts": {
+   "Ring": 80
+  },
+  "size": [
+   2.14,
+   2.02,
+   0.0
+  ],
+  "min": [
+   -1.07,
+   -0.98,
+   0.0
+  ],
+  "max": [
+   1.06,
+   1.04,
+   0.0
+  ],
+  "materials": [
+   "M_Ink"
+  ],
+  "hierarchy": [
+   "Ring"
+  ],
+  "note": "Flat ink ring decal, outer radius 1 m, 0.15 m thick band; faces up. UV u = around, v = inner(0)->outer(1). Scale up and fade for pond ripples; lay 1-2 cm above the pond surface."
+ },
+ "FX_Splash": {
+  "group": "dressing",
+  "tris": 1116,
+  "parts": {
+   "Base": 68,
+   "Crown": 832,
+   "Drop_1": 36,
+   "Drop_2": 36,
+   "Drop_3": 36,
+   "Drop_4": 36,
+   "Drop_5": 36,
+   "Drop_6": 36
+  },
+  "size": [
+   2.9,
+   3.54,
+   2.12
+  ],
+  "min": [
+   -1.51,
+   -1.7,
+   -0.01
+  ],
+  "max": [
+   1.39,
+   1.84,
+   2.11
+  ],
+  "materials": [
+   "M_Ink"
+  ],
+  "hierarchy": [
+   "Base",
+   "Crown",
+   "Drop_1",
+   "Drop_2",
+   "Drop_3",
+   "Drop_4",
+   "Drop_5",
+   "Drop_6"
+  ],
+  "note": "Ink splash crown for the fish burst, radius ~1 m at scale 1 (scale to the pond). Separate pieces: Base (flat), Crown (rising spikes), Drop_1..6 (droplets, pivots at their centres for flinging)."
+ },
+ "FX_Dust": {
+  "group": "dressing",
+  "tris": 384,
+  "parts": {
+   "Card_1": 64,
+   "Card_2": 64,
+   "Card_3": 64,
+   "Card_4": 64,
+   "Flecks": 128
+  },
+  "size": [
+   2.27,
+   0.68,
+   0.58
+  ],
+  "min": [
+   -1.07,
+   -0.39,
+   -0.02
+  ],
+  "max": [
+   1.2,
+   0.29,
+   0.56
+  ],
+  "materials": [
+   "M_Paper",
+   "M_PaperShade"
+  ],
+  "hierarchy": [
+   "Card_1",
+   "Card_2",
+   "Card_3",
+   "Card_4",
+   "Flecks"
+  ],
+  "note": "Paper-dust puff cards: Card_1..4 (two crossed jagged paper cards each, pivots at their centres, use as particle meshes) + Flecks (tiny paper bits)."
+ },
+ "Level_Ch1": {
+  "group": "level",
+  "tris": 103813,
+  "parts": {
+   "Ground_Walk_fall": 150,
+   "Margin_fall": 31,
+   "Ground_Lines_fall": 3514,
+   "Cliffs_fall": 725,
+   "Light_fall": 592,
+   "Exit_fall_gate": 18,
+   "Vista_fall": 13772,
+   "Ground_Walk_gate": 74,
+   "Margin_gate": 98,
+   "Ground_Lines_gate": 4710,
+   "Cliffs_gate": 802,
+   "Exit_gate_fall": 28,
+   "Exit_gate_plaza": 18,
+   "Exit_gate_cart": 22,
+   "Vista_gate": 11910,
+   "Ground_Walk_plaza": 220,
+   "Margin_plaza": 201,
+   "Ground_Lines_plaza": 5998,
+   "Cliffs_plaza": 2710,
+   "Decor_plaza": 2112,
+   "Light_plaza": 742,
+   "Vista_plaza": 5290,
+   "Exit_plaza_gate": 20,
+   "Exit_plaza_alley": 28,
+   "Exit_plaza_cart": 22,
+   "Bell_plaza": 310,
+   "Ground_Walk_alley": 79,
+   "Margin_alley": 116,
+   "Ground_Lines_alley": 4334,
+   "Cliffs_alley": 1764,
+   "Decor_alley": 1990,
+   "Light_alley": 112,
+   "Vista_alley": 3527,
+   "Exit_alley_plaza": 28,
+   "Exit_alley_field": 20,
+   "Exit_alley_hideout": 24,
+   "Ground_Walk_hideout": 60,
+   "Margin_hideout": 70,
+   "Ground_Lines_hideout": 1878,
+   "Cliffs_hideout": 1268,
+   "Decor_hideout": 122,
+   "Light_hideout": 460,
+   "Vista_hideout": 1772,
+   "Exit_hideout_alley": 20,
+   "Face_hideout": 2,
+   "Ground_Walk_cart": 85,
+   "Margin_cart": 85,
+   "Ground_Lines_cart": 4728,
+   "Cliffs_cart": 2294,
+   "Decor_cart": 136,
+   "Light_cart": 112,
+   "Vista_cart": 3447,
+   "Exit_cart_plaza": 20,
+   "Exit_cart_field": 22,
+   "Exit_cart_gate": 28,
+   "Satchel_cart": 38,
+   "Decor_cart_rim": 296,
+   "Ground_Walk_field": 416,
+   "Margin_field": 81,
+   "Ground_Lines_field": 7692,
+   "Cliffs_field": 1274,
+   "Decor_field": 158,
+   "Vista_field": 4281,
+   "Exit_field_alley": 24,
+   "Exit_field_cart": 24,
+   "Walls_Bound": 4472,
+   "Ceiling": 2162,
+   "Backdrop": 175
+  },
+  "size": [
+   311.63,
+   325.52,
+   70.0
+  ],
+  "min": [
+   -190.59,
+   -174.09,
+   -18.0
+  ],
+  "max": [
+   121.04,
+   151.43,
+   52.0
+  ],
+  "materials": [
+   "M_Abyss",
+   "M_BackdropNavy",
+   "M_Bark",
+   "M_Beam",
+   "M_BookBlue",
+   "M_BookGreen",
+   "M_BookRed",
+   "M_Brass",
+   "M_CaveWall",
+   "M_Ceiling",
+   "M_CurtainRed",
+   "M_Dust",
+   "M_FieldSoil",
+   "M_GroundEarth",
+   "M_GroundPainted",
+   "M_Hatch",
+   "M_HatchDark",
+   "M_Ink",
+   "M_Iron",
+   "M_LampGlow",
+   "M_Leather",
+   "M_LightPool",
+   "M_PageWhite",
+   "M_PaintBlue",
+   "M_PaintRed",
+   "M_PaperBack",
+   "M_PlazaStone1",
+   "M_PlazaStone2",
+   "M_PlazaStone3",
+   "M_Pond",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_SketchLine",
+   "M_Smudge",
+   "M_Spire",
+   "M_StageWood",
+   "M_Terracotta",
+   "M_TerracottaDark",
+   "M_TornEdge",
+   "M_UnderCliff",
+   "M_UnderDeep",
+   "M_UnderGround",
+   "M_UnderLow",
+   "M_UnderRoad",
+   "M_UnderSpire",
+   "M_VistaCliff",
+   "M_VistaCurtain",
+   "M_VistaGround",
+   "M_VistaNavy",
+   "M_VistaPlaza",
+   "M_VistaStone",
+   "M_VistaTerraDark",
+   "M_VistaTerracotta",
+   "M_VistaWood",
+   "M_WallRock",
+   "M_Wood"
+  ],
+  "per_area": {
+   "Area_a_fall": 18802,
+   "Area_a_gate": 17662,
+   "Area_a_plaza": 17653,
+   "Area_a_alley": 11994,
+   "Area_a_hideout": 5652,
+   "Area_a_cart": 11291,
+   "Area_a_field": 13950,
+   "Global": 6809
+  },
+  "note": "Chapter-1 level split into page areas (chapter1.json areas[]). Root at world origin."
+ },
+ "RedCord": {
+  "group": "offering",
+  "tris": 470,
+  "parts": {
+   "Cord": 332,
+   "Lines": 138
+  },
+  "size": [
+   0.18,
+   0.03,
+   0.29
+  ],
+  "min": [
+   -0.09,
+   -0.02,
+   -0.24
+  ],
+  "max": [
+   0.09,
+   0.01,
+   0.05
+  ],
+  "materials": [
+   "M_Ink",
+   "M_OfferRed",
+   "M_OfferRedBrush",
+   "M_Pencil",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Cord",
+   "  Lines"
+  ],
+  "note": "Village offering mark: a brush-painted red cloth strip tied in a knot. Pivot = knot (attach to the hero's cape or a lump), ribbon faces Unity +Z, tails hang down (-Y). One tail is painted to the end and cut; the other stops in raw cloth + frayed threads, its planned length only pencil. M_OfferRed/M_OfferRedBrush are 'keep' (no drain)."
+ },
+ "Sack": {
+  "group": "offering",
+  "tris": 1822,
+  "parts": {
+   "Body": 587,
+   "Lines": 931,
+   "Mouth": 304
+  },
+  "size": [
+   0.98,
+   0.83,
+   1.33
+  ],
+  "min": [
+   -0.47,
+   -0.41,
+   0.0
+  ],
+  "max": [
+   0.5,
+   0.42,
+   1.33
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_SackDark",
+   "M_Sackcloth",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Body",
+   "  Lines",
+   "Mouth"
+  ],
+  "note": "Collector's sack, closed and full (1.3 m; a child fits inside - the hero is carried in it at the fall). Something presses from inside. Unfinished: the weave never closed on the right shoulder (torn window, dark inside, pencil weave across). Mouth = gathered neck + twine tie + ruffle, pivot at the neck (hide it / use Sack_Open)."
+ },
+ "Sack_Open": {
+  "group": "offering",
+  "tris": 1250,
+  "parts": {
+   "Body": 552,
+   "Lines": 502,
+   "Mouth": 196
+  },
+  "size": [
+   1.05,
+   0.85,
+   0.61
+  ],
+  "min": [
+   -0.56,
+   -0.42,
+   0.0
+  ],
+  "max": [
+   0.5,
+   0.42,
+   0.61
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_SackDark",
+   "M_Sackcloth",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Body",
+   "  Lines",
+   "Mouth"
+  ],
+  "note": "Collector's sack, empty and open (slumped, 0.55 m). Mouth = rolled hem + dark inside + loose twine (pivot = rim centre). Unfinished: the weave on the left side is a torn window with pencil weave."
+ },
+ "HookPole": {
+  "group": "offering",
+  "tris": 1039,
+  "parts": {
+   "Pole": 348,
+   "Lines": 383,
+   "Hook": 308
+  },
+  "size": [
+   0.41,
+   0.09,
+   2.64
+  ],
+  "min": [
+   -0.04,
+   -0.05,
+   -0.05
+  ],
+  "max": [
+   0.37,
+   0.04,
+   2.59
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_SackDark",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Pole",
+   "  Grip (empty)",
+   "  Hook",
+   "  Lines"
+  ],
+  "note": "Collector's hook pole (2.45 m): three puppet-limb segments with ball joints (made from spare puppet arms). Unfinished: the lowest 0.42 m is only pencil, the hook's barb end is ink + pencil (only the shank and half the curve are carved). Root = floor end. Grip empty at 1.15 m (hand). Hook pivot = lashing (wiggle)."
+ },
+ "DecreeScroll": {
+  "group": "offering",
+  "tris": 1626,
+  "parts": {
+   "Scroll": 476,
+   "Lines": 806,
+   "Seal": 344
+  },
+  "size": [
+   0.5,
+   0.14,
+   0.13
+  ],
+  "min": [
+   -0.24,
+   -0.07,
+   -0.02
+  ],
+  "max": [
+   0.26,
+   0.06,
+   0.11
+  ],
+  "materials": [
+   "M_DecreeBand",
+   "M_Ink",
+   "M_KingSeal",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Scroll",
+   "  Lines",
+   "Seal"
+  ],
+  "note": "The king's rolled interpretation band (0.46 m), lying on the ground: yellowed creature paper tied with a plum cord, plum wax seal with the king's crown glyph on top-front. Unfinished: the right end of the roll stops at a torn edge, the rest of the roll and its end spiral only pencil. Spat out by the fish."
+ },
+ "DecreeOpen": {
+  "group": "offering",
+  "tris": 1116,
+  "parts": {
+   "Band": 306,
+   "HumanText": 48,
+   "Face": 96,
+   "Lines": 602,
+   "Seal": 64
+  },
+  "size": [
+   0.84,
+   0.45,
+   0.11
+  ],
+  "min": [
+   -0.42,
+   -0.21,
+   -0.0
+  ],
+  "max": [
+   0.42,
+   0.24,
+   0.11
+  ],
+  "materials": [
+   "M_DecreeBand",
+   "M_Ink",
+   "M_KingSeal",
+   "M_PageWhite",
+   "M_PaperBack",
+   "M_Pencil"
+  ],
+  "hierarchy": [
+   "Band",
+   "  Face",
+   "  HumanText",
+   "  Lines",
+   "  Seal"
+  ],
+  "note": "The king's band unrolled on the ground (0.78 x 0.25 m). Face = the band top, UV 0..1 over the whole band rectangle (creature glyph texture); its back-right corner is torn and peeled up, and HumanText = the human page underneath (own UV 0..1, rotated -4 deg, larger) shows through the tear and along both long edges. Right roll half drawn (pencil), seal broken in two. Hide Face (or animate the flap) to reveal the whole HumanText."
+ },
+ "Lump_Brother": {
+  "group": "offering",
+  "tris": 2127,
+  "parts": {
+   "Body": 806,
+   "Lines": 797,
+   "Nose": 60,
+   "Cord": 464
+  },
+  "size": [
+   0.81,
+   0.85,
+   0.83
+  ],
+  "min": [
+   -0.43,
+   -0.53,
+   -0.06
+  ],
+  "max": [
+   0.38,
+   0.32,
+   0.78
+  ],
+  "materials": [
+   "M_Ink",
+   "M_OfferRed",
+   "M_OfferRedBrush",
+   "M_PaintBlue",
+   "M_PaintNavy",
+   "M_PaintRed",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_SketchNose",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Body",
+   "  Cord",
+   "  Lines",
+   "  Nose"
+  ],
+  "note": "Kinopio's brother - a failed body returned by the fish, kept on a chair as the 'shell'. A slumped wooden mass in Kinopio's colours (blue shirt top, red shorts foot), his hex face plank sunk and tilted (ring eye on the left, carved hole on the right = Kinopio mirrored, one eye melted into a drip), a short drooping sketch-line nose (Nose, M_SketchNose) and a navy cap whose back half is pencil. The red offering cord is tied round the neck (Cord, knot = same cord as the hero's). One arm a stub, the other only pencil + ink hand. Root = seat."
+ },
+ "Lump_4": {
+  "group": "offering",
+  "tris": 1427,
+  "parts": {
+   "Body": 908,
+   "Lines": 519
+  },
+  "size": [
+   0.75,
+   1.06,
+   0.78
+  ],
+  "min": [
+   -0.37,
+   -0.74,
+   -0.04
+  ],
+  "max": [
+   0.38,
+   0.32,
+   0.74
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PaintRed",
+   "M_PaintRedBrush",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Body",
+   "  Lines"
+  ],
+  "note": "Generic failed body (better replacement for Lump_1/3): a sitting body whose legs fused into a wide red puddle; one leg still sticks forward, stops at a torn shin, its foot only a pencil box. Egg head fused into the right shoulder (hole eye + groove eye). Left arm only drawn. Root = seat."
+ },
+ "Lump_5": {
+  "group": "offering",
+  "tris": 1399,
+  "parts": {
+   "Body": 1188,
+   "Lines": 211
+  },
+  "size": [
+   0.45,
+   0.8,
+   0.66
+  ],
+  "min": [
+   -0.21,
+   -0.47,
+   -0.01
+  ],
+  "max": [
+   0.24,
+   0.34,
+   0.66
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaintBlue",
+   "M_PaintRed",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_Smudge",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Body",
+   "  Lines"
+  ],
+  "note": "Generic failed body (better replacement for Lump_2): a body folded double, box head (three holes) resting on its knees as if bowing forever. Its back is an open shell - hollow inside, pencil ribs where the body was never drawn. One arm built, one only pencil. Root = seat."
+ },
+ "NoseFileStone": {
+  "group": "offering",
+  "tris": 1520,
+  "parts": {
+   "Stone": 691,
+   "Lines": 829
+  },
+  "size": [
+   0.5,
+   0.4,
+   0.31
+  ],
+  "min": [
+   -0.21,
+   -0.2,
+   -0.03
+  ],
+  "max": [
+   0.29,
+   0.2,
+   0.28
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_Shaving",
+   "M_Smudge",
+   "M_TornEdge",
+   "M_Whetstone"
+  ],
+  "hierarchy": [
+   "Stone",
+   "  Lines"
+  ],
+  "note": "Kinopio's nose-filing stone (0.52 x 0.32 x 0.26 m) in his house: grey paper-stone with a worn diagonal groove on top (graphite smudge + shavings in it). Unfinished: the left third of the block is only pencil (torn edge)."
+ },
+ "SawdustPile": {
+  "group": "offering",
+  "tris": 1979,
+  "parts": {
+   "Pile": 1572,
+   "Lines": 407
+  },
+  "size": [
+   0.88,
+   0.95,
+   0.21
+  ],
+  "min": [
+   -0.44,
+   -0.51,
+   -0.0
+  ],
+  "max": [
+   0.44,
+   0.43,
+   0.2
+  ],
+  "materials": [
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_Shaving",
+   "M_SketchNose",
+   "M_Smudge"
+  ],
+  "hierarchy": [
+   "Pile",
+   "  Lines"
+  ],
+  "note": "Floor of Kinopio's house: a low pile of wood shavings and dust (0.7 m) - and among them short pieces of his translucent sketch-line nose (M_SketchNose), what he files off after each lie. Far side only pencil."
+ },
+ "HiddenStash": {
+  "group": "offering",
+  "tris": 2886,
+  "parts": {
+   "Nest": 674,
+   "Lines": 570,
+   "Treasure": 1642
+  },
+  "size": [
+   1.02,
+   0.96,
+   0.28
+  ],
+  "min": [
+   -0.47,
+   -0.5,
+   -0.03
+  ],
+  "max": [
+   0.55,
+   0.46,
+   0.24
+  ],
+  "materials": [
+   "M_BookBlue",
+   "M_BookGreen",
+   "M_BookRed",
+   "M_Brass",
+   "M_Glass",
+   "M_Ink",
+   "M_Iron",
+   "M_Leather",
+   "M_PageWhite",
+   "M_PaintBlue",
+   "M_PaintRed",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_Porcelain",
+   "M_Rope",
+   "M_SackDark",
+   "M_Sackcloth",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Nest",
+   "  Lines",
+   "  Treasure"
+  ],
+  "note": "Kinopio's hidden stash in the secret den (0.95 m): a nest of creature rags (a few painted red/blue strips), one sector of the ring only pencil loops. Inside, fallen human things he kept instead of offering them - finished, vivid: blue and red books, brass spoon, buttons, small clock, green bottle, spectacles, marbles, a teacup, a hair ribbon."
+ },
+ "WallDrawing": {
+  "group": "offering",
+  "tris": 232,
+  "parts": {
+   "Patch": 68,
+   "Face": 2,
+   "Lines": 162
+  },
+  "size": [
+   1.3,
+   0.02,
+   0.88
+  ],
+  "min": [
+   -0.63,
+   -0.02,
+   0.22
+  ],
+  "max": [
+   0.67,
+   0.0,
+   1.1
+  ],
+  "materials": [
+   "M_Ink",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Patch",
+   "  Face",
+   "  Lines"
+  ],
+  "note": "Children's wall drawing in the secret den. Root = floor at the wall base (wall plane = local y 0, picture faces Unity +Z). Face = UV 0..1 quad 1.0 x 0.72 m at 0.30-1.02 m (child height) for the drawing texture (two children and the light hole). Patch = the rubbed-clean wall behind it. Lines = tally marks, a scribble and two height marks."
+ },
+ "Bell": {
+  "group": "offering",
+  "tris": 3088,
+  "parts": {
+   "Frame": 792,
+   "Lines": 1470,
+   "BellBody": 642,
+   "Clapper": 184
+  },
+  "size": [
+   3.36,
+   0.74,
+   3.84
+  ],
+  "min": [
+   -1.58,
+   -0.37,
+   -0.3
+  ],
+  "max": [
+   1.78,
+   0.37,
+   3.55
+  ],
+  "materials": [
+   "M_BellBronze",
+   "M_BellInner",
+   "M_Ink",
+   "M_PaintRedBrush",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_SackDark",
+   "M_StageWood",
+   "M_TerracottaDark",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "BellBody",
+   "  Clapper",
+   "Frame",
+   "  Lines"
+  ],
+  "note": "Plaza bell (rung as the offering day nears). Frame half built: left post, brace and 60 % of the beam are painted wood, the beam's right part and the right post above 0.9 m are pencil (scaffold guides). Bell = painted bronze with a red brushed band (finished, pivot = yoke: swing about local X). Clapper pivot = inside the crown, pull cord to 1.0 m above the floor."
+ },
+ "OfferingPile": {
+  "group": "offering",
+  "tris": 2903,
+  "parts": {
+   "Pile": 2627,
+   "Lines": 276
+  },
+  "size": [
+   1.06,
+   1.2,
+   0.65
+  ],
+  "min": [
+   -0.51,
+   -0.6,
+   -0.0
+  ],
+  "max": [
+   0.55,
+   0.6,
+   0.65
+  ],
+  "materials": [
+   "M_BookBlue",
+   "M_BookGreen",
+   "M_BookRed",
+   "M_Brass",
+   "M_Glass",
+   "M_Ink",
+   "M_Iron",
+   "M_Leather",
+   "M_OfferRed",
+   "M_OfferRedBrush",
+   "M_PageWhite",
+   "M_Pencil",
+   "M_Porcelain",
+   "M_Rope",
+   "M_SackDark",
+   "M_Sackcloth",
+   "M_TornEdge",
+   "M_Wood"
+  ],
+  "hierarchy": [
+   "Pile",
+   "  Lines"
+  ],
+  "note": "Offerings on the cart (fits the Cart bed 1.1 x 1.5 m, root = bed top centre: Unity Cart-local (0, 0.80, -0.10)). Three creature sacks, human things heaped on top (finished: books, umbrella, clock, lantern, teacup, shoe, bottle), the red offering cord on the top sack, a cord net knotted on the left half - its right half only pencil."
+ },
+ "BarkDoor": {
+  "group": "offering2",
+  "tris": 1526,
+  "parts": {
+   "Door": 656,
+   "Lines": 786,
+   "Knot": 84
+  },
+  "size": [
+   0.98,
+   0.16,
+   1.22
+  ],
+  "min": [
+   -0.46,
+   -0.13,
+   -0.0
+  ],
+  "max": [
+   0.53,
+   0.03,
+   1.22
+  ],
+  "materials": [
+   "M_Bark",
+   "M_Ink",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_SackDark",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Door",
+   "  Knot",
+   "  Lines"
+  ],
+  "note": "Door of Kinopio's secret den (in the old tree): a curved slab of bark 0.78 x 1.22 m, arched top. Root = floor centre under the closed door. Door pivot = hinge on the left edge (Unity: rotate local Y to swing; front faces Unity +Z). Knot = knot hole used as finger hole / peephole (child of Door). Unfinished: the upper-right part of the slab is torn off, its arch only pencil."
+ },
+ "ClothCover": {
+  "group": "offering2",
+  "tris": 1774,
+  "parts": {
+   "Cloth": 1076,
+   "Lines": 698
+  },
+  "size": [
+   0.98,
+   0.79,
+   0.98
+  ],
+  "min": [
+   -0.5,
+   -0.51,
+   -0.36
+  ],
+  "max": [
+   0.49,
+   0.28,
+   0.61
+  ],
+  "materials": [
+   "M_Ink",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_Sackcloth",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Cloth",
+   "  Lines"
+  ],
+  "note": "Sackcloth draped over a seated lump on a chair. Root = seat top centre (same as the lumps / Chair seat 0.5 m). Covers a body up to ~0.62 m, hangs ~0.36 m over the front and sides of a 0.52 m seat, tucked flat at the back (backrest). A nose pokes the cloth from inside (front). Unfinished: on the right side the weave never closed - a window with pencil drape lines."
+ },
+ "MusicBox": {
+  "group": "offering2",
+  "tris": 484,
+  "parts": {
+   "Box": 312,
+   "Lid": 116,
+   "Crank": 56
+  },
+  "size": [
+   0.25,
+   0.14,
+   0.14
+  ],
+  "min": [
+   -0.1,
+   -0.07,
+   -0.0
+  ],
+  "max": [
+   0.14,
+   0.07,
+   0.13
+  ],
+  "materials": [
+   "M_BookBlue",
+   "M_BookRed",
+   "M_Brass",
+   "M_Iron",
+   "M_Porcelain",
+   "M_Wood"
+  ],
+  "hierarchy": [
+   "Box",
+   "  Crank",
+   "  Lid"
+  ],
+  "note": "Human music box (0.2 m), finished: wooden case with brass corners and band, blue + brass lid inlay, red velvet, brass pin cylinder and comb inside. Lid pivot = back top hinge (rotate local X to open). Crank pivot = axle on the right side (Blender +X = Unity -X side), turns about local X."
+ },
+ "MirrorShard": {
+  "group": "offering2",
+  "tris": 152,
+  "parts": {
+   "Shard": 138,
+   "Lines": 14
+  },
+  "size": [
+   0.22,
+   0.18,
+   0.02
+  ],
+  "min": [
+   -0.1,
+   -0.09,
+   -0.0
+  ],
+  "max": [
+   0.12,
+   0.09,
+   0.02
+  ],
+  "materials": [
+   "M_Brass",
+   "M_EyeShine",
+   "M_Glass",
+   "M_Ink",
+   "M_Iron",
+   "M_Mirror"
+  ],
+  "hierarchy": [
+   "Shard",
+   "  Lines"
+  ],
+  "note": "Human mirror shard (0.22 m), finished: silvered glass with a green glass edge and a piece of the gilt frame, painted highlight streaks. Lies flat (tilt it in Unity to catch light)."
+ },
+ "SpinTop": {
+  "group": "offering2",
+  "tris": 224,
+  "parts": {
+   "Top": 224
+  },
+  "size": [
+   0.08,
+   0.07,
+   0.09
+  ],
+  "min": [
+   -0.04,
+   -0.04,
+   0.0
+  ],
+  "max": [
+   0.04,
+   0.04,
+   0.09
+  ],
+  "materials": [
+   "M_BookRed",
+   "M_Brass",
+   "M_Iron",
+   "M_PageWhite",
+   "M_Wood"
+  ],
+  "hierarchy": [
+   "Top"
+  ],
+  "note": "Human spinning top (9 cm), finished: painted red / white / blue bands, brass ring, iron tip. Root = tip on the floor; Top pivot = tip (spin about local Y, wobble by tilting)."
+ },
+ "Torch": {
+  "group": "offering2",
+  "tris": 746,
+  "parts": {
+   "Pole": 336,
+   "Lines": 164,
+   "Flame": 246
+  },
+  "size": [
+   0.54,
+   0.61,
+   2.01
+  ],
+  "min": [
+   -0.23,
+   -0.27,
+   -0.05
+  ],
+  "max": [
+   0.31,
+   0.34,
+   1.96
+  ],
+  "materials": [
+   "M_Flame",
+   "M_Ink",
+   "M_LampGlow",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood"
+  ],
+  "hierarchy": [
+   "Pole",
+   "  Flame",
+   "  Lines"
+  ],
+  "note": "Creature torch on a carved branch (1.95 m with flame). Unfinished: the socket tripod has one built leg and two pencil legs, five of the eight cage slats are only pencil. Flame pivot = flame base (flicker: scale / sway); emissive M_Flame + M_LampGlow core -> add a small warm point light at Flame."
+ },
+ "CordBasket": {
+  "group": "offering2",
+  "tris": 2222,
+  "parts": {
+   "Basket": 572,
+   "Lines": 1100,
+   "Cords": 326,
+   "Lid": 224
+  },
+  "size": [
+   0.47,
+   0.49,
+   0.33
+  ],
+  "min": [
+   -0.24,
+   -0.26,
+   0.0
+  ],
+  "max": [
+   0.24,
+   0.23,
+   0.33
+  ],
+  "materials": [
+   "M_Ink",
+   "M_OfferRed",
+   "M_OfferRedBrush",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Basket",
+   "  Lines",
+   "Cords",
+   "Lid"
+  ],
+  "note": "Basket of red offering cord (0.44 x 0.3 m). Unfinished: the weave stops at a torn rim on the front-right, the lid's back half is only pencil (the coiled red cord shows through). Lid pivot = back rim hinge (rotate local X to open). Cords = coils inside + three strands hanging over the front rim (keep red)."
+ },
+ "CordHook": {
+  "group": "offering2",
+  "tris": 604,
+  "parts": {
+   "Hook": 262,
+   "Lines": 234,
+   "Cord": 108
+  },
+  "size": [
+   0.16,
+   0.15,
+   0.56
+  ],
+  "min": [
+   -0.08,
+   -0.14,
+   -0.46
+  ],
+  "max": [
+   0.08,
+   0.01,
+   0.1
+  ],
+  "materials": [
+   "M_Ink",
+   "M_OfferRed",
+   "M_OfferRedBrush",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_TornEdge"
+  ],
+  "hierarchy": [
+   "Hook",
+   "  Cord",
+   "  Lines"
+  ],
+  "note": "Wall hook (creature-carved peg on a plank) with one torn red cord strand looped over it. Root = mount point on the wall (wall plane = local y 0, hook sticks out toward Unity +Z; place at ~1.0-1.2 m). Unfinished: lower half of the plank and one peg only pencil; the strand is torn off (frayed) and its missing length pencil. Cord pivot = hook tip."
+ },
+ "KidWorkbench": {
+  "group": "offering2",
+  "tris": 2089,
+  "parts": {
+   "Bench": 901,
+   "Lines": 598,
+   "Birds": 590
+  },
+  "size": [
+   0.89,
+   0.55,
+   0.64
+  ],
+  "min": [
+   -0.41,
+   -0.27,
+   -0.04
+  ],
+  "max": [
+   0.48,
+   0.27,
+   0.6
+  ],
+  "materials": [
+   "M_Ink",
+   "M_Iron",
+   "M_PaintBlue",
+   "M_PaperBack",
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_PuppetWood",
+   "M_Shaving",
+   "M_TornEdge",
+   "M_Whetstone",
+   "M_Wood"
+  ],
+  "hierarchy": [
+   "Bench",
+   "  Birds",
+   "  Lines"
+  ],
+  "note": "Kinopio's little workbench (0.82 x 0.4, top at 0.55 m - child height). On it: a small whetstone, a sawdust heap with shavings, a carving knife (fallen human object, finished) and five thumbnail wooden birds at every stage (block -> rough -> carved with pencil wings -> one with blue paint started; part Birds). Unfinished: right end of the top and the front-right leg only pencil."
+ },
+ "SawdustBits": {
+  "group": "offering2",
+  "tris": 724,
+  "parts": {
+   "Bits": 668,
+   "Lines": 56
+  },
+  "size": [
+   0.49,
+   0.29,
+   0.08
+  ],
+  "min": [
+   -0.27,
+   -0.11,
+   -0.0
+  ],
+  "max": [
+   0.21,
+   0.18,
+   0.08
+  ],
+  "materials": [
+   "M_Pencil",
+   "M_PuppetJoint",
+   "M_Shaving"
+  ],
+  "hierarchy": [
+   "Bits",
+   "  Lines"
+  ],
+  "note": "A few scattered wood shavings and dust specks (0.55 x 0.28 m) for a trail. Repeat with random yaw / scale along a path. Lies on the floor."
+ }
+}
